@@ -1,0 +1,137 @@
+import { useLanguage } from '../../context/LanguageContext'
+import { getText } from '../../data/translations'
+import Section from '../ui/Section'
+import Container from '../ui/Container'
+import SectionHeader from '../ui/SectionHeader'
+import Reveal from '../ui/Reveal'
+
+const districts = [
+  'Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi', 'Khulna',
+  'Barishal', 'Mymensingh', 'Rangpur', 'Comilla', 'Narayanganj',
+  'Gazipur', 'Narsingdi', 'Cumilla', 'Cox\'s Bazar', 'Noakhali',
+  'Brahmanbaria', 'Feni', 'Chandpur', 'Lakshmipur', 'Habiganj',
+]
+
+export default function Coverage() {
+  const { lang } = useLanguage()
+  const statLabels = getText(lang, 'stats')
+
+  const coverageStats = [
+    { value: '64', label: statLabels[0] },
+    { value: '495', label: statLabels[1] },
+    { value: '4,500+', label: statLabels[2] },
+    { value: '99.9%', label: statLabels[3] },
+  ]
+
+  return (
+    <Section id="coverage" className="bg-white dark:bg-slate-950 relative overflow-hidden">
+      {/* Background map grid feel */}
+      <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-radial from-red-600/6 to-transparent pointer-events-none" />
+
+      <Container className="relative">
+        <SectionHeader
+          badge={getText(lang, 'badge.coverage')}
+          heading={getText(lang, 'coverage.heading')}
+          headingAccent={getText(lang, 'coverage.accent')}
+          subheading={getText(lang, 'coverage.sub')}
+        />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left — Visual Map Card */}
+          <Reveal direction="left">
+          <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-slate-800/40 shadow-2xl shadow-black/10 dark:shadow-black/40 aspect-[4/3] flex items-center justify-center">
+            {/* Map placeholder with stylised Bangladesh outline feel */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900" />
+            <div className="absolute inset-0 bg-grid opacity-30" />
+
+            {/* Decorative pulsing dots representing cities */}
+            {[
+              { top: '28%', left: '52%', size: 'lg', label: 'Dhaka' },
+              { top: '55%', left: '72%', size: 'md', label: 'Chittagong' },
+              { top: '18%', left: '68%', size: 'sm', label: 'Sylhet' },
+              { top: '40%', left: '28%', size: 'sm', label: 'Rajshahi' },
+              { top: '65%', left: '35%', size: 'sm', label: 'Khulna' },
+              { top: '72%', left: '52%', size: 'sm', label: 'Barishal' },
+              { top: '20%', left: '44%', size: 'sm', label: 'Mymensingh' },
+              { top: '10%', left: '35%', size: 'sm', label: 'Rangpur' },
+            ].map((dot) => (
+              <div
+                key={dot.label}
+                className="absolute flex flex-col items-center gap-1 group"
+                style={{ top: dot.top, left: dot.left }}
+              >
+                <div className={`relative ${dot.size === 'lg' ? 'w-4 h-4' : dot.size === 'md' ? 'w-3 h-3' : 'w-2 h-2'}`}>
+                  <span className="absolute inset-0 rounded-full bg-red-500 opacity-40 animate-ping" />
+                  <span className={`relative block rounded-full bg-red-500 ${dot.size === 'lg' ? 'w-4 h-4' : dot.size === 'md' ? 'w-3 h-3' : 'w-2 h-2'}`} />
+                </div>
+                <span className="text-[9px] text-slate-700 dark:text-white/60 font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 dark:bg-slate-900/80 px-1.5 py-0.5 rounded">
+                  {dot.label}
+                </span>
+              </div>
+            ))}
+
+            {/* Center label */}
+            <div className="relative text-center z-10 pointer-events-none">
+              <p className="text-8xl font-black tracking-widest select-none bg-gradient-to-b from-white/25 to-white/5 bg-clip-text text-transparent">BD</p>
+              <p className="text-xs font-semibold tracking-[0.3em] text-white/30 uppercase -mt-2">Bangladesh</p>
+            </div>
+
+            {/* Gradient overlay */}
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none" />
+
+            {/* Coverage badge */}
+              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-red-500/30 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              <span className="text-white text-xs font-semibold">{getText(lang, 'coverage.badge')}</span>
+            </div>
+          </div>
+          </Reveal>
+
+          {/* Right — Stats + District Tags */}
+          <Reveal direction="right" delay={150}>
+          <div>
+            {/* Coverage stat cards */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {coverageStats.map((s) => (
+                <div key={s.label} className="rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/[0.08] p-5 text-center hover:border-red-500/20 transition-colors duration-300">
+                  <p className="text-3xl font-black bg-gradient-to-r from-red-400 to-amber-300 bg-clip-text text-transparent mb-1">{s.value}</p>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm">{s.label}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* District tags */}
+            <div className="mb-8">
+              <p className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-4">{getText(lang, 'coverage.majorAreas')}</p>
+              <div className="flex flex-wrap gap-2">
+                {districts.map((d) => (
+                  <span
+                    key={d}
+                    className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-white/[0.07] text-slate-600 dark:text-slate-300 text-xs font-medium hover:border-red-500/30 hover:text-red-600 dark:hover:text-white transition-all duration-200 cursor-default"
+                  >
+                    {d}
+                  </span>
+                ))}
+                <span className="px-3 py-1.5 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium">
+                  +44 more →
+                </span>
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 text-white font-semibold text-sm hover:from-red-500 hover:via-red-400 hover:to-orange-400 shadow-lg shadow-orange-500/20 transition-all duration-300 active:scale-95"
+            >
+              {getText(lang, 'coverage.checkAvailability')}
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+          </Reveal>
+        </div>
+      </Container>
+    </Section>
+  )
+}

@@ -1,0 +1,106 @@
+import { useState, lazy, Suspense } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
+import { LanguageProvider } from './context/LanguageContext'
+import TopBar from './components/layout/TopBar'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import FloatingButtons from './components/layout/FloatingButtons'
+import Hero from './components/sections/Hero'
+import Services from './components/sections/Services'
+import Stats from './components/sections/Stats'
+import WhyChooseUs from './components/sections/WhyChooseUs'
+import Coverage from './components/sections/Coverage'
+import HowItWorks from './components/sections/HowItWorks'
+import Pricing from './components/sections/Pricing'
+import Testimonials from './components/sections/Testimonials'
+import Blog from './components/sections/Blog'
+import FAQ from './components/sections/FAQ'
+import CTA from './components/sections/CTA'
+import Contact from './components/sections/Contact'
+const HomeInternetPage      = lazy(() => import('./pages/HomeInternetPage'))
+const CorporateInternetPage = lazy(() => import('./pages/CorporateInternetPage'))
+const AboutPage             = lazy(() => import('./pages/AboutPage'))
+const SelfCornerPage        = lazy(() => import('./pages/SelfCornerPage'))
+const PayBillPage           = lazy(() => import('./pages/PayBillPage'))
+const ContactPage           = lazy(() => import('./pages/ContactPage'))
+const DataConnectivityPage  = lazy(() => import('./pages/DataConnectivityPage'))
+const IpTelephonyPage       = lazy(() => import('./pages/IpTelephonyPage'))
+const SmsServicePage        = lazy(() => import('./pages/SmsServicePage'))
+const DomainHostingPage     = lazy(() => import('./pages/DomainHostingPage'))
+const ManagedServicesPage   = lazy(() => import('./pages/ManagedServicesPage'))
+const BlogPage              = lazy(() => import('./pages/BlogPage'))
+
+function PageLoader() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-slate-900">
+      <div className="flex flex-col items-center gap-4">
+        <div className="w-10 h-10 rounded-full border-4 border-slate-200 dark:border-slate-700 border-t-red-500 animate-spin" />
+        <p className="text-sm text-slate-400 dark:text-slate-500 font-medium">Loading…</p>
+      </div>
+    </div>
+  )
+}
+
+function HomePage({ topBarOpen }) {
+  return (
+    <main>
+      <Hero topBarVisible={topBarOpen} />
+      <Services />
+      <Stats />
+      <WhyChooseUs />
+      <Coverage />
+      <HowItWorks />
+      <Pricing />
+      <Testimonials />
+      <Blog />
+      <FAQ />
+      <CTA />
+      <Contact />
+    </main>
+  )
+}
+
+function AppInner() {
+  const [topBarOpen, setTopBarOpen] = useState(true)
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-slate-900 overflow-x-hidden transition-colors duration-300">
+      <TopBar show={topBarOpen} onDismiss={() => setTopBarOpen(false)} />
+      <Navbar topBarVisible={topBarOpen} />
+      <Suspense fallback={<PageLoader />}>
+      <Routes>
+        <Route path="/" element={<HomePage topBarOpen={topBarOpen} />} />
+        <Route path="/home-internet" element={<HomeInternetPage />} />
+        <Route path="/corporate-internet" element={<CorporateInternetPage />} />
+        <Route path="/about-us" element={<AboutPage />} />
+        <Route path="/self-corner" element={<SelfCornerPage />} />
+        <Route path="/pay-bill" element={<PayBillPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/data-connectivity" element={<DataConnectivityPage />} />
+        <Route path="/ip-telephony" element={<IpTelephonyPage />} />
+        <Route path="/sms-service" element={<SmsServicePage />} />
+        <Route path="/domain-hosting" element={<DomainHostingPage />} />
+        <Route path="/managed-services" element={<ManagedServicesPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="*" element={<HomePage topBarOpen={topBarOpen} />} />
+      </Routes>
+      </Suspense>
+      <Footer />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ThemeProvider>
+        <LanguageProvider>
+          <AppInner />
+        </LanguageProvider>
+      </ThemeProvider>
+    </BrowserRouter>
+  )
+}
+
