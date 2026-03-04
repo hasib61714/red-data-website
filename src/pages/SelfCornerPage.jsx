@@ -24,8 +24,8 @@ export default function SelfCornerPage() {
       <PageMeta title="Self Corner" description="Manage your Red Data account, pay bills, view usage, and raise support tickets from our customer self-service portal." />
 
       {/* ── Hero ── */}
-      <div className="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-900 pt-36 pb-14 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-indigo-600/20 blur-3xl pointer-events-none" />
+      <div className="bg-gradient-to-br from-slate-900 via-red-950 to-slate-900 pt-36 pb-14 relative overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-red-600/10 blur-3xl pointer-events-none" />
         <Container>
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
@@ -34,13 +34,13 @@ export default function SelfCornerPage() {
             <span className="text-white font-medium">Self Corner</span>
           </nav>
           <div className="text-center max-w-2xl mx-auto">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
               Customer Portal
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               Self{' '}
-              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent">
                 Corner
               </span>
             </h1>
@@ -63,13 +63,13 @@ export default function SelfCornerPage() {
                 <div className="flex border-b border-slate-100 dark:border-slate-700/60">
                   <button
                     onClick={() => setTab('login')}
-                    className={`flex-1 py-4 text-sm font-bold transition-all ${tab === 'login' ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 -mb-px' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+                    className={`flex-1 py-4 text-sm font-bold transition-all ${tab === 'login' ? 'text-red-600 dark:text-red-400 border-b-2 border-red-600 dark:border-red-400 -mb-px' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
                   >
                     Sign In
                   </button>
                   <button
                     onClick={() => setTab('register')}
-                    className={`flex-1 py-4 text-sm font-bold transition-all ${tab === 'register' ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 -mb-px' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+                    className={`flex-1 py-4 text-sm font-bold transition-all ${tab === 'register' ? 'text-red-600 dark:text-red-400 border-b-2 border-red-600 dark:border-red-400 -mb-px' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
                   >
                     Register
                   </button>
@@ -90,7 +90,7 @@ export default function SelfCornerPage() {
                             onChange={handleChange}
                             placeholder="Enter your User ID"
                             required
-                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                           />
                         </div>
                         <div>
@@ -102,21 +102,21 @@ export default function SelfCornerPage() {
                             onChange={handleChange}
                             placeholder="Enter your password"
                             required
-                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                           />
                         </div>
                         <div className="flex items-center justify-between text-xs">
                           <label className="flex items-center gap-2 text-slate-500 dark:text-slate-400 cursor-pointer">
-                            <input type="checkbox" className="rounded border-slate-300 text-indigo-600" />
+                            <input type="checkbox" className="rounded border-slate-300 text-red-600" />
                             Remember me
                           </label>
-                          <button type="button" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">
+                          <button type="button" className="text-red-600 dark:text-red-400 hover:underline font-medium">
                             Forgot Password?
                           </button>
                         </div>
                         <button
                           type="submit"
-                          className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all"
+                          className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 active:scale-95 text-white font-bold text-sm shadow-lg shadow-red-600/30 transition-all"
                         >
                           Sign In to Portal
                         </button>
@@ -129,17 +129,17 @@ export default function SelfCornerPage() {
                       <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
                           <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Full Name</label>
-                          <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Your full name" required className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" />
+                          <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Your full name" required className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all" />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Phone Number</label>
-                          <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="01XXXXXXXXX" required className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" />
+                          <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="01XXXXXXXXX" required className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all" />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Email Address</label>
-                          <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="email@example.com" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" />
+                          <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="email@example.com" className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all" />
                         </div>
-                        <button type="submit" className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all">
+                        <button type="submit" className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 active:scale-95 text-white font-bold text-sm shadow-lg shadow-red-600/30 transition-all">
                           Create Account
                         </button>
                       </form>
@@ -149,7 +149,7 @@ export default function SelfCornerPage() {
                   <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-700/60">
                     <p className="text-center text-xs text-slate-400">
                       Need help?{' '}
-                      <a href="tel:+8809640112233" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">
+                      <a href="tel:+8809640112233" className="text-red-600 dark:text-red-400 hover:underline font-medium">
                         Call 09640-112233
                       </a>
                     </p>
@@ -161,13 +161,13 @@ export default function SelfCornerPage() {
             {/* Right: Features */}
             <div className="flex-1">
               <div className="mb-8">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20 mb-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
                   Portal Features
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
                   Everything you need{' '}
-                  <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-red-500 to-rose-400 bg-clip-text text-transparent">
                     in one place
                   </span>
                 </h2>
@@ -177,8 +177,8 @@ export default function SelfCornerPage() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {features.map((f) => (
-                  <div key={f.title} className="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-indigo-200 dark:hover:border-indigo-500/30 hover:shadow-md transition-all group">
-                    <div className="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                  <div key={f.title} className="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">
+                    <div className="w-11 h-11 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
                       {f.icon}
                     </div>
                     <div>
