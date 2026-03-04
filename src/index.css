@@ -5,8 +5,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* offset for fixed topbar (32px) + navbar (48px) */
-    scroll-padding-top: 88px;
+    /* offset for dark contact strip (36px) + main navbar (56px) */
+    scroll-padding-top: 92px;
   }
 
   body {
