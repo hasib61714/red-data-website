@@ -41,7 +41,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
   const pathname = location.pathname
   const isServiceActive = () => serviceItems.some(item => pathname === item.to)
   const mobileLinkCls = (active = false) =>
-    `flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+    `flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
       active
         ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10'
         : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.07]'
@@ -83,7 +83,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
   }, [])
 
   const linkCls = (active = false) =>
-    `relative px-2.5 py-1.5 rounded-lg text-[11.5px] font-medium transition-all duration-200 whitespace-nowrap ${
+    `relative px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold transition-all duration-200 whitespace-nowrap ${
       active
         ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10'
         : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07]'
@@ -282,7 +282,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               to="/pay-bill"
               className={pathname === '/pay-bill'
                 ? 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/25 transition-all duration-200'
-                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-medium whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
+                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
               }
             >
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -306,7 +306,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               to="/self-corner"
               className={pathname === '/self-corner'
                 ? 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/25 transition-all duration-200'
-                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-medium whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
+                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
               }
             >
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -407,7 +407,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
             {/* Services accordion */}
             <div>
               <button onClick={() => setMobileServicesOpen(v => !v)}
-                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
                   isServiceActive()
                     ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10'
                     : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.07]'
@@ -425,12 +425,12 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
                       onClick={() => { setMobileServicesOpen(false); setMenuOpen(false) }}
                       className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm transition-all ${
                         pathname === item.to
-                          ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10 font-medium'
+                          ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06]'
                       }`}>
                       <span className="text-base flex-shrink-0">{item.icon}</span>
                       <div>
-                        <p className="font-medium text-xs leading-snug">{item.label}</p>
+                        <p className="font-semibold text-xs leading-snug">{item.label}</p>
                         <p className="text-[10px] text-slate-400 leading-snug">{item.desc}</p>
                       </div>
                     </Link>
