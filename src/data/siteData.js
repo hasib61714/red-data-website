@@ -771,6 +771,34 @@ export const aboutPageData = {
     { name: 'BIIN',                  img: 'https://reddata.com.bd/images/clients/BIIN.png' },
     { name: 'SMART',                 img: 'https://reddata.com.bd/images/clients/SMART.png' },
   ],
+  story: {
+    heading: 'Empowering Bangladesh\'s Digital Future',
+    paragraphs: [
+      'With a robust network infrastructure and strategic partnerships, Red Data ensures seamless connectivity and exceptional performance. Leveraging state-of-the-art technologies, Red Data delivers high-speed internet access, enabling individuals and businesses to stay connected, collaborate, and thrive in today\'s digital landscape.',
+      'Committed to customer satisfaction and industry-leading service quality, Red Data (Pvt.) Limited continuously invests in infrastructure development, network expansion, and talent acquisition. With a dedicated team of professionals, Red Data strives to exceed customer expectations and drive the digital transformation of Bangladesh.',
+      'As the digital landscape evolves, Red Data (Pvt.) Limited remains steadfast in its mission to empower connectivity, enabling individuals, businesses, and communities to embrace the endless possibilities of the digital world.',
+    ],
+    ctaServices: { label: 'Our Services', href: '/corporate-internet' },
+    ctaContact:  { label: 'Contact Us',   href: '/#contact' },
+  },
+  companyCards: [
+    {
+      icon: '📍',
+      title: 'Head Office',
+      lines: ['Level 19, SimpleTree Attalika,', '134 Gulshan Avenue,', 'Dhaka-1212, Bangladesh'],
+    },
+    {
+      icon: '🏢',
+      title: 'Registered Address',
+      lines: ['House 5/A, Road 2, Lane 3,', 'Block G, Halishahar,', 'Chittagong, Bangladesh'],
+    },
+  ],
+  cta: {
+    heading: 'Partner with Red Data today',
+    subheading: 'Join 10,000+ satisfied customers across Bangladesh.',
+    cta1: { label: 'Get in Touch', href: '/#contact' },
+    cta2: { label: '← Back Home', href: '/' },
+  },
 }
 
 // ─── Data Connectivity Page ───────────────────────────────────────────────────
@@ -979,6 +1007,28 @@ export const selfCornerData = {
     { icon: '🔄', title: 'Plan Upgrade / Change', desc: 'Easily upgrade or switch your internet plan based on your current needs.' },
     { icon: '🎫', title: 'Support Tickets', desc: 'Raise and track support requests directly from your portal without calling.' },
     { icon: '📡', title: 'Connection Status', desc: 'Monitor your connection health and get real-time network status updates.' },
+  ],
+}
+
+// ─── Home Internet Page ─────────────────────────────────────────────────────
+export const homeInternetPageData = {
+  plans: [
+    { name: 'Rose',     price: 525,  base: 500,  vat: 25,  speed: 15,  oneTime: 2500, talkTime: 50,  ott: 0, tag: 'Starter',          tagColor: 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300',         popular: false, color: 'from-pink-400 to-rose-500' },
+    { name: 'Cherry',   price: 630,  base: 600,  vat: 30,  speed: 20,  oneTime: 2500, talkTime: 50,  ott: 0, tag: 'Most Popular',      tagColor: 'bg-red-100 text-red-600 dark:bg-red-500/20 dark:text-red-300',             popular: true,  color: 'from-red-500 to-rose-600' },
+    { name: 'Raspberry',price: 735,  base: 700,  vat: 35,  speed: 30,  oneTime: 2000, talkTime: 100, ott: 0, tag: 'Customer Favorite', tagColor: 'bg-orange-100 text-orange-600 dark:bg-orange-500/20 dark:text-orange-300', popular: false, color: 'from-rose-500 to-red-600' },
+    { name: 'Maroon',   price: 840,  base: 800,  vat: 40,  speed: 40,  oneTime: 1500, talkTime: 150, ott: 1, tag: 'Family Plan',       tagColor: 'bg-purple-100 text-purple-600 dark:bg-purple-500/20 dark:text-purple-300', popular: false, color: 'from-rose-600 to-red-700' },
+    { name: 'Scarlet',  price: 1050, base: 1000, vat: 50,  speed: 50,  oneTime: 1000, talkTime: 200, ott: 1, tag: 'Affordable',        tagColor: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300', popular: false, color: 'from-red-500 to-red-700' },
+    { name: 'Crimson',  price: 1260, base: 1200, vat: 60,  speed: 60,  oneTime: 1000, talkTime: 250, ott: 1, tag: 'Popular',           tagColor: 'bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300',             popular: false, color: 'from-red-600 to-rose-800' },
+    { name: 'Ruby',     price: 1890, base: 1800, vat: 90,  speed: 70,  oneTime: 500,  talkTime: 300, ott: 2, tag: 'Streaming Friendly',tagColor: 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300',         popular: false, color: 'from-rose-700 to-red-900' },
+    { name: 'Carmine',  price: 2520, base: 2400, vat: 120, speed: 100, oneTime: 0,    talkTime: 450, ott: 2, tag: 'Best Value',        tagColor: 'bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-300',     popular: false, color: 'from-red-700 to-rose-900' },
+  ],
+  benefits: [
+    { icon: '⚡', title: 'Blazing Fast Speeds',  desc: 'Unmatched download & upload speeds for a smooth online experience.' },
+    { icon: '🛡️', title: 'Guaranteed Uptime',    desc: '99.9% uptime SLA with proactive monitoring round the clock.' },
+    { icon: '♾️', title: 'Unlimited Data',        desc: 'No data cap, no throttling — stream, game, and browse freely.' },
+    { icon: '📞', title: '24/7 Support',          desc: 'Dedicated support team available any hour of the day.' },
+    { icon: '💰', title: 'Free Installation',     desc: 'No hidden charges — professional install at zero cost.' },
+    { icon: '📡', title: 'Fiber Optic Network',   desc: 'Built on future-proof fiber infrastructure.' },
   ],
 }
 
