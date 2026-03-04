@@ -181,9 +181,9 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
       {/* ── Main Nav Header — always fixed, adjusts top ──────────────────── */}
       <header
         style={{ top: barsHidden ? 0 : barsHeight }}
-        className={`fixed left-0 right-0 z-50 transition-all duration-300 border-b ${
+        className={`fixed left-0 right-0 z-50 transition-[background-color,box-shadow,border-color] duration-200 border-b ${
           scrolled
-            ? 'bg-white/95 dark:bg-slate-900/98 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-black/40 border-slate-200/80 dark:border-white/10'
+            ? 'bg-white/95 backdrop-blur-xl dark:bg-slate-900 shadow-lg shadow-black/5 dark:shadow-black/60 border-slate-200/80 dark:border-white/10'
             : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-white/[0.08]'
         }`}
       >
