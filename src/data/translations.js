@@ -2,7 +2,7 @@
 export const t = {
   en: {
     // TopBar
-    topbar: 'Special Offer: Free installation + 1 month free on all plans this March.',
+    topbar: 'Special Offer: Free installation + 1 month free on all plans this March 2026.',
     topbarCta: 'Grab it now →',
 
     // Navbar
@@ -145,14 +145,14 @@ export const t = {
     // Footer
     footer: {
       followUs: 'Follow Us',
-      copyright: '© 2025 Red Data Ltd. All rights reserved.',
+      copyright: '© 2026 Red Data Ltd. All rights reserved.',
       btrc: 'BTRC Licensed ISP',
     },
   },
 
   bn: {
     // TopBar
-    topbar: 'বিশেষ অফার: এই মার্চে সকল প্ল্যানে বিনামূল্যে ইনস্টলেশন + ১ মাস ফ্রি।',
+    topbar: 'বিশেষ অফার: মার্চ ২০২৬-এ সকল প্ল্যানে বিনামূল্যে ইনস্টলেশন + ১ মাস ফ্রি।',
     topbarCta: 'এখনই নিন →',
 
     // Navbar
@@ -295,7 +295,7 @@ export const t = {
     // Footer
     footer: {
       followUs: 'আমাদের অনুসরণ করুন',
-      copyright: '© ২০২৫ রেড ডাটা লিমিটেড। সকল স্বত্ব সংরক্ষিত।',
+      copyright: '© ২০২৬ রেড ডাটা লিমিটেড। সকল স্বত্ব সংরক্ষিত।',
       btrc: 'BTRC লাইসেন্সপ্রাপ্ত ISP',
     },
   },
