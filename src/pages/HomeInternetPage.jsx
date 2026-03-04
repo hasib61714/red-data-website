@@ -334,6 +334,8 @@ export default function HomeInternetPage() {
                   src="https://reddata.com.bd/images/bd.png"
                   alt="Bangladesh coverage map"
                   className="w-64 lg:w-80 drop-shadow-2xl opacity-90"
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => { e.target.style.display = 'none' }}
                 />
                 <div className="absolute inset-0 rounded-full bg-red-500/10 blur-3xl" />
