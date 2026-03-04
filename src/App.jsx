@@ -2,7 +2,6 @@ import { useState, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import { LanguageProvider } from './context/LanguageContext'
-import TopBar from './components/layout/TopBar'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import FloatingButtons from './components/layout/FloatingButtons'
@@ -66,8 +65,7 @@ function AppInner() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 overflow-x-hidden transition-colors duration-300">
-      <TopBar show={topBarOpen} onDismiss={() => setTopBarOpen(false)} />
-      <Navbar topBarVisible={topBarOpen} />
+      <Navbar topBarOpen={topBarOpen} onDismiss={() => setTopBarOpen(false)} />
       <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route path="/" element={<HomePage topBarOpen={topBarOpen} />} />

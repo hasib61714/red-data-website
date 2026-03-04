@@ -3,28 +3,9 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import { ipTelephonyData } from '../data/siteData'
 
-const features = [
-  { icon: '🏢', title: 'Hosted & On-Premise IPPBX', desc: 'Deploy a full-featured IP PBX either hosted in our cloud or on-premise at your office — your choice of control and scale.' },
-  { icon: '☁️', title: 'Cloud PBX Service', desc: 'Fully managed cloud-based PBX eliminating hardware costs while delivering enterprise-grade telephony features.' },
-  { icon: '📞', title: 'Call Center Solution', desc: 'Complete inbound/outbound call center platform with agent management, queue analytics, and supervisor dashboards.' },
-  { icon: '🤖', title: 'Dynamic IVR', desc: 'Multi-level Interactive Voice Response with real-time routing logic, language support, and seamless CRM hooks.' },
-  { icon: '🔢', title: 'Short Code Parking', desc: 'Dedicated short codes for marketing campaigns, hotlines, and internal extensions that are easy to remember.' },
-  { icon: '📟', title: 'Analog PBX Integration', desc: 'Bridge your legacy analog PBX infrastructure into the VoIP world with zero downtime migration paths.' },
-  { icon: '🆓', title: 'Toll Free Service', desc: 'Provision toll-free numbers so customers can call your business at no charge — ideal for support and sales.' },
-  { icon: '🔗', title: 'CRM Integration', desc: 'Native connectors for popular CRMs (Salesforce, Zoho, HubSpot) enabling click-to-dial and call logging.' },
-  { icon: '🌐', title: 'SIP Trunk', desc: 'Replace costly PSTN lines with scalable SIP trunks over our high-quality IP network with competitive per-minute rates.' },
-  { icon: '🃏', title: 'Hunting Group', desc: 'Distribute incoming calls intelligently across agent groups using round-robin, simultaneous, or priority rules.' },
-  { icon: '📲', title: 'Automated Dialing & Call Distribution', desc: 'Predictive, progressive, and preview auto-dialers with automatic call distribution for maximum agent productivity.' },
-  { icon: '↪️', title: 'Call Forwarding', desc: 'Unconditional, busy, and no-answer forwarding rules configurable per extension — stay reachable everywhere.' },
-]
-
-const stats = [
-  { value: '12+', label: 'Features' },
-  { value: 'HD', label: 'Voice Quality' },
-  { value: '99.9%', label: 'Uptime SLA' },
-  { value: '24/7', label: 'Support' },
-]
+const { features, stats } = ipTelephonyData
 
 export default function IpTelephonyPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])

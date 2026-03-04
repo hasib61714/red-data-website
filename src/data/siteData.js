@@ -30,6 +30,45 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
+// ─── Navbar service dropdown items (router Links) ────────────────────────────
+export const navServiceItems = [
+  { label: 'Corporate Internet', to: '/corporate-internet', icon: '🏢', desc: 'Dedicated enterprise bandwidth' },
+  { label: 'Home Internet',      to: '/home-internet',      icon: '🏠', desc: 'High-speed residential plans' },
+  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: '🔗', desc: 'Fiber-backed inter-office links' },
+  { label: 'IP Telephony',       to: '/ip-telephony',       icon: '📞', desc: 'VoIP & cloud PBX solutions' },
+  { label: 'SMS Service',        to: '/sms-service',        icon: '💬', desc: 'Bulk messaging & OTP gateway' },
+  { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: '🌐', desc: 'Domains, NVMe hosting & SSL' },
+  { label: 'Managed Services',   to: '/managed-services',   icon: '🛡️', desc: '24/7 IT infrastructure management' },
+]
+
+// ─── Contact Bar (top dark strip) ────────────────────────────────────────────
+export const contactBarData = {
+  phone: { display: '+880-9640-112233', raw: '+8809640112233' },
+  email: 'info@reddata.com.bd',
+  socials: [
+    {
+      label: 'Facebook',
+      href: 'https://www.facebook.com/profile.php?id=61556093758540',
+      path: 'M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z',
+    },
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/red-data',
+      path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
+    },
+    {
+      label: 'WhatsApp',
+      href: 'https://wa.me/+8801971521964',
+      path: 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z',
+    },
+    {
+      label: 'YouTube',
+      href: 'https://www.youtube.com/@reddata',
+      path: 'M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
+    },
+  ],
+}
+
 // ─── Hero ────────────────────────────────────────────────────────────────────
 export const heroData = {
   cta1: { label: 'Explore Plans', href: '#pricing' },
@@ -459,16 +498,20 @@ export const pricingData = {
   plans: [
     {
       name: 'Raspberry',
+      tag: 'Customer Favorite',
+      tag_bn: 'গ্রাহক পছন্দের',
       price: '৳735',
+      vatBreakdown: '৳700 + ৳35 (5% VAT)',
+      vatBreakdown_bn: '৳৭০০ + ৳৩৫ (৫% ভ্যাট)',
       period: '/month',
       period_bn: '/মাস',
       oneTime: '৳2,000 one-time setup',
       oneTime_bn: '৳২,০০০ এককালীন সেটআপ',
       bandwidth: '30 Mbps',
-      popular: false,
+      popular: true,
       features: [
         '30 Mbps Bandwidth',
-        'Buffer-less Social & YouTube',
+        'Buffer-less social media & YouTube',
         'Unlimited Device Support',
         '100 Min TalkTime',
         '24/7 Customer Care',
@@ -476,7 +519,7 @@ export const pricingData = {
       ],
       features_bn: [
         '৩০ Mbps ব্যান্ডউইথ',
-        'বাফার-মুক্ত সোশ্যাল ও YouTube',
+        'বাফার-মুক্ত সোশ্যাল মিডিয়া ও YouTube',
         'অসীমিত ডিভাইস সাপোর্ট',
         '১০০ মিন ট্যালকটাইম',
         '২৪/৭ গ্রাহক সেবা',
@@ -487,16 +530,20 @@ export const pricingData = {
     },
     {
       name: 'Maroon',
+      tag: 'Family Plan',
+      tag_bn: 'ফ্যামিলি প্ল্যান',
       price: '৳840',
+      vatBreakdown: '৳800 + ৳40 (5% VAT)',
+      vatBreakdown_bn: '৳৮০০ + ৳৪০ (৫% ভ্যাট)',
       period: '/month',
       period_bn: '/মাস',
       oneTime: '৳1,500 one-time setup',
       oneTime_bn: '৳১,৫০০ এককালীন সেটআপ',
       bandwidth: '40 Mbps',
-      popular: true,
+      popular: false,
       features: [
         '40 Mbps Bandwidth',
-        'Buffer-less Social & YouTube',
+        'Buffer-less social media & YouTube',
         'Unlimited Device Support',
         '150 Min TalkTime',
         '1 OTT Subscription',
@@ -504,7 +551,7 @@ export const pricingData = {
       ],
       features_bn: [
         '৪০ Mbps ব্যান্ডউইথ',
-        'বাফার-মুক্ত সোশ্যাল ও YouTube',
+        'বাফার-মুক্ত সোশ্যাল মিডিয়া ও YouTube',
         'অসীমিত ডিভাইস সাপোর্ট',
         '১৫০ মিন ট্যালকটাইম',
         '১টি OTT সাবস্ক্রিপশন',
@@ -515,7 +562,10 @@ export const pricingData = {
     },
     {
       name: 'Scarlet',
+      tag: '',
       price: '৳1,050',
+      vatBreakdown: '৳1,000 + ৳50 (5% VAT)',
+      vatBreakdown_bn: '৳১,০০০ + ৳৫০ (৫% ভ্যাট)',
       period: '/month',
       period_bn: '/মাস',
       oneTime: '৳1,000 one-time setup',
@@ -524,7 +574,7 @@ export const pricingData = {
       popular: false,
       features: [
         '50 Mbps Bandwidth',
-        'Buffer-less Social & YouTube',
+        'Buffer-less social media & YouTube',
         'Unlimited Device Support',
         '200 Min TalkTime',
         '1 OTT Subscription',
@@ -532,7 +582,7 @@ export const pricingData = {
       ],
       features_bn: [
         '৫০ Mbps ব্যান্ডউইথ',
-        'বাফার-মুক্ত সোশ্যাল ও YouTube',
+        'বাফার-মুক্ত সোশ্যাল মিডিয়া ও YouTube',
         'অসীমিত ডিভাইস সাপোর্ট',
         '২০০ মিন ট্যালকটাইম',
         '১টি OTT সাবস্ক্রিপশন',
@@ -672,3 +722,263 @@ export const footerData = {
   ],
   copyright: '© 2026 Red Data (Pvt.) Limited. All rights reserved.',
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PAGE-SPECIFIC DATA
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─── About Page ──────────────────────────────────────────────────────────────
+export const aboutPageData = {
+  stats: [
+    { num: '2012',    label: 'Founded' },
+    { num: '12+',     label: 'Years of Experience' },
+    { num: '10,000+', label: 'Happy Clients' },
+    { num: '99.9%',   label: 'Uptime SLA' },
+  ],
+  services: [
+    { icon: '🌐', label: 'Internet & Data Connectivity' },
+    { icon: '📞', label: 'IP Telephony Service' },
+    { icon: '💬', label: 'SMS Service' },
+    { icon: '☁️', label: 'Cloud & Email Solution' },
+    { icon: '💻', label: 'Website & Software Development' },
+    { icon: '🔧', label: 'Network Hardware' },
+    { icon: '🛡️', label: 'Managed Services' },
+  ],
+  clients: [
+    { name: 'UCB',                   img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F1UCB.png&w=640&q=75' },
+    { name: 'City Bank',             img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F2CityBank.png&w=640&q=75' },
+    { name: 'Prime Bank',            img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F3PrimeBank.png&w=640&q=75' },
+    { name: 'DBBL',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F4DBBL.png&w=640&q=75' },
+    { name: 'Mercantile Bank',       img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F5Mercantilebank.png&w=640&q=75' },
+    { name: 'Shahjalal Islami Bank', img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F6ShahjalalIslamiBank.png&w=640&q=75' },
+    { name: 'Shimanto Bank',         img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F7ShimantoBank.png&w=640&q=75' },
+    { name: 'Citizens Bank',         img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F8CitizensBank.png&w=640&q=75' },
+    { name: 'Upay',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F9Upay.png&w=640&q=75' },
+    { name: 'Genex',                 img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F10Genex.png&w=640&q=75' },
+    { name: 'Digicon',               img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F11Digicon.png&w=640&q=75' },
+    { name: 'Urmi',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2Furmi.png&w=640&q=75' },
+    { name: 'Bitopi Group',          img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F13BitopiGroup.png&w=640&q=75' },
+    { name: 'SSD Tech',              img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F14SSDTech.png&w=640&q=75' },
+    { name: 'Nextnet',               img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F15Nextnet.png&w=640&q=75' },
+    { name: 'CloudWell',             img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F16CloudWell.png&w=640&q=75' },
+    { name: 'EB Solution',           img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F17EBSolution.png&w=640&q=75' },
+    { name: 'SARBS Communication',   img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F18SARBSCommunication.png&w=640&q=75' },
+    { name: 'NRDS',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F19NRDS.png&w=640&q=75' },
+    { name: 'Wintel Limited',        img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F20WintelLimited.png&w=640&q=75' },
+    { name: 'Bangladesh Apparel',    img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F21BangladeshApparel.png&w=640&q=75' },
+    { name: 'AyAl',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FAyAl.png&w=640&q=75' },
+    { name: 'AyAl Tech',             img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FAyAlTech.png&w=640&q=75' },
+    { name: 'BIIN',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FBIIN.png&w=640&q=75' },
+    { name: 'SMART',                 img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FSMART.png&w=640&q=75' },
+  ],
+}
+
+// ─── Data Connectivity Page ───────────────────────────────────────────────────
+export const dataConnectivityData = {
+  features: [
+    { icon: '🔗', title: 'Point-to-Point & Multipoint Links', desc: 'Highly reliable dedicated data links connecting your branches and campuses with guaranteed bandwidth and zero congestion.' },
+    { icon: '🔒', title: 'VPN Services', desc: 'Secure encrypted Virtual Private Networks over our high-speed fiber backbone for safe inter-office and remote access.' },
+    { icon: '🌐', title: 'MPLS Network', desc: 'Layer 2 / Layer 3 resilient national MPLS next-generation network ensuring intelligent traffic routing and Quality of Service.' },
+    { icon: '🌑', title: 'Dark Fiber for Enterprises', desc: 'Lease unlit fiber strands and run your own networking equipment at full capacity — complete control over your last-mile infrastructure.' },
+    { icon: '📡', title: 'CP Network', desc: 'Carrier partner network spanning Grameenphone, Banglalink, Airtel, Robi, and Teletalk for maximum national reachability.' },
+    { icon: '🏗️', title: 'Backhaul Service', desc: 'Robust high-capacity backhaul links for ISPs, tower operators, and enterprise aggregation points across Bangladesh.' },
+  ],
+  stats: [
+    { value: '99.9%', label: 'Network Uptime SLA' },
+    { value: '24/7',  label: 'NOC Monitoring' },
+    { value: '5+',    label: 'Carrier Partners' },
+    { value: '10 Gbps', label: 'Backbone Capacity' },
+  ],
+}
+
+// ─── IP Telephony Page ────────────────────────────────────────────────────────
+export const ipTelephonyData = {
+  features: [
+    { icon: '🏢', title: 'Hosted & On-Premise IPPBX', desc: 'Deploy a full-featured IP PBX either hosted in our cloud or on-premise at your office — your choice of control and scale.' },
+    { icon: '☁️', title: 'Cloud PBX Service', desc: 'Fully managed cloud-based PBX eliminating hardware costs while delivering enterprise-grade telephony features.' },
+    { icon: '📞', title: 'Call Center Solution', desc: 'Complete inbound/outbound call center platform with agent management, queue analytics, and supervisor dashboards.' },
+    { icon: '🤖', title: 'Dynamic IVR', desc: 'Multi-level Interactive Voice Response with real-time routing logic, language support, and seamless CRM hooks.' },
+    { icon: '🔢', title: 'Short Code Parking', desc: 'Dedicated short codes for marketing campaigns, hotlines, and internal extensions that are easy to remember.' },
+    { icon: '📟', title: 'Analog PBX Integration', desc: 'Bridge your legacy analog PBX infrastructure into the VoIP world with zero downtime migration paths.' },
+    { icon: '🆓', title: 'Toll Free Service', desc: 'Provision toll-free numbers so customers can call your business at no charge — ideal for support and sales.' },
+    { icon: '🔗', title: 'CRM Integration', desc: 'Native connectors for popular CRMs (Salesforce, Zoho, HubSpot) enabling click-to-dial and call logging.' },
+    { icon: '🌐', title: 'SIP Trunk', desc: 'Replace costly PSTN lines with scalable SIP trunks over our high-quality IP network with competitive per-minute rates.' },
+    { icon: '🃏', title: 'Hunting Group', desc: 'Distribute incoming calls intelligently across agent groups using round-robin, simultaneous, or priority rules.' },
+    { icon: '📲', title: 'Automated Dialing & Call Distribution', desc: 'Predictive, progressive, and preview auto-dialers with automatic call distribution for maximum agent productivity.' },
+    { icon: '↪️', title: 'Call Forwarding', desc: 'Unconditional, busy, and no-answer forwarding rules configurable per extension — stay reachable everywhere.' },
+  ],
+  stats: [
+    { value: '12+', label: 'Features' },
+    { value: 'HD',  label: 'Voice Quality' },
+    { value: '99.9%', label: 'Uptime SLA' },
+    { value: '24/7',  label: 'Support' },
+  ],
+}
+
+// ─── SMS Service Page ─────────────────────────────────────────────────────────
+export const smsServiceData = {
+  features: [
+    { icon: '🔌', title: 'Easy API Integration', desc: 'Developer-friendly REST APIs with comprehensive documentation — integrate bulk SMS into any system in minutes.' },
+    { icon: '🖥️', title: 'User Friendly Customer Panel', desc: 'Intuitive web dashboard for non-technical users to send campaigns, view reports, and manage contacts without any coding.' },
+    { icon: '📋', title: 'Campaign & Template Management', desc: 'Create, schedule, and reuse SMS templates for recurring campaigns — segmentation and bulk import included.' },
+    { icon: '🗄️', title: 'Aggregator Plane', desc: 'Connected to all major operators through our aggregator layer ensuring maximum route coverage and reliability across Bangladesh.' },
+    { icon: '📍', title: 'Location Based SMS', desc: 'Target subscribers by geographic zone for hyper-local marketing campaigns and location-triggered notifications.' },
+    { icon: '📈', title: 'Highest Submit Rate', desc: 'Our direct operator connections deliver among the highest submit and delivery rates in the country with real-time status.' },
+    { icon: '💸', title: 'No Hidden Cost', desc: 'Transparent per-SMS pricing — no setup fees, no monthly minimums, no surprise charges. Pay only for what you send.' },
+    { icon: '🔑', title: 'Customer Driven API Key', desc: 'Each customer gets a dedicated API key with role-based access control and usage analytics in the dashboard.' },
+    { icon: '👨‍💻', title: 'Developer Friendly', desc: 'SDKs for PHP, Python, Node.js and Java alongside thorough Postman collections and sandbox environments.' },
+    { icon: '💼', title: 'Transactional SMS', desc: 'Mission-critical OTPs, alerts, and notifications delivered through a dedicated high-priority route with millisecond latency.' },
+  ],
+  useCases: [
+    { icon: '🏦', label: 'Banking & Finance' },
+    { icon: '🛒', label: 'E-Commerce' },
+    { icon: '🏥', label: 'Healthcare' },
+    { icon: '📦', label: 'Logistics' },
+    { icon: '🎓', label: 'Education' },
+    { icon: '🏢', label: 'Enterprises' },
+  ],
+}
+
+// ─── Domain & Hosting Page ────────────────────────────────────────────────────
+export const domainHostingData = {
+  features: [
+    { icon: '🌐', title: 'Domain Registration', desc: 'Register .com, .com.bd, .org, .net and all popular TLDs at competitive prices with free DNS management, privacy protection, and auto-renewal.' },
+    { icon: '☁️', title: 'Cloud Hosting', desc: 'Scalable cloud hosting with SSD storage, auto-scaling resources, free SSL, and one-click app installs — perfect for web & ecommerce.' },
+    { icon: '💾', title: 'Storage Solutions', desc: 'Flexible object and block storage options with redundant backups, geo-replication, and high-throughput access for business data.' },
+    { icon: '🖥️', title: 'Dedicated Servers', desc: 'Bare-metal dedicated servers with full root access, custom hardware configurations, and direct network hand-off in our Dhaka data center.' },
+    { icon: '🏗️', title: 'Network Infrastructure', desc: 'Enterprise-grade connectivity for your hosted services with redundant upstream links, BGP routing, and low-latency peering.' },
+    { icon: '🛡️', title: 'Security Measures', desc: 'DDoS mitigation, WAF, automated malware scanning, SSL certificates, and proactive vulnerability patching included on all plans.' },
+    { icon: '⚙️', title: 'Customization Options', desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.' },
+    { icon: '🔧', title: 'Management Tools', desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.' },
+  ],
+  plans: [
+    { name: 'Starter',    price: 'BDT 500',   period: '/month', features: ['1 Domain', '10 GB SSD Storage', '10 Email Accounts', 'Free SSL', '99.9% Uptime'] },
+    { name: 'Business',   price: 'BDT 1,200', period: '/month', features: ['5 Domains', '50 GB SSD Storage', 'Unlimited Emails', 'Free SSL + CDN', '99.9% Uptime', 'Daily Backup'], highlight: true },
+    { name: 'Enterprise', price: 'Custom',    period: 'Quote',  features: ['Unlimited Domains', 'Dedicated Storage', 'Custom Email Setup', 'DDoS Protection', '99.99% SLA', 'Managed Service'] },
+  ],
+}
+
+// ─── Managed Services Page ────────────────────────────────────────────────────
+export const managedServicesData = {
+  services: [
+    {
+      icon: '🌐',
+      title: 'Custom Network Management Service',
+      color: 'from-blue-500 to-blue-600',
+      bgColor: 'bg-blue-50 dark:bg-blue-500/10',
+      borderColor: 'border-blue-200 dark:border-blue-500/30',
+      desc: 'End-to-end monitoring, configuration, and optimisation of your entire network infrastructure — routers, switches, firewalls, and WAN links — proactively managed by our certified engineers.',
+      features: ['Proactive fault detection & resolution', '24/7 NOC monitoring', 'Network performance optimisation', 'Regular firmware & patch management', 'Detailed SLA reports & dashboards', 'Incident management & escalation'],
+    },
+    {
+      icon: '🛡️',
+      title: 'Managed Network Security Service',
+      color: 'from-red-500 to-rose-600',
+      bgColor: 'bg-red-50 dark:bg-red-500/10',
+      borderColor: 'border-red-200 dark:border-red-500/30',
+      desc: 'Comprehensive security management covering firewalls, intrusion detection, threat intelligence, and compliance — keeping your business protected around the clock.',
+      features: ['Firewall management & tuning', 'IDS / IPS monitoring', 'Security incident response', 'Vulnerability scanning & remediation', 'Compliance reporting (ISO 27001, BDRC)', 'DDoS protection & traffic scrubbing'],
+    },
+    {
+      icon: '💻',
+      title: 'Managed Software & Embedded System Development',
+      color: 'from-emerald-500 to-emerald-600',
+      bgColor: 'bg-emerald-50 dark:bg-emerald-500/10',
+      borderColor: 'border-emerald-200 dark:border-emerald-500/30',
+      desc: 'Full-lifecycle software and embedded system development from requirements analysis through to deployment and ongoing support — custom-built for your business needs.',
+      features: ['Custom software application development', 'Embedded & IoT system engineering', 'System integration & API development', 'Quality assurance & testing', 'Deployment & DevOps pipelines', 'Post-launch maintenance & support'],
+    },
+  ],
+  stats: [
+    { value: '24/7',  label: 'Managed Support' },
+    { value: '99.9%', label: 'Network Uptime' },
+    { value: '50+',   label: 'Enterprise Clients' },
+    { value: '10+',   label: 'Years Experience' },
+  ],
+}
+
+// ─── Blog Page ────────────────────────────────────────────────────────────────
+export const blogPostsData = [
+  {
+    id: 1,
+    date: 'June 2024',
+    category: 'Company News',
+    title: 'বাংলাদেশে রেড ডাটা এর সেরা ইন্টারনেট এবং আইটি সেবা',
+    excerpt: 'রেড ডাটা লিমিটেড বাংলাদেশের সেরা ইন্টারনেট সেবা প্রদানকারী কোম্পানিগুলির মধ্যে একটি হিসেবে নিজেকে প্রতিষ্ঠিত করেছে। আমাদের হাই-স্পিড ফাইবার নেটওয়ার্ক এবং প্রিমিয়াম কানেক্টিভিটি সমাধান সম্পর্কে জানুন।',
+    author: 'Rajaul Hira',
+    readTime: '5 min read',
+    image: 'https://reddata.com.bd/_next/static/media/banner2.3d4b4f1c.jpg',
+    href: 'https://reddata.com.bd/blogs/1',
+    tag: 'Featured',
+    tagColor: 'bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-300',
+  },
+  {
+    id: 2,
+    date: 'May 2024',
+    category: 'Business',
+    title: 'The Benefits of Corporate Internet Services for Businesses in Bangladesh',
+    excerpt: 'Discover how dedicated corporate internet services with SLA-backed uptime can transform business productivity, enable remote work, and support digital transformation goals for Bangladeshi companies.',
+    author: 'Red Data Team',
+    readTime: '6 min read',
+    image: 'https://reddata.com.bd/_next/static/media/blog_two.fd98c990.jpg',
+    href: 'https://reddata.com.bd/blogs/2',
+    tag: 'Business',
+    tagColor: 'bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300',
+  },
+  {
+    id: 3,
+    date: 'April 2024',
+    category: 'Home Internet',
+    title: 'How to Choose the Best Home Internet Provider in Bangladesh',
+    excerpt: 'With multiple ISPs competing for your attention, choosing the right home internet provider can be overwhelming. This guide covers speeds, reliability, pricing, and customer support — what really matters.',
+    author: 'Red Data Team',
+    readTime: '7 min read',
+    image: 'https://reddata.com.bd/_next/static/media/blog.be34b0fd.jpg',
+    href: 'https://reddata.com.bd/blogs/3',
+    tag: 'Tips',
+    tagColor: 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-300',
+  },
+]
+
+// ─── Contact Page ─────────────────────────────────────────────────────────────
+export const contactPageData = {
+  methods: [
+    { icon: '✉️', label: 'Email', value: 'info@reddata.com.bd', href: 'mailto:info@reddata.com.bd', color: 'from-blue-500 to-blue-600', bg: 'bg-blue-50 dark:bg-blue-500/10', border: 'border-blue-200 dark:border-blue-500/30' },
+    { icon: '💬', label: 'WhatsApp', value: '+880 1971-521964', href: 'https://wa.me/+8801971521964', color: 'from-green-500 to-emerald-600', bg: 'bg-green-50 dark:bg-green-500/10', border: 'border-green-200 dark:border-green-500/30' },
+    { icon: '📞', label: 'Phone', value: '+880 9640-112233', href: 'tel:+8809640112233', color: 'from-red-500 to-rose-600', bg: 'bg-red-50 dark:bg-red-500/10', border: 'border-red-200 dark:border-red-500/30' },
+    { icon: '🎧', label: 'HelpDesk', value: '+880 9640-123123', href: 'tel:+8809640123123', color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-500/10', border: 'border-purple-200 dark:border-purple-500/30' },
+    { icon: '📘', label: 'Facebook', value: 'Red Data Limited', href: 'https://www.facebook.com/profile.php?id=61556093758540', color: 'from-[#1877F2] to-blue-600', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-700/40' },
+    { icon: '👥', label: 'Facebook Group', value: 'Red Data Community', href: 'http://www.facebook.com/groups/reddatalimited/', color: 'from-sky-500 to-blue-600', bg: 'bg-sky-50 dark:bg-sky-900/20', border: 'border-sky-200 dark:border-sky-700/40' },
+  ],
+}
+
+// ─── Pay Bill Page ────────────────────────────────────────────────────────────
+export const payBillData = {
+  paymentMethods: [
+    { name: 'bKash', color: 'from-pink-500 to-pink-600', bg: 'bg-pink-50 dark:bg-pink-500/10', border: 'border-pink-200 dark:border-pink-500/30', icon: '💳', number: '01XXXXXXXXX', steps: ['Open bKash app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'] },
+    { name: 'Nagad', color: 'from-orange-500 to-orange-600', bg: 'bg-orange-50 dark:bg-orange-500/10', border: 'border-orange-200 dark:border-orange-500/30', icon: '📱', number: '01XXXXXXXXX', steps: ['Open Nagad app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'] },
+    { name: 'Rocket (DBBL)', color: 'from-purple-500 to-purple-600', bg: 'bg-purple-50 dark:bg-purple-500/10', border: 'border-purple-200 dark:border-purple-500/30', icon: '🚀', number: '01XXXXXXXXX', steps: ['Dial *322#', 'Select "Send Money"', 'Enter merchant number', 'Enter amount & PIN'] },
+    { name: 'Internet Banking', color: 'from-blue-500 to-blue-600', bg: 'bg-blue-50 dark:bg-blue-500/10', border: 'border-blue-200 dark:border-blue-500/30', icon: '🏦', number: 'A/C: 12345678901', steps: ['Log in to your bank', 'Go to Fund Transfer', 'Add Red Data as payee', 'Transfer & note your User ID'] },
+    { name: 'Card Payment', color: 'from-emerald-500 to-emerald-600', bg: 'bg-emerald-50 dark:bg-emerald-500/10', border: 'border-emerald-200 dark:border-emerald-500/30', icon: '💳', number: 'VISA / Mastercard', steps: ['Go to Self Corner portal', 'Select "Pay Bill"', 'Choose Card option', 'Enter card details & pay'] },
+    { name: 'Cash / Walk-in', color: 'from-slate-500 to-slate-600', bg: 'bg-slate-50 dark:bg-slate-700/30', border: 'border-slate-200 dark:border-slate-600/50', icon: '🏢', number: 'Office Visit', steps: ['Visit our Gulshan office', 'Bring your User ID', 'Pay at the front desk', 'Collect your receipt'] },
+  ],
+  faqs: [
+    { q: 'When will my connection be restored after payment?', a: 'Your connection is typically restored within 5–15 minutes of payment confirmation. For bKash/Nagad payments, it may take up to 1 hour during off-hours.' },
+    { q: 'What information do I need to pay?', a: 'You need your Red Data User ID/Username. This is provided when you first subscribe and is also visible when you log into Self Corner.' },
+    { q: 'Is there a late payment fee?', a: 'Bills are due on the 1st of each month. A late fee may apply after the 7th. Contact support for waivers on exceptional cases.' },
+    { q: 'Can I pay for multiple months at once?', a: 'Yes, advance payment is accepted. Please mention it to our support team or note it in the transaction reference.' },
+  ],
+}
+
+// ─── Self Corner Page ─────────────────────────────────────────────────────────
+export const selfCornerData = {
+  features: [
+    { icon: '📊', title: 'Account Overview', desc: 'View your current plan, usage data, and subscription details at a glance.' },
+    { icon: '💳', title: 'Online Bill Payment', desc: 'Pay your monthly bills quickly and securely using bKash, Nagad, card, or bank transfer.' },
+    { icon: '📜', title: 'Payment History', desc: 'Access your complete payment records and download invoices anytime.' },
+    { icon: '🔄', title: 'Plan Upgrade / Change', desc: 'Easily upgrade or switch your internet plan based on your current needs.' },
+    { icon: '🎫', title: 'Support Tickets', desc: 'Raise and track support requests directly from your portal without calling.' },
+    { icon: '📡', title: 'Connection Status', desc: 'Monitor your connection health and get real-time network status updates.' },
+  ],
+}
+

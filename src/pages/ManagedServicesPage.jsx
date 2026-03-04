@@ -3,64 +3,9 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import { managedServicesData } from '../data/siteData'
 
-const services = [
-  {
-    icon: '🌐',
-    title: 'Custom Network Management Service',
-    color: 'from-blue-500 to-blue-600',
-    bgColor: 'bg-blue-50 dark:bg-blue-500/10',
-    borderColor: 'border-blue-200 dark:border-blue-500/30',
-    desc: 'End-to-end monitoring, configuration, and optimisation of your entire network infrastructure — routers, switches, firewalls, and WAN links — proactively managed by our certified engineers.',
-    features: [
-      'Proactive fault detection & resolution',
-      '24/7 NOC monitoring',
-      'Network performance optimisation',
-      'Regular firmware & patch management',
-      'Detailed SLA reports & dashboards',
-      'Incident management & escalation',
-    ],
-  },
-  {
-    icon: '🛡️',
-    title: 'Managed Network Security Service',
-    color: 'from-red-500 to-rose-600',
-    bgColor: 'bg-red-50 dark:bg-red-500/10',
-    borderColor: 'border-red-200 dark:border-red-500/30',
-    desc: 'Comprehensive security management covering firewalls, intrusion detection, threat intelligence, and compliance — keeping your business protected around the clock.',
-    features: [
-      'Firewall management & tuning',
-      'IDS / IPS monitoring',
-      'Security incident response',
-      'Vulnerability scanning & remediation',
-      'Compliance reporting (ISO 27001, BDRC)',
-      'DDoS protection & traffic scrubbing',
-    ],
-  },
-  {
-    icon: '💻',
-    title: 'Managed Software & Embedded System Development',
-    color: 'from-emerald-500 to-emerald-600',
-    bgColor: 'bg-emerald-50 dark:bg-emerald-500/10',
-    borderColor: 'border-emerald-200 dark:border-emerald-500/30',
-    desc: 'Full-lifecycle software and embedded system development from requirements analysis through to deployment and ongoing support — custom-built for your business needs.',
-    features: [
-      'Custom software application development',
-      'Embedded & IoT system engineering',
-      'System integration & API development',
-      'Quality assurance & testing',
-      'Deployment & DevOps pipelines',
-      'Post-launch maintenance & support',
-    ],
-  },
-]
-
-const stats = [
-  { value: '24/7', label: 'Managed Support' },
-  { value: '99.9%', label: 'Network Uptime' },
-  { value: '50+', label: 'Enterprise Clients' },
-  { value: '10+', label: 'Years Experience' },
-]
+const { services, stats } = managedServicesData
 
 export default function ManagedServicesPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])

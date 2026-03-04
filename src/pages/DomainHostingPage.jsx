@@ -3,55 +3,9 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import { domainHostingData } from '../data/siteData'
 
-const features = [
-  {
-    icon: '🌐',
-    title: 'Domain Registration',
-    desc: 'Register .com, .com.bd, .org, .net and all popular TLDs at competitive prices with free DNS management, privacy protection, and auto-renewal.',
-  },
-  {
-    icon: '☁️',
-    title: 'Cloud Hosting',
-    desc: 'Scalable cloud hosting with SSD storage, auto-scaling resources, free SSL, and one-click app installs — perfect for web & ecommerce.',
-  },
-  {
-    icon: '💾',
-    title: 'Storage Solutions',
-    desc: 'Flexible object and block storage options with redundant backups, geo-replication, and high-throughput access for business data.',
-  },
-  {
-    icon: '🖥️',
-    title: 'Dedicated Servers',
-    desc: 'Bare-metal dedicated servers with full root access, custom hardware configurations, and direct network hand-off in our Dhaka data center.',
-  },
-  {
-    icon: '🏗️',
-    title: 'Network Infrastructure',
-    desc: 'Enterprise-grade connectivity for your hosted services with redundant upstream links, BGP routing, and low-latency peering.',
-  },
-  {
-    icon: '🛡️',
-    title: 'Security Measures',
-    desc: 'DDoS mitigation, WAF, automated malware scanning, SSL certificates, and proactive vulnerability patching included on all plans.',
-  },
-  {
-    icon: '⚙️',
-    title: 'Customization Options',
-    desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.',
-  },
-  {
-    icon: '🔧',
-    title: 'Management Tools',
-    desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.',
-  },
-]
-
-const plans = [
-  { name: 'Starter', price: 'BDT 500', period: '/month', features: ['1 Domain', '10 GB SSD Storage', '10 Email Accounts', 'Free SSL', '99.9% Uptime'] },
-  { name: 'Business', price: 'BDT 1,200', period: '/month', features: ['5 Domains', '50 GB SSD Storage', 'Unlimited Emails', 'Free SSL + CDN', '99.9% Uptime', 'Daily Backup'], highlight: true },
-  { name: 'Enterprise', price: 'Custom', period: 'Quote', features: ['Unlimited Domains', 'Dedicated Storage', 'Custom Email Setup', 'DDoS Protection', '99.99% SLA', 'Managed Service'] },
-]
+const { features, plans } = domainHostingData
 
 export default function DomainHostingPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])

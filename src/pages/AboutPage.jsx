@@ -2,51 +2,9 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
+import { aboutPageData } from '../data/siteData'
 
-const clients = [
-  { name: 'UCB',                   img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F1UCB.png&w=640&q=75' },
-  { name: 'City Bank',             img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F2CityBank.png&w=640&q=75' },
-  { name: 'Prime Bank',            img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F3PrimeBank.png&w=640&q=75' },
-  { name: 'DBBL',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F4DBBL.png&w=640&q=75' },
-  { name: 'Mercantile Bank',       img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F5Mercantilebank.png&w=640&q=75' },
-  { name: 'Shahjalal Islami Bank', img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F6ShahjalalIslamiBank.png&w=640&q=75' },
-  { name: 'Shimanto Bank',         img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F7ShimantoBank.png&w=640&q=75' },
-  { name: 'Citizens Bank',         img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F8CitizensBank.png&w=640&q=75' },
-  { name: 'Upay',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F9Upay.png&w=640&q=75' },
-  { name: 'Genex',                 img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F10Genex.png&w=640&q=75' },
-  { name: 'Digicon',               img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F11Digicon.png&w=640&q=75' },
-  { name: 'Urmi',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2Furmi.png&w=640&q=75' },
-  { name: 'Bitopi Group',          img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F13BitopiGroup.png&w=640&q=75' },
-  { name: 'SSD Tech',              img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F14SSDTech.png&w=640&q=75' },
-  { name: 'Nextnet',               img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F15Nextnet.png&w=640&q=75' },
-  { name: 'CloudWell',             img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F16CloudWell.png&w=640&q=75' },
-  { name: 'EB Solution',           img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F17EBSolution.png&w=640&q=75' },
-  { name: 'SARBS Communication',   img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F18SARBSCommunication.png&w=640&q=75' },
-  { name: 'NRDS',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F19NRDS.png&w=640&q=75' },
-  { name: 'Wintel Limited',        img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F20WintelLimited.png&w=640&q=75' },
-  { name: 'Bangladesh Apparel',    img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2F21BangladeshApparel.png&w=640&q=75' },
-  { name: 'AyAl',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FAyAl.png&w=640&q=75' },
-  { name: 'AyAl Tech',             img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FAyAlTech.png&w=640&q=75' },
-  { name: 'BIIN',                  img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FBIIN.png&w=640&q=75' },
-  { name: 'SMART',                 img: 'https://reddata.com.bd/_next/image?url=%2Fimages%2Fclients%2FSMART.png&w=640&q=75' },
-]
-
-const services = [
-  { icon: '🌐', label: 'Internet & Data Connectivity' },
-  { icon: '📞', label: 'IP Telephony Service' },
-  { icon: '💬', label: 'SMS Service' },
-  { icon: '☁️', label: 'Cloud & Email Solution' },
-  { icon: '💻', label: 'Website & Software Development' },
-  { icon: '🔧', label: 'Network Hardware' },
-  { icon: '🛡️', label: 'Managed Services' },
-]
-
-const stats = [
-  { num: '2012',   label: 'Founded' },
-  { num: '12+',    label: 'Years of Experience' },
-  { num: '10,000+',label: 'Happy Clients' },
-  { num: '99.9%',  label: 'Uptime SLA' },
-]
+const { clients, services, stats } = aboutPageData
 
 export default function AboutPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])

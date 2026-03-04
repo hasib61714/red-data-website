@@ -3,51 +3,9 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import { blogPostsData } from '../data/siteData'
 
-const posts = [
-  {
-    id: 1,
-    date: 'June 2024',
-    category: 'Company News',
-    title: 'বাংলাদেশে রেড ডাটা এর সেরা ইন্টারনেট এবং আইটি সেবা',
-    excerpt:
-      'রেড ডাটা লিমিটেড বাংলাদেশের সেরা ইন্টারনেট সেবা প্রদানকারী কোম্পানিগুলির মধ্যে একটি হিসেবে নিজেকে প্রতিষ্ঠিত করেছে। আমাদের হাই-স্পিড ফাইবার নেটওয়ার্ক এবং প্রিমিয়াম কানেক্টিভিটি সমাধান সম্পর্কে জানুন।',
-    author: 'Rajaul Hira',
-    readTime: '5 min read',
-    image: 'https://reddata.com.bd/_next/static/media/banner2.3d4b4f1c.jpg',
-    href: 'https://reddata.com.bd/blogs/1',
-    tag: 'Featured',
-    tagColor: 'bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-300',
-  },
-  {
-    id: 2,
-    date: 'May 2024',
-    category: 'Business',
-    title: 'The Benefits of Corporate Internet Services for Businesses in Bangladesh',
-    excerpt:
-      'Discover how dedicated corporate internet services with SLA-backed uptime can transform business productivity, enable remote work, and support digital transformation goals for Bangladeshi companies.',
-    author: 'Red Data Team',
-    readTime: '6 min read',
-    image: 'https://reddata.com.bd/_next/static/media/blog_two.fd98c990.jpg',
-    href: 'https://reddata.com.bd/blogs/2',
-    tag: 'Business',
-    tagColor: 'bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300',
-  },
-  {
-    id: 3,
-    date: 'April 2024',
-    category: 'Home Internet',
-    title: 'How to Choose the Best Home Internet Provider in Bangladesh',
-    excerpt:
-      'With multiple ISPs competing for your attention, choosing the right home internet provider can be overwhelming. This guide covers speeds, reliability, pricing, and customer support — what really matters.',
-    author: 'Red Data Team',
-    readTime: '7 min read',
-    image: 'https://reddata.com.bd/_next/static/media/blog.be34b0fd.jpg',
-    href: 'https://reddata.com.bd/blogs/3',
-    tag: 'Tips',
-    tagColor: 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-300',
-  },
-]
+const posts = blogPostsData
 
 export default function BlogPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])

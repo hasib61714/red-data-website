@@ -2,15 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
+import { selfCornerData } from '../data/siteData'
 
-const features = [
-  { icon: '📊', title: 'Account Overview', desc: 'View your current plan, usage data, and subscription details at a glance.' },
-  { icon: '💳', title: 'Online Bill Payment', desc: 'Pay your monthly bills quickly and securely using bKash, Nagad, card, or bank transfer.' },
-  { icon: '📜', title: 'Payment History', desc: 'Access your complete payment records and download invoices anytime.' },
-  { icon: '🔄', title: 'Plan Upgrade / Change', desc: 'Easily upgrade or switch your internet plan based on your current needs.' },
-  { icon: '🎫', title: 'Support Tickets', desc: 'Raise and track support requests directly from your portal without calling.' },
-  { icon: '📡', title: 'Connection Status', desc: 'Monitor your connection health and get real-time network status updates.' },
-]
+const { features } = selfCornerData
 
 export default function SelfCornerPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
