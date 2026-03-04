@@ -107,7 +107,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               <p className="text-center leading-none">
                 🎉 <strong>{lang === 'en' ? 'Special Offer:' : 'বিশেষ অফার:'}</strong> {T('topbar')}{' '}
-                <a href="#pricing" className="underline underline-offset-2 hover:text-white/80 font-semibold transition-colors">
+                <a href="/#pricing" className="underline underline-offset-2 hover:text-white/80 font-semibold transition-colors">
                   {T('topbarCta')}
                 </a>
               </p>
@@ -268,7 +268,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
                         <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
                         BTRC Licensed ISP
                       </span>
-                      <a href="#services" onClick={() => setServicesOpen(false)} className="text-[11px] font-semibold text-red-600 dark:text-red-400 hover:text-red-500 flex items-center gap-1 transition-colors">
+                      <a href="/#services" onClick={() => setServicesOpen(false)} className="text-[11px] font-semibold text-red-600 dark:text-red-400 hover:text-red-500 flex items-center gap-1 transition-colors">
                         View all services →
                       </a>
                     </div>
@@ -346,7 +346,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
             </button>
 
             <a
-              href="#pricing"
+              href="/#pricing"
               className="flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-[11.5px] font-bold
                          bg-gradient-to-r from-red-600 to-red-700 text-white
                          hover:from-red-500 hover:to-red-600
@@ -475,7 +475,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
 
           <div className="mt-3 pt-3 border-t border-slate-100 dark:border-white/[0.07]">
             <a
-              href="#pricing"
+              href="/#pricing"
               onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold bg-gradient-to-r from-red-600 to-red-700 text-white hover:from-red-500 hover:to-red-600 shadow-lg shadow-red-600/20 transition-all duration-200"
             >
