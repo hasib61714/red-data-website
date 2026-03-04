@@ -277,16 +277,13 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               )}
             </div>
 
-            {/* Pay Bill — emerald accent */}
+            {/* Pay Bill — emerald accent when active, neutral otherwise */}
             <Link
               to="/pay-bill"
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap
-                         text-emerald-700 dark:text-emerald-400
-                         bg-emerald-50 dark:bg-emerald-500/10
-                         border border-emerald-200 dark:border-emerald-500/25
-                         hover:bg-emerald-100 dark:hover:bg-emerald-500/20
-                         hover:border-emerald-300 dark:hover:border-emerald-500/40
-                         transition-all duration-200"
+              className={pathname === '/pay-bill'
+                ? 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/25 transition-all duration-200'
+                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-medium whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
+              }
             >
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
@@ -304,15 +301,13 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               {T('nav.contactUs')}
             </Link>
 
-            {/* Self Corner — red accent */}
+            {/* Self Corner — red accent when active, neutral otherwise */}
             <Link
               to="/self-corner"
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap
-                         text-red-700 dark:text-red-300
-                         bg-red-50 dark:bg-red-500/10
-                         border border-red-200 dark:border-red-500/25
-                         hover:bg-red-100 dark:hover:bg-red-500/20
-                         transition-all duration-200"
+              className={pathname === '/self-corner'
+                ? 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/25 transition-all duration-200'
+                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-medium whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
+              }
             >
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
@@ -445,7 +440,10 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
             </div>
 
             <Link to="/pay-bill" onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 transition-colors">
+              className={pathname === '/pay-bill'
+                ? 'flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 transition-colors'
+                : mobileLinkCls(false)
+              }>
               <span className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
               </span>
@@ -465,7 +463,10 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
             </Link>
 
             <Link to="/self-corner" onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold text-red-700 dark:text-red-400 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 transition-colors">
+              className={pathname === '/self-corner'
+                ? 'flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold text-red-700 dark:text-red-400 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 transition-colors'
+                : mobileLinkCls(false)
+              }>
               <span className="w-8 h-8 rounded-lg bg-red-100 dark:bg-red-500/20 flex items-center justify-center flex-shrink-0">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
               </span>
