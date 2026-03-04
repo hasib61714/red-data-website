@@ -1,5 +1,5 @@
-import { useState, lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState, lazy, Suspense, useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import { LanguageProvider } from './context/LanguageContext'
 import Navbar from './components/layout/Navbar'
@@ -44,6 +44,25 @@ function PageLoader() {
   )
 }
 
+// Scrolls to hash anchors (e.g. /#pricing, /#coverage) after navigation
+function HashScrollHandler() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (!hash) return
+    // Small delay to allow page sections to render
+    const id = setTimeout(() => {
+      const el = document.querySelector(hash)
+      if (el) {
+        const offset = 80 // navbar height
+        const top = el.getBoundingClientRect().top + window.scrollY - offset
+        window.scrollTo({ top, behavior: 'smooth' })
+      }
+    }, 100)
+    return () => clearTimeout(id)
+  }, [pathname, hash])
+  return null
+}
+
 function HomePage({ topBarOpen }) {
   return (
     <main>
@@ -68,6 +87,7 @@ function AppInner() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 overflow-x-hidden">
+      <HashScrollHandler />
       <Navbar topBarOpen={topBarOpen} onDismiss={() => setTopBarOpen(false)} />
       <Suspense fallback={<PageLoader />}>
       <Routes>
