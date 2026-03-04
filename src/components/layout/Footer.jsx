@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center mb-5">
-              <img src="/logo.png" alt="Red Data" className="h-10 w-auto object-contain brightness-110" />
+              <img src="/RD Logo W.png" alt="Red Data" className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">{L(lang, footerData, 'description')}</p>
             <ul className="space-y-3">

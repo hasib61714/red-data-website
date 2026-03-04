@@ -193,10 +193,9 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
           {/* ── Logo ────────────────────────────────────────────────────── */}
           <Link to="/" className="flex-shrink-0 flex items-center">
             <img
-              src="/logo.png"
+              src={dark ? '/RD Logo W.png' : '/logo.png'}
               alt="Red Data"
-              className="h-9 w-auto object-contain transition-all duration-300
-                         dark:[filter:invert(1)_hue-rotate(180deg)]"
+              className="h-9 w-auto object-contain"
             />
           </Link>
 
