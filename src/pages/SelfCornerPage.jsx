@@ -195,14 +195,12 @@ export default function SelfCornerPage() {
                   <h4 className="font-bold text-emerald-800 dark:text-emerald-300 text-sm mb-0.5">Quick Bill Pay</h4>
                   <p className="text-emerald-700 dark:text-emerald-400 text-xs">Pay your bill instantly without signing in</p>
                 </div>
-                <a
-                  href="https://reddata.com.bd/paybill"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/pay-bill"
                   className="shrink-0 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all hover:scale-105"
                 >
                   Pay Bill
-                </a>
+                </Link>
               </div>
             </div>
           </div>

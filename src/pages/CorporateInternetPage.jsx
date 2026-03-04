@@ -130,17 +130,15 @@ export default function CorporateInternetPage() {
                 At Red Data, we understand that a reliable and high-speed internet connection is critical for the success of your business. Our Corporate Internet Connectivity service offers robust, secure, and scalable internet solutions tailored to meet the unique demands of your enterprise. With dedicated bandwidth, 24/7 customer support, and guaranteed uptime, we ensure your business operations run smoothly and efficiently. Partner with us to experience seamless connectivity and drive your business forward.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://reddata.com.bd/contact"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-600/40 transition-all hover:scale-105"
                 >
                   Get Started
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
+                </Link>
                 <a
                   href="tel:+8809640112233"
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-all"
@@ -239,17 +237,15 @@ export default function CorporateInternetPage() {
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                 Thousands of enterprises across Bangladesh trust Red Data for their mission-critical internet needs.
               </p>
-              <a
-                href="https://reddata.com.bd/contact"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105"
               >
                 Contact Sales
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </Link>
             </div>
             {/* Right: grid */}
             <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -344,14 +340,12 @@ export default function CorporateInternetPage() {
                 Contact our sales team today and get a custom quote tailored to your business needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="https://reddata.com.bd/contact"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/contact"
                   className="px-8 py-3.5 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-600/40 transition-all hover:scale-105"
                 >
                   Get a Custom Quote
-                </a>
+                </Link>
                 <a
                   href="tel:+8809640112233"
                   className="px-8 py-3.5 rounded-full border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-all"
