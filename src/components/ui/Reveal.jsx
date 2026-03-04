@@ -18,7 +18,7 @@ export default function Reveal({ children, direction = 'up', delay = 0, classNam
           observer.unobserve(el)
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.05, rootMargin: '0px 0px -30px 0px' }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -34,7 +34,7 @@ export default function Reveal({ children, direction = 'up', delay = 0, classNam
     <div
       ref={ref}
       className={`${cls} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      style={delay ? { transitionDelay: `${delay}ms`, willChange: 'opacity, transform' } : { willChange: 'opacity, transform' }}
     >
       {children}
     </div>
