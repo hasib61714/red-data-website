@@ -14,9 +14,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#" className="inline-flex items-center mb-5">
+            <Link to="/" className="inline-flex items-center mb-5">
               <img src="/logo.png" alt="Red Data" className="h-10 w-auto object-contain brightness-110" />
-            </a>
+            </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">{L(lang, footerData, 'description')}</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
