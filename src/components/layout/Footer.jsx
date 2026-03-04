@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import Container from '../ui/Container'
 import { footerData, L } from '../../data/siteData'
@@ -86,8 +87,8 @@ export default function Footer() {
               (Pvt.) Limited. All rights reserved.
             </p>
             <div className="flex items-center gap-5">
-              <a href="#" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Terms of Service</a>
+              <Link to="/privacy-policy" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Terms of Service</Link>
               <a href="https://reddata.com.bd/tariff.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">BTRC Tariff</a>
             </div>
           </div>
