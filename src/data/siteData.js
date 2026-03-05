@@ -84,7 +84,7 @@ export const heroData = {
 export const heroSlides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1920&q=80&fit=crop',
     badge: 'BTRC Licensed ISP — Bangladesh',
     badge_bn: 'BTRC লাইসেন্সপ্রাপ্ত ISP — বাংলাদেশ',
     headline: 'Reliable & High-Speed',
@@ -96,7 +96,7 @@ export const heroSlides = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80&fit=crop',
     badge: 'Enterprise Grade Connectivity',
     badge_bn: 'এন্টারপ্রাইজ গ্রেড কানেক্টিভিটি',
     headline: 'Power Your Business',
@@ -108,7 +108,7 @@ export const heroSlides = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1920&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80&fit=crop',
     badge: 'Home Internet Plans',
     badge_bn: 'হোম ইন্টারনেট প্ল্যান',
     headline: 'Stream, Game & Browse',
@@ -120,7 +120,7 @@ export const heroSlides = [
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80&fit=crop',
     badge: 'Nationwide Coverage',
     badge_bn: 'সারাদেশে কভারেজ',
     headline: 'Connected Across',
