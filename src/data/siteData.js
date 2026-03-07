@@ -32,13 +32,13 @@ export const navLinks = [
 
 // ─── Navbar service dropdown items (router Links) ────────────────────────────
 export const navServiceItems = [
-  { label: 'Corporate Internet', to: '/corporate-internet', icon: '🏢', desc: 'Dedicated enterprise bandwidth' },
-  { label: 'Home Internet',      to: '/home-internet',      icon: '🏠', desc: 'High-speed residential plans' },
-  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: '🔗', desc: 'Fiber-backed inter-office links' },
-  { label: 'IP Telephony',       to: '/ip-telephony',       icon: '📞', desc: 'VoIP & cloud PBX solutions' },
-  { label: 'SMS Service',        to: '/sms-service',        icon: '💬', desc: 'Bulk messaging & OTP gateway' },
-  { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: '🌐', desc: 'Domains, NVMe hosting & SSL' },
-  { label: 'Managed Services',   to: '/managed-services',   icon: '🛡️', desc: '24/7 IT infrastructure management' },
+  { label: 'Corporate Internet', to: '/corporate-internet', icon: 'building', desc: 'Dedicated enterprise bandwidth' },
+  { label: 'Home Internet',      to: '/home-internet',      icon: 'wifi',     desc: 'High-speed residential plans' },
+  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'network',  desc: 'Fiber-backed inter-office links' },
+  { label: 'IP Telephony',       to: '/ip-telephony',       icon: 'phone',    desc: 'VoIP & cloud PBX solutions' },
+  { label: 'SMS Service',        to: '/sms-service',        icon: 'message',  desc: 'Bulk messaging & OTP gateway' },
+  { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: 'globe',    desc: 'Domains, NVMe hosting & SSL' },
+  { label: 'Managed Services',   to: '/managed-services',   icon: 'shield',   desc: '24/7 IT infrastructure management' },
 ]
 
 // ─── Contact Bar (top dark strip) ────────────────────────────────────────────
@@ -84,7 +84,7 @@ export const heroData = {
 export const heroSlides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1920&q=80&fit=crop',
+    image: '/images/heroes/hero1.jpg',
     badge: 'BTRC Licensed ISP — Bangladesh',
     badge_bn: 'BTRC লাইসেন্সপ্রাপ্ত ISP — বাংলাদেশ',
     headline: 'Reliable & High-Speed',
@@ -96,7 +96,7 @@ export const heroSlides = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80&fit=crop',
+    image: '/images/heroes/hero2.jpg',
     badge: 'Enterprise Grade Connectivity',
     badge_bn: 'এন্টারপ্রাইজ গ্রেড কানেক্টিভিটি',
     headline: 'Power Your Business',
@@ -108,7 +108,7 @@ export const heroSlides = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80&fit=crop',
+    image: '/images/heroes/hero3.jpg',
     badge: 'Home Internet Plans',
     badge_bn: 'হোম ইন্টারনেট প্ল্যান',
     headline: 'Stream, Game & Browse',
@@ -120,7 +120,7 @@ export const heroSlides = [
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80&fit=crop',
+    image: '/images/heroes/hero4.jpg',
     badge: 'Nationwide Coverage',
     badge_bn: 'সারাদেশে কভারেজ',
     headline: 'Connected Across',
@@ -240,7 +240,8 @@ export const servicesData = {
     'From enterprise-grade connectivity to smart home internet — Red Data delivers every solution your business and life demands.',
   items: [
     {
-      icon: '🏢',
+      icon: 'building',
+      internalUrl: '/corporate-internet',
       title: 'Corporate Internet',
       title_bn: 'কর্পোরেট ইন্টারনেট',
       description:
@@ -271,7 +272,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🏠',
+      icon: 'wifi',
+      internalUrl: '/home-internet',
       title: 'Home Internet',
       title_bn: 'হোম ইন্টারনেট',
       description:
@@ -310,7 +312,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🔗',
+      icon: 'network',
+      internalUrl: '/data-connectivity',
       title: 'Data Connectivity',
       title_bn: 'ডেটা কানেক্টিভিটি',
       description:
@@ -340,7 +343,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '📞',
+      icon: 'phone',
+      internalUrl: '/ip-telephony',
       title: 'IP Telephony',
       title_bn: 'আইপি টেলিফোনি',
       description:
@@ -372,7 +376,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '💬',
+      icon: 'message',
+      internalUrl: '/sms-service',
       title: 'SMS Service',
       title_bn: 'SMS সার্ভিস',
       description:
@@ -402,7 +407,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🌐',
+      icon: 'globe',
+      internalUrl: '/domain-hosting',
       title: 'Domain & Hosting',
       title_bn: 'ডোমেইন ও হোস্টিং',
       description:
@@ -434,7 +440,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🛡️',
+      icon: 'shield',
+      internalUrl: '/managed-services',
       title: 'Managed Services',
       title_bn: 'ম্যানেজড সার্ভিস',
       description:
@@ -468,10 +475,10 @@ export const servicesData = {
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
 export const statsData = [
-  { value: '12+', label: 'Years Experience', label_bn: 'যুগুন্ত অভিজ্ঞতা', description: 'Serving homes and businesses since 2012', description_bn: '২০১২ সাল থেকে ঘর ও ব্যবসায় সেবা প্রদান' },
+  { value: '13+', label: 'Years Experience', label_bn: 'বছরের অভিজ্ঞতা', description: 'Serving homes and businesses since 2012', description_bn: '২০১২ সাল থেকে ঘর ও ব্যবসায় সেবা প্রদান' },
   { value: '99.9%', label: 'Network Uptime', label_bn: 'নেটওয়ার্ক আপটাইম', description: 'SLA-backed reliability you can count on', description_bn: 'SLA-সমর্থিত নির্ভরযোগ্যতা' },
   { value: '64', label: 'Districts Covered', label_bn: 'জেলায় কভারেজ', description: 'Nationwide fiber backbone across Bangladesh', description_bn: 'বাংলাদেশজুড়ে ফাইবার ব্যাকবোন' },
-  { value: '24 / 7', label: 'Customer Support', label_bn: 'গ্রাহক সহায়তা', description: 'Round-the-clock technical assistance', description_bn: 'সার্বক্ষণিক টেকনিক্যাল সহায়তা' },
+  { value: '10,000+', label: 'Happy Clients', label_bn: 'সন্তুষ্ট গ্রাহক', description: 'Trusted by homes and enterprises nationwide', description_bn: 'ঘর ও ব্যবসা প্রতিষ্ঠান উভয়ের বিশ্বাস' },
 ]
 
 // ─── Why Choose Us ───────────────────────────────────────────────────────────
@@ -480,12 +487,12 @@ export const whyUsData = {
   heading: 'Why Thousands Choose',
   headingAccent: 'Red Data',
   items: [
-    { icon: '⚡', title: 'Free Integration', title_bn: 'বিনামূল্যে ইন্টিগ্রেশন', description: 'We set up everything from scratch — no hidden charges, no hassle.', description_bn: 'আমরা শুরু থেকে সবকিছু সেটআপ করি — কোনো লুকানো চার্জ নেই, কোনো ঝামেলা নেই।' },
-    { icon: '🚀', title: 'Fast Installation', title_bn: 'দ্রুত ইনস্টলেশন', description: 'Get connected within 24 hours of sign-up with our rapid deployment team.', description_bn: 'সাইন আপের ২৪ ঘণ্টার মধ্যে আমাদের দ্রুত ডিপ্লয়মেন্ট দল সংযুক্ত করবে।' },
-    { icon: '🔒', title: 'Blazing-Fast & Secure', title_bn: 'দ্রুততম ও নিরাপদ', description: 'Fiber-grade speeds with enterprise-class network security at every level.', description_bn: 'ফাইবার-গ্রেড গতি এবং সব স্তরে এন্টারপ্রাইজ-ক্লাস নেটওয়ার্ক সিকিউরিটি।' },
-    { icon: '💰', title: 'Competitive Pricing', title_bn: 'প্রতিযোগিতামূলক মূল্য', description: 'Premium performance without premium price tags. BTRC approved tariff.', description_bn: 'প্রিমিয়াম পারফর্মান্স, প্রিমিয়াম মূল্য ছাড়াই। BTRC অনুমোদিত ট্যারিফ।' },
-    { icon: '📈', title: 'Continuous Improvement', title_bn: 'নিরন্তর উন্নতি', description: 'We invest constantly in network upgrades to keep you ahead of demand.', description_bn: 'আমরা নিরন্তর নেটওয়ার্ক আপগ্রেডে বিনিয়োগ করি।' },
-    { icon: '🎧', title: '24×7 Proactive Support', title_bn: '২৪×৭ প্রোঅ্যাক্টিভ সহায়তা', description: 'Our NOC team monitors your connection around the clock so issues are resolved before you notice them.', description_bn: 'আমাদের NOC দল সার্বক্ষণিক আপনার সংযোগ মনিটর করে, যেন সমস্যা বোঝার আগেই সমাধান হয়।' },
+    { icon: 'plug', title: 'Free Integration', title_bn: 'বিনামূল্যে ইন্টিগ্রেশন', description: 'We set up everything from scratch — no hidden charges, no hassle.', description_bn: 'আমরা শুরু থেকে সবকিছু সেটআপ করি — কোনো লুকানো চার্জ নেই, কোনো ঝামেলা নেই।' },
+    { icon: 'zap', title: 'Fast Installation', title_bn: 'দ্রুত ইনস্টলেশন', description: 'Get connected within 24 hours of sign-up with our rapid deployment team.', description_bn: 'সাইন আপের ২৪ ঘণ্টার মধ্যে আমাদের দ্রুত ডিপ্লয়মেন্ট দল সংযুক্ত করবে।' },
+    { icon: 'lock', title: 'Blazing-Fast & Secure', title_bn: 'দ্রুততম ও নিরাপদ', description: 'Fiber-grade speeds with enterprise-class network security at every level.', description_bn: 'ফাইবার-গ্রেড গতি এবং সব স্তরে এন্টারপ্রাইজ-ক্লাস নেটওয়ার্ক সিকিউরিটি।' },
+    { icon: 'dollar', title: 'Competitive Pricing', title_bn: 'প্রতিযোগিতামূলক মূল্য', description: 'Premium performance without premium price tags. BTRC approved tariff.', description_bn: 'প্রিমিয়াম পারফর্মান্স, প্রিমিয়াম মূল্য ছাড়াই। BTRC অনুমোদিত ট্যারিফ।' },
+    { icon: 'trending', title: 'Continuous Improvement', title_bn: 'নিরন্তর উন্নতি', description: 'We invest constantly in network upgrades to keep you ahead of demand.', description_bn: 'আমরা নিরন্তর নেটওয়ার্ক আপগ্রেডে বিনিয়োগ করি।' },
+    { icon: 'headphones', title: '24×7 Proactive Support', title_bn: '২৪×৭ প্রোঅ্যাক্টিভ সহায়তা', description: 'Our NOC team monitors your connection around the clock so issues are resolved before you notice them.', description_bn: 'আমাদের NOC দল সার্বক্ষণিক আপনার সংযোগ মনিটর করে, যেন সমস্যা বোঝার আগেই সমাধান হয়।' },
   ],
 }
 
@@ -508,7 +515,7 @@ export const pricingData = {
       oneTime: '৳2,000 one-time setup',
       oneTime_bn: '৳২,০০০ এককালীন সেটআপ',
       bandwidth: '30 Mbps',
-      popular: true,
+      popular: false,
       features: [
         '30 Mbps Bandwidth',
         'Buffer-less social media & YouTube',
@@ -540,7 +547,7 @@ export const pricingData = {
       oneTime: '৳1,500 one-time setup',
       oneTime_bn: '৳১,৫০০ এককালীন সেটআপ',
       bandwidth: '40 Mbps',
-      popular: false,
+      popular: true,
       features: [
         '40 Mbps Bandwidth',
         'Buffer-less social media & YouTube',
@@ -703,7 +710,6 @@ export const footerData = {
         { label: 'Why Choose Us', href: '/#why-us' },
         { label: 'Area Coverage', href: '/#coverage' },
         { label: 'News & Blog', href: '/blog' },
-        { label: 'Pay Bill', href: '/pay-bill' },
         { label: 'BTRC Approved Tariff', href: 'https://reddata.com.bd/tariff.pdf' },
       ],
     },
@@ -712,7 +718,6 @@ export const footerData = {
       heading_bn: 'সহায়তা',
       links: [
         { label: 'Contact Us', href: '/contact' },
-        { label: 'Self Care Portal', href: '/self-corner' },
         { label: 'Helpline: 09640-112233', href: 'tel:+8809640112233' },
         { label: 'HelpDesk: 09640-123123', href: 'tel:+8809640123123' },
         { label: 'WhatsApp Us', href: 'https://wa.me/+8801971521964' },
@@ -731,45 +736,45 @@ export const footerData = {
 export const aboutPageData = {
   stats: [
     { num: '2012',    label: 'Founded' },
-    { num: '12+',     label: 'Years of Experience' },
+    { num: '13+',     label: 'Years of Experience' },
     { num: '10,000+', label: 'Happy Clients' },
     { num: '99.9%',   label: 'Uptime SLA' },
   ],
   services: [
-    { icon: '🌐', label: 'Internet & Data Connectivity' },
-    { icon: '📞', label: 'IP Telephony Service' },
-    { icon: '💬', label: 'SMS Service' },
-    { icon: '☁️', label: 'Cloud & Email Solution' },
-    { icon: '💻', label: 'Website & Software Development' },
-    { icon: '🔧', label: 'Network Hardware' },
-    { icon: '🛡️', label: 'Managed Services' },
+    { icon: 'globe',   label: 'Internet & Data Connectivity' },
+    { icon: 'phone',   label: 'IP Telephony Service' },
+    { icon: 'message', label: 'SMS Service' },
+    { icon: 'cloud',   label: 'Cloud & Email Solution' },
+    { icon: 'code',    label: 'Website & Software Development' },
+    { icon: 'wrench',  label: 'Network Hardware' },
+    { icon: 'shield',  label: 'Managed Services' },
   ],
   clients: [
-    { name: 'UCB',                   img: 'https://reddata.com.bd/images/clients/1UCB.png' },
-    { name: 'City Bank',             img: 'https://reddata.com.bd/images/clients/2CityBank.png' },
-    { name: 'Prime Bank',            img: 'https://reddata.com.bd/images/clients/3PrimeBank.png' },
-    { name: 'DBBL',                  img: 'https://reddata.com.bd/images/clients/4DBBL.png' },
-    { name: 'Mercantile Bank',       img: 'https://reddata.com.bd/images/clients/5Mercantilebank.png' },
-    { name: 'Shahjalal Islami Bank', img: 'https://reddata.com.bd/images/clients/6ShahjalalIslamiBank.png' },
-    { name: 'Shimanto Bank',         img: 'https://reddata.com.bd/images/clients/7ShimantoBank.png' },
-    { name: 'Citizens Bank',         img: 'https://reddata.com.bd/images/clients/8CitizensBank.png' },
-    { name: 'Upay',                  img: 'https://reddata.com.bd/images/clients/9Upay.png' },
-    { name: 'Genex',                 img: 'https://reddata.com.bd/images/clients/10Genex.png' },
-    { name: 'Digicon',               img: 'https://reddata.com.bd/images/clients/11Digicon.png' },
-    { name: 'Urmi',                  img: 'https://reddata.com.bd/images/clients/urmi.png' },
-    { name: 'Bitopi Group',          img: 'https://reddata.com.bd/images/clients/13BitopiGroup.png' },
-    { name: 'SSD Tech',              img: 'https://reddata.com.bd/images/clients/14SSDTech.png' },
-    { name: 'Nextnet',               img: 'https://reddata.com.bd/images/clients/15Nextnet.png' },
-    { name: 'CloudWell',             img: 'https://reddata.com.bd/images/clients/16CloudWell.png' },
-    { name: 'EB Solution',           img: 'https://reddata.com.bd/images/clients/17EBSolution.png' },
-    { name: 'SARBS Communication',   img: 'https://reddata.com.bd/images/clients/18SARBSCommunication.png' },
-    { name: 'NRDS',                  img: 'https://reddata.com.bd/images/clients/19NRDS.png' },
-    { name: 'Wintel Limited',        img: 'https://reddata.com.bd/images/clients/20WintelLimited.png' },
-    { name: 'Bangladesh Apparel',    img: 'https://reddata.com.bd/images/clients/21BangladeshApparel.png' },
-    { name: 'AyAl',                  img: 'https://reddata.com.bd/images/clients/AyAl.png' },
-    { name: 'AyAl Tech',             img: 'https://reddata.com.bd/images/clients/AyAlTech.png' },
-    { name: 'BIIN',                  img: 'https://reddata.com.bd/images/clients/BIIN.png' },
-    { name: 'SMART',                 img: 'https://reddata.com.bd/images/clients/SMART.png' },
+    { name: 'UCB',                   img: '/images/clients/1UCB.png' },
+    { name: 'City Bank',             img: '/images/clients/2CityBank.png' },
+    { name: 'Prime Bank',            img: '/images/clients/3PrimeBank.png' },
+    { name: 'DBBL',                  img: '/images/clients/4DBBL.png' },
+    { name: 'Mercantile Bank',       img: '/images/clients/5Mercantilebank.png' },
+    { name: 'Shahjalal Islami Bank', img: '/images/clients/6ShahjalalIslamiBank.png' },
+    { name: 'Shimanto Bank',         img: '/images/clients/7ShimantoBank.png' },
+    { name: 'Citizens Bank',         img: '/images/clients/8CitizensBank.png' },
+    { name: 'Upay',                  img: '/images/clients/9Upay.png' },
+    { name: 'Genex',                 img: '/images/clients/10Genex.png' },
+    { name: 'Digicon',               img: '/images/clients/11Digicon.png' },
+    { name: 'Urmi',                  img: '/images/clients/urmi.png' },
+    { name: 'Bitopi Group',          img: '/images/clients/13BitopiGroup.png' },
+    { name: 'SSD Tech',              img: '/images/clients/14SSDTech.png' },
+    { name: 'Nextnet',               img: '/images/clients/15Nextnet.png' },
+    { name: 'CloudWell',             img: '/images/clients/16CloudWell.png' },
+    { name: 'EB Solution',           img: '/images/clients/17EBSolution.png' },
+    { name: 'SARBS Communication',   img: '/images/clients/18SARBSCommunication.png' },
+    { name: 'NRDS',                  img: '/images/clients/19NRDS.png' },
+    { name: 'Wintel Limited',        img: '/images/clients/20WintelLimited.png' },
+    { name: 'Bangladesh Apparel',    img: '/images/clients/21BangladeshApparel.png' },
+    { name: 'AyAl',                  img: '/images/clients/AyAl.png' },
+    { name: 'AyAl Tech',             img: '/images/clients/AyAlTech.png' },
+    { name: 'BIIN',                  img: '/images/clients/BIIN.png' },
+    { name: 'SMART',                 img: '/images/clients/SMART.png' },
   ],
   story: {
     heading: 'Empowering Bangladesh\'s Digital Future',
@@ -783,12 +788,12 @@ export const aboutPageData = {
   },
   companyCards: [
     {
-      icon: '📍',
+      icon: 'mapPin',
       title: 'Head Office',
       lines: ['Level 19, SimpleTree Attalika,', '134 Gulshan Avenue,', 'Dhaka-1212, Bangladesh'],
     },
     {
-      icon: '🏢',
+      icon: 'building',
       title: 'Registered Address',
       lines: ['House 5/A, Road 2, Lane 3,', 'Block G, Halishahar,', 'Chittagong, Bangladesh'],
     },
@@ -921,7 +926,7 @@ export const managedServicesData = {
     { value: '24/7',  label: 'Managed Support' },
     { value: '99.9%', label: 'Network Uptime' },
     { value: '50+',   label: 'Enterprise Clients' },
-    { value: '10+',   label: 'Years Experience' },
+    { value: '13+',   label: 'Years Experience' },
   ],
 }
 

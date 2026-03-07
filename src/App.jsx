@@ -20,8 +20,6 @@ import Contact from './components/sections/Contact'
 const HomeInternetPage      = lazy(() => import('./pages/HomeInternetPage'))
 const CorporateInternetPage = lazy(() => import('./pages/CorporateInternetPage'))
 const AboutPage             = lazy(() => import('./pages/AboutPage'))
-const SelfCornerPage        = lazy(() => import('./pages/SelfCornerPage'))
-const PayBillPage           = lazy(() => import('./pages/PayBillPage'))
 const ContactPage           = lazy(() => import('./pages/ContactPage'))
 const DataConnectivityPage  = lazy(() => import('./pages/DataConnectivityPage'))
 const IpTelephonyPage       = lazy(() => import('./pages/IpTelephonyPage'))
@@ -95,8 +93,6 @@ function AppInner() {
         <Route path="/home-internet" element={<HomeInternetPage />} />
         <Route path="/corporate-internet" element={<CorporateInternetPage />} />
         <Route path="/about-us" element={<AboutPage />} />
-        <Route path="/self-corner" element={<SelfCornerPage />} />
-        <Route path="/pay-bill" element={<PayBillPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/data-connectivity" element={<DataConnectivityPage />} />
         <Route path="/ip-telephony" element={<IpTelephonyPage />} />

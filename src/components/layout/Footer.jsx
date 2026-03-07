@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import Container from '../ui/Container'
+import Icon from '../ui/Icon'
 import { footerData, L } from '../../data/siteData'
 
 export default function Footer() {
@@ -20,21 +21,21 @@ export default function Footer() {
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">{L(lang, footerData, 'description')}</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <span className="text-red-500 mt-0.5">📍</span>
+                <Icon name="mapPin" className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
                 <div className="text-slate-400 text-sm leading-relaxed">
                   <p>{contact.address}</p>
                   <p className="text-slate-500 text-xs mt-1">Reg. Office: {contact.addressReg}</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-red-500">📞</span>
+                <Icon name="phone" className="w-4 h-4 text-red-500 flex-shrink-0" />
                 <div>
                   <a href={`tel:${contact.phone}`} className="text-slate-400 text-sm hover:text-red-400 transition-colors block">{contact.phone}</a>
                   <a href={`tel:${contact.helpdesk}`} className="text-slate-500 text-xs hover:text-red-400 transition-colors">HelpDesk: {contact.helpdesk}</a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-red-500">✉️</span>
+                <Icon name="mail" className="w-4 h-4 text-red-500 flex-shrink-0" />
                 <a href={`mailto:${contact.email}`} className="text-slate-400 text-sm hover:text-red-400 transition-colors">{contact.email}</a>
               </li>
             </ul>

@@ -1,4 +1,5 @@
 import Button from '../ui/Button'
+import Icon from '../ui/Icon'
 
 export default function PricingCard({ name, tag, price, vatBreakdown, period, oneTime, bandwidth, popular, features, cta }) {
   return (
@@ -30,11 +31,11 @@ export default function PricingCard({ name, tag, price, vatBreakdown, period, on
           <span className={`text-sm mb-1.5 ${popular ? 'text-red-200' : 'text-slate-400'}`}>{period}</span>
         </div>
         {vatBreakdown && (
-          <p className={`text-[11px] font-medium mb-1 ${popular ? 'text-red-200/80' : 'text-slate-400 dark:text-slate-500'}`}>{vatBreakdown}</p>
+          <p className={`text-[9px] font-normal opacity-60 mb-1 ${popular ? 'text-red-200' : 'text-slate-400 dark:text-slate-500'}`}>{vatBreakdown}</p>
         )}
         <p className={`text-xs ${popular ? 'text-red-200' : 'text-slate-500'}`}>{oneTime}</p>
         <div className={`mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-sm font-semibold ${popular ? 'bg-white/15 text-white' : 'bg-slate-100 dark:bg-slate-700/50 text-red-600 dark:text-red-300'}`}>
-          ⚡ {bandwidth}
+          <Icon name="zap" className="w-3.5 h-3.5" /> {bandwidth}
         </div>
       </div>
 

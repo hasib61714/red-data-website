@@ -45,6 +45,25 @@ export default function Coverage() {
             <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900" />
             <div className="absolute inset-0 bg-grid opacity-30" />
 
+            {/* Bangladesh SVG outline */}
+            <svg
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              viewBox="0 0 300 380"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M148 30 L165 38 L178 32 L192 45 L205 42 L218 55 L215 70 L225 82 L220 97 L228 110 L222 125 L230 138 L225 152 L235 168 L228 183 L232 198 L220 210 L215 225 L205 238 L195 250 L185 262 L172 272 L165 285 L158 295 L148 305 L138 295 L130 285 L120 275 L110 262 L100 250 L90 238 L80 225 L75 210 L68 195 L72 180 L65 165 L72 150 L68 135 L75 120 L70 105 L78 92 L72 78 L82 65 L95 58 L108 52 L122 42 L135 36 Z"
+                stroke="rgba(239,68,68,0.35)"
+                strokeWidth="1.5"
+                fill="rgba(239,68,68,0.06)"
+              />
+              {/* Rivers — simplified */}
+              <path d="M148 120 Q152 145 148 170 Q144 195 148 220 Q152 245 148 270" stroke="rgba(96,165,250,0.2)" strokeWidth="1" fill="none" />
+              <path d="M120 150 Q135 160 148 155 Q162 150 175 158" stroke="rgba(96,165,250,0.15)" strokeWidth="0.8" fill="none" />
+            </svg>
+
             {/* Decorative pulsing dots representing cities */}
             {[
               { top: '28%', left: '52%', size: 'lg', label: 'Dhaka' },

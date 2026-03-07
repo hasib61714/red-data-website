@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
+import Icon from '../components/ui/Icon'
 import { aboutPageData, footerData } from '../data/siteData'
 
 const { clients, services, stats, story, companyCards, cta: aboutCta } = aboutPageData
@@ -69,12 +70,12 @@ export default function AboutPage() {
                   onError={(e) => {
                     e.target.parentElement.className = 'relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 h-80 lg:h-96 flex items-center justify-center'
                     e.target.style.display = 'none'
-                    e.target.parentElement.innerHTML = '<span class="text-6xl">🏢</span>'
+                    e.target.parentElement.innerHTML = '<span class="text-xs text-slate-400 font-medium">🏢</span>'
                   }}
                 />
                 {/* Badge */}
                 <div className="absolute bottom-4 left-4 bg-red-600 text-white rounded-xl px-4 py-2 shadow-xl text-sm font-bold">
-                  12+ Year Experience
+                  13+ Year Experience
                 </div>
               </div>
             </div>
@@ -126,8 +127,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {services.map((s) => (
               <div key={s.label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 text-center hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">
-                <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                  {s.icon}
+                <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform">
+                  <Icon name={s.icon} className="w-6 h-6" />
                 </div>
                 <span className="text-sm font-semibold text-slate-700 dark:text-slate-200 leading-tight">{s.label}</span>
               </div>
@@ -142,7 +143,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {companyCards.map((card) => (
               <div key={card.title} className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50">
-                <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl mb-4">{card.icon}</div>
+                <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 mb-4"><Icon name={card.icon} className="w-5 h-5" /></div>
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">{card.title}</h4>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                   {card.lines.map((line, i) => (
@@ -153,14 +154,14 @@ export default function AboutPage() {
             ))}
             {/* Contact */}
             <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50">
-              <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl mb-4">📞</div>
+              <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 mb-4"><Icon name="phone" className="w-5 h-5" /></div>
               <h4 className="font-bold text-slate-900 dark:text-white mb-2">Contact</h4>
               <div className="space-y-1.5 text-sm">
                 <a href={`tel:${contact.phone.replace(/-/g, '')}`} className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                  📞 {contact.phone}
+                  <Icon name="phone" className="w-3.5 h-3.5" /> {contact.phone}
                 </a>
                 <a href={`mailto:${contact.email}`} className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                  ✉️ {contact.email}
+                  <Icon name="mail" className="w-3.5 h-3.5" /> {contact.email}
                 </a>
               </div>
             </div>
@@ -189,7 +190,7 @@ export default function AboutPage() {
                 <img
                   src={c.img}
                   alt={c.name}
-                  className="h-9 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                  className="h-9 w-auto object-contain hover:scale-105 transition-all duration-300"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => {

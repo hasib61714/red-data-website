@@ -21,11 +21,6 @@ export default function FloatingButtons() {
           chatOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none'
         }`}
       >
-        {/* Header label */}
-        <div className="bg-red-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md mb-1">
-          Live Support
-        </div>
-
         {/* WhatsApp Option */}
         <a
           href="https://wa.me/+8801971521964"
