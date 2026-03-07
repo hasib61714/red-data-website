@@ -537,7 +537,7 @@ export const pricingData = {
     },
     {
       name: 'Maroon',
-      tag: 'Family Plan',
+    tag: 'Most Popular',
       tag_bn: 'ফ্যামিলি প্ল্যান',
       price: '৳840',
       vatBreakdown: '৳800 + ৳40 (5% VAT)',
@@ -569,7 +569,7 @@ export const pricingData = {
     },
     {
       name: 'Scarlet',
-      tag: '',
+      tag: 'Family Plan',
       price: '৳1,050',
       vatBreakdown: '৳1,000 + ৳50 (5% VAT)',
       vatBreakdown_bn: '৳১,০০০ + ৳৫০ (৫% ভ্যাট)',
