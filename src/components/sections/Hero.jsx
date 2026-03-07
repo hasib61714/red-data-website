@@ -74,11 +74,11 @@ export default function Hero({ topBarVisible = false }) {
       {/* ─── Slide Content ─── */}
       <div className="absolute inset-0 z-30 flex items-center">
         <Container className="w-full">
-          <div className="max-w-3xl flex flex-col justify-center">
-            {/* Badge */}
+          <div className="max-w-3xl w-full flex flex-col justify-center" style={{paddingTop: '48px', paddingBottom: '48px'}}>
+            {/* Tag/Badge */}
             <div
               key={`badge-${current}`}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/15 text-red-400 border border-red-500/25 mb-6 animate-fade-up"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/15 text-red-400 border border-red-500/25 mb-7 animate-fade-up"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
               {L(lang, slide, 'badge')}
@@ -87,7 +87,7 @@ export default function Hero({ topBarVisible = false }) {
             {/* Headline */}
             <h1
               key={`h1-${current}`}
-              className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-5 animate-fade-up"
+              className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-6 animate-fade-up"
               style={{ animationDelay: '80ms' }}
             >
               {L(lang, slide, 'headline')}{' '}
@@ -99,7 +99,7 @@ export default function Hero({ topBarVisible = false }) {
             {/* Sub-headline */}
             <p
               key={`sub-${current}`}
-              className="text-slate-300 text-xl sm:text-2xl leading-relaxed max-w-2xl mb-8 animate-fade-up"
+              className="text-slate-300 text-xl sm:text-2xl leading-relaxed max-w-2xl mb-10 animate-fade-up"
               style={{ animationDelay: '160ms' }}
             >
               {L(lang, slide, 'subheadline')}
