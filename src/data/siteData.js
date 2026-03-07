@@ -34,7 +34,7 @@ export const navLinks = [
 export const navServiceItems = [
   { label: 'Corporate Internet', to: '/corporate-internet', icon: 'building', desc: 'Dedicated enterprise bandwidth' },
   { label: 'Home Internet',      to: '/home-internet',      icon: 'wifi',     desc: 'High-speed residential plans' },
-  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'network',  desc: 'Fiber-backed inter-office links' },
+    { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'wifi',     desc: 'Dedicated & shared bandwidth' },
   { label: 'IP Telephony',       to: '/ip-telephony',       icon: 'phone',    desc: 'VoIP & cloud PBX solutions' },
   { label: 'SMS Service',        to: '/sms-service',        icon: 'message',  desc: 'Bulk messaging & OTP gateway' },
   { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: 'globe',    desc: 'Domains, NVMe hosting & SSL' },
