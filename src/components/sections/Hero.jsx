@@ -74,7 +74,7 @@ export default function Hero({ topBarVisible = false }) {
       {/* ─── Slide Content ─── */}
       <div className="absolute inset-0 z-30 flex items-center">
         <Container className="w-full">
-          <div className="max-w-3xl flex flex-col justify-center" style={{minHeight: '420px'}}>
+          <div className="max-w-3xl flex flex-col justify-center">
             {/* Badge */}
             <div
               key={`badge-${current}`}
@@ -88,7 +88,7 @@ export default function Hero({ topBarVisible = false }) {
             <h1
               key={`h1-${current}`}
               className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-5 animate-fade-up"
-              style={{ animationDelay: '80ms', minHeight: '80px', display: 'flex', alignItems: 'flex-end' }}
+              style={{ animationDelay: '80ms' }}
             >
               {L(lang, slide, 'headline')}{' '}
               <span className="bg-gradient-to-r from-red-400 via-orange-300 to-amber-300 bg-clip-text text-transparent">
@@ -100,7 +100,7 @@ export default function Hero({ topBarVisible = false }) {
             <p
               key={`sub-${current}`}
               className="text-slate-300 text-xl sm:text-2xl leading-relaxed max-w-2xl mb-8 animate-fade-up"
-              style={{ animationDelay: '160ms', minHeight: '60px', display: 'flex', alignItems: 'flex-start' }}
+              style={{ animationDelay: '160ms' }}
             >
               {L(lang, slide, 'subheadline')}
             </p>
@@ -109,7 +109,7 @@ export default function Hero({ topBarVisible = false }) {
             <div
               key={`cta-${current}`}
               className="flex flex-col sm:flex-row gap-5 animate-fade-up"
-              style={{ animationDelay: '240ms', minHeight: '60px' }}
+              style={{ animationDelay: '240ms' }}
             >
               <Button variant="primary" size="xl" href={cta1.href} fullWidthOnMobile>
                 {getText(lang, 'hero.explore')}
