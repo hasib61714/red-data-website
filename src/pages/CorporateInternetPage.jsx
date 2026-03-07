@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import Icon from '../components/ui/Icon'
 
 const fiberFeatures = [
   {
@@ -53,40 +54,40 @@ const fiberFeatures = [
 ]
 
 const whyUs = [
-  { icon: '🔗', title: 'Free Integration', desc: 'Seamless integration with your existing network infrastructure at no extra cost.' },
-  { icon: '⚡', title: 'Fast Installation', desc: 'Professional setup and activation within 2–3 business days.' },
-  { icon: '📡', title: 'Reliable & Blazing-Fast Speeds', desc: 'Dedicated bandwidth ensuring consistent performance for your business.' },
-  { icon: '💰', title: 'Competitive Pricing', desc: 'BTRC approved transparent tariffs with no hidden charges or lock-in contracts.' },
-  { icon: '📈', title: 'Commitment to Improvement', desc: 'We continuously invest in network upgrades to deliver the best service.' },
-  { icon: '🎧', title: '24x7 Proactive Support', desc: 'Round-the-clock dedicated support team ready to resolve any issue fast.' },
+  { icon: 'link',       title: 'Free Integration', desc: 'Seamless integration with your existing network infrastructure at no extra cost.' },
+  { icon: 'zap',        title: 'Fast Installation', desc: 'Professional setup and activation within 2–3 business days.' },
+  { icon: 'network',    title: 'Reliable & Blazing-Fast Speeds', desc: 'Dedicated bandwidth ensuring consistent performance for your business.' },
+  { icon: 'dollar',     title: 'Competitive Pricing', desc: 'BTRC approved transparent tariffs with no hidden charges or lock-in contracts.' },
+  { icon: 'trending',   title: 'Commitment to Improvement', desc: 'We continuously invest in network upgrades to deliver the best service.' },
+  { icon: 'headphones', title: '24x7 Proactive Support', desc: 'Round-the-clock dedicated support team ready to resolve any issue fast.' },
 ]
 
 const clients = [
-  { name: 'UCB',                    img: 'https://reddata.com.bd/images/clients/1UCB.png' },
-  { name: 'City Bank',              img: 'https://reddata.com.bd/images/clients/2CityBank.png' },
-  { name: 'Prime Bank',             img: 'https://reddata.com.bd/images/clients/3PrimeBank.png' },
-  { name: 'DBBL',                   img: 'https://reddata.com.bd/images/clients/4DBBL.png' },
-  { name: 'Mercantile Bank',        img: 'https://reddata.com.bd/images/clients/5Mercantilebank.png' },
-  { name: 'Shahjalal Islami Bank',  img: 'https://reddata.com.bd/images/clients/6ShahjalalIslamiBank.png' },
-  { name: 'Shimanto Bank',          img: 'https://reddata.com.bd/images/clients/7ShimantoBank.png' },
-  { name: 'Citizens Bank',          img: 'https://reddata.com.bd/images/clients/8CitizensBank.png' },
-  { name: 'Upay',                   img: 'https://reddata.com.bd/images/clients/9Upay.png' },
-  { name: 'Genex',                  img: 'https://reddata.com.bd/images/clients/10Genex.png' },
-  { name: 'Digicon',                img: 'https://reddata.com.bd/images/clients/11Digicon.png' },
-  { name: 'Urmi',                   img: 'https://reddata.com.bd/images/clients/urmi.png' },
-  { name: 'Bitopi Group',           img: 'https://reddata.com.bd/images/clients/13BitopiGroup.png' },
-  { name: 'SSD Tech',               img: 'https://reddata.com.bd/images/clients/14SSDTech.png' },
-  { name: 'Nextnet',                img: 'https://reddata.com.bd/images/clients/15Nextnet.png' },
-  { name: 'CloudWell',              img: 'https://reddata.com.bd/images/clients/16CloudWell.png' },
-  { name: 'EB Solution',            img: 'https://reddata.com.bd/images/clients/17EBSolution.png' },
-  { name: 'SARBS Communication',    img: 'https://reddata.com.bd/images/clients/18SARBSCommunication.png' },
-  { name: 'NRDS',                   img: 'https://reddata.com.bd/images/clients/19NRDS.png' },
-  { name: 'Wintel Limited',         img: 'https://reddata.com.bd/images/clients/20WintelLimited.png' },
-  { name: 'Bangladesh Apparel',     img: 'https://reddata.com.bd/images/clients/21BangladeshApparel.png' },
-  { name: 'AyAl',                   img: 'https://reddata.com.bd/images/clients/AyAl.png' },
-  { name: 'AyAl Tech',              img: 'https://reddata.com.bd/images/clients/AyAlTech.png' },
-  { name: 'BIIN',                   img: 'https://reddata.com.bd/images/clients/BIIN.png' },
-  { name: 'SMART',                  img: 'https://reddata.com.bd/images/clients/SMART.png' },
+  { name: 'UCB',                    img: '/images/clients/1UCB.png' },
+  { name: 'City Bank',              img: '/images/clients/2CityBank.png' },
+  { name: 'Prime Bank',             img: '/images/clients/3PrimeBank.png' },
+  { name: 'DBBL',                   img: '/images/clients/4DBBL.png' },
+  { name: 'Mercantile Bank',        img: '/images/clients/5Mercantilebank.png' },
+  { name: 'Shahjalal Islami Bank',  img: '/images/clients/6ShahjalalIslamiBank.png' },
+  { name: 'Shimanto Bank',          img: '/images/clients/7ShimantoBank.png' },
+  { name: 'Citizens Bank',          img: '/images/clients/8CitizensBank.png' },
+  { name: 'Upay',                   img: '/images/clients/9Upay.png' },
+  { name: 'Genex',                  img: '/images/clients/10Genex.png' },
+  { name: 'Digicon',                img: '/images/clients/11Digicon.png' },
+  { name: 'Urmi',                   img: '/images/clients/urmi.png' },
+  { name: 'Bitopi Group',           img: '/images/clients/13BitopiGroup.png' },
+  { name: 'SSD Tech',               img: '/images/clients/14SSDTech.png' },
+  { name: 'Nextnet',                img: '/images/clients/15Nextnet.png' },
+  { name: 'CloudWell',              img: '/images/clients/16CloudWell.png' },
+  { name: 'EB Solution',            img: '/images/clients/17EBSolution.png' },
+  { name: 'SARBS Communication',    img: '/images/clients/18SARBSCommunication.png' },
+  { name: 'NRDS',                   img: '/images/clients/19NRDS.png' },
+  { name: 'Wintel Limited',         img: '/images/clients/20WintelLimited.png' },
+  { name: 'Bangladesh Apparel',     img: '/images/clients/21BangladeshApparel.png' },
+  { name: 'AyAl',                   img: '/images/clients/AyAl.png' },
+  { name: 'AyAl Tech',              img: '/images/clients/AyAlTech.png' },
+  { name: 'BIIN',                   img: '/images/clients/BIIN.png' },
+  { name: 'SMART',                  img: '/images/clients/SMART.png' },
 ]
 
 export default function CorporateInternetPage() {
@@ -251,8 +252,8 @@ export default function CorporateInternetPage() {
             <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {whyUs.map((item) => (
                 <div key={item.title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
-                    {item.icon}
+                  <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon name={item.icon} className="w-6 h-6 text-red-500 dark:text-red-400" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{item.title}</h4>
@@ -292,7 +293,7 @@ export default function CorporateInternetPage() {
                 <img
                   src={c.img}
                   alt={c.name}
-                  className="h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                  className="h-10 w-auto object-contain transition-all duration-300"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => {

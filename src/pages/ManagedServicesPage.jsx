@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import Icon from '../components/ui/Icon'
 import { managedServicesData } from '../data/siteData'
 
 const { services, stats } = managedServicesData
@@ -80,8 +81,8 @@ export default function ManagedServicesPage() {
               <div key={s.title} className={`rounded-3xl border ${s.borderColor} ${s.bgColor} p-7 lg:p-9`}>
                 <div className="flex flex-col lg:flex-row gap-6">
                   <div className="flex items-start gap-4 flex-1">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${s.color} text-white flex items-center justify-center text-2xl shadow-lg shrink-0`}>
-                      {s.icon}
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${s.color} text-white flex items-center justify-center shadow-lg shrink-0`}>
+                      <Icon name={s.icon} className="w-7 h-7" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2 mb-2">

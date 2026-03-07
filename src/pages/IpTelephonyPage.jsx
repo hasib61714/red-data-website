@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import Icon from '../components/ui/Icon'
 import { ipTelephonyData } from '../data/siteData'
 
 const { features, stats } = ipTelephonyData
@@ -77,8 +78,8 @@ export default function IpTelephonyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {features.map((f) => (
               <div key={f.title} className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 p-6 hover:shadow-lg hover:-translate-y-1 transition-all group">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 text-white flex items-center justify-center text-xl shadow mb-4 group-hover:scale-110 transition-transform">
-                  {f.icon}
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 text-white flex items-center justify-center shadow mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name={f.icon} className="w-5 h-5" />
                 </div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base mb-2">{f.title}</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{f.desc}</p>

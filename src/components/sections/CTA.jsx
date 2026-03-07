@@ -4,6 +4,7 @@ import Container from '../ui/Container'
 import Button from '../ui/Button'
 import Reveal from '../ui/Reveal'
 import { ctaData, footerData, L } from '../../data/siteData'
+import Icon from '../ui/Icon'
 
 export default function CTA() {
   const { lang } = useLanguage()
@@ -58,15 +59,15 @@ export default function CTA() {
             {/* Quick contact links */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 pt-10 border-t border-slate-200 dark:border-white/[0.08]">
               <a href={`mailto:${footerData.contact.email}`} className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 text-sm transition-colors">
-                <span>✉️</span> {footerData.contact.email}
+                <Icon name="mail" className="w-4 h-4" /> {footerData.contact.email}
               </a>
               <div className="hidden sm:block w-px h-5 bg-slate-300 dark:bg-white/10" />
               <a href={`tel:${footerData.contact.phone.replace(/-/g, '')}`} className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 text-sm transition-colors">
-                <span>📞</span> {footerData.contact.phone}
+                <Icon name="phone" className="w-4 h-4" /> {footerData.contact.phone}
               </a>
               <div className="hidden sm:block w-px h-5 bg-slate-300 dark:bg-white/10" />
               <a href="https://wa.me/+8801971521964" className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 text-sm transition-colors">
-                <span>💬</span> WhatsApp
+                <Icon name="message" className="w-4 h-4" /> WhatsApp
               </a>
             </div>
           </div>

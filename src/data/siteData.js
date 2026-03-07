@@ -809,12 +809,12 @@ export const aboutPageData = {
 // ─── Data Connectivity Page ───────────────────────────────────────────────────
 export const dataConnectivityData = {
   features: [
-    { icon: '🔗', title: 'Point-to-Point & Multipoint Links', desc: 'Highly reliable dedicated data links connecting your branches and campuses with guaranteed bandwidth and zero congestion.' },
-    { icon: '🔒', title: 'VPN Services', desc: 'Secure encrypted Virtual Private Networks over our high-speed fiber backbone for safe inter-office and remote access.' },
-    { icon: '🌐', title: 'MPLS Network', desc: 'Layer 2 / Layer 3 resilient national MPLS next-generation network ensuring intelligent traffic routing and Quality of Service.' },
-    { icon: '🌑', title: 'Dark Fiber for Enterprises', desc: 'Lease unlit fiber strands and run your own networking equipment at full capacity — complete control over your last-mile infrastructure.' },
-    { icon: '📡', title: 'CP Network', desc: 'Carrier partner network spanning Grameenphone, Banglalink, Airtel, Robi, and Teletalk for maximum national reachability.' },
-    { icon: '🏗️', title: 'Backhaul Service', desc: 'Robust high-capacity backhaul links for ISPs, tower operators, and enterprise aggregation points across Bangladesh.' },
+    { icon: 'link',    title: 'Point-to-Point & Multipoint Links', desc: 'Highly reliable dedicated data links connecting your branches and campuses with guaranteed bandwidth and zero congestion.' },
+    { icon: 'lock',    title: 'VPN Services', desc: 'Secure encrypted Virtual Private Networks over our high-speed fiber backbone for safe inter-office and remote access.' },
+    { icon: 'globe',   title: 'MPLS Network', desc: 'Layer 2 / Layer 3 resilient national MPLS next-generation network ensuring intelligent traffic routing and Quality of Service.' },
+    { icon: 'cpu',     title: 'Dark Fiber for Enterprises', desc: 'Lease unlit fiber strands and run your own networking equipment at full capacity — complete control over your last-mile infrastructure.' },
+    { icon: 'network', title: 'CP Network', desc: 'Carrier partner network spanning Grameenphone, Banglalink, Airtel, Robi, and Teletalk for maximum national reachability.' },
+    { icon: 'wrench',  title: 'Backhaul Service', desc: 'Robust high-capacity backhaul links for ISPs, tower operators, and enterprise aggregation points across Bangladesh.' },
   ],
   stats: [
     { value: '99.9%', label: 'Network Uptime SLA' },
@@ -827,18 +827,18 @@ export const dataConnectivityData = {
 // ─── IP Telephony Page ────────────────────────────────────────────────────────
 export const ipTelephonyData = {
   features: [
-    { icon: '🏢', title: 'Hosted & On-Premise IPPBX', desc: 'Deploy a full-featured IP PBX either hosted in our cloud or on-premise at your office — your choice of control and scale.' },
-    { icon: '☁️', title: 'Cloud PBX Service', desc: 'Fully managed cloud-based PBX eliminating hardware costs while delivering enterprise-grade telephony features.' },
-    { icon: '📞', title: 'Call Center Solution', desc: 'Complete inbound/outbound call center platform with agent management, queue analytics, and supervisor dashboards.' },
-    { icon: '🤖', title: 'Dynamic IVR', desc: 'Multi-level Interactive Voice Response with real-time routing logic, language support, and seamless CRM hooks.' },
-    { icon: '🔢', title: 'Short Code Parking', desc: 'Dedicated short codes for marketing campaigns, hotlines, and internal extensions that are easy to remember.' },
-    { icon: '📟', title: 'Analog PBX Integration', desc: 'Bridge your legacy analog PBX infrastructure into the VoIP world with zero downtime migration paths.' },
-    { icon: '🆓', title: 'Toll Free Service', desc: 'Provision toll-free numbers so customers can call your business at no charge — ideal for support and sales.' },
-    { icon: '🔗', title: 'CRM Integration', desc: 'Native connectors for popular CRMs (Salesforce, Zoho, HubSpot) enabling click-to-dial and call logging.' },
-    { icon: '🌐', title: 'SIP Trunk', desc: 'Replace costly PSTN lines with scalable SIP trunks over our high-quality IP network with competitive per-minute rates.' },
-    { icon: '🃏', title: 'Hunting Group', desc: 'Distribute incoming calls intelligently across agent groups using round-robin, simultaneous, or priority rules.' },
-    { icon: '📲', title: 'Automated Dialing & Call Distribution', desc: 'Predictive, progressive, and preview auto-dialers with automatic call distribution for maximum agent productivity.' },
-    { icon: '↪️', title: 'Call Forwarding', desc: 'Unconditional, busy, and no-answer forwarding rules configurable per extension — stay reachable everywhere.' },
+    { icon: 'building',    title: 'Hosted & On-Premise IPPBX', desc: 'Deploy a full-featured IP PBX either hosted in our cloud or on-premise at your office — your choice of control and scale.' },
+    { icon: 'cloud',       title: 'Cloud PBX Service', desc: 'Fully managed cloud-based PBX eliminating hardware costs while delivering enterprise-grade telephony features.' },
+    { icon: 'phone',       title: 'Call Center Solution', desc: 'Complete inbound/outbound call center platform with agent management, queue analytics, and supervisor dashboards.' },
+    { icon: 'cpu',         title: 'Dynamic IVR', desc: 'Multi-level Interactive Voice Response with real-time routing logic, language support, and seamless CRM hooks.' },
+    { icon: 'layers',      title: 'Short Code Parking', desc: 'Dedicated short codes for marketing campaigns, hotlines, and internal extensions that are easy to remember.' },
+    { icon: 'phone',       title: 'Analog PBX Integration', desc: 'Bridge your legacy analog PBX infrastructure into the VoIP world with zero downtime migration paths.' },
+    { icon: 'dollar',      title: 'Toll Free Service', desc: 'Provision toll-free numbers so customers can call your business at no charge — ideal for support and sales.' },
+    { icon: 'link',        title: 'CRM Integration', desc: 'Native connectors for popular CRMs (Salesforce, Zoho, HubSpot) enabling click-to-dial and call logging.' },
+    { icon: 'globe',       title: 'SIP Trunk', desc: 'Replace costly PSTN lines with scalable SIP trunks over our high-quality IP network with competitive per-minute rates.' },
+    { icon: 'users',       title: 'Hunting Group', desc: 'Distribute incoming calls intelligently across agent groups using round-robin, simultaneous, or priority rules.' },
+    { icon: 'device',      title: 'Automated Dialing & Call Distribution', desc: 'Predictive, progressive, and preview auto-dialers with automatic call distribution for maximum agent productivity.' },
+    { icon: 'arrow',       title: 'Call Forwarding', desc: 'Unconditional, busy, and no-answer forwarding rules configurable per extension — stay reachable everywhere.' },
   ],
   stats: [
     { value: '12+', label: 'Features' },
@@ -851,38 +851,38 @@ export const ipTelephonyData = {
 // ─── SMS Service Page ─────────────────────────────────────────────────────────
 export const smsServiceData = {
   features: [
-    { icon: '🔌', title: 'Easy API Integration', desc: 'Developer-friendly REST APIs with comprehensive documentation — integrate bulk SMS into any system in minutes.' },
-    { icon: '🖥️', title: 'User Friendly Customer Panel', desc: 'Intuitive web dashboard for non-technical users to send campaigns, view reports, and manage contacts without any coding.' },
-    { icon: '📋', title: 'Campaign & Template Management', desc: 'Create, schedule, and reuse SMS templates for recurring campaigns — segmentation and bulk import included.' },
-    { icon: '🗄️', title: 'Aggregator Plane', desc: 'Connected to all major operators through our aggregator layer ensuring maximum route coverage and reliability across Bangladesh.' },
-    { icon: '📍', title: 'Location Based SMS', desc: 'Target subscribers by geographic zone for hyper-local marketing campaigns and location-triggered notifications.' },
-    { icon: '📈', title: 'Highest Submit Rate', desc: 'Our direct operator connections deliver among the highest submit and delivery rates in the country with real-time status.' },
-    { icon: '💸', title: 'No Hidden Cost', desc: 'Transparent per-SMS pricing — no setup fees, no monthly minimums, no surprise charges. Pay only for what you send.' },
-    { icon: '🔑', title: 'Customer Driven API Key', desc: 'Each customer gets a dedicated API key with role-based access control and usage analytics in the dashboard.' },
-    { icon: '👨‍💻', title: 'Developer Friendly', desc: 'SDKs for PHP, Python, Node.js and Java alongside thorough Postman collections and sandbox environments.' },
-    { icon: '💼', title: 'Transactional SMS', desc: 'Mission-critical OTPs, alerts, and notifications delivered through a dedicated high-priority route with millisecond latency.' },
+    { icon: 'plug',      title: 'Easy API Integration', desc: 'Developer-friendly REST APIs with comprehensive documentation — integrate bulk SMS into any system in minutes.' },
+    { icon: 'tv',        title: 'User Friendly Customer Panel', desc: 'Intuitive web dashboard for non-technical users to send campaigns, view reports, and manage contacts without any coding.' },
+    { icon: 'layers',    title: 'Campaign & Template Management', desc: 'Create, schedule, and reuse SMS templates for recurring campaigns — segmentation and bulk import included.' },
+    { icon: 'chip',      title: 'Aggregator Plane', desc: 'Connected to all major operators through our aggregator layer ensuring maximum route coverage and reliability across Bangladesh.' },
+    { icon: 'mapPin',    title: 'Location Based SMS', desc: 'Target subscribers by geographic zone for hyper-local marketing campaigns and location-triggered notifications.' },
+    { icon: 'trending',  title: 'Highest Submit Rate', desc: 'Our direct operator connections deliver among the highest submit and delivery rates in the country with real-time status.' },
+    { icon: 'dollar',    title: 'No Hidden Cost', desc: 'Transparent per-SMS pricing — no setup fees, no monthly minimums, no surprise charges. Pay only for what you send.' },
+    { icon: 'shield',    title: 'Customer Driven API Key', desc: 'Each customer gets a dedicated API key with role-based access control and usage analytics in the dashboard.' },
+    { icon: 'code',      title: 'Developer Friendly', desc: 'SDKs for PHP, Python, Node.js and Java alongside thorough Postman collections and sandbox environments.' },
+    { icon: 'star',      title: 'Transactional SMS', desc: 'Mission-critical OTPs, alerts, and notifications delivered through a dedicated high-priority route with millisecond latency.' },
   ],
   useCases: [
-    { icon: '🏦', label: 'Banking & Finance' },
-    { icon: '🛒', label: 'E-Commerce' },
-    { icon: '🏥', label: 'Healthcare' },
-    { icon: '📦', label: 'Logistics' },
-    { icon: '🎓', label: 'Education' },
-    { icon: '🏢', label: 'Enterprises' },
+    { icon: 'building', label: 'Banking & Finance' },
+    { icon: 'chart',    label: 'E-Commerce' },
+    { icon: 'shield',   label: 'Healthcare' },
+    { icon: 'layers',   label: 'Logistics' },
+    { icon: 'star',     label: 'Education' },
+    { icon: 'building', label: 'Enterprises' },
   ],
 }
 
 // ─── Domain & Hosting Page ────────────────────────────────────────────────────
 export const domainHostingData = {
   features: [
-    { icon: '🌐', title: 'Domain Registration', desc: 'Register .com, .com.bd, .org, .net and all popular TLDs at competitive prices with free DNS management, privacy protection, and auto-renewal.' },
-    { icon: '☁️', title: 'Cloud Hosting', desc: 'Scalable cloud hosting with SSD storage, auto-scaling resources, free SSL, and one-click app installs — perfect for web & ecommerce.' },
-    { icon: '💾', title: 'Storage Solutions', desc: 'Flexible object and block storage options with redundant backups, geo-replication, and high-throughput access for business data.' },
-    { icon: '🖥️', title: 'Dedicated Servers', desc: 'Bare-metal dedicated servers with full root access, custom hardware configurations, and direct network hand-off in our Dhaka data center.' },
-    { icon: '🏗️', title: 'Network Infrastructure', desc: 'Enterprise-grade connectivity for your hosted services with redundant upstream links, BGP routing, and low-latency peering.' },
-    { icon: '🛡️', title: 'Security Measures', desc: 'DDoS mitigation, WAF, automated malware scanning, SSL certificates, and proactive vulnerability patching included on all plans.' },
-    { icon: '⚙️', title: 'Customization Options', desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.' },
-    { icon: '🔧', title: 'Management Tools', desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.' },
+    { icon: 'globe',   title: 'Domain Registration', desc: 'Register .com, .com.bd, .org, .net and all popular TLDs at competitive prices with free DNS management, privacy protection, and auto-renewal.' },
+    { icon: 'cloud',   title: 'Cloud Hosting', desc: 'Scalable cloud hosting with SSD storage, auto-scaling resources, free SSL, and one-click app installs — perfect for web & ecommerce.' },
+    { icon: 'chip',    title: 'Storage Solutions', desc: 'Flexible object and block storage options with redundant backups, geo-replication, and high-throughput access for business data.' },
+    { icon: 'tv',      title: 'Dedicated Servers', desc: 'Bare-metal dedicated servers with full root access, custom hardware configurations, and direct network hand-off in our Dhaka data center.' },
+    { icon: 'network', title: 'Network Infrastructure', desc: 'Enterprise-grade connectivity for your hosted services with redundant upstream links, BGP routing, and low-latency peering.' },
+    { icon: 'shield',  title: 'Security Measures', desc: 'DDoS mitigation, WAF, automated malware scanning, SSL certificates, and proactive vulnerability patching included on all plans.' },
+    { icon: 'wrench',  title: 'Customization Options', desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.' },
+    { icon: 'wrench',  title: 'Management Tools', desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.' },
   ],
   plans: [
     { name: 'Starter',    price: 'BDT 500',   period: '/month', features: ['1 Domain', '10 GB SSD Storage', '10 Email Accounts', 'Free SSL', '99.9% Uptime'] },
@@ -895,7 +895,7 @@ export const domainHostingData = {
 export const managedServicesData = {
   services: [
     {
-      icon: '🌐',
+      icon: 'globe',
       title: 'Custom Network Management Service',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50 dark:bg-blue-500/10',
@@ -904,7 +904,7 @@ export const managedServicesData = {
       features: ['Proactive fault detection & resolution', '24/7 NOC monitoring', 'Network performance optimisation', 'Regular firmware & patch management', 'Detailed SLA reports & dashboards', 'Incident management & escalation'],
     },
     {
-      icon: '🛡️',
+      icon: 'shield',
       title: 'Managed Network Security Service',
       color: 'from-red-500 to-rose-600',
       bgColor: 'bg-red-50 dark:bg-red-500/10',
@@ -913,7 +913,7 @@ export const managedServicesData = {
       features: ['Firewall management & tuning', 'IDS / IPS monitoring', 'Security incident response', 'Vulnerability scanning & remediation', 'Compliance reporting (ISO 27001, BDRC)', 'DDoS protection & traffic scrubbing'],
     },
     {
-      icon: '💻',
+      icon: 'code',
       title: 'Managed Software & Embedded System Development',
       color: 'from-emerald-500 to-emerald-600',
       bgColor: 'bg-emerald-50 dark:bg-emerald-500/10',
