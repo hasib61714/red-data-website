@@ -40,7 +40,11 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
 
   const location = useLocation()
   const pathname = location.pathname
-  const isServiceActive = () => serviceItems.some(item => pathname === item.to)
+  // Only highlight dropdown as active if pathname matches a dropdown item, not Corporate/Home Internet
+  const isServiceActive = () => {
+    // Exclude Corporate Internet and Home Internet from dropdown selection
+    return serviceItems.some(item => pathname === item.to && item.label !== 'Corporate Internet' && item.label !== 'Home Internet')
+  }
   const mobileLinkCls = (active = false) =>
     `flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
       active
