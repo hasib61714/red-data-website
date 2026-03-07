@@ -11,76 +11,58 @@ export default function HomeInternetPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900">
-      <PageMeta title="Home Internet Plans" description="Affordable high-speed fiber home internet plans in Dhaka and across Bangladesh from Red Data. No throttling, 99.9% uptime SLA." />
-
-      {/* ── Page Hero ── */}
-      <div className="bg-gradient-to-br from-slate-900 via-red-950 to-slate-900 pt-36 pb-16 relative overflow-hidden">
-        {/* decorative blobs */}
-        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-10 -right-10 w-96 h-96 rounded-full bg-rose-700/15 blur-3xl pointer-events-none" />
         <Container>
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Home Internet</span>
-          </nav>
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-              Home Internet Plans
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
-              Pricing Package
-            </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              We provide popular pricing to enjoy your daily life. High-speed fiber optic internet with no hidden charges and BTRC approved tariffs.
-            </p>
-          </div>
-        </Container>
-      </div>
-
-      {/* ── Plans Grid ── */}
-      <div className="bg-slate-50 dark:bg-slate-900 py-16">
-        <Container>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`relative flex flex-col rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
-                  plan.popular
-                    ? 'border-red-500 shadow-lg shadow-red-500/20 dark:shadow-red-500/10'
-                    : 'border-slate-200 dark:border-slate-700/60 shadow-md'
-                } bg-white dark:bg-slate-800`}
-              >
-                {/* Popular ring */}
-                {plan.popular && (
-                  <div className="absolute inset-0 rounded-2xl ring-2 ring-red-500 pointer-events-none" />
-                )}
-
-                {/* Colour top bar */}
-                <div className={`h-1.5 w-full bg-gradient-to-r ${plan.color}`} />
-
-                {/* Tag */}
-                <div className="px-5 pt-4 pb-0 flex justify-between items-start">
-                  <span className={`text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${plan.tagColor}`}>
-                    {plan.tag}
-                  </span>
-                  {plan.popular && (
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-red-600 text-white">★ Top Pick</span>
-                  )}
-                </div>
-
-                {/* Plan name */}
-                <div className="px-5 pt-3">
-                  <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">{plan.name}</h3>
-                  <div className="flex items-end gap-1 mt-1">
-                    <span className="text-3xl font-black text-red-600 dark:text-red-400">৳{plan.price.toLocaleString()}</span>
-                    <span className="text-slate-400 text-sm mb-1">/month</span>
+          <div className="flex flex-col items-center justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
+              {plans.slice(0, 3).map((plan, idx) => (
+                <div
+                  key={plan.name}
+                  className="relative flex flex-col items-center justify-between rounded-2xl border border-red-400 bg-white shadow-lg min-h-[540px] max-w-[370px] mx-auto w-full p-8"
+                  style={{ boxSizing: 'border-box' }}
+                >
+                  {/* Badge */}
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-28 flex justify-center">
+                    <span className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow bg-white border border-red-400 text-red-600`}>{plan.tag || (plan.popular ? 'Most Popular' : idx === 0 ? 'Basic' : idx === 1 ? 'Starter' : '')}</span>
                   </div>
-                  <p className="text-xs text-slate-400 mt-0.5">{plan.base} + {plan.vat} (5% VAT)</p>
+                  {/* Plan name */}
+                  <h3 className="mt-8 mb-4 text-xl font-extrabold text-center text-slate-900">{plan.name}</h3>
+                  {/* Price */}
+                  <div className="mb-2 text-center">
+                    <span className="text-4xl font-black text-red-600">৳{plan.price.toLocaleString()}</span>
+                    <span className="text-slate-400 text-base ml-1">/month</span>
+                  </div>
+                  {/* One-time cost */}
+                  <div className="mb-4 text-center text-sm text-slate-500">{plan.oneTime === 0 ? <span className="text-emerald-500">Free</span> : plan.oneTime}</div>
+                  {/* Divider */}
+                  <hr className="w-full border-t border-red-200 my-4" />
+                  {/* Features */}
+                  <ul className="w-full flex-1 flex flex-col justify-start gap-4 mb-8">
+                    {[
+                      'Buffer-less social media & YouTube',
+                      'Unlimited devices',
+                      `${plan.talkTime} Min TalkTime`,
+                      ...(plan.ott > 0 ? [`${plan.ott} OTT Subscription${plan.ott > 1 ? 's' : ''}`] : []),
+                      '24/7 Customer Care',
+                    ].map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm text-slate-700">
+                        <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* CTA */}
+                  <Link
+                    to="/contact"
+                    className="block w-full mt-auto text-center py-3 rounded-xl font-semibold text-base bg-gradient-to-r from-red-600 via-orange-500 to-amber-400 text-white shadow-md transition-all duration-200 hover:scale-[1.02] active:scale-95"
+                  >
+                    Choose Package &rarr;
+                  </Link>
                 </div>
+              ))}
+            </div>
+          </div>
 
                 {/* Speed badge */}
                 <div className="px-5 mt-4">
