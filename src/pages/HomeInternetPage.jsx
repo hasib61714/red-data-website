@@ -5,6 +5,8 @@ import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
 import { homeInternetPageData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
+import PricingCard from '../components/shared/PricingCard'
+import Reveal from '../components/ui/Reveal'
 
 const { plans, benefits } = homeInternetPageData
 
@@ -101,104 +103,34 @@ export default function HomeInternetPage() {
       {/* ── Plans Grid ── */}
       <div className="bg-slate-50 dark:bg-slate-900 py-16">
         <Container>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`relative flex flex-col rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
-                  plan.popular
-                    ? 'border-red-500 shadow-lg shadow-red-500/20 dark:shadow-red-500/10'
-                    : 'border-slate-200 dark:border-slate-700/60 shadow-md'
-                } bg-white dark:bg-slate-800`}
-              >
-                {/* Popular ring */}
-                {plan.popular && (
-                  <div className="absolute inset-0 rounded-2xl ring-2 ring-red-500 pointer-events-none" />
-                )}
-
-                {/* Colour top bar */}
-                <div className={`h-1.5 w-full bg-gradient-to-r ${plan.color}`} />
-
-                {/* Tag */}
-                <div className="px-5 pt-4 pb-0 flex justify-between items-start">
-                  <span className={`text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${plan.tagColor}`}>
-                    {plan.tag}
-                  </span>
-                  {plan.popular && (
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-red-600 text-white">★ Top Pick</span>
-                  )}
-                </div>
-
-                {/* Plan name */}
-                <div className="px-5 pt-3">
-                  <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">{plan.name}</h3>
-                  <div className="flex items-end gap-1 mt-1">
-                    <span className="text-3xl font-black text-red-600 dark:text-red-400">৳{plan.price.toLocaleString()}</span>
-                    <span className="text-slate-400 text-sm mb-1">/month</span>
-                  </div>
-                  <p className="text-xs text-slate-400 mt-0.5">{plan.base} + {plan.vat} (5% VAT)</p>
-                </div>
-
-                {/* Speed badge */}
-                <div className="px-5 mt-4">
-                  <div className={`flex items-center gap-2 bg-gradient-to-r ${plan.color} text-white rounded-xl px-3 py-2.5`}>
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <span className="text-lg font-black">{plan.speed} Mbps</span>
-                    <span className="text-xs opacity-80 font-medium">Bandwidth</span>
-                  </div>
-                </div>
-
-                {/* Features */}
-                <ul className="px-5 mt-4 space-y-2 flex-1">
-                  {[
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start md:items-center mt-4">
+            {plans.map((plan, i) => (
+              <Reveal key={plan.name} delay={i * 100}>
+                <PricingCard
+                  name={plan.name}
+                  tag={plan.tag}
+                  price={`৳${plan.price.toLocaleString()}`}
+                  vatBreakdown={`৳${plan.base} + ৳${plan.vat} (5% VAT)`}
+                  period="/month"
+                  oneTime={plan.oneTime === 0 ? 'Free installation' : `৳${plan.oneTime.toLocaleString()} one-time setup`}
+                  bandwidth={`${plan.speed} Mbps`}
+                  popular={plan.name === 'Maroon'}
+                  features={[
+                    `${plan.speed} Mbps Bandwidth`,
                     'Buffer-less social media & YouTube',
-                    'Unlimited devices',
+                    'Unlimited Device Support',
                     `${plan.talkTime} Min TalkTime`,
                     ...(plan.ott > 0 ? [`${plan.ott} OTT Subscription${plan.ott > 1 ? 's' : ''}`] : []),
                     '24/7 Customer Care',
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300">
-                      <svg className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* One-time cost */}
-                <div className="px-5 mt-4">
-                  <div className="flex items-center justify-between bg-slate-50 dark:bg-slate-700/50 rounded-lg px-3 py-2 text-sm">
-                    <span className="text-slate-500 dark:text-slate-400">One-time cost</span>
-                    <span className="font-bold text-slate-900 dark:text-white">
-                      {plan.oneTime === 0 ? <span className="text-emerald-500">Free</span> : `৳${plan.oneTime.toLocaleString()}`}
-                    </span>
-                  </div>
-                </div>
-
-                {/* CTA */}
-                <div className="px-5 pb-5 mt-4">
-                  <Link
-                    to="/contact"
-                    className={`block w-full text-center py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95 ${
-                      plan.popular
-                        ? 'bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-600/30'
-                        : 'bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white hover:bg-red-600 hover:text-white dark:hover:bg-red-600'
-                    }`}
-                  >
-                    Choose Package
-                  </Link>
-                </div>
-              </div>
+                    plan.oneTime === 0 ? 'Free Installation' : `৳${plan.oneTime.toLocaleString()} one-time setup`,
+                  ]}
+                  cta="Get Started"
+                />
+              </Reveal>
             ))}
           </div>
-
-          {/* VAT Note */}
           <p className="text-center text-slate-500 dark:text-slate-500 text-sm mt-10">
-            All prices include 5% VAT.{' '}
-          <span className="text-red-600 dark:text-red-400">View full BTRC approved tariff</span>
+            All prices include 5% VAT.
           </p>
         </Container>
       </div>
