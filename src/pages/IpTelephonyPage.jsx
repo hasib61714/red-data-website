@@ -7,6 +7,8 @@ import { ipTelephonyData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import { useLanguage } from '../context/LanguageContext'
 import ExpandableText from '../components/ui/ExpandableText'
+import PageHero from '../components/ui/PageHero'
+import ServiceCTA from '../components/ui/ServiceCTA'
 
 const { features } = ipTelephonyData
 
@@ -19,13 +21,7 @@ export default function IpTelephonyPage() {
       <PageMeta title="IP Telephony" description="VoIP & cloud PBX solutions with crystal-clear call quality and flexible plans from Red Data in Bangladesh." />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px)" }}
-        />
-        <Container>
+      <PageHero>
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
@@ -46,8 +42,7 @@ export default function IpTelephonyPage() {
               voicemail, call forwarding, and conferencing.
             </ExpandableText>
           </div>
-        </Container>
-      </div>
+      </PageHero>
 
 
       {/* Features */}
@@ -80,27 +75,11 @@ export default function IpTelephonyPage() {
       </div>
 
       {/* CTA */}
-      <div className="py-12 bg-white dark:bg-slate-800/40">
-        <Container>
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-            <div className="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-red-600/10 blur-3xl pointer-events-none" />
-            <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 justify-between">
-              <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Ready to modernise your business communications?</h3>
-                <p className="text-slate-300 text-sm">Contact our VoIP specialists for a custom proposal tailored to your team size and requirements.</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-                <Link to="/contact" className="px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg transition-all hover:scale-105">
-                  Get a Quote
-                </Link>
-                <a href="tel:+8809640112233" className="px-6 py-3 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all">
-                  Call Sales
-                </a>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
+      <ServiceCTA
+        heading="Ready to modernise your business communications?"
+        subtext="Contact our VoIP specialists for a custom proposal tailored to your team size and requirements."
+        primaryLabel="Get a Quote"
+      />
 
       <ExploreServices />
     </div>

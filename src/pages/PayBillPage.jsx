@@ -4,6 +4,7 @@ import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { payBillData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
+import PageHero from '../components/ui/PageHero'
 
 const { paymentMethods, faqs } = payBillData
 
@@ -16,13 +17,7 @@ export default function PayBillPage() {
       <PageMeta title="Pay Bill" description="Pay your Red Data internet bill via bKash, Nagad, Rocket, card, bank transfer, or cash at our Gulshan office." />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px)" }}
-        />
-        <Container>
+      <PageHero>
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
@@ -43,8 +38,7 @@ export default function PayBillPage() {
               Multiple easy payment options available. Pay anytime, anywhere using your preferred method.
             </p>
           </div>
-        </Container>
-      </div>
+      </PageHero>
 
       {/* Quick Pay Banner */}
       <div className="bg-red-600 py-4">

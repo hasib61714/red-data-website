@@ -7,6 +7,7 @@ import PageMeta from '../components/ui/PageMeta'
 import { corporateInternetPageData, aboutPageData, L } from '../data/siteData'
 import { useLanguage } from '../context/LanguageContext'
 import ExpandableText from '../components/ui/ExpandableText'
+import PageHero from '../components/ui/PageHero'
 
 const { fiberFeatures, whyUs, stats: corpStats } = corporateInternetPageData
 const clients = aboutPageData.clients
@@ -20,16 +21,7 @@ export default function CorporateInternetPage() {
       <PageMeta title="Corporate Internet" description="Dedicated enterprise-grade internet with reliable uptime, static IPs, and 24/7 support from Red Data Bangladesh." />
 
       {/* Page Hero */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
-        {/* Abstract circuit lines background */}
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{
-            backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px)",
-          }}
-        />
-        <Container>
+      <PageHero>
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
@@ -100,8 +92,7 @@ export default function CorporateInternetPage() {
               </div>
             </div>
           </div>
-        </Container>
-      </div>
+      </PageHero>
 
       {/* Fiber Optic Features */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
