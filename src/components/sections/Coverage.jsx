@@ -6,9 +6,10 @@ import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 
 // SVG map viewBox: 0 0 1024 1024 — potrace transform="translate(0,1024) scale(0.1,-0.1)"
-// Calibrated: West(88.01)→x≈168, East(92.68)→x≈720, North(26.63)→y≈5, South(20.74)→y≈1005
-const toSvgX = (lng) => 168 + (lng - 88.01) * 118.2
-const toSvgY = (lat) => 5 + (26.63 - lat) * 169.8
+// Actual SVG shape bounds parsed from path: x 143–881, y 0–1024
+// West(88.01)→x=143, East(92.68)→x=881, North(26.63)→y=0, South(20.74)→y=1024
+const toSvgX = (lng) => 143 + (lng - 88.01) * 158.1
+const toSvgY = (lat) => (26.63 - lat) * 173.9
 
 // Service cities: size 'lg'=capital, 'md'=divisional HQ (labeled), 'sm'=other (dot only)
 const SERVICE_CITIES = [
