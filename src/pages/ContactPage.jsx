@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { contactPageData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import PageHero from '../components/ui/PageHero'
+import Breadcrumb from '../components/ui/Breadcrumb'
 
 const contactMethods = contactPageData.methods
 
@@ -54,11 +54,7 @@ export default function ContactPage() {
 
       {/* Hero */}
       <PageHero>
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Contact Us</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'Contact Us' }]} />
           <div className="max-w-2xl">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               We&rsquo;d Love to{' '}

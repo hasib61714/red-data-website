@@ -5,6 +5,8 @@ import PageMeta from '../components/ui/PageMeta'
 import { payBillData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import PageHero from '../components/ui/PageHero'
+import Breadcrumb from '../components/ui/Breadcrumb'
+import SectionHeader from '../components/ui/SectionHeader'
 
 const { paymentMethods, faqs } = payBillData
 
@@ -18,11 +20,7 @@ export default function PayBillPage() {
 
       {/* Hero */}
       <PageHero>
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Pay Bill</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'Pay Bill' }]} />
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
@@ -57,18 +55,7 @@ export default function PayBillPage() {
       {/* Payment Methods */}
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Payment Options
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
-              Choose Your{' '}
-              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Payment Method
-              </span>
-            </h2>
-          </div>
+          <SectionHeader badge="Payment Options" heading="Choose Your" headingAccent="Payment Method" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {paymentMethods.map((m) => (

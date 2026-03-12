@@ -6,6 +6,8 @@ import { aboutPageData, footerData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import ExpandableText from '../components/ui/ExpandableText'
 import PageHero from '../components/ui/PageHero'
+import Breadcrumb from '../components/ui/Breadcrumb'
+import SectionHeader from '../components/ui/SectionHeader'
 
 const { clients, services, stats, story, companyCards, cta: aboutCta } = aboutPageData
 const { contact } = footerData
@@ -19,11 +21,7 @@ export default function AboutPage() {
 
       {/* Hero */}
       <PageHero>
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">About Us</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'About Us' }]} />
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="lg:w-1/2">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
@@ -106,18 +104,7 @@ export default function AboutPage() {
       {/* Services */}
       <div className="py-16 bg-slate-50 dark:bg-slate-800/40">
         <Container>
-          <div className="text-center mb-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              What We Offer
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              Our{' '}
-              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h2>
-          </div>
+          <SectionHeader badge="What We Offer" heading="Our" headingAccent="Services" className="mb-10" />
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {services.map((s) => (
               <div key={s.label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 text-center hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">
@@ -166,18 +153,7 @@ export default function AboutPage() {
       {/* Clients */}
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <div className="text-center mb-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Our Clients
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              Some of Our{' '}
-              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Valuable Clients
-              </span>
-            </h2>
-          </div>
+          <SectionHeader badge="Our Clients" heading="Some of Our" headingAccent="Valuable Clients" className="mb-10" />
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             {clients.map((c) => (
               <div key={c.name} className="flex items-center justify-center p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">

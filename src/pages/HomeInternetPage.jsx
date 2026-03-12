@@ -9,6 +9,8 @@ import PricingCard from '../components/shared/PricingCard'
 import Reveal from '../components/ui/Reveal'
 import ExpandableText from '../components/ui/ExpandableText'
 import PageHero from '../components/ui/PageHero'
+import Breadcrumb from '../components/ui/Breadcrumb'
+import SectionHeader from '../components/ui/SectionHeader'
 
 const { plans, benefits } = homeInternetPageData
 
@@ -21,12 +23,7 @@ export default function HomeInternetPage() {
 
       {/* Page Hero */}
       <PageHero>
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Home Internet</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'Home Internet' }]} />
           <div className="flex flex-col lg:flex-row items-center gap-10">
             {/* Left: text */}
             <div className="lg:w-1/2">
@@ -130,18 +127,7 @@ export default function HomeInternetPage() {
       {/* Why Choose Us */}
       <div className="py-16 bg-white dark:bg-slate-800/40">
         <Container>
-          <div className="text-center mb-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Why Choose Us
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
-              We provide top-tier services with{' '}
-              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                benefits you can rely on
-              </span>
-            </h2>
-          </div>
+          <SectionHeader badge="Why Choose Us" heading="We provide top-tier services with" headingAccent="benefits you can rely on" className="mb-10" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((b) => (
               <div key={b.title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 transition-colors">

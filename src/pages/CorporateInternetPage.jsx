@@ -8,6 +8,8 @@ import { corporateInternetPageData, aboutPageData, L } from '../data/siteData'
 import { useLanguage } from '../context/LanguageContext'
 import ExpandableText from '../components/ui/ExpandableText'
 import PageHero from '../components/ui/PageHero'
+import Breadcrumb from '../components/ui/Breadcrumb'
+import SectionHeader from '../components/ui/SectionHeader'
 
 const { fiberFeatures, whyUs, stats: corpStats } = corporateInternetPageData
 const clients = aboutPageData.clients
@@ -22,12 +24,7 @@ export default function CorporateInternetPage() {
 
       {/* Page Hero */}
       <PageHero>
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Corporate Internet</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'Corporate Internet' }]} />
           <div className="flex flex-col lg:flex-row items-center gap-10">
             {/* Left: text */}
             <div className="lg:w-1/2">
@@ -97,18 +94,7 @@ export default function CorporateInternetPage() {
       {/* Fiber Optic Features */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Fiber Optic Advantage
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
-              Why Choose Red Data{' '}
-              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Fiber Optic Connectivity?
-              </span>
-            </h2>
-          </div>
+          <SectionHeader badge="Fiber Optic Advantage" heading="Why Choose Red Data" headingAccent="Fiber Optic Connectivity?" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {fiberFeatures.map((f, i) => (
               <div
@@ -182,21 +168,7 @@ export default function CorporateInternetPage() {
       {/* Clients */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Our Clients
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
-              Some of Our{' '}
-              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Valuable Clients
-              </span>
-            </h2>
-            <p className="mt-3 text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto">
-              Trusted by leading banks, fintech companies, and enterprises across Bangladesh.
-            </p>
-          </div>
+          <SectionHeader badge="Our Clients" heading="Some of Our" headingAccent="Valuable Clients" subheading="Trusted by leading banks, fintech companies, and enterprises across Bangladesh." />
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             {clients.map((c) => (
               <div

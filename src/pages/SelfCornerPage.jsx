@@ -5,6 +5,8 @@ import PageMeta from '../components/ui/PageMeta'
 import { selfCornerData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import PageHero from '../components/ui/PageHero'
+import Breadcrumb from '../components/ui/Breadcrumb'
+import SectionHeader from '../components/ui/SectionHeader'
 
 const { features } = selfCornerData
 
@@ -26,11 +28,7 @@ export default function SelfCornerPage() {
 
       {/* Hero */}
       <PageHero>
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Self Corner</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'Self Corner' }]} />
           <div className="text-center max-w-2xl mx-auto">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
@@ -157,21 +155,7 @@ export default function SelfCornerPage() {
 
             {/* Right: Features */}
             <div className="flex-1">
-              <div className="mb-8">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                  Portal Features
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-                  Everything you need{' '}
-                  <span className="bg-gradient-to-r from-red-500 to-rose-400 bg-clip-text text-transparent">
-                    in one place
-                  </span>
-                </h2>
-                <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">
-                  Manage your internet subscription without ever needing to call — fully self-service.
-                </p>
-              </div>
+              <SectionHeader center={false} badge="Portal Features" heading="Everything you need" headingAccent="in one place" subheading="Manage your internet subscription without ever needing to call — fully self-service." className="mb-8" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {features.map((f) => (
                   <div key={f.title} className="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">

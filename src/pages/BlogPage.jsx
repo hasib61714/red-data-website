@@ -5,6 +5,7 @@ import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
 import { blogPostsData } from '../data/siteData'
 import PageHero from '../components/ui/PageHero'
+import Breadcrumb from '../components/ui/Breadcrumb'
 
 const posts = blogPostsData
 
@@ -19,11 +20,7 @@ export default function BlogPage() {
 
       {/* Hero */}
       <PageHero>
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Blog</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'Blog' }]} />
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />

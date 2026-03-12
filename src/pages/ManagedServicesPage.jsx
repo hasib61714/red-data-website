@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
@@ -9,6 +8,8 @@ import { useLanguage } from '../context/LanguageContext'
 import ExpandableText from '../components/ui/ExpandableText'
 import PageHero from '../components/ui/PageHero'
 import ServiceCTA from '../components/ui/ServiceCTA'
+import Breadcrumb from '../components/ui/Breadcrumb'
+import SectionHeader from '../components/ui/SectionHeader'
 
 const { services } = managedServicesData
 
@@ -22,13 +23,7 @@ export default function ManagedServicesPage() {
 
       {/* Hero */}
       <PageHero>
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-slate-400">Services</span>
-            <span>/</span>
-            <span className="text-white font-medium">Managed Services</span>
-          </nav>
+          <Breadcrumb items={[{ label: 'Services' }, { label: 'Managed Services' }]} />
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               Managed{' '}
@@ -48,18 +43,7 @@ export default function ManagedServicesPage() {
       {/* Services */}
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Our Offerings
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
-              Three Core{' '}
-              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Managed Services
-              </span>
-            </h2>
-          </div>
+          <SectionHeader badge="Our Offerings" heading="Three Core" headingAccent="Managed Services" />
 
           <div className="space-y-8">
             {services.map((s, i) => (
