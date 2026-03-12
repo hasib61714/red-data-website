@@ -948,7 +948,7 @@ export const contactPageData = {
     { icon: '📞', label: 'Phone', value: '+880 9640-112233', href: 'tel:+8809640112233', color: 'from-red-500 to-rose-600', bg: 'bg-red-50 dark:bg-red-500/10', border: 'border-red-200 dark:border-red-500/30' },
     { icon: '🎧', label: 'HelpDesk', value: '+880 9640-123123', href: 'tel:+8809640123123', color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-500/10', border: 'border-purple-200 dark:border-purple-500/30' },
     { icon: '📘', label: 'Facebook', value: 'Red Data Limited', href: 'https://www.facebook.com/profile.php?id=61556093758540', color: 'from-[#1877F2] to-blue-600', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-700/40' },
-    { icon: '👥', label: 'Facebook Group', value: 'Red Data Community', href: 'http://www.facebook.com/groups/reddatalimited/', color: 'from-sky-500 to-blue-600', bg: 'bg-sky-50 dark:bg-sky-900/20', border: 'border-sky-200 dark:border-sky-700/40' },
+    { icon: '👥', label: 'Facebook Group', value: 'Red Data Community', href: 'https://www.facebook.com/groups/reddatalimited/', color: 'from-sky-500 to-blue-600', bg: 'bg-sky-50 dark:bg-sky-900/20', border: 'border-sky-200 dark:border-sky-700/40' },
   ],
 }
 
