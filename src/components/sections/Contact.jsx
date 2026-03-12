@@ -29,7 +29,7 @@ const contactMethods = homeContactMethods
 // 1. Go to https://formspree.io → Sign up free
 // 2. Create a new form → copy the form ID (e.g. xpwzabcd)
 // 3. Paste it below replacing YOUR_FORM_ID
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/info@reddata.com.bd'
 
 export default function Contact() {
   const { lang } = useLanguage()
@@ -45,16 +45,20 @@ export default function Contact() {
     setSubmitting(true)
     setError('')
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(FORMSUBMIT_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          _subject: `[Red Data Website] New Contact Request`,
+          _template: 'table',
+          ...form,
+        }),
       })
-      if (res.ok) {
+      const data = await res.json()
+      if (data.success === 'true' || data.success === true) {
         setSent(true)
       } else {
-        const data = await res.json()
-        setError(data?.errors?.[0]?.message || 'Something went wrong. Please try again.')
+        setError('Something went wrong. Please try again.')
       }
     } catch {
       setError('Network error. Please check your connection and try again.')

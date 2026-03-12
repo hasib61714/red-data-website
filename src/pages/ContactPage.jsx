@@ -11,11 +11,39 @@ export default function ContactPage() {
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Placeholder — wire up to backend/formspree as needed
-    setSubmitted(true)
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/info@reddata.com.bd', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: `[Red Data Website] ${form.subject}`,
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          subject: form.subject,
+          message: form.message,
+          _template: 'table',
+        }),
+      })
+      const data = await res.json()
+      if (data.success === 'true' || data.success === true) {
+        setSubmitted(true)
+        setForm({ name: '', email: '', phone: '', subject: '', message: '' })
+      } else {
+        setError('Failed to send. Please try again or email us directly.')
+      }
+    } catch {
+      setError('Network error. Please try again or email us directly.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -119,9 +147,12 @@ export default function ContactPage() {
                       className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all resize-none"
                     />
                   </div>
-                  <button type="submit" className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold shadow-lg hover:shadow-red-500/25 transition-all transform hover:scale-[1.01] text-sm">
-                    Send Message →
+                  <button type="submit" disabled={sending} className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold shadow-lg hover:shadow-red-500/25 transition-all transform hover:scale-[1.01] disabled:scale-100 text-sm flex items-center justify-center gap-2">
+                    {sending ? (
+                      <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg> Sending…</>
+                    ) : 'Send Message →'}
                   </button>
+                  {error && <p className="text-red-500 text-sm text-center mt-2">{error}</p>}
                 </form>
               )}
             </div>
