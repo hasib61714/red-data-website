@@ -71,7 +71,7 @@ export const heroData = {
   cta2: { label: 'Get Connected', href: '#contact' },
   stats: [
     { value: '10K+', label: 'Happy Customers' },
-    { value: '99.9%', label: 'Uptime SLA' },
+    { value: '99%', label: 'Uptime' },
     { value: '64', label: 'Districts Covered' },
   ],
 }
@@ -99,7 +99,7 @@ export const heroSlides = [
     headline_bn: 'আপনার ব্যবসাকে শক্তিশালী করুন',
     headlineAccent: 'With Dedicated Bandwidth',
     headlineAccent_bn: 'ডেডিকেটেড ব্যান্ডউইথ দিয়ে',
-    subheadline: 'SLA-backed corporate internet with redundant fiber links. Keep every office, server, and team running at full capacity.',
+    subheadline: 'reliable corporate internet with redundant fiber links. Keep every office, server, and team running at full capacity.',
     subheadline_bn: 'SLA-সমর্থিত কর্পোরেট ইন্টারনেট রিডান্ড্যান্ট ফাইবার লিংকসহ। প্রতিটি অফিস, সার্ভার ও দলকে পূর্ণ গতিতে রাখুন।',
   },
   {
@@ -325,7 +325,7 @@ export const servicesData = {
         { icon: 'infinite', text: 'Zero Packet Loss Guarantee' },
         { icon: 'chart', text: 'Real-Time Traffic Analytics' },
         { icon: 'wrench', text: 'Dedicated Account Manager' },
-        { icon: 'clock', text: 'SLA-Backed 99.9% Uptime' },
+        { icon: 'clock', text: '99% Uptime' },
       ],
       features: [
         'Point-to-point & MPLS VPN circuits',
@@ -406,7 +406,7 @@ export const servicesData = {
       title: 'Domain & Hosting',
       title_bn: 'ডোমেইন ও হোস্টিং',
       description:
-        'Register your domain and host with confidence. 99.9% uptime, NVMe storage, free SSL, and one-click CMS installs included.',
+        'Register your domain and host with confidence. 99% uptime, NVMe storage, free SSL, and one-click CMS installs included.',
       description_bn:
         'আস্থার সাথে ডোমেইন নির্ধারণ ও হোস্ট করুন। ৯৯.৯% আপটাইম, NVMe স্টোরেজ, বিনামূল্যে SSL।',
       tag: 'Web',
@@ -417,7 +417,7 @@ export const servicesData = {
       highlights: [
         { icon: 'shield', text: 'Free SSL Certificate' },
         { icon: 'bolt', text: 'NVMe SSD Storage' },
-        { icon: 'star', text: '99.9% Uptime Guarantee' },
+        { icon: 'star', text: '99% Uptime Guarantee' },
         { icon: 'wrench', text: 'One-Click CMS Install' },
         { icon: 'cloud', text: 'Daily Automated Backups' },
         { icon: 'users', text: 'cPanel + Email Hosting' },
@@ -470,7 +470,7 @@ export const servicesData = {
 // ─── Stats ───────────────────────────────────────────────────────────────────
 export const statsData = [
   { value: '13+', label: 'Years Experience', label_bn: 'যুগুন্ত অভিজ্ঞতা', description: 'Serving homes and businesses since 2012', description_bn: '২০১২ সাল থেকে ঘর ও ব্যবসায় সেবা প্রদান' },
-  { value: '99.9%', label: 'Network Uptime', label_bn: 'নেটওয়ার্ক আপটাইম', description: 'SLA-backed reliability you can count on', description_bn: 'SLA-সমর্থিত নির্ভরযোগ্যতা' },
+  { value: '99%', label: 'Network Uptime', label_bn: 'নেটওয়ার্ক আপটাইম', description: 'reliable connectivity you can count on', description_bn: 'SLA-সমর্থিত নির্ভরযোগ্যতা' },
   { value: '64', label: 'Districts Covered', label_bn: 'জেলায় কভারেজ', description: 'Nationwide fiber backbone across Bangladesh', description_bn: 'বাংলাদেশজুড়ে ফাইবার ব্যাকবোন' },
   { value: '24 / 7', label: 'Customer Support', label_bn: 'গ্রাহক সহায়তা', description: 'Round-the-clock technical assistance', description_bn: 'সার্বক্ষণিক টেকনিক্যাল সহায়তা' },
 ]
@@ -734,7 +734,7 @@ export const aboutPageData = {
     { num: '2012',    label: 'Founded' },
     { num: '13+',     label: 'Years of Experience' },
     { num: '10,000+', label: 'Happy Clients' },
-    { num: '99.9%',   label: 'Uptime SLA' },
+    { num: '99%',   label: 'Uptime' },
   ],
   services: [
     { icon: 'Globe',          label: 'Internet & Data Connectivity' },
@@ -815,7 +815,7 @@ export const dataConnectivityData = {
     { icon: 'Network', title: 'Backhaul Service', title_bn: 'ব্যাকহল সার্ভিস', desc: 'Robust high-capacity backhaul links for ISPs, tower operators, and enterprise aggregation points across Bangladesh.', desc_bn: 'বাংলাদেশজুড়ে আইএসপি, টাওয়ার অপারেটর এবং এন্টারপ্রাইজ অ্যাগ্রিগেশন পয়েন্টের জন্য শক্তিশালী হাই-ক্যাপাসিটি ব্যাকহল লিংক।' },
   ],
   stats: [
-    { value: '99.9%', label: 'Network Uptime SLA' },
+    { value: '99%', label: 'Network Uptime' },
     { value: '24/7',  label: 'NOC Monitoring' },
     { value: '5+',    label: 'Carrier Partners' },
     { value: '10 Gbps', label: 'Backbone Capacity' },
@@ -927,7 +927,7 @@ export const managedServicesData = {
   ],
   stats: [
     { value: '24/7',  label: 'Managed Support' },
-    { value: '99.9%', label: 'Network Uptime' },
+    { value: '99%', label: 'Network Uptime' },
     { value: '50+',   label: 'Enterprise Clients' },
     { value: '10+',   label: 'Years Experience' },
   ],
@@ -970,7 +970,7 @@ export const blogPostsData = [
     date: 'May 2024',
     category: 'Business',
     title: 'The Benefits of Corporate Internet Services for Businesses in Bangladesh',
-    excerpt: 'Discover how dedicated corporate internet services with SLA-backed uptime can transform business productivity, enable remote work, and support digital transformation goals for Bangladeshi companies.',
+    excerpt: 'Discover how dedicated corporate internet services with reliable uptime can transform business productivity, enable remote work, and support digital transformation goals for Bangladeshi companies.',
     author: 'Red Data Team',
     readTime: '6 min read',
     image: '/images/hero/hero2-corporate.jpg',
@@ -1068,7 +1068,7 @@ export const homeInternetPageData = {
   ],
   benefits: [
     { icon: 'Zap', title: 'Blazing Fast Speeds',  desc: 'Unmatched download & upload speeds for a smooth online experience.' },
-    { icon: 'Shield', title: 'Guaranteed Uptime',    desc: '99.9% uptime SLA with proactive monitoring round the clock.' },
+    { icon: 'Shield', title: 'Guaranteed Uptime',    desc: '99% uptime with proactive monitoring round the clock.' },
     { icon: 'Infinity', title: 'Unlimited Data',        desc: 'No data cap, no throttling — stream, game, and browse freely.' },
     { icon: 'Phone', title: '24/7 Support',          desc: 'Dedicated support team available any hour of the day.' },
     { icon: 'DollarSign', title: 'Free Installation',     desc: 'No hidden charges — professional install at zero cost.' },
@@ -1105,7 +1105,7 @@ export const corporateInternetPageData = {
   ],
   stats: [
     { num: '10,000+', label: 'Enterprise Clients' },
-    { num: '99.9%',   label: 'Uptime SLA' },
+    { num: '99%',   label: 'Uptime' },
     { num: '24/7',    label: 'Dedicated Support' },
     { num: '64',      label: 'Districts Covered' },
   ],

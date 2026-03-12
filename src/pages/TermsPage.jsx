@@ -138,7 +138,7 @@ const sections = [
       },
       {
         sub: 'Corporate & Enterprise Services',
-        text: 'Enterprise SLA uptime commitments (typically 99.9%) are defined per individual service agreements. Service credits for SLA breaches will be applied as specified in the applicable corporate agreement.',
+        text: 'Enterprise uptime commitments (typically 99%) are defined per individual service agreements. Service credits for SLA breaches will be applied as specified in the applicable corporate agreement.',
       },
       {
         sub: 'Force Majeure',

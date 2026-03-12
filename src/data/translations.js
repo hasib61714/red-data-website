@@ -98,7 +98,7 @@ export const t = {
     testimonials: {
       heading: 'Trusted by Thousands',
       accent: 'Across Bangladesh',
-      trustLabel: ['10,000+', '4.9 / 5', '99.9%', '64'],
+      trustLabel: ['10,000+', '4.9 / 5', '99%', '64'],
       trustSub: ['Customers', 'Average Rating', 'Satisfaction Rate', 'Districts Served'],
     },
 

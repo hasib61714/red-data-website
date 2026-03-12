@@ -15,7 +15,7 @@ export default function HomeInternetPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
-      <PageMeta title="Home Internet Plans" description="Affordable high-speed fiber home internet plans in Dhaka and across Bangladesh from Red Data. No throttling, 99.9% uptime SLA." />
+      <PageMeta title="Home Internet Plans" description="Affordable high-speed fiber home internet plans in Dhaka and across Bangladesh from Red Data. No throttling, 99% uptime." />
 
       {/* ── Page Hero ── */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
@@ -91,8 +91,8 @@ export default function HomeInternetPage() {
                 </div>
                 {/* Uptime badge */}
                 <div className="absolute -top-4 -left-4 bg-emerald-600 text-white rounded-2xl px-4 py-3 shadow-xl">
-                  <div className="text-2xl font-black">99.9%</div>
-                  <div className="text-xs text-emerald-200">Uptime SLA</div>
+                  <div className="text-2xl font-black">99%</div>
+                  <div className="text-xs text-emerald-200">Uptime</div>
                 </div>
               </div>
             </div>

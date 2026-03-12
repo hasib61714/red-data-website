@@ -16,7 +16,7 @@ export default function CorporateInternetPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
-      <PageMeta title="Corporate Internet" description="Dedicated enterprise-grade internet with SLA-backed uptime, static IPs, and 24/7 support from Red Data Bangladesh." />
+      <PageMeta title="Corporate Internet" description="Dedicated enterprise-grade internet with reliable uptime, static IPs, and 24/7 support from Red Data Bangladesh." />
 
       {/* ── Page Hero ── */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
@@ -86,15 +86,10 @@ export default function CorporateInternetPage() {
                     ))}
                   </div>
                 </div>
-                {/* SLA badge */}
-                <div className="absolute -bottom-4 -right-4 bg-red-600 text-white rounded-2xl px-4 py-3 shadow-xl">
-                  <div className="text-2xl font-black">SLA</div>
-                  <div className="text-xs text-red-200">Guaranteed</div>
-                </div>
                 {/* Uptime badge */}
                 <div className="absolute -top-4 -left-4 bg-emerald-600 text-white rounded-2xl px-4 py-3 shadow-xl">
-                  <div className="text-2xl font-black">99.9%</div>
-                  <div className="text-xs text-emerald-200">Uptime SLA</div>
+                  <div className="text-2xl font-black">99%</div>
+                  <div className="text-xs text-emerald-200">Uptime</div>
                 </div>
               </div>
             </div>

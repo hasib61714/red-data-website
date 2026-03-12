@@ -54,7 +54,7 @@ export default function Coverage() {
     { value: '64',    label: statLabels[0] },
     { value: '495',   label: statLabels[1] },
     { value: '4,500+', label: statLabels[2] },
-    { value: '99.9%', label: statLabels[3] },
+    { value: '99%', label: statLabels[3] },
   ]
 
   return (
