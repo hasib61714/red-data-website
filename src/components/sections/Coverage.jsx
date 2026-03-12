@@ -5,6 +5,40 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 
+// Image pixel bounds of actual map content (analysed from 408×612 PNG):
+// x: 43–368, y: 91–507  → content_w=325, content_h=416
+// Bangladesh geo bounds: lng 88.01–92.68, lat 20.74–26.63
+const toSvgX = (lng) => 43 + (lng - 88.01) / (92.68 - 88.01) * 325
+const toSvgY = (lat) => 91 + (26.63 - lat) / (26.63 - 20.74) * 416
+
+// Service cities: size 'lg'=capital, 'md'=divisional HQ (labeled), 'sm'=other (dot only)
+const SERVICE_CITIES = [
+  { city: 'Dhaka',        lng: 90.41, lat: 23.81, size: 'lg' },
+  { city: 'Chattogram',   lng: 91.83, lat: 22.33, size: 'md' },
+  { city: 'Sylhet',       lng: 91.87, lat: 24.90, size: 'md' },
+  { city: 'Rajshahi',     lng: 88.60, lat: 24.37, size: 'md' },
+  { city: 'Khulna',       lng: 89.55, lat: 22.80, size: 'md' },
+  { city: 'Barishal',     lng: 90.35, lat: 22.70, size: 'md' },
+  { city: 'Mymensingh',   lng: 90.40, lat: 24.75, size: 'md' },
+  { city: 'Rangpur',      lng: 89.27, lat: 25.74, size: 'md' },
+  { city: 'Comilla',      lng: 91.18, lat: 23.46, size: 'sm' },
+  { city: 'Narayanganj',  lng: 90.50, lat: 23.62, size: 'sm' },
+  { city: 'Gazipur',      lng: 90.43, lat: 23.99, size: 'sm' },
+  { city: 'Narsingdi',    lng: 90.72, lat: 23.92, size: 'sm' },
+  { city: "Cox's Bazar",  lng: 92.00, lat: 21.45, size: 'sm' },
+  { city: 'Noakhali',     lng: 91.10, lat: 22.86, size: 'sm' },
+  { city: 'Brahmanbaria', lng: 91.11, lat: 23.96, size: 'sm' },
+  { city: 'Feni',         lng: 91.39, lat: 23.00, size: 'sm' },
+  { city: 'Chandpur',     lng: 90.64, lat: 23.23, size: 'sm' },
+  { city: 'Habiganj',     lng: 91.41, lat: 24.37, size: 'sm' },
+  { city: 'Bogura',       lng: 89.37, lat: 24.85, size: 'sm' },
+  { city: 'Dinajpur',     lng: 88.63, lat: 25.62, size: 'sm' },
+  { city: 'Jashore',      lng: 89.21, lat: 23.17, size: 'sm' },
+  { city: 'Kushtia',      lng: 89.12, lat: 23.90, size: 'sm' },
+  { city: 'Faridpur',     lng: 89.83, lat: 23.60, size: 'sm' },
+  { city: 'Tangail',      lng: 89.92, lat: 24.25, size: 'sm' },
+]
+
 const districts = [
   'Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi', 'Khulna',
   'Barishal', 'Mymensingh', 'Rangpur', 'Comilla', 'Narayanganj',
@@ -48,40 +82,36 @@ export default function Coverage() {
                 style={{ filter: 'drop-shadow(0 0 12px rgba(239,68,68,0.15))' }}
               />
 
-              {/* SVG Dot Overlay — same coordinate space as image (0 0 408 612) */}
+              {/* SVG Dot Overlay — viewBox matches image 408×612 */}
               <svg
                 viewBox="0 0 408 612"
                 className="absolute inset-0 w-full h-full"
                 style={{ pointerEvents: 'none' }}
               >
-                {[
-                  { city: 'Dhaka',       lng: 90.41, lat: 23.81, size: 'lg' },
-                  { city: 'Chattogram',  lng: 91.83, lat: 22.33, size: 'md' },
-                  { city: 'Sylhet',      lng: 91.87, lat: 24.90, size: 'sm' },
-                  { city: 'Rajshahi',    lng: 88.60, lat: 24.37, size: 'sm' },
-                  { city: 'Khulna',      lng: 89.55, lat: 22.80, size: 'sm' },
-                  { city: 'Barishal',    lng: 90.35, lat: 22.70, size: 'sm' },
-                  { city: 'Mymensingh', lng: 90.40, lat: 24.75, size: 'sm' },
-                  { city: 'Rangpur',     lng: 89.27, lat: 25.74, size: 'sm' },
-                  { city: 'Comilla',     lng: 91.18, lat: 23.46, size: 'sm' },
-                  { city: 'Narayanganj',lng: 90.50, lat: 23.62, size: 'sm' },
-                ].map(({ city, lng, lat, size }) => {
-                  // Bangladesh bounds: lng 88.01–92.68, lat 20.74–26.63
-                  const x = (lng - 88.01) / (92.68 - 88.01) * 408
-                  const y = (26.63 - lat) / (26.63 - 20.74) * 612
-                  const r = size === 'lg' ? 10 : size === 'md' ? 7 : 5
+                {SERVICE_CITIES.map(({ city, lng, lat, size }, i) => {
+                  const x = toSvgX(lng)
+                  const y = toSvgY(lat)
+                  const r = size === 'lg' ? 10 : size === 'md' ? 6 : 4
+                  const dur = `${2 + (i % 4) * 0.4}s`
                   return (
                     <g key={city}>
-                      {/* Outer pulse ring */}
-                      <circle cx={x} cy={y} r={r * 2.5} fill="rgba(239,68,68,0.15)">
-                        <animate attributeName="r" values={`${r};${r * 3.5};${r}`} dur="2.5s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.5;0;0.5" dur="2.5s" repeatCount="indefinite" />
+                      {/* Pulse ring */}
+                      <circle cx={x} cy={y} r={r} fill="rgba(239,68,68,0.2)">
+                        <animate attributeName="r" values={`${r};${r * 3};${r}`} dur={dur} repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.6;0;0.6" dur={dur} repeatCount="indefinite" />
                       </circle>
-                      {/* Inner dot */}
-                      <circle cx={x} cy={y} r={r / 1.5} fill="#ef4444" opacity="0.9" />
-                      {/* City label for lg/md */}
+                      {/* Dot */}
+                      <circle cx={x} cy={y} r={r / 2} fill="#ef4444" opacity="0.95" />
+                      {/* Label for divisional HQs */}
                       {size !== 'sm' && (
-                        <text x={x + r + 4} y={y + 4} fill="rgba(255,255,255,0.85)" fontSize={size === 'lg' ? 14 : 11} fontWeight="700" fontFamily="sans-serif">
+                        <text
+                          x={x + r + 3} y={y + 4}
+                          fill="rgba(255,255,255,0.9)"
+                          fontSize={size === 'lg' ? 13 : 10}
+                          fontWeight="700"
+                          fontFamily="sans-serif"
+                          style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}
+                        >
                           {city}
                         </text>
                       )}
