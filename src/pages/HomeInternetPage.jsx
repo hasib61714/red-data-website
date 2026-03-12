@@ -244,10 +244,8 @@ export default function HomeInternetPage() {
 
                 {/* CTA */}
                 <div className="px-5 pb-5 mt-4">
-                  <a
-                    href="https://reddata.com.bd/contact"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/contact"
                     className={`block w-full text-center py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95 ${
                       plan.popular
                         ? 'bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-600/30'
@@ -255,7 +253,7 @@ export default function HomeInternetPage() {
                     }`}
                   >
                     Choose Package
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -320,17 +318,15 @@ export default function HomeInternetPage() {
               <p className="text-slate-300 text-base leading-relaxed mb-6">
                 Red Data provides high-speed fiber optic internet services across Bangladesh. From major cities to suburban areas, our growing network ensures you stay connected.
               </p>
-              <a
-                href="https://reddata.com.bd/area-coverage"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/#coverage"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6-3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
                 Check Coverage
-              </a>
+              </Link>
             </div>
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative">
@@ -356,14 +352,12 @@ export default function HomeInternetPage() {
               <p className="text-red-100 text-sm mt-1">Subscribe to any plan and get free installation today.</p>
             </div>
             <div className="flex gap-3">
-              <a
-                href="https://reddata.com.bd/contact"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contact"
                 className="px-6 py-3 rounded-full bg-white text-red-600 font-bold text-sm hover:bg-red-50 transition-all shadow"
               >
                 Get Started
-              </a>
+              </Link>
               <Link to="/" className="px-6 py-3 rounded-full border border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition-all">
                 ← Back Home
               </Link>
