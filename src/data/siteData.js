@@ -759,7 +759,8 @@ export const aboutPageData = {
     { name: 'Upay',                  img: '/images/clients/9Upay.png' },
     { name: 'Genex',                 img: '/images/clients/10Genex.png' },
     { name: 'Digicon',               img: '/images/clients/11Digicon.png' },
-    { name: 'Urmi',                  img: '/images/clients/urmi.png' },
+    { name: 'Urmi',                  img: '/images/clients/Urmi-logo-1.png' },
+    { name: 'MDB',                   img: '/images/clients/MDB_LOGO_Updated.png' },
     { name: 'Bitopi Group',          img: '/images/clients/13BitopiGroup.png' },
     { name: 'SSD Tech',              img: '/images/clients/14SSDTech.png' },
     { name: 'Nextnet',               img: '/images/clients/15Nextnet.png' },
@@ -841,7 +842,7 @@ export const ipTelephonyData = {
   stats: [
     { value: '12+', label: 'Features' },
     { value: 'HD',  label: 'Voice Quality' },
-    { value: '99.9%', label: 'Uptime SLA' },
+    { value: '99 %', label: 'Uptime ' },
     { value: '24/7',  label: 'Support' },
   ],
 }
@@ -882,11 +883,7 @@ export const domainHostingData = {
     { icon: 'Settings', title: 'Customization Options', title_bn: 'কাস্টমাইজেশন বিকল্প', desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.', desc_bn: 'আপনার প্রয়োজনমতো ওএস, কন্ট্রোল প্যানেল (cPanel / Plesk / DirectAdmin), সফটওয়্যার স্ট্যাক এবং রিসোর্স বরাদ্দ বেছে নিন।' },
     { icon: 'Wrench', title: 'Management Tools', title_bn: 'ম্যানেজমেন্ট টুলস', desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.', desc_bn: 'সম্পূর্ণ মানসিক শান্তির জন্য cPanel / WHM অ্যাক্সেস, ওয়ান-ক্লিক ব্যাকআপ, রিসোর্স মনিটর, ডিএনএস ম্যানেজার এবং ২৪/৭ ম্যানেজড সহায়তা।' },
   ],
-  plans: [
-    { name: 'Starter',    price: 'BDT 500',   period: '/month', features: ['1 Domain', '10 GB SSD Storage', '10 Email Accounts', 'Free SSL', '99.9% Uptime'] },
-    { name: 'Business',   price: 'BDT 1,200', period: '/month', features: ['5 Domains', '50 GB SSD Storage', 'Unlimited Emails', 'Free SSL + CDN', '99.9% Uptime', 'Daily Backup'], highlight: true },
-    { name: 'Enterprise', price: 'Custom',    period: 'Quote',  features: ['Unlimited Domains', 'Dedicated Storage', 'Custom Email Setup', 'DDoS Protection', '99.99% SLA', 'Managed Service'] },
-  ],
+  
 }
 
 // ─── Managed Services Page ────────────────────────────────────────────────────
