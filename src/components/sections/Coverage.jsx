@@ -73,18 +73,28 @@ export default function Coverage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left — Bangladesh Map Image + Dot Overlay */}
           <Reveal direction="left">
-            <div className="relative rounded-3xl overflow-hidden border border-red-500/40 bg-slate-900 shadow-2xl shadow-black/20 dark:shadow-black/40 flex items-center justify-center mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none">
-              {/* Map Image — natural 2:3 aspect (408×612) */}
+            <div
+              className="relative rounded-3xl overflow-hidden border border-red-500/40 bg-slate-900 shadow-2xl shadow-black/20 dark:shadow-black/40 mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none"
+              style={{ aspectRatio: '325 / 416' }}
+            >
+              {/* Map Image — cropped to content area (43–368 × 91–507 of 408×612) */}
               <img
                 src="/bd map.png"
                 alt="Bangladesh Coverage Map"
-                className="w-full h-auto block"
-                style={{ filter: 'drop-shadow(0 0 12px rgba(239,68,68,0.15))' }}
+                style={{
+                  position: 'absolute',
+                  width: '125.5%',
+                  left: '-13.2%',
+                  top: '-27.5%',
+                  height: 'auto',
+                  filter: 'drop-shadow(0 0 12px rgba(239,68,68,0.15))',
+                  pointerEvents: 'none',
+                }}
               />
 
-              {/* SVG Dot Overlay — viewBox matches image 408×612 */}
+              {/* SVG Dot Overlay — viewBox cropped to content area */}
               <svg
-                viewBox="0 0 408 612"
+                viewBox="43 91 325 416"
                 className="absolute inset-0 w-full h-full"
                 style={{ pointerEvents: 'none' }}
               >
