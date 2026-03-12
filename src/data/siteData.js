@@ -99,7 +99,7 @@ export const heroSlides = [
     headline_bn: 'আপনার ব্যবসাকে শক্তিশালী করুন',
     headlineAccent: 'With Dedicated Bandwidth',
     headlineAccent_bn: 'ডেডিকেটেড ব্যান্ডউইথ দিয়ে',
-    subheadline: 'reliable corporate internet with redundant fiber links. Keep every office, server, and team running at full capacity.',
+    subheadline: 'Reliable corporate internet with redundant fiber links. Keep every office, server, and team running at full capacity.',
     subheadline_bn: 'SLA-সমর্থিত কর্পোরেট ইন্টারনেট রিডান্ড্যান্ট ফাইবার লিংকসহ। প্রতিটি অফিস, সার্ভার ও দলকে পূর্ণ গতিতে রাখুন।',
   },
   {
