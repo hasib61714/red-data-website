@@ -3,9 +3,11 @@ import { Link, useParams, Navigate } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { blogPostsData } from '../data/siteData'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function BlogDetailPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const { lang } = useLanguage()
   const { id } = useParams()
   const post = blogPostsData.find((p) => String(p.id) === id)
 
@@ -26,9 +28,9 @@ export default function BlogDetailPage() {
         <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
           <Container>
             <nav className="flex items-center gap-2 text-sm text-slate-300 mb-3">
-              <Link to="/" className="hover:text-white transition-colors">Home</Link>
+              <Link to="/" className="hover:text-white transition-colors">{lang === 'bn' ? 'হোম' : 'Home'}</Link>
               <span>/</span>
-              <Link to="/blog" className="hover:text-white transition-colors">Blog</Link>
+              <Link to="/blog" className="hover:text-white transition-colors">{lang === 'bn' ? 'ব্লগ' : 'Blog'}</Link>
               <span>/</span>
               <span className="text-white font-medium truncate max-w-xs">{post.category}</span>
             </nav>
@@ -97,15 +99,15 @@ export default function BlogDetailPage() {
             {/* CTA */}
             <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 flex flex-col sm:flex-row items-center gap-6 justify-between">
               <div>
-                <p className="text-white font-bold text-lg mb-1">Ready to get connected?</p>
-                <p className="text-slate-400 text-sm">Contact Red Data today for a free consultation.</p>
+                <p className="text-white font-bold text-lg mb-1">{lang === 'bn' ? 'সংযুক্ত হতে প্রস্তুত?' : 'Ready to get connected?'}</p>
+                <p className="text-slate-400 text-sm">{lang === 'bn' ? 'বিনামূল্যে পরামর্শের জন্য আজই রেড ডাটার সাথে যোগাযোগ করুন।' : 'Contact Red Data today for a free consultation.'}</p>
               </div>
               <div className="flex gap-3 shrink-0">
                 <Link to="/contact" className="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition-all hover:scale-105">
-                  Contact Us
+                  {lang === 'bn' ? 'যোগাযোগ করুন' : 'Contact Us'}
                 </Link>
                 <Link to="/#pricing" className="px-5 py-2.5 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all">
-                  View Plans
+                  {lang === 'bn' ? 'প্ল্যান দেখুন' : 'View Plans'}
                 </Link>
               </div>
             </div>
@@ -114,7 +116,7 @@ export default function BlogDetailPage() {
             <div className="mt-8">
               <Link to="/blog" className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 text-sm font-medium transition-colors">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                Back to Blog
+                {lang === 'bn' ? 'ব্লগে ফিরুন' : 'Back to Blog'}
               </Link>
             </div>
           </div>

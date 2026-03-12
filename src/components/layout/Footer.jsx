@@ -23,14 +23,14 @@ export default function Footer() {
                 <span className="text-red-500 mt-0.5">📍</span>
                 <div className="text-slate-400 text-sm leading-relaxed">
                   <p>{contact.address}</p>
-                  <p className="text-slate-500 text-xs mt-1">Reg. Office: {contact.addressReg}</p>
+                  <p className="text-slate-500 text-xs mt-1">{lang === 'bn' ? 'নিবন্ধিত অফিস:' : 'Reg. Office:'} {contact.addressReg}</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-red-500">📞</span>
                 <div>
                   <a href={`tel:${contact.phone}`} className="text-slate-400 text-sm hover:text-red-400 transition-colors block">{contact.phone}</a>
-                  <a href={`tel:${contact.helpdesk}`} className="text-slate-500 text-xs hover:text-red-400 transition-colors">HelpDesk: {contact.helpdesk}</a>
+                  <a href={`tel:${contact.helpdesk}`} className="text-slate-500 text-xs hover:text-red-400 transition-colors">{lang === 'bn' ? 'হেল্পডেস্ক:' : 'HelpDesk:'} {contact.helpdesk}</a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
@@ -84,16 +84,16 @@ export default function Footer() {
         <Container className="py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-slate-400 text-sm">
-              © 2026{' '}
+              {lang === 'bn' ? '© ২০২৬ ' : '© 2026 '}
               <span className="font-semibold bg-gradient-to-r from-red-500 to-rose-400 bg-clip-text text-transparent">
                 Red Data
               </span>{' '}
-              (Pvt.) Limited. All rights reserved.
+              {lang === 'bn' ? '(প্রা.) লিমিটেড। সকল স্বত্ব সংরক্ষিত।' : '(Pvt.) Limited. All rights reserved.'}
             </p>
             <div className="flex items-center gap-5">
-              <Link to="/privacy-policy" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Terms of Service</Link>
-              <span className="text-slate-500 text-xs">BTRC Tariff</span>
+              <Link to="/privacy-policy" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">{lang === 'bn' ? 'গোপনীয়তা নীতি' : 'Privacy Policy'}</Link>
+              <Link to="/terms" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">{lang === 'bn' ? 'সেবার শর্তাবলী' : 'Terms of Service'}</Link>
+              <span className="text-slate-500 text-xs">{lang === 'bn' ? 'BTRC ট্যারিফ' : 'BTRC Tariff'}</span>
             </div>
           </div>
         </Container>

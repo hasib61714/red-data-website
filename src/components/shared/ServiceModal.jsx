@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useLang } from '../../context/LanguageContext'
 
 const ICONS = {
   bolt: (
@@ -80,6 +81,7 @@ const ICONS = {
 }
 
 export default function ServiceModal({ service, onClose }) {
+  const { lang } = useLang()
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     const onKey = (e) => e.key === 'Escape' && onClose()
@@ -166,7 +168,7 @@ export default function ServiceModal({ service, onClose }) {
           {service.highlights?.length > 0 && (
             <div>
               <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">
-                Key Highlights
+                {lang === 'bn' ? 'মূল বৈশিষ্ট্য' : 'Key Highlights'}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                 {service.highlights.map((h) => (
@@ -188,7 +190,7 @@ export default function ServiceModal({ service, onClose }) {
           {service.features?.length > 0 && (
             <div>
               <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">
-                What's Included
+                {lang === 'bn' ? 'যা অন্তর্ভুক্ত' : "What's Included"}
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
                 {service.features.map((f) => (
@@ -209,7 +211,7 @@ export default function ServiceModal({ service, onClose }) {
           {service.packages?.length > 0 && (
             <div>
               <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">
-                Popular Packages
+                {lang === 'bn' ? 'জনপ্রিয় প্যাকেজ' : 'Popular Packages'}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                 {service.packages.map((pkg) => (
@@ -229,19 +231,19 @@ export default function ServiceModal({ service, onClose }) {
 
         {/* Footer CTA */}
         <div className="sticky bottom-0 px-6 sm:px-8 py-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-t border-slate-200 dark:border-white/[0.06] flex items-center justify-between gap-4">
-          <p className="text-slate-500 dark:text-slate-500 text-xs hidden sm:block">Questions? Call <span className="text-slate-700 dark:text-slate-300">+880-9640-112233</span></p>
+          <p className="text-slate-500 dark:text-slate-500 text-xs hidden sm:block">{lang === 'bn' ? 'প্রশ্ন আছে? কল করুন ' : 'Questions? Call '}<span className="text-slate-700 dark:text-slate-300">+880-9640-112233</span></p>
           <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
             <button
               onClick={onClose}
               className="px-4 py-2 rounded-full text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 transition-all duration-200"
             >
-              Close
+              {lang === 'bn' ? 'বন্ধ করুন' : 'Close'}
             </button>
             <Link
               to={service.ctaUrl || '/contact'}
               className="px-5 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-red-600 via-red-500 to-orange-500 hover:from-red-500 hover:to-orange-400 shadow-lg shadow-red-500/25 transition-all duration-200"
             >
-              Get Started →
+              {lang === 'bn' ? 'শুরু করুন →' : 'Get Started →'}
             </Link>
           </div>
         </div>

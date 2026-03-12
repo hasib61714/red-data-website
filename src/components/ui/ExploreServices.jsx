@@ -1,24 +1,26 @@
 import { Link, useLocation } from 'react-router-dom'
+import { useLang } from '../../context/LanguageContext'
 
 const allServices = [
-  { label: 'Corporate Internet', to: '/corporate-internet', icon: '🏢', color: 'from-red-500 to-rose-600' },
-  { label: 'Home Internet',      to: '/home-internet',      icon: '🏠', color: 'from-rose-500 to-pink-600' },
-  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: '🔗', color: 'from-sky-500 to-blue-600' },
-  { label: 'IP Telephony',       to: '/ip-telephony',       icon: '📞', color: 'from-violet-500 to-purple-600' },
-  { label: 'SMS Service',        to: '/sms-service',        icon: '💬', color: 'from-orange-500 to-amber-600' },
-  { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: '🌐', color: 'from-teal-500 to-cyan-600' },
-  { label: 'Managed Services',   to: '/managed-services',   icon: '🛡️', color: 'from-blue-500 to-indigo-600' },
+  { label: 'Corporate Internet', label_bn: 'কর্পোরেট ইন্টারনেট', to: '/corporate-internet', icon: '🏢', color: 'from-red-500 to-rose-600' },
+  { label: 'Home Internet',      label_bn: 'হোম ইন্টারনেট',      to: '/home-internet',      icon: '🏠', color: 'from-rose-500 to-pink-600' },
+  { label: 'Data Connectivity',  label_bn: 'ডেটা কানেক্টিভিটি',  to: '/data-connectivity',  icon: '🔗', color: 'from-sky-500 to-blue-600' },
+  { label: 'IP Telephony',       label_bn: 'আইপি টেলিফোনি',       to: '/ip-telephony',       icon: '📞', color: 'from-violet-500 to-purple-600' },
+  { label: 'SMS Service',        label_bn: 'এসএমএস সেবা',        to: '/sms-service',        icon: '💬', color: 'from-orange-500 to-amber-600' },
+  { label: 'Domain & Hosting',   label_bn: 'ডোমেইন ও হোস্টিং',   to: '/domain-hosting',     icon: '🌐', color: 'from-teal-500 to-cyan-600' },
+  { label: 'Managed Services',   label_bn: 'ম্যানেজড সেবা',      to: '/managed-services',   icon: '🛡️', color: 'from-blue-500 to-indigo-600' },
 ]
 
 export default function ExploreServices() {
   const { pathname } = useLocation()
+  const { lang } = useLang()
   const others = allServices.filter(s => s.to !== pathname).slice(0, 6)
 
   return (
     <section className="py-16 bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-800 dark:text-white mb-10">
-          Explore More <span className="bg-gradient-to-r from-red-500 to-rose-500 bg-clip-text text-transparent">Services</span>
+          {lang === 'bn' ? 'আরও ' : 'Explore More '}<span className="bg-gradient-to-r from-red-500 to-rose-500 bg-clip-text text-transparent">{lang === 'bn' ? 'সেবাসমূহ' : 'Services'}</span>
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {others.map(service => (
@@ -31,7 +33,7 @@ export default function ExploreServices() {
                 {service.icon}
               </div>
               <span className="text-xs font-semibold text-center text-slate-700 dark:text-slate-300 leading-tight">
-                {service.label}
+                {lang === 'bn' ? service.label_bn : service.label}
               </span>
             </Link>
           ))}

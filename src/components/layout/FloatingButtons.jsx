@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useLang } from '../../context/LanguageContext'
 
 export default function FloatingButtons() {
   const [showTopBtn, setShowTopBtn] = useState(false)
   const [chatOpen, setChatOpen] = useState(false)
+  const { lang } = useLang()
 
   useEffect(() => {
     const onScroll = () => setShowTopBtn(window.scrollY > 400)
@@ -37,7 +39,7 @@ export default function FloatingButtons() {
           </span>
           <div className="text-left">
             <p className="font-semibold text-xs leading-tight">WhatsApp</p>
-            <p className="text-xs opacity-60 group-hover:opacity-80 leading-tight">Chat with us</p>
+            <p className="text-xs opacity-60 group-hover:opacity-80 leading-tight">{lang === 'bn' ? 'চ্যাট করুন' : 'Chat with us'}</p>
           </div>
         </a>
 
@@ -53,7 +55,7 @@ export default function FloatingButtons() {
             </svg>
           </span>
           <div className="text-left">
-            <p className="font-semibold text-xs leading-tight">Email Us</p>
+            <p className="font-semibold text-xs leading-tight">{lang === 'bn' ? 'ইমেইল করুন' : 'Email Us'}</p>
             <p className="text-xs opacity-60 group-hover:opacity-80 leading-tight">info@reddata.com.bd</p>
           </div>
         </a>

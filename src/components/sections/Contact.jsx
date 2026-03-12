@@ -140,7 +140,7 @@ export default function Contact() {
                     onClick={() => { setSent(false); setError(''); setForm({ name: '', company: '', phone: '', email: '', message: '' }) }}
                     className="mt-6 text-red-400 text-sm hover:text-red-300 transition-colors font-medium"
                   >
-                    Send another message →
+                    {lang === 'bn' ? 'আরেকটি বার্তা পাঠান →' : 'Send another message →'}
                   </button>
                 </div>
               ) : (
@@ -214,7 +214,7 @@ export default function Contact() {
                       </>
                     )}
                   </button>
-                  <p className="text-slate-600 text-xs text-center">We never share your details. By submitting you agree to our Privacy Policy.</p>
+                  <p className="text-slate-600 text-xs text-center">{lang === 'bn' ? 'আমরা আপনার তথ্য শেয়ার করি না। জমা দিয়ে আপনি আমাদের গোপনীয়তা নীতিতে সম্মত হচ্ছেন।' : 'We never share your details. By submitting you agree to our Privacy Policy.'}</p>
                 </form>
               )}
             </div>

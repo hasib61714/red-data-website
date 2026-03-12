@@ -116,7 +116,7 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
                   <span className="hidden sm:inline">{contactBarData.phone.display}</span>
-                  <span className="sm:hidden">Hotline</span>
+                  <span className="sm:hidden">{lang === 'bn' ? 'হটলাইন' : 'Hotline'}</span>
                 </a>
                 <span className="hidden md:block w-px h-3 bg-white/20" />
                 <a
@@ -131,7 +131,7 @@ export default function Navbar() {
                 <span className="hidden lg:block w-px h-3 bg-white/20" />
                 <span className="hidden lg:flex items-center gap-1.5 text-slate-500 text-[10px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                  BTRC Licensed ISP
+                  {lang === 'bn' ? 'BTRC লাইসেন্সপ্রাপ্ত ISP' : 'BTRC Licensed ISP'}
                 </span>
               </div>
 
@@ -211,7 +211,7 @@ export default function Navbar() {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-[500px] rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/[0.09] shadow-2xl shadow-black/10 dark:shadow-black/60 overflow-hidden z-50">
                   <div className="h-0.5 w-full bg-gradient-to-r from-red-500 via-orange-400 to-amber-300" />
                   <div className="p-3">
-                    <p className="px-3 pt-1.5 pb-2 text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.15em]">Our Services</p>
+                    <p className="px-3 pt-1.5 pb-2 text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.15em]">{lang === 'bn' ? 'আমাদের সেবা' : 'Our Services'}</p>
                     <div className="grid grid-cols-2 gap-0.5">
                       {serviceItems.map((item) => (
                         <Link
@@ -241,10 +241,10 @@ export default function Navbar() {
                     <div className="mt-2 mx-1 pt-2 border-t border-slate-100 dark:border-white/[0.06] flex items-center justify-between">
                       <span className="flex items-center gap-1.5 text-[10px] text-slate-400 dark:text-slate-500">
                         <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
-                        BTRC Licensed ISP
+                        {lang === 'bn' ? 'BTRC লাইসেন্সপ্রাপ্ত ISP' : 'BTRC Licensed ISP'}
                       </span>
                       <a href="/#services" onClick={() => setServicesOpen(false)} className="text-[11px] font-semibold text-red-600 dark:text-red-400 hover:text-red-500 flex items-center gap-1 transition-colors">
-                        View all services →
+                        {lang === 'bn' ? 'সব সেবা দেখুন →' : 'View all services →'}
                       </a>
                     </div>
                   </div>
