@@ -6,6 +6,7 @@ import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
 import { corporateInternetPageData, aboutPageData, L } from '../data/siteData'
 import { useLanguage } from '../context/LanguageContext'
+import ExpandableText from '../components/ui/ExpandableText'
 
 const { fiberFeatures, whyUs, stats: corpStats } = corporateInternetPageData
 const clients = aboutPageData.clients
@@ -48,9 +49,9 @@ export default function CorporateInternetPage() {
                   Connectivity
                 </span>
               </h1>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+              <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
                 At Red Data, we understand that a reliable and high-speed internet connection is critical for the success of your business. Our Corporate Internet Connectivity service offers robust, secure, and scalable internet solutions tailored to meet the unique demands of your enterprise. With dedicated bandwidth, 24/7 customer support, and guaranteed uptime, we ensure your business operations run smoothly and efficiently. Partner with us to experience seamless connectivity and drive your business forward.
-              </p>
+              </ExpandableText>
               <div className="flex flex-wrap gap-3">
                 <Link
                   to="/contact"
