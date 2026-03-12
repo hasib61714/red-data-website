@@ -185,7 +185,7 @@ export default function ContactPage() {
               <div className="rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-700/50 shadow-sm">
                 <iframe
                   title="Red Data Office Location"
-                  src="https://maps.google.com/maps?q=SimpleTree+Attalika,+134+Gulshan+Avenue,+Dhaka+1212,+Bangladesh&output=embed&z=16"
+                  src="https://maps.google.com/maps?width=600&height=260&hl=en&q=SimpleTree+Attalika+134+Gulshan+Avenue+Dhaka+1212&ie=UTF8&t=&z=16&iwloc=B&output=embed"
                   width="100%"
                   height="260"
                   style={{ border: 0, display: 'block' }}
@@ -206,8 +206,9 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=SimpleTree+Attalika,+134+Gulshan+Avenue,+Dhaka+1212,+Bangladesh"
-                    target="_blank" rel="noreferrer"
+                    href="https://maps.google.com/?q=SimpleTree+Attalika+134+Gulshan+Avenue+Dhaka+1212+Bangladesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="shrink-0 px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-semibold transition-colors"
                   >
                     Directions →
