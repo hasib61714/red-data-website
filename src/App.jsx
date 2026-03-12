@@ -67,7 +67,7 @@ function AppInner() {
   const [topBarOpen, setTopBarOpen] = useState(true)
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 overflow-x-hidden transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-slate-900 overflow-x-hidden">
       <Navbar topBarOpen={topBarOpen} onDismiss={() => setTopBarOpen(false)} />
       <Suspense fallback={<PageLoader />}>
       <Routes>
