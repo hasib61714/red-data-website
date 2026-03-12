@@ -92,6 +92,11 @@ export default function CorporateInternetPage() {
                   <div className="text-2xl font-black">99%</div>
                   <div className="text-xs text-emerald-200">Uptime</div>
                 </div>
+                {/* Bandwidth badge */}
+                <div className="absolute -bottom-4 -right-4 bg-red-600 text-white rounded-2xl px-4 py-3 shadow-xl">
+                  <div className="text-2xl font-black">10G</div>
+                  <div className="text-xs text-red-200">Dedicated</div>
+                </div>
               </div>
             </div>
           </div>
