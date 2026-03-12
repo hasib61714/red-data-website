@@ -2,70 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
+import { payBillData } from '../data/siteData'
 
-const paymentMethods = [
-  {
-    name: 'bKash',
-    color: 'from-pink-500 to-pink-600',
-    bg: 'bg-pink-50 dark:bg-pink-500/10',
-    border: 'border-pink-200 dark:border-pink-500/30',
-    icon: '💳',
-    number: '01XXXXXXXXX',
-    steps: ['Open bKash app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'],
-  },
-  {
-    name: 'Nagad',
-    color: 'from-orange-500 to-orange-600',
-    bg: 'bg-orange-50 dark:bg-orange-500/10',
-    border: 'border-orange-200 dark:border-orange-500/30',
-    icon: '📱',
-    number: '01XXXXXXXXX',
-    steps: ['Open Nagad app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'],
-  },
-  {
-    name: 'Rocket (DBBL)',
-    color: 'from-purple-500 to-purple-600',
-    bg: 'bg-purple-50 dark:bg-purple-500/10',
-    border: 'border-purple-200 dark:border-purple-500/30',
-    icon: '🚀',
-    number: '01XXXXXXXXX',
-    steps: ['Dial *322#', 'Select "Send Money"', 'Enter merchant number', 'Enter amount & PIN'],
-  },
-  {
-    name: 'Internet Banking',
-    color: 'from-blue-500 to-blue-600',
-    bg: 'bg-blue-50 dark:bg-blue-500/10',
-    border: 'border-blue-200 dark:border-blue-500/30',
-    icon: '🏦',
-    number: 'A/C: 12345678901',
-    steps: ['Log in to your bank', 'Go to Fund Transfer', 'Add Red Data as payee', 'Transfer & note your User ID'],
-  },
-  {
-    name: 'Card Payment',
-    color: 'from-emerald-500 to-emerald-600',
-    bg: 'bg-emerald-50 dark:bg-emerald-500/10',
-    border: 'border-emerald-200 dark:border-emerald-500/30',
-    icon: '💳',
-    number: 'VISA / Mastercard',
-    steps: ['Go to Self Corner portal', 'Select "Pay Bill"', 'Choose Card option', 'Enter card details & pay'],
-  },
-  {
-    name: 'Cash / Walk-in',
-    color: 'from-slate-500 to-slate-600',
-    bg: 'bg-slate-50 dark:bg-slate-700/30',
-    border: 'border-slate-200 dark:border-slate-600/50',
-    icon: '🏢',
-    number: 'Office Visit',
-    steps: ['Visit our Gulshan office', 'Bring your User ID', 'Pay at the front desk', 'Collect your receipt'],
-  },
-]
-
-const faqs = [
-  { q: 'When will my connection be restored after payment?', a: 'Your connection is typically restored within 5–15 minutes of payment confirmation. For bKash/Nagad payments, it may take up to 1 hour during off-hours.' },
-  { q: 'What information do I need to pay?', a: 'You need your Red Data User ID/Username. This is provided when you first subscribe and is also visible when you log into Self Corner.' },
-  { q: 'Is there a late payment fee?', a: 'Bills are due on the 1st of each month. A late fee may apply after the 7th. Contact support for waivers on exceptional cases.' },
-  { q: 'Can I pay for multiple months at once?', a: 'Yes, advance payment is accepted. Please mention it to our support team or note it in the transaction reference.' },
-]
+const { paymentMethods, faqs } = payBillData
 
 export default function PayBillPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])

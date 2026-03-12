@@ -1,6 +1,6 @@
 import Button from '../ui/Button'
 
-export default function PricingCard({ name, price, period, oneTime, bandwidth, popular, features, cta }) {
+export default function PricingCard({ name, tag, price, vatBreakdown, period, oneTime, bandwidth, popular, features, cta }) {
   return (
     <div
       className={`relative flex flex-col rounded-2xl p-6 transition-all duration-300 ${
@@ -9,11 +9,15 @@ export default function PricingCard({ name, price, period, oneTime, bandwidth, p
           : 'bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/[0.08] hover:border-slate-300 dark:hover:border-white/20 hover:shadow-xl hover:-translate-y-1'
       }`}
     >
-      {/* Popular Badge */}
-      {popular && (
+      {/* Popular / Tag Badge */}
+      {(popular || tag) && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="px-5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-600/40">
-            Most Popular
+          <span className={`px-5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase shadow-lg whitespace-nowrap ${
+            popular
+              ? 'bg-gradient-to-r from-red-600 to-red-700 text-white shadow-red-600/40'
+              : 'bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-slate-800/40'
+          }`}>
+            {tag || 'Most Popular'}
           </span>
         </div>
       )}
@@ -21,10 +25,13 @@ export default function PricingCard({ name, price, period, oneTime, bandwidth, p
       {/* Header */}
       <div className="mb-6">
         <p className={`text-sm font-semibold uppercase tracking-widest mb-3 ${popular ? 'text-red-200' : 'text-slate-500 dark:text-slate-400'}`}>{name}</p>
-        <div className="flex items-end gap-1 mb-1">
+        <div className="flex items-end gap-1 mb-0.5">
           <span className={`text-3xl font-black ${popular ? 'text-white' : 'text-slate-900 dark:text-white'}`}>{price}</span>
           <span className={`text-sm mb-1.5 ${popular ? 'text-red-200' : 'text-slate-400'}`}>{period}</span>
         </div>
+        {vatBreakdown && (
+          <p className={`text-[11px] font-medium mb-1 ${popular ? 'text-red-200/80' : 'text-slate-400 dark:text-slate-500'}`}>{vatBreakdown}</p>
+        )}
         <p className={`text-xs ${popular ? 'text-red-200' : 'text-slate-500'}`}>{oneTime}</p>
         <div className={`mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-sm font-semibold ${popular ? 'bg-white/15 text-white' : 'bg-slate-100 dark:bg-slate-700/50 text-red-600 dark:text-red-300'}`}>
           ⚡ {bandwidth}

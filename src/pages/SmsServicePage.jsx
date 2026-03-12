@@ -3,28 +3,9 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import { smsServiceData } from '../data/siteData'
 
-const features = [
-  { icon: '🔌', title: 'Easy API Integration', desc: 'Developer-friendly REST APIs with comprehensive documentation — integrate bulk SMS into any system in minutes.' },
-  { icon: '🖥️', title: 'User Friendly Customer Panel', desc: 'Intuitive web dashboard for non-technical users to send campaigns, view reports, and manage contacts without any coding.' },
-  { icon: '📋', title: 'Campaign & Template Management', desc: 'Create, schedule, and reuse SMS templates for recurring campaigns — segmentation and bulk import included.' },
-  { icon: '🗄️', title: 'Aggregator Plane', desc: 'Connected to all major operators through our aggregator layer ensuring maximum route coverage and reliability across Bangladesh.' },
-  { icon: '📍', title: 'Location Based SMS', desc: 'Target subscribers by geographic zone for hyper-local marketing campaigns and location-triggered notifications.' },
-  { icon: '📈', title: 'Highest Submit Rate', desc: 'Our direct operator connections deliver among the highest submit and delivery rates in the country with real-time status.' },
-  { icon: '💸', title: 'No Hidden Cost', desc: 'Transparent per-SMS pricing — no setup fees, no monthly minimums, no surprise charges. Pay only for what you send.' },
-  { icon: '🔑', title: 'Customer Driven API Key', desc: 'Each customer gets a dedicated API key with role-based access control and usage analytics in the dashboard.' },
-  { icon: '👨‍💻', title: 'Developer Friendly', desc: 'SDKs for PHP, Python, Node.js and Java alongside thorough Postman collections and sandbox environments.' },
-  { icon: '💼', title: 'Transactional SMS', desc: 'Mission-critical OTPs, alerts, and notifications delivered through a dedicated high-priority route with millisecond latency.' },
-]
-
-const useCases = [
-  { icon: '🏦', label: 'Banking & Finance' },
-  { icon: '🛒', label: 'E-Commerce' },
-  { icon: '🏥', label: 'Healthcare' },
-  { icon: '📦', label: 'Logistics' },
-  { icon: '🎓', label: 'Education' },
-  { icon: '🏢', label: 'Enterprises' },
-]
+const { features, useCases } = smsServiceData
 
 export default function SmsServicePage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])

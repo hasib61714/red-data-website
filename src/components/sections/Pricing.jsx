@@ -30,6 +30,8 @@ export default function Pricing() {
             <Reveal key={plan.name} delay={i * 100}>
               <PricingCard
                 {...plan}
+                tag={L(lang, plan, 'tag')}
+                vatBreakdown={L(lang, plan, 'vatBreakdown')}
                 period={L(lang, plan, 'period')}
                 oneTime={L(lang, plan, 'oneTime')}
                 features={L(lang, plan, 'features')}

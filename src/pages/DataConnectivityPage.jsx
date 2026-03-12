@@ -3,46 +3,9 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import { dataConnectivityData } from '../data/siteData'
 
-const features = [
-  {
-    icon: '🔗',
-    title: 'Point-to-Point & Multipoint Links',
-    desc: 'Highly reliable dedicated data links connecting your branches and campuses with guaranteed bandwidth and zero congestion.',
-  },
-  {
-    icon: '🔒',
-    title: 'VPN Services',
-    desc: 'Secure encrypted Virtual Private Networks over our high-speed fiber backbone for safe inter-office and remote access.',
-  },
-  {
-    icon: '🌐',
-    title: 'MPLS Network',
-    desc: 'Layer 2 / Layer 3 resilient national MPLS next-generation network ensuring intelligent traffic routing and Quality of Service.',
-  },
-  {
-    icon: '🌑',
-    title: 'Dark Fiber for Enterprises',
-    desc: 'Lease unlit fiber strands and run your own networking equipment at full capacity — complete control over your last-mile infrastructure.',
-  },
-  {
-    icon: '📡',
-    title: 'CP Network',
-    desc: 'Carrier partner network spanning Grameenphone, Banglalink, Airtel, Robi, and Teletalk for maximum national reachability.',
-  },
-  {
-    icon: '🏗️',
-    title: 'Backhaul Service',
-    desc: 'Robust high-capacity backhaul links for ISPs, tower operators, and enterprise aggregation points across Bangladesh.',
-  },
-]
-
-const stats = [
-  { value: '99.9%', label: 'Network Uptime SLA' },
-  { value: '24/7', label: 'NOC Monitoring' },
-  { value: '5+', label: 'Carrier Partners' },
-  { value: '10 Gbps', label: 'Backbone Capacity' },
-]
+const { features, stats } = dataConnectivityData
 
 export default function DataConnectivityPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
