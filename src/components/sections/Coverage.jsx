@@ -5,11 +5,10 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 
-// Image pixel bounds of actual map content (analysed from 408×612 PNG):
-// x: 43–368, y: 91–507  → content_w=325, content_h=416
-// Bangladesh geo bounds: lng 88.01–92.68, lat 20.74–26.63
-const toSvgX = (lng) => 43 + (lng - 88.01) / (92.68 - 88.01) * 325
-const toSvgY = (lat) => 91 + (26.63 - lat) / (26.63 - 20.74) * 416
+// SVG map viewBox: 0 0 1024 1024 — Bangladesh geo bounds: lng 88.01–92.68, lat 20.74–26.63
+// Mapped bounds in 1024×1024 space: x 135–765, y 5–1010
+const toSvgX = (lng) => 135 + (lng - 88.01) / (92.68 - 88.01) * 630
+const toSvgY = (lat) => 5 + (26.63 - lat) / (26.63 - 20.74) * 1005
 
 // Service cities: size 'lg'=capital, 'md'=divisional HQ (labeled), 'sm'=other (dot only)
 const SERVICE_CITIES = [
@@ -82,9 +81,9 @@ export default function Coverage() {
                 style={{ filter: 'drop-shadow(0 0 12px rgba(239,68,68,0.15))' }}
               />
 
-              {/* SVG Dot Overlay — viewBox matches image 408×612 */}
+              {/* SVG Dot Overlay — viewBox matches bd-map.svg 1024×1024 */}
               <svg
-                viewBox="0 0 408 612"
+                viewBox="0 0 1024 1024"
                 className="absolute inset-0 w-full h-full"
                 style={{ pointerEvents: 'none' }}
               >
