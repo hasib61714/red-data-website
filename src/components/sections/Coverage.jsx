@@ -5,10 +5,10 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 
-// SVG map viewBox: 0 0 1024 1024 — Bangladesh geo bounds: lng 88.01–92.68, lat 20.74–26.63
-// Mapped bounds in 1024×1024 space: x 135–765, y 5–1010
-const toSvgX = (lng) => 135 + (lng - 88.01) / (92.68 - 88.01) * 630
-const toSvgY = (lat) => 5 + (26.63 - lat) / (26.63 - 20.74) * 1005
+// SVG map viewBox: 0 0 1024 1024 — potrace transform="translate(0,1024) scale(0.1,-0.1)"
+// Calibrated: West(88.01)→x≈168, East(92.68)→x≈720, North(26.63)→y≈5, South(20.74)→y≈1005
+const toSvgX = (lng) => 168 + (lng - 88.01) * 118.2
+const toSvgY = (lat) => 5 + (26.63 - lat) * 169.8
 
 // Service cities: size 'lg'=capital, 'md'=divisional HQ (labeled), 'sm'=other (dot only)
 const SERVICE_CITIES = [
