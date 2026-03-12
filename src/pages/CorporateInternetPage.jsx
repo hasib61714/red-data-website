@@ -4,12 +4,14 @@ import IconMapper from '../components/ui/IconMapper'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
-import { corporateInternetPageData, aboutPageData } from '../data/siteData'
+import { corporateInternetPageData, aboutPageData, L } from '../data/siteData'
+import { useLanguage } from '../context/LanguageContext'
 
 const { fiberFeatures, whyUs, stats: corpStats } = corporateInternetPageData
 const clients = aboutPageData.clients
 
 export default function CorporateInternetPage() {
+  const { lang } = useLanguage()
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
 
   return (
@@ -129,8 +131,8 @@ export default function CorporateInternetPage() {
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 text-white flex items-center justify-center mb-5 shadow-lg shadow-red-500/30 group-hover:scale-110 transition-transform">
                     <IconMapper name={f.icon} className="w-7 h-7" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{f.title}</h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{f.desc}</p>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{L(lang, f, 'title')}</h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{L(lang, f, 'desc')}</p>
                 </div>
               </div>
             ))}
@@ -175,8 +177,8 @@ export default function CorporateInternetPage() {
                     <IconMapper name={item.icon} className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{item.title}</h4>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                    <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{L(lang, item, 'title')}</h4>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{L(lang, item, 'desc')}</p>
                   </div>
                 </div>
               ))}

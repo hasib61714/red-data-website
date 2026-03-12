@@ -5,17 +5,17 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 
-// Bangladesh outline — simplified path in lat/lng space
-// ViewBox maps: x=longitude (88.0–92.9), y=latitude inverted (20.5–26.7)
-// All coords: [lng, lat] converted to SVG via toX/toY
+// Bangladesh outline — proper boundary approximation
+// ViewBox: 0 0 500 600 | toX: lng→x, toY: lat→y (inverted)
 const BD_PATH =
-  'M 29,20 L 88,28 L 147,28 L 226,28 L 285,38 L 315,78 ' +
-  'L 334,158 L 412,168 L 451,188 L 461,228 L 462,298 ' +
-  'L 471,375 L 452,428 L 403,468 L 393,528 L 334,578 ' +
-  'L 266,542 L 217,512 L 177,482 L 138,452 L 108,422 ' +
-  'L 88,356 L 68,272 L 30,228 L 20,128 Z'
+  'M 27,24 L 35,7 L 55,14 L 90,29 L 133,27 L 160,40 L 196,43 L 214,32 ' +
+  'L 245,32 L 275,15 L 310,26 L 349,10 L 364,18 L 383,70 L 402,150 ' +
+  'L 441,178 L 459,231 L 478,285 L 462,350 L 456,382 L 420,435 ' +
+  'L 430,484 L 452,535 L 444,576 L 400,598 L 296,595 L 257,553 ' +
+  'L 202,550 L 143,500 L 118,500 L 110,435 L 100,370 L 61,324 ' +
+  'L 31,280 L 25,245 L 22,183 L 25,140 Z'
 
-// Service locations: [lng, lat, label, size]
+// Service location dots: [lng, lat, label, size]
 const SERVICE_DOTS = [
   [90.41, 23.81, 'Dhaka',       'lg'],
   [91.83, 22.33, 'Chittagong',  'md'],
@@ -29,9 +29,9 @@ const SERVICE_DOTS = [
   [90.50, 23.62, 'Narayanganj', 'sm'],
 ]
 
-// Convert lat/lng to SVG coordinates (viewBox 0 0 500 640)
+// Convert lat/lng to SVG coordinates (viewBox 0 0 500 600)
 const toX = (lng) => ((lng - 87.8) / 5.1) * 500
-const toY = (lat) => ((26.8 - lat) / 6.4) * 640
+const toY = (lat) => ((26.8 - lat) / 6.3) * 600
 
 const DOT_SIZE = { lg: 14, md: 10, sm: 7 }
 
@@ -74,7 +74,7 @@ export default function Coverage() {
 
               {/* SVG Map */}
               <svg
-                viewBox="0 0 500 640"
+                viewBox="0 0 500 600"
                 className="absolute inset-0 w-full h-full p-6"
                 style={{ filter: 'drop-shadow(0 0 20px rgba(239,68,68,0.15))' }}
               >
