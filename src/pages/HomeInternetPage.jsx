@@ -77,7 +77,7 @@ export default function HomeInternetPage() {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-600/20 to-slate-800/60 backdrop-blur-sm border border-white/10" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="grid grid-cols-3 gap-6 p-8">
-                    {['Home','Wifi','Play','Tv','Phone','Monitor','Shield','Zap','Clock'].map((icon, i) => (
+                    {['Home','Wifi','Tv','Play','Smartphone','Radio','Shield','Zap','Clock'].map((icon, i) => (
                       <div key={i} className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white/70 backdrop-blur-sm border border-white/10">
                         <IconMapper name={icon} className="w-5 h-5" />
                       </div>
