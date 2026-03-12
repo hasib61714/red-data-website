@@ -37,10 +37,6 @@ export default function HomeInternetPage() {
           <div className="flex flex-col lg:flex-row items-center gap-10">
             {/* Left: text */}
             <div className="lg:w-1/2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-                Residential Plans
-              </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
                 Home Internet<br />
                 <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">

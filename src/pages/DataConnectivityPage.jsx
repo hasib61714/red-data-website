@@ -33,10 +33,6 @@ export default function DataConnectivityPage() {
             <span className="text-white font-medium">Data Connectivity</span>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-              Enterprise Service
-            </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               Data{' '}
               <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
@@ -50,20 +46,6 @@ export default function DataConnectivityPage() {
               connections. All of our data services are delivered via Layer2/Layer3 and resilient national MPLS next
               generation network, monitored and maintained 24/7 by our NOC.
             </p>
-          </div>
-        </Container>
-      </div>
-
-      {/* ── Stats ── */}
-      <div className="bg-red-600 py-6">
-        <Container>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-center">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <div className="text-2xl sm:text-3xl font-extrabold text-white">{s.value}</div>
-                <div className="text-red-100 text-xs sm:text-sm font-medium">{s.label}</div>
-              </div>
-            ))}
           </div>
         </Container>
       </div>

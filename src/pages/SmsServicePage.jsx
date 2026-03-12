@@ -30,10 +30,6 @@ export default function SmsServicePage() {
             <span className="text-white font-medium">SMS Service</span>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-              Bulk SMS Platform
-            </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               SMS{' '}
               <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
@@ -44,19 +40,6 @@ export default function SmsServicePage() {
               Smart & affordable bulk SMS marketing — send messages, alerts, and notifications at scale with
               high delivery rates, easy API integration, and comprehensive real-time reporting.
             </p>
-          </div>
-        </Container>
-      </div>
-
-      {/* ── Use Cases ── */}
-      <div className="bg-red-600 py-5">
-        <Container>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {useCases.map((u) => (
-              <span key={u.label} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 text-white text-sm font-medium">
-                <IconMapper name={u.icon} className="w-5 h-5" /> {L(lang, u, 'label')}
-              </span>
-            ))}
           </div>
         </Container>
       </div>
