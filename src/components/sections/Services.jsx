@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import { getText } from '../../data/translations'
@@ -11,12 +12,15 @@ import { servicesData, L } from '../../data/siteData'
 
 export default function Services() {
   const { lang } = useLanguage()
-  const localizedItems = servicesData.items.map(item => ({
-    ...item,
-    title: L(lang, item, 'title'),
-    description: L(lang, item, 'description'),
-    tag: L(lang, item, 'tag'),
-  }))
+  const localizedItems = useMemo(
+    () => servicesData.items.map(item => ({
+      ...item,
+      title: L(lang, item, 'title'),
+      description: L(lang, item, 'description'),
+      tag: L(lang, item, 'tag'),
+    })),
+    [lang]
+  )
 
   const [corporate, homeInternet, ...rest] = localizedItems
 

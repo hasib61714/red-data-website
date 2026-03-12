@@ -2,8 +2,8 @@ import { lazy, Suspense, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import { LanguageProvider } from './context/LanguageContext'
-import { useLang } from './context/LanguageContext'
 import Navbar from './components/layout/Navbar'
+import PageMeta from './components/ui/PageMeta'
 import Footer from './components/layout/Footer'
 import FloatingButtons from './components/layout/FloatingButtons'
 import Hero from './components/sections/Hero'
@@ -68,6 +68,10 @@ function HashScrollHandler() {
 function HomePage() {
   return (
     <main>
+      <PageMeta
+        title="High-Speed Fiber Internet in Bangladesh"
+        description="Red Data Limited — BTRC licensed ISP. High-speed fiber broadband, corporate internet, data connectivity, IP telephony & managed IT services across Bangladesh."
+      />
       <Hero />
       <Pricing />
       <Services />
@@ -84,29 +88,9 @@ function HomePage() {
   )
 }
 
-// Re-triggers Google Translate after React renders a new route
-function TranslateOnRouteChange() {
-  const { lang } = useLang()
-  const { pathname } = useLocation()
-  useEffect(() => {
-    if (lang !== 'bn') return
-    // Give React time to paint the new page, then re-select Bengali
-    const t = setTimeout(() => {
-      const select = document.querySelector('.goog-te-combo')
-      if (select && select.value !== 'bn') {
-        select.value = 'bn'
-        select.dispatchEvent(new Event('change'))
-      }
-    }, 350)
-    return () => clearTimeout(t)
-  }, [pathname, lang])
-  return null
-}
-
 function AppInner() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 overflow-x-hidden">
-      <TranslateOnRouteChange />
       <HashScrollHandler />
       <Navbar />
       <Suspense fallback={<PageLoader />}>

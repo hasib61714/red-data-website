@@ -10,6 +10,21 @@ import IconMapper from '../ui/IconMapper'
 // Service dropdown items
 const serviceItems = navServiceItems
 
+// Static class helpers — defined outside component to avoid recreation on every render
+const linkCls = (active = false) =>
+  `relative px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold transition-all duration-200 whitespace-nowrap ${
+    active
+      ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10'
+      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07]'
+  }`
+
+const mobileLinkCls = (active = false) =>
+  `flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+    active
+      ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10'
+      : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.07]'
+  }`
+
 function SunIcon() {
   return (
     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -42,12 +57,6 @@ export default function Navbar() {
   const pathname = location.pathname
   const directNavPaths = ['/corporate-internet', '/home-internet']
   const isServiceActive = () => serviceItems.some(item => pathname === item.to && !directNavPaths.includes(item.to))
-  const mobileLinkCls = (active = false) =>
-    `flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
-      active
-        ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10'
-        : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.07]'
-    }`
 
   // Auto-close menus on navigation
   useEffect(() => {
@@ -83,13 +92,6 @@ export default function Navbar() {
     document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
   }, [])
-
-  const linkCls = (active = false) =>
-    `relative px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold transition-all duration-200 whitespace-nowrap ${
-      active
-        ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10'
-        : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07]'
-    }`
 
   // Heights: dark strip h-9 = 36px
   const barsHeight = 36
