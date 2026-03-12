@@ -142,9 +142,7 @@ export default function HomeInternetPage() {
           {/* VAT Note */}
           <p className="text-center text-slate-500 dark:text-slate-500 text-sm mt-10">
             All prices include 5% VAT.{' '}
-            <a href="https://reddata.com.bd/tariff.pdf" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline">
-              View full BTRC approved tariff →
-            </a>
+          <span className="text-red-600 dark:text-red-400">View full BTRC approved tariff</span>
           </p>
         </Container>
       </div>
@@ -182,9 +180,7 @@ export default function HomeInternetPage() {
 
       {/* ── Area Coverage ── */}
       <div className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 pointer-events-none"
-          style={{ backgroundImage: "url('https://reddata.com.bd/images/worldmap.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-        />
+        <div className="absolute inset-0 opacity-5 pointer-events-none" />
         <Container>
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="lg:w-1/2">
@@ -210,14 +206,9 @@ export default function HomeInternetPage() {
             </div>
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative">
-                <img
-                  src="https://reddata.com.bd/images/bd.png"
-                  alt="Bangladesh coverage map"
-                  className="w-64 lg:w-80 drop-shadow-2xl opacity-90"
-                  loading="lazy"
-                  decoding="async"
-                  onError={(e) => { e.target.style.display = 'none' }}
-                />
+                <div className="w-64 lg:w-80 h-72 rounded-3xl bg-gradient-to-br from-red-600/20 to-red-900/10 flex items-center justify-center">
+                  <svg className="w-24 h-24 text-red-400/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}><path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6-3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+                </div>
                 <div className="absolute inset-0 rounded-full bg-red-500/10 blur-3xl" />
               </div>
             </div>

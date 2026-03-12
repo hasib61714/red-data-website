@@ -67,9 +67,7 @@ export default function Pricing() {
 
         <p className="text-center text-slate-500 dark:text-slate-500 text-sm mt-6">
           {getText(lang, 'pricing.vatNote')}{' '}
-          <a href="https://reddata.com.bd/tariff.pdf" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline">
-            {getText(lang, 'pricing.viewTariff')}
-          </a>
+          <span className="text-red-600 dark:text-red-400">{getText(lang, 'pricing.viewTariff')}</span>
         </p>
       </Container>
     </Section>

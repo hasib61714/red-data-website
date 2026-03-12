@@ -13,13 +13,13 @@ export const navLinks = [
     label: 'Services',
     href: '#services',
     dropdown: [
-      { label: 'Corporate Internet', href: 'https://reddata.com.bd/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
-      { label: 'Home Internet', href: 'https://reddata.com.bd/home-internet', icon: 'Home', desc: 'High-speed residential plans' },
-      { label: 'Data Connectivity', href: 'https://reddata.com.bd/data-connectivity', icon: 'Link2', desc: 'Fiber-backed inter-office links' },
-      { label: 'IP Telephony', href: 'https://reddata.com.bd/ip-telephony', icon: 'Phone', desc: 'VoIP & cloud PBX solutions' },
-      { label: 'SMS Service', href: 'https://reddata.com.bd/sms-service', icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
-      { label: 'Domain & Hosting', href: 'https://reddata.com.bd/domain-hosting', icon: 'Globe', desc: 'Domains, NVMe hosting & SSL' },
-      { label: 'Managed Services', href: 'https://reddata.com.bd/managed-service', icon: 'Shield', desc: '24/7 IT infrastructure management' },
+      { label: 'Corporate Internet', href: '/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
+      { label: 'Home Internet', href: '/home-internet', icon: 'Home', desc: 'High-speed residential plans' },
+      { label: 'Data Connectivity', href: '/data-connectivity', icon: 'Link2', desc: 'Fiber-backed inter-office links' },
+      { label: 'IP Telephony', href: '/ip-telephony', icon: 'Phone', desc: 'VoIP & cloud PBX solutions' },
+      { label: 'SMS Service', href: '/sms-service', icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
+      { label: 'Domain & Hosting', href: '/domain-hosting', icon: 'Globe', desc: 'Domains, NVMe hosting & SSL' },
+      { label: 'Managed Services', href: '/managed-services', icon: 'Shield', desc: '24/7 IT infrastructure management' },
     ],
   },
   { label: 'Why Us', href: '#why-us' },
@@ -250,8 +250,7 @@ export const servicesData = {
         'SLA গ্যারান্টি সহ এন্টারপ্রাইজ-গ্রেড ডেডিকেটেড ব্যান্ডউইথ। রিডান্ড্যান্ট হাই-ক্যাপাসিটি সংযোগে ব্যবসায়িক কার্যক্রম দ্রুতগতিতে চলুন।',
       tag: 'Enterprise',
       tag_bn: 'এন্টারপ্রাইজ',
-      ctaUrl: 'https://reddata.com.bd/corporate-internet',
-      image: 'https://reddata.com.bd/_next/static/media/corporate.fe6da3f2.svg',
+      ctaUrl: '/corporate-internet',
       intro:
         'At Red Data, we understand that a reliable and high-speed internet connection is critical for the success of your business. Our Corporate Internet Connectivity service offers robust, secure, and scalable internet solutions tailored to meet the unique demands of your enterprise. With dedicated bandwidth, 24/7 customer support, and guaranteed uptime, we ensure your business operations run smoothly and efficiently.',
       highlights: [
@@ -282,8 +281,7 @@ export const servicesData = {
         'নিরবচ্ছিন্ন স্ট্রিমিং, গেমিং ও ব্রাউজিং দরুন। আমাদের হাই-স্পিড হোম প্ল্যান আধুনিক পরিবারের জন্য তৈরি।',
       tag: 'Residential',
       tag_bn: 'রেসিডেন্শিয়াল',
-      ctaUrl: 'https://reddata.com.bd/home-internet',
-      image: 'https://reddata.com.bd/_next/static/media/wair.f49f3212.svg',
+      ctaUrl: '/home-internet',
       intro:
         'Red Data Home Internet delivers ultra-fast fiber broadband engineered for modern households. From buffer-free 4K streaming and lag-free gaming to seamless video calls and smart-home devices — all on one blisteringly fast connection.',
       highlights: [
@@ -322,7 +320,7 @@ export const servicesData = {
         'নিরবচ্ছিন্ন ডেটা ট্রান্সফার ও সুরক্ষিত অফিসের মধ্যে যোগাযোগ। আমাদের ফাইবার-সমর্থিত লিংকে শূন্য প্যাকেট লস নিশ্চিত।',
       tag: 'Infrastructure',
       tag_bn: 'ইনফ্রাস্ট্রাকচার',
-      ctaUrl: 'https://reddata.com.bd/contact',
+      ctaUrl: '/contact',
       intro:
         `Red Data's Data Connectivity solutions interconnect your offices, data centres, and remote sites with secure, high-throughput fiber links. Backed by a nationwide fiber backbone, our point-to-point and MPLS services deliver carrier-grade reliability with full SLA commitments.`,
       highlights: [
@@ -353,7 +351,7 @@ export const servicesData = {
         'স্পষ্ট ভয়েস কোয়ালিটি সহ VoIP সমাধান যোগাযোগ খরচ কমায়। আজই আপনার ব্যবসায়িক ফোন সিস্টেম আধুনিক করুন।',
       tag: 'Voice',
       tag_bn: 'ভয়েস',
-      ctaUrl: 'https://reddata.com.bd/ip-telephony',
+      ctaUrl: '/ip-telephony',
       intro:
         `Elevate your business communications with Red Data's IP Telephony Service. Enjoy superior voice quality, seamless integration, cost-effective calling plans, and a wide range of advanced features such as voicemail, call forwarding, and conferencing. Designed for businesses of all sizes.`,
       highlights: [
@@ -386,7 +384,7 @@ export const servicesData = {
         'বাল্ক মেসেজিং, থানঘতমূলক অ্যালার্ট ও মার্কেটিং ক্যাম্পেইন — রিয়েল-টাইম ডিলিভারি রিপোর্টসহ একটি প্ল্যাটফর্মে।',
       tag: 'Messaging',
       tag_bn: 'মেসেজিং',
-      ctaUrl: 'https://reddata.com.bd/contact',
+      ctaUrl: '/contact',
       intro:
         `Red Data's SMS platform lets businesses send millions of personalised messages with a single API call. Whether it's OTP authentication, order alerts, promotional campaigns, or appointment reminders — our gateway ensures near-instant delivery across all BD operators.`,
       highlights: [
@@ -417,7 +415,7 @@ export const servicesData = {
         'আস্থার সাথে ডোমেইন নির্ধারণ ও হোস্ট করুন। ৯৯.৯% আপটাইম, NVMe স্টোরেজ, বিনামূল্যে SSL।',
       tag: 'Web',
       tag_bn: 'ওয়েব',
-      ctaUrl: 'https://reddata.com.bd/contact',
+      ctaUrl: '/contact',
       intro:
         `Get your business online with Red Data's domain registration and web hosting services. From lightweight business sites to high-traffic e-commerce stores, our NVMe-powered servers deliver blazing-fast load times with enterprise security built in.`,
       highlights: [
@@ -450,7 +448,7 @@ export const servicesData = {
         'আপনার মূল ব্যবসায়ে মনোযোগ দিন, আমাদের সার্টিফাইড ইঞ্জিনিয়াররা আপনার IT ইনফ্রাস্ট্রাকচার পরিচালনা করাবে।',
       tag: 'IT Management',
       tag_bn: 'IT ম্যানেজমেন্ট',
-      ctaUrl: 'https://reddata.com.bd/contact',
+      ctaUrl: '/contact',
       intro:
         `Red Data Managed IT Services offloads the headaches of infrastructure management from your team. Our certified engineers provide proactive monitoring, rapid incident response, and strategic IT consulting — so your systems stay online and your team stays focused`,
       highlights: [
@@ -711,7 +709,7 @@ export const footerData = {
         { label: 'Area Coverage', href: '/#coverage' },
         { label: 'News & Blog', href: '/blog' },
         { label: 'Pay Bill', href: '/pay-bill' },
-        { label: 'BTRC Approved Tariff', href: 'https://reddata.com.bd/tariff.pdf' },
+        { label: 'BTRC Approved Tariff', href: '/tariff' },
       ],
     },
     {

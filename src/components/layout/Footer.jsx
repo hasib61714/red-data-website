@@ -93,7 +93,7 @@ export default function Footer() {
             <div className="flex items-center gap-5">
               <Link to="/privacy-policy" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">Terms of Service</Link>
-              <a href="https://reddata.com.bd/tariff.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-500 text-xs hover:text-slate-300 transition-colors">BTRC Tariff</a>
+              <span className="text-slate-500 text-xs">BTRC Tariff</span>
             </div>
           </div>
         </Container>

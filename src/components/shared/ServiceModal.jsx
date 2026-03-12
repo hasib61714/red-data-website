@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const ICONS = {
   bolt: (
@@ -236,14 +237,12 @@ export default function ServiceModal({ service, onClose }) {
             >
               Close
             </button>
-            <a
-              href={service.ctaUrl || 'https://reddata.com.bd/contact'}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={service.ctaUrl || '/contact'}
               className="px-5 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-red-600 via-red-500 to-orange-500 hover:from-red-500 hover:to-orange-400 shadow-lg shadow-red-500/25 transition-all duration-200"
             >
               Get Started →
-            </a>
+            </Link>
           </div>
         </div>
       </div>

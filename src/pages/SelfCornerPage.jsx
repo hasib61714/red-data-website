@@ -16,8 +16,7 @@ export default function SelfCornerPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Redirect to actual self-care portal
-    window.open('https://reddata.com.bd/self-corner', '_blank', 'noopener,noreferrer')
+    alert('Online portal coming soon. Please call +880-9640-112233 for account assistance.')
   }
 
   return (
