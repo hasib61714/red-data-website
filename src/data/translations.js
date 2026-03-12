@@ -161,7 +161,6 @@ export const t = {
       services: 'সেবাসমূহ',
       corporateInternet: 'কর্পোরেট ইন্টারনেট',
       homeInternet: 'হোম ইন্টারনেট',
-      services: 'সেবাসমূহ',
       payBill: 'বিল দিন',
       aboutUs: 'আমাদের সম্পর্কে',
       contactUs: 'যোগাযোগ করুন',
