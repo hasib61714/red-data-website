@@ -181,27 +181,37 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Address */}
-              <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700/50 p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 text-white flex items-center justify-center text-xl shadow shrink-0">
-                    📍
+              {/* Office Map */}
+              <div className="rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-700/50 shadow-sm">
+                <iframe
+                  title="Red Data Office Location"
+                  src="https://maps.google.com/maps?q=SimpleTree+Attalika,+134+Gulshan+Avenue,+Dhaka+1212,+Bangladesh&output=embed&z=16"
+                  width="100%"
+                  height="260"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <div className="bg-white dark:bg-slate-800 px-5 py-4 flex items-center justify-between gap-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-red-600 to-rose-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                      <IconMapper name="MapPin" className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-slate-900 dark:text-white text-sm">Office Address</p>
+                      <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mt-0.5">
+                        Level 19, SimpleTree Attalika, 134 Gulshan Avenue, Dhaka 1212
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">Office Address</h3>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                      Level 19, SimpleTree Attalika<br />
-                      134 Gulshan Avenue<br />
-                      Dhaka 1212, Bangladesh
-                    </p>
-                    <a
-                      href="https://maps.google.com/?q=SimpleTree+Attalika+134+Gulshan+Avenue+Dhaka"
-                      target="_blank" rel="noreferrer"
-                      className="inline-flex items-center gap-1 mt-3 text-red-600 dark:text-red-400 hover:underline text-sm font-medium"
-                    >
-                      View on Map →
-                    </a>
-                  </div>
+                  <a
+                    href="https://maps.google.com/?q=SimpleTree+Attalika+134+Gulshan+Avenue+Dhaka"
+                    target="_blank" rel="noreferrer"
+                    className="shrink-0 px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-semibold transition-colors"
+                  >
+                    Directions →
+                  </a>
                 </div>
               </div>
 
