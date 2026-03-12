@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
-import { managedServicesData } from '../data/siteData'
+import { managedServicesData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
+import { useLanguage } from '../context/LanguageContext'
 
 const { services, stats } = managedServicesData
 
 export default function ManagedServicesPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const { lang } = useLanguage()
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -88,13 +90,13 @@ export default function ManagedServicesPage() {
                       <div className="flex items-center gap-2 mb-2">
                         <span className={`text-xs font-bold uppercase tracking-widest bg-gradient-to-r ${s.color} bg-clip-text text-transparent`}>Service {String(i + 1).padStart(2, '0')}</span>
                       </div>
-                      <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mb-3">{s.title}</h3>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{s.desc}</p>
+                      <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mb-3">{L(lang, s, 'title')}</h3>
+                      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{L(lang, s, 'desc')}</p>
                     </div>
                   </div>
                   <div className="lg:w-64 shrink-0">
                     <ul className="space-y-2">
-                      {s.features.map((feat) => (
+                      {(lang === 'bn' && s.features_bn ? s.features_bn : s.features).map((feat) => (
                         <li key={feat} className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
                           <svg className={`w-4 h-4 bg-gradient-to-br ${s.color} bg-clip-text shrink-0`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} style={{ color: 'currentColor' }}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />

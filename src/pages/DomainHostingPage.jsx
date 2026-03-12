@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
-import { domainHostingData } from '../data/siteData'
+import { domainHostingData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
+import { useLanguage } from '../context/LanguageContext'
 
 const { features, plans } = domainHostingData
 
 export default function DomainHostingPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const { lang } = useLanguage()
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -67,8 +69,8 @@ export default function DomainHostingPage() {
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 text-white flex items-center justify-center text-xl shadow mb-3 group-hover:scale-110 transition-transform">
                   <IconMapper name={f.icon} className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{f.title}</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{f.desc}</p>
+                <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{L(lang, f, 'title')}</h3>
+                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{L(lang, f, 'desc')}</p>
               </div>
             ))}
           </div>

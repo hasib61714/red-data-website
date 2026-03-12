@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
-import { smsServiceData } from '../data/siteData'
+import { smsServiceData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
+import { useLanguage } from '../context/LanguageContext'
 
 const { features, useCases } = smsServiceData
 
 export default function SmsServicePage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const { lang } = useLanguage()
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -52,7 +54,7 @@ export default function SmsServicePage() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             {useCases.map((u) => (
               <span key={u.label} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 text-white text-sm font-medium">
-                <IconMapper name={u.icon} className="w-5 h-5" /> {u.label}
+                <IconMapper name={u.icon} className="w-5 h-5" /> {L(lang, u, 'label')}
               </span>
             ))}
           </div>
@@ -80,8 +82,8 @@ export default function SmsServicePage() {
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 text-white flex items-center justify-center text-xl shadow mb-3 group-hover:scale-110 transition-transform">
                   <IconMapper name={f.icon} className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{f.title}</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{f.desc}</p>
+                <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{L(lang, f, 'title')}</h3>
+                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{L(lang, f, 'desc')}</p>
               </div>
             ))}
           </div>
