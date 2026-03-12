@@ -18,7 +18,7 @@ export default function SmsServicePage() {
       <PageMeta title="SMS Service" description="Bulk SMS, OTP gateway, and transactional messaging services with high delivery rates from Red Data Bangladesh." />
 
       {/* ── Hero ── */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-14 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
         <Container>
