@@ -7,13 +7,11 @@ import Reveal from '../ui/Reveal'
 import SectionHeader from '../ui/SectionHeader'
 import { blogPostsData } from '../../data/siteData'
 
-function PostCard({ date, tag, tagColor, title, excerpt, href, readTime, image, author }) {
+function PostCard({ id, date, tag, tagColor, title, excerpt, readTime, image, author }) {
   const { lang } = useLanguage()
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to={`/blog/${id}`}
       className="group flex flex-col rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/[0.08] overflow-hidden hover:border-red-500/25 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/5 transition-all duration-300"
     >
       {/* Thumbnail */}
@@ -72,7 +70,7 @@ function PostCard({ date, tag, tagColor, title, excerpt, href, readTime, image, 
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
 
