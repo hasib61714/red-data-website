@@ -13,7 +13,6 @@ export const navLinks = [
     label: 'Services',
     href: '#services',
     dropdown: [
-      { label: 'Corporate Internet', href: '/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
       { label: 'Data Connectivity', href: '/data-connectivity', icon: 'Link2', desc: 'Fiber-backed inter-office links' },
       { label: 'IP Telephony', href: '/ip-telephony', icon: 'Phone', desc: 'VoIP & cloud PBX solutions' },
       { label: 'SMS Service', href: '/sms-service', icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
@@ -31,7 +30,6 @@ export const navLinks = [
 
 // ─── Navbar service dropdown items (router Links) ────────────────────────────
 export const navServiceItems = [
-  { label: 'Corporate Internet', to: '/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
   { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'Link2',     desc: 'Fiber-backed inter-office links' },
   { label: 'IP Telephony',       to: '/ip-telephony',       icon: 'Phone',     desc: 'VoIP & cloud PBX solutions' },
   { label: 'SMS Service',        to: '/sms-service',        icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
