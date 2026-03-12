@@ -206,7 +206,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <a
-                    href="https://maps.google.com/?q=SimpleTree+Attalika+134+Gulshan+Avenue+Dhaka"
+                    href="https://www.google.com/maps/dir/?api=1&destination=SimpleTree+Attalika,+134+Gulshan+Avenue,+Dhaka+1212,+Bangladesh"
                     target="_blank" rel="noreferrer"
                     className="shrink-0 px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-semibold transition-colors"
                   >
