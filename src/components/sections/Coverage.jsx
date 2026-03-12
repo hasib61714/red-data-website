@@ -76,7 +76,7 @@ export default function Coverage() {
             <div className="relative rounded-3xl overflow-hidden border border-red-500/40 bg-slate-900 shadow-2xl shadow-black/20 dark:shadow-black/40 flex items-center justify-center mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none">
               {/* Map Image — natural 2:3 aspect (408×612) */}
               <img
-                src="/bd map.png"
+                src="/bd-map.svg"
                 alt="Bangladesh Coverage Map"
                 className="w-full h-auto block"
                 style={{ filter: 'drop-shadow(0 0 12px rgba(239,68,68,0.15))' }}
