@@ -92,7 +92,7 @@ export default function HomeInternetPage() {
       {/* Plans Grid */}
       <div className="bg-slate-50 dark:bg-slate-900 py-16">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start md:items-center mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mt-4">
             {plans.map((plan, i) => (
               <Reveal key={plan.name} delay={i * 100}>
                 <PricingCard
@@ -103,7 +103,6 @@ export default function HomeInternetPage() {
                   period="/month"
                   oneTime={plan.oneTime === 0 ? 'Free installation' : `৳${plan.oneTime.toLocaleString()} one-time setup`}
                   bandwidth={`${plan.speed} Mbps`}
-                  popular={plan.name === 'Maroon'}
                   features={[
                     `${plan.speed} Mbps Bandwidth`,
                     'Buffer-less social media & YouTube',
