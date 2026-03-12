@@ -29,6 +29,7 @@ const SmsServicePage        = lazy(() => import('./pages/SmsServicePage'))
 const DomainHostingPage     = lazy(() => import('./pages/DomainHostingPage'))
 const ManagedServicesPage   = lazy(() => import('./pages/ManagedServicesPage'))
 const BlogPage              = lazy(() => import('./pages/BlogPage'))
+const BlogDetailPage        = lazy(() => import('./pages/BlogDetailPage'))
 const PrivacyPolicyPage     = lazy(() => import('./pages/PrivacyPolicyPage'))
 const TermsPage             = lazy(() => import('./pages/TermsPage'))
 const NotFoundPage          = lazy(() => import('./pages/NotFoundPage'))
@@ -104,6 +105,7 @@ function AppInner() {
         <Route path="/domain-hosting" element={<DomainHostingPage />} />
         <Route path="/managed-services" element={<ManagedServicesPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<BlogDetailPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="*" element={<NotFoundPage />} />

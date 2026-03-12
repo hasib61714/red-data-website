@@ -50,7 +50,7 @@ export default function BlogPage() {
           <div className="mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400">Featured Post</span>
           </div>
-          <a href={featured.href} target="_blank" rel="noreferrer" className="group block">
+          <Link to={`/blog/${featured.id}`} className="group block">
             <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700/50 overflow-hidden shadow-sm hover:shadow-xl transition-all">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Image */}
@@ -94,7 +94,7 @@ export default function BlogPage() {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         </Container>
       </div>
 
@@ -106,7 +106,7 @@ export default function BlogPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {rest.map((post) => (
-              <a key={post.id} href={post.href} target="_blank" rel="noreferrer" className="group block bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+              <Link key={post.id} to={`/blog/${post.id}`} className="group block bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                 <div className="relative overflow-hidden h-48">
                   <img
                     src={post.image}
@@ -142,16 +142,10 @@ export default function BlogPage() {
                     <span className="text-red-600 dark:text-red-400 text-xs font-semibold">Read →</span>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* External blog link */}
-          <div className="mt-10 text-center">
-            <a href="https://reddata.com.bd/blogs" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-red-600 text-red-600 dark:text-red-400 dark:border-red-500 font-bold text-sm hover:bg-red-600 hover:text-white dark:hover:bg-red-600 dark:hover:text-white transition-all">
-              View All Posts on reddata.com.bd →
-            </a>
-          </div>
         </Container>
       </div>
 
