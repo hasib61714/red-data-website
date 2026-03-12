@@ -468,7 +468,7 @@ export const servicesData = {
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
 export const statsData = [
-  { value: '12+', label: 'Years Experience', label_bn: 'যুগুন্ত অভিজ্ঞতা', description: 'Serving homes and businesses since 2012', description_bn: '২০১২ সাল থেকে ঘর ও ব্যবসায় সেবা প্রদান' },
+  { value: '13+', label: 'Years Experience', label_bn: 'যুগুন্ত অভিজ্ঞতা', description: 'Serving homes and businesses since 2012', description_bn: '২০১২ সাল থেকে ঘর ও ব্যবসায় সেবা প্রদান' },
   { value: '99.9%', label: 'Network Uptime', label_bn: 'নেটওয়ার্ক আপটাইম', description: 'SLA-backed reliability you can count on', description_bn: 'SLA-সমর্থিত নির্ভরযোগ্যতা' },
   { value: '64', label: 'Districts Covered', label_bn: 'জেলায় কভারেজ', description: 'Nationwide fiber backbone across Bangladesh', description_bn: 'বাংলাদেশজুড়ে ফাইবার ব্যাকবোন' },
   { value: '24 / 7', label: 'Customer Support', label_bn: 'গ্রাহক সহায়তা', description: 'Round-the-clock technical assistance', description_bn: 'সার্বক্ষণিক টেকনিক্যাল সহায়তা' },
@@ -731,7 +731,7 @@ export const footerData = {
 export const aboutPageData = {
   stats: [
     { num: '2012',    label: 'Founded' },
-    { num: '12+',     label: 'Years of Experience' },
+    { num: '13+',     label: 'Years of Experience' },
     { num: '10,000+', label: 'Happy Clients' },
     { num: '99.9%',   label: 'Uptime SLA' },
   ],

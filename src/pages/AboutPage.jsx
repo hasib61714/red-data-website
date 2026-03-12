@@ -74,7 +74,7 @@ export default function AboutPage() {
                 />
                 {/* Badge */}
                 <div className="absolute bottom-4 left-4 bg-red-600 text-white rounded-xl px-4 py-2 shadow-xl text-sm font-bold">
-                  12+ Year Experience
+                  13+ Year Experience
                 </div>
               </div>
             </div>

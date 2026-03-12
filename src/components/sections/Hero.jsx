@@ -74,7 +74,7 @@ export default function Hero({ topBarVisible = false }) {
       {/* ─── Slide Content ─── */}
       <div className="absolute inset-0 z-30 flex items-center">
       <Container className="w-full">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl py-20">
 
           {/* Badge */}
           <div
@@ -88,7 +88,7 @@ export default function Hero({ topBarVisible = false }) {
           {/* Headline */}
           <h1
             key={`h1-${current}`}
-            className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-[1.07] tracking-tight mb-6 animate-fade-up"
+            className="text-4xl sm:text-5xl lg:text-7xl font-medium text-white leading-[1.07] tracking-tight mb-6 animate-fade-up"
             style={{ animationDelay: '80ms' }}
           >
             {L(lang, slide, 'headline')}{' '}
@@ -162,23 +162,6 @@ export default function Hero({ topBarVisible = false }) {
         ))}
       </div>
 
-      {/* ─── Slide Counter ─── */}
-      <div className="absolute bottom-[4.5rem] right-6 lg:right-10 z-40 text-xs text-slate-400 font-mono select-none">
-        <span className="text-red-400 font-bold">{String(current + 1).padStart(2, '0')}</span>
-        <span className="mx-1 opacity-50">/</span>
-        {String(heroSlides.length).padStart(2, '0')}
-      </div>
-
-      {/* ─── Progress Bar ─── */}
-      {!paused && (
-        <div className="absolute bottom-0 left-0 right-0 z-40 h-[3px] bg-white/10">
-          <div
-            key={`progress-${current}`}
-            className="h-full bg-gradient-to-r from-red-500 to-red-600 origin-left"
-            style={{ animation: `progressBar ${SLIDE_INTERVAL}ms linear forwards` }}
-          />
-        </div>
-      )}
 
       {/* ─── Scroll Indicator ─── */}
       <div className="absolute bottom-7 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-1.5 animate-bounce">
@@ -188,12 +171,6 @@ export default function Hero({ topBarVisible = false }) {
         </svg>
       </div>
 
-      <style>{`
-        @keyframes progressBar {
-          from { transform: scaleX(0); }
-          to   { transform: scaleX(1); }
-        }
-      `}</style>
     </section>
   )
 }
