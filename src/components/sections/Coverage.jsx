@@ -5,36 +5,6 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 
-// Bangladesh outline — proper boundary approximation
-// ViewBox: 0 0 500 600 | toX: lng→x, toY: lat→y (inverted)
-const BD_PATH =
-  'M 27,24 L 35,7 L 55,14 L 90,29 L 133,27 L 160,40 L 196,43 L 214,32 ' +
-  'L 245,32 L 275,15 L 310,26 L 349,10 L 364,18 L 383,70 L 402,150 ' +
-  'L 441,178 L 459,231 L 478,285 L 462,350 L 456,382 L 420,435 ' +
-  'L 430,484 L 452,535 L 444,576 L 400,598 L 296,595 L 257,553 ' +
-  'L 202,550 L 143,500 L 118,500 L 110,435 L 100,370 L 61,324 ' +
-  'L 31,280 L 25,245 L 22,183 L 25,140 Z'
-
-// Service location dots: [lng, lat, label, size]
-const SERVICE_DOTS = [
-  [90.41, 23.81, 'Dhaka',       'lg'],
-  [91.83, 22.33, 'Chittagong',  'md'],
-  [91.87, 24.90, 'Sylhet',      'sm'],
-  [88.60, 24.37, 'Rajshahi',    'sm'],
-  [89.55, 22.80, 'Khulna',      'sm'],
-  [90.35, 22.70, 'Barishal',    'sm'],
-  [90.40, 24.75, 'Mymensingh',  'sm'],
-  [89.27, 25.74, 'Rangpur',     'sm'],
-  [91.18, 23.46, 'Comilla',     'sm'],
-  [90.50, 23.62, 'Narayanganj', 'sm'],
-]
-
-// Convert lat/lng to SVG coordinates (viewBox 0 0 500 600)
-const toX = (lng) => ((lng - 87.8) / 5.1) * 500
-const toY = (lat) => ((26.8 - lat) / 6.3) * 600
-
-const DOT_SIZE = { lg: 14, md: 10, sm: 7 }
-
 const districts = [
   'Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi', 'Khulna',
   'Barishal', 'Mymensingh', 'Rangpur', 'Comilla', 'Narayanganj',
@@ -67,50 +37,18 @@ export default function Coverage() {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left — Bangladesh SVG Map */}
+          {/* Left — Bangladesh Map Image */}
           <Reveal direction="left">
             <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-900 shadow-2xl shadow-black/20 dark:shadow-black/40 aspect-[4/3] flex items-center justify-center">
               <div className="absolute inset-0 bg-grid opacity-20" />
 
-              {/* SVG Map */}
-              <svg
-                viewBox="0 0 500 600"
-                className="absolute inset-0 w-full h-full p-6"
-                style={{ filter: 'drop-shadow(0 0 20px rgba(239,68,68,0.15))' }}
-              >
-                {/* Bangladesh outline */}
-                <path
-                  d={BD_PATH}
-                  fill="rgba(239,68,68,0.08)"
-                  stroke="rgba(239,68,68,0.4)"
-                  strokeWidth="2"
-                  strokeLinejoin="round"
-                />
-
-                {/* Service location dots */}
-                {SERVICE_DOTS.map(([lng, lat, label, size]) => {
-                  const x = toX(lng)
-                  const y = toY(lat)
-                  const r = DOT_SIZE[size]
-                  return (
-                    <g key={label}>
-                      {/* Pulse ring */}
-                      <circle cx={x} cy={y} r={r * 2} fill="rgba(239,68,68,0.15)">
-                        <animate attributeName="r" values={`${r};${r * 2.5};${r}`} dur="2.5s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.4;0;0.4" dur="2.5s" repeatCount="indefinite" />
-                      </circle>
-                      {/* Dot */}
-                      <circle cx={x} cy={y} r={r / 2} fill="#ef4444" />
-                      {/* Label (only for larger dots) */}
-                      {size !== 'sm' && (
-                        <text x={x + r + 4} y={y + 4} fill="rgba(255,255,255,0.7)" fontSize="11" fontWeight="600" fontFamily="sans-serif">
-                          {label}
-                        </text>
-                      )}
-                    </g>
-                  )
-                })}
-              </svg>
+              {/* Map Image */}
+              <img
+                src="/bd map.png"
+                alt="Bangladesh Coverage Map"
+                className="absolute inset-0 w-full h-full object-contain p-4"
+                style={{ filter: 'drop-shadow(0 0 20px rgba(239,68,68,0.2))' }}
+              />
 
               {/* Coverage badge */}
               <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-red-500/30 backdrop-blur-sm z-10">
