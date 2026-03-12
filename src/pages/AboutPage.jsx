@@ -2,9 +2,10 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
-import { aboutPageData } from '../data/siteData'
+import { aboutPageData, footerData } from '../data/siteData'
 
-const { clients, services, stats } = aboutPageData
+const { clients, services, stats, story, companyCards, cta: aboutCta } = aboutPageData
+const { contact } = footerData
 
 export default function AboutPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
@@ -90,15 +91,9 @@ export default function AboutPage() {
                 </span>
               </h2>
               <div className="space-y-4 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                <p>
-                  With a robust network infrastructure and strategic partnerships, Red Data ensures seamless connectivity and exceptional performance. Leveraging state-of-the-art technologies, Red Data delivers high-speed internet access, enabling individuals and businesses to stay connected, collaborate, and thrive in today's digital landscape.
-                </p>
-                <p>
-                  Committed to customer satisfaction and industry-leading service quality, Red Data (Pvt.) Limited continuously invests in infrastructure development, network expansion, and talent acquisition. With a dedicated team of professionals, Red Data strives to exceed customer expectations and drive the digital transformation of Bangladesh.
-                </p>
-                <p>
-                  As the digital landscape evolves, Red Data (Pvt.) Limited remains steadfast in its mission to empower connectivity, enabling individuals, businesses, and communities to embrace the endless possibilities of the digital world.
-                </p>
+                {story.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/corporate-internet" className="px-5 py-2.5 rounded-full bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105">
@@ -145,36 +140,27 @@ export default function AboutPage() {
       <div className="py-16 bg-white dark:bg-slate-900">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Head Office */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50">
-              <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl mb-4">📍</div>
-              <h4 className="font-bold text-slate-900 dark:text-white mb-2">Head Office</h4>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                Level 19, SimpleTree Attalika,<br />
-                134 Gulshan Avenue,<br />
-                Dhaka-1212, Bangladesh
-              </p>
-            </div>
-            {/* Registered Address */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50">
-              <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl mb-4">🏢</div>
-              <h4 className="font-bold text-slate-900 dark:text-white mb-2">Registered Address</h4>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                House 5/A, Road 2, Lane 3,<br />
-                Block G, Halishahar,<br />
-                Chittagong, Bangladesh
-              </p>
-            </div>
+            {companyCards.map((card) => (
+              <div key={card.title} className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50">
+                <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl mb-4">{card.icon}</div>
+                <h4 className="font-bold text-slate-900 dark:text-white mb-2">{card.title}</h4>
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                  {card.lines.map((line, i) => (
+                    <span key={i}>{line}{i < card.lines.length - 1 && <br />}</span>
+                  ))}
+                </p>
+              </div>
+            ))}
             {/* Contact */}
             <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50">
               <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl mb-4">📞</div>
               <h4 className="font-bold text-slate-900 dark:text-white mb-2">Contact</h4>
               <div className="space-y-1.5 text-sm">
-                <a href="tel:+8809640112233" className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                  📞 09640-112233
+                <a href={`tel:${contact.phone.replace(/-/g, '')}`} className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                  📞 {contact.phone}
                 </a>
-                <a href="mailto:info@reddata.com.bd" className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                  ✉️ info@reddata.com.bd
+                <a href={`mailto:${contact.email}`} className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                  ✉️ {contact.email}
                 </a>
               </div>
             </div>
@@ -222,15 +208,15 @@ export default function AboutPage() {
         <Container>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">Partner with Red Data today</h3>
-              <p className="text-red-100 text-sm mt-1">Join 10,000+ satisfied customers across Bangladesh.</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">{aboutCta.heading}</h3>
+              <p className="text-red-100 text-sm mt-1">{aboutCta.subheading}</p>
             </div>
             <div className="flex gap-3">
-              <a href="/#contact" className="px-6 py-3 rounded-full bg-white text-red-600 font-bold text-sm hover:bg-red-50 transition-all shadow">
-                Get in Touch
+              <a href={aboutCta.cta1.href} className="px-6 py-3 rounded-full bg-white text-red-600 font-bold text-sm hover:bg-red-50 transition-all shadow">
+                {aboutCta.cta1.label}
               </a>
               <Link to="/" className="px-6 py-3 rounded-full border border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition-all">
-                ← Back Home
+                {aboutCta.cta2.label}
               </Link>
             </div>
           </div>
