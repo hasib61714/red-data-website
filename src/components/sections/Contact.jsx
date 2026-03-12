@@ -25,7 +25,7 @@ function ContactIcon({ iconKey }) {
 
 const contactMethods = homeContactMethods
 
-// ─── Replace YOUR_FORM_ID with your Formspree form ID ──────────────────────
+// Replace YOUR_FORM_ID with your Formspree form ID
 // 1. Go to https://formspree.io → Sign up free
 // 2. Create a new form → copy the form ID (e.g. xpwzabcd)
 // 3. Paste it below replacing YOUR_FORM_ID

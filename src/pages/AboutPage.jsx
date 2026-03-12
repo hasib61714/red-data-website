@@ -16,7 +16,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <PageMeta title="About Us" description="Red Data Limited — BTRC licensed ISP founded in 2012. Serving 10,000+ clients with fiber internet, data connectivity, and IT solutions across Bangladesh." />
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
@@ -54,7 +54,7 @@ export default function AboutPage() {
         </Container>
       </div>
 
-      {/* ── Our Story ── */}
+      {/* Our Story */}
       <div className="py-20 bg-white dark:bg-slate-900">
         <Container>
           <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -109,7 +109,7 @@ export default function AboutPage() {
         </Container>
       </div>
 
-      {/* ── Services ── */}
+      {/* Services */}
       <div className="py-16 bg-slate-50 dark:bg-slate-800/40">
         <Container>
           <div className="text-center mb-10">
@@ -137,7 +137,7 @@ export default function AboutPage() {
         </Container>
       </div>
 
-      {/* ── Company Info ── */}
+      {/* Company Info */}
       <div className="py-16 bg-white dark:bg-slate-900">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -169,7 +169,7 @@ export default function AboutPage() {
         </Container>
       </div>
 
-      {/* ── Clients ── */}
+      {/* Clients */}
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="text-center mb-10">
@@ -204,7 +204,7 @@ export default function AboutPage() {
         </Container>
       </div>
 
-      {/* ── CTA ── */}
+      {/* CTA */}
       <div className="py-14 bg-gradient-to-r from-red-600 to-rose-700">
         <Container>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">

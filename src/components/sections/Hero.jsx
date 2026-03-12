@@ -48,7 +48,7 @@ export default function Hero() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* ─── Background Image Slides ─── */}
+      {/* Background Image Slides */}
       {heroSlides.map((s, i) => (
         <div
           key={s.id}
@@ -71,7 +71,7 @@ export default function Hero() {
       {/* Grid overlay */}
       <div className="absolute inset-0 bg-grid opacity-20 z-20 pointer-events-none" />
 
-      {/* ─── Slide Content ─── */}
+      {/* Slide Content */}
       <div className="absolute inset-0 z-30 flex ">
       <Container className="w-full">
         <div className="max-w-[850px] py-10">
@@ -126,7 +126,7 @@ export default function Hero() {
       </Container>
       </div>
 
-      {/* ─── Prev / Next Arrows ─── */}
+      {/* Prev / Next Arrows */}
       <button
         onClick={goBack}
         className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-red-500/20 hover:border-red-500/40 backdrop-blur-sm transition-all duration-200 flex items-center justify-center"
@@ -146,7 +146,7 @@ export default function Hero() {
         </svg>
       </button>
 
-      {/* ─── Dot Indicators ─── */}
+      {/* Dot Indicators */}
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2.5">
         {heroSlides.map((s, i) => (
           <button
@@ -163,7 +163,7 @@ export default function Hero() {
       </div>
 
 
-      {/* ─── Scroll Indicator ─── */}
+      {/* Scroll Indicator */}
       <div className="absolute bottom-7 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-1.5 animate-bounce">
         <span className="text-slate-500 text-[10px] tracking-widest uppercase">Scroll</span>
         <svg className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

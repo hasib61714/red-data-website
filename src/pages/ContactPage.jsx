@@ -51,7 +51,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <PageMeta title="Contact Us" description="Get in touch with Red Data — Bangladesh's leading ISP — via phone, WhatsApp, email, or our online contact form." />
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
@@ -78,12 +78,12 @@ export default function ContactPage() {
         </Container>
       </div>
 
-      {/* ── Main ── */}
+      {/* Main */}
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-            {/* ── Contact Form ── */}
+            {/* Contact Form */}
             <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700/50 p-8 lg:p-10">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6">
                 Send a Message
@@ -157,7 +157,7 @@ export default function ContactPage() {
               )}
             </div>
 
-            {/* ── Contact Methods + Address ── */}
+            {/* Contact Methods + Address */}
             <div className="space-y-6">
               <div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -235,7 +235,7 @@ export default function ContactPage() {
         </Container>
       </div>
 
-      {/* ── Back ── */}
+      {/* Back */}
     </div>
   )
 }

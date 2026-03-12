@@ -15,7 +15,7 @@ export default function FloatingButtons() {
   return (
     <div className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3">
 
-      {/* ── Live Chat Panel ── */}
+      {/* Live Chat Panel */}
       <div
         className={`flex flex-col items-end gap-2 transition-all duration-300 origin-bottom-right ${
           chatOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none'
@@ -59,7 +59,7 @@ export default function FloatingButtons() {
         </a>
       </div>
 
-      {/* ── Main Chat Toggle Button ── */}
+      {/* Main Chat Toggle Button */}
       <div className="flex items-center gap-3">
         {/* Scroll to Top */}
         <button

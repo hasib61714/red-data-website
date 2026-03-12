@@ -7,7 +7,7 @@ import { getText } from '../../data/translations'
 import { navServiceItems, contactBarData } from '../../data/siteData'
 import IconMapper from '../ui/IconMapper'
 
-// ─── Service dropdown items ───────────────────────────────────────────────────
+// Service dropdown items
 const serviceItems = navServiceItems
 
 function SunIcon() {
@@ -96,13 +96,13 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Scrollable Bars (TopBar + Contact Strip) ─────────────────────── */}
+      {/* Scrollable Bars (TopBar + Contact Strip) */}
       <div
         className={`fixed top-0 left-0 right-0 z-[60] transition-transform duration-300 ease-in-out ${
           barsHidden ? '-translate-y-full' : 'translate-y-0'
         }`}
       >
-        {/* ── Dark Contact Strip ──────────────────────────────────────── */}
+        {/* Dark Contact Strip */}
         <div className="bg-slate-900 dark:bg-black border-b border-white/[0.06]">
           <Container>
             <div className="flex items-center justify-between h-9">
@@ -156,7 +156,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ── Main Nav Header — always fixed, adjusts top ──────────────────── */}
+      {/* Main Nav Header — always fixed, adjusts top */}
       <header
         style={{ top: barsHidden ? 0 : barsHeight }}
         className={`fixed left-0 right-0 z-50 transition-[background-color,box-shadow,border-color] duration-200 border-b ${
@@ -168,7 +168,7 @@ export default function Navbar() {
       <Container>
         <div className="flex items-center justify-between h-14 gap-2">
 
-          {/* ── Logo ────────────────────────────────────────────────────── */}
+          {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center">
             <img
               src={dark ? '/RD Logo W.png' : '/logo.png'}
@@ -177,7 +177,7 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* ── Desktop Nav ──────────────────────────────────────────────── */}
+          {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-0.5 flex-1 justify-center">
 
             {/* Home */}
@@ -264,7 +264,7 @@ export default function Navbar() {
 
           </nav>
 
-          {/* ── Desktop Right Controls ───────────────────────────────────── */}
+          {/* Desktop Right Controls */}
           <div className="hidden xl:flex items-center gap-1.5 flex-shrink-0">
             <button
               onClick={toggleLang}
@@ -300,7 +300,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* ── Mobile Right Controls ────────────────────────────────────── */}
+          {/* Mobile Right Controls */}
           <div className="xl:hidden flex items-center gap-1.5">
             <button
               onClick={toggleLang}
@@ -327,7 +327,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ── Mobile Menu ──────────────────────────────────────────────────── */}
+        {/* Mobile Menu */}
         <div className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-[860px] opacity-100 pb-4' : 'max-h-0 opacity-0'}`}>
           <div className="h-px bg-slate-100 dark:bg-white/[0.07] mb-2" />
           <nav className="flex flex-col gap-0.5">

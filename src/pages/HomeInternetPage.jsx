@@ -18,7 +18,7 @@ export default function HomeInternetPage() {
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <PageMeta title="Home Internet Plans" description="Affordable high-speed fiber home internet plans in Dhaka and across Bangladesh from Red Data. No throttling, 99% uptime." />
 
-      {/* ── Page Hero ── */}
+      {/* Page Hero */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
@@ -101,7 +101,7 @@ export default function HomeInternetPage() {
         </Container>
       </div>
 
-      {/* ── Plans Grid ── */}
+      {/* Plans Grid */}
       <div className="bg-slate-50 dark:bg-slate-900 py-16">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start md:items-center mt-4">
@@ -136,7 +136,7 @@ export default function HomeInternetPage() {
         </Container>
       </div>
 
-      {/* ── Why Choose Us ── */}
+      {/* Why Choose Us */}
       <div className="py-16 bg-white dark:bg-slate-800/40">
         <Container>
           <div className="text-center mb-10">
@@ -167,7 +167,7 @@ export default function HomeInternetPage() {
         </Container>
       </div>
 
-      {/* ── Area Coverage ── */}
+      {/* Area Coverage */}
       <div className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 pointer-events-none" />
         <Container>
@@ -205,7 +205,7 @@ export default function HomeInternetPage() {
         </Container>
       </div>
 
-      {/* ── CTA ── */}
+      {/* CTA */}
       <div className="py-14 bg-red-600">
         <Container>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">

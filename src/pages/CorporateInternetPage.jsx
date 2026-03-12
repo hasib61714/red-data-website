@@ -19,7 +19,7 @@ export default function CorporateInternetPage() {
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <PageMeta title="Corporate Internet" description="Dedicated enterprise-grade internet with reliable uptime, static IPs, and 24/7 support from Red Data Bangladesh." />
 
-      {/* ── Page Hero ── */}
+      {/* Page Hero */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
@@ -103,7 +103,7 @@ export default function CorporateInternetPage() {
         </Container>
       </div>
 
-      {/* ── Fiber Optic Features ── */}
+      {/* Fiber Optic Features */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="text-center mb-12">
@@ -141,7 +141,7 @@ export default function CorporateInternetPage() {
         </Container>
       </div>
 
-      {/* ── Why Choose Us ── */}
+      {/* Why Choose Us */}
       <div className="py-20 bg-white dark:bg-slate-800/40">
         <Container>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -188,7 +188,7 @@ export default function CorporateInternetPage() {
         </Container>
       </div>
 
-      {/* ── Clients ── */}
+      {/* Clients */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="text-center mb-12">
@@ -232,7 +232,7 @@ export default function CorporateInternetPage() {
         </Container>
       </div>
 
-      {/* ── Stats Strip ── */}
+      {/* Stats Strip */}
       <div className="bg-gradient-to-r from-red-600 to-rose-700 py-12">
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center text-white">
@@ -246,7 +246,7 @@ export default function CorporateInternetPage() {
         </Container>
       </div>
 
-      {/* ── CTA ── */}
+      {/* CTA */}
       <div className="py-16 bg-white dark:bg-slate-900">
         <Container>
           <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-10 lg:p-14 relative overflow-hidden text-center">

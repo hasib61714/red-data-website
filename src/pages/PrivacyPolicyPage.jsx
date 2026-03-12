@@ -248,7 +248,7 @@ export default function PrivacyPolicyPage() {
         description="Red Data's Privacy Policy — how we collect, use, and protect your personal information."
       />
 
-      {/* ── Hero Banner ── */}
+      {/* Hero Banner */}
       <div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-36 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-red-600/8 blur-3xl pointer-events-none" />
@@ -287,12 +287,12 @@ export default function PrivacyPolicyPage() {
         </Container>
       </div>
 
-      {/* ── Main Content ── */}
+      {/* Main Content */}
       <div className="bg-white dark:bg-slate-900 min-h-screen">
         <Container className="py-16">
           <div className="flex flex-col lg:flex-row gap-12">
 
-            {/* ── Sticky Table of Contents ── */}
+            {/* Sticky Table of Contents */}
             <aside className="lg:w-64 flex-shrink-0">
               <div className="lg:sticky lg:top-24">
                 <div className="rounded-2xl border border-slate-200 dark:border-white/[0.08] bg-slate-50 dark:bg-slate-800/40 p-5">
@@ -325,7 +325,7 @@ export default function PrivacyPolicyPage() {
               </div>
             </aside>
 
-            {/* ── Document Body ── */}
+            {/* Document Body */}
             <article className="flex-1 min-w-0">
               {/* Intro box */}
               <div className="rounded-2xl border border-blue-200 dark:border-blue-500/20 bg-blue-50 dark:bg-blue-500/5 p-6 mb-10">

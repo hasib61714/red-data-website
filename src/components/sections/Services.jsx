@@ -30,7 +30,7 @@ export default function Services() {
           subheading={getText(lang, 'services.sub')}
         />
 
-        {/* ── Featured: Corporate + Home Internet ── */}
+        {/* Featured: Corporate + Home Internet */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
           {[corporate, homeInternet].map((service, i) => (
             <Reveal key={service.title} delay={i * 100}>
@@ -67,7 +67,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* ── Other Services ── */}
+        {/* Other Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
           {rest.map((service, i) => (
             <Reveal key={service.title} delay={i * 80} className="h-full">

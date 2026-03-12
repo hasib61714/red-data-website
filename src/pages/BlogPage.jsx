@@ -16,7 +16,7 @@ export default function BlogPage() {
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <PageMeta title="Blog" description="Company news, technology insights, and helpful guides from the Red Data team in Bangladesh." />
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-16 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
@@ -47,7 +47,7 @@ export default function BlogPage() {
         </Container>
       </div>
 
-      {/* ── Featured Post ── */}
+      {/* Featured Post */}
       <div className="py-14 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="mb-8">
@@ -101,7 +101,7 @@ export default function BlogPage() {
         </Container>
       </div>
 
-      {/* ── Other Posts ── */}
+      {/* Other Posts */}
       <div className="py-8 pb-16 bg-white dark:bg-slate-900">
         <Container>
           <div className="mb-6">
@@ -152,7 +152,7 @@ export default function BlogPage() {
         </Container>
       </div>
 
-      {/* ── Newsletter‑style CTA ── */}
+      {/* Newsletter‑style CTA */}
       <div className="py-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
         <Container>
           <div className="max-w-xl mx-auto text-center">

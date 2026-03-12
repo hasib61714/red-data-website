@@ -15,7 +15,7 @@ export default function BlogDetailPage() {
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <PageMeta title={post.title} description={post.excerpt} />
 
-      {/* ── Hero Image ── */}
+      {/* Hero Image */}
       <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
         <img
           src={post.image}
@@ -38,7 +38,7 @@ export default function BlogDetailPage() {
         </div>
       </div>
 
-      {/* ── Meta bar ── */}
+      {/* Meta bar */}
       <div className="border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
         <Container>
           <div className="flex flex-wrap items-center gap-4 py-4 text-sm text-slate-500 dark:text-slate-400">
@@ -58,7 +58,7 @@ export default function BlogDetailPage() {
         </Container>
       </div>
 
-      {/* ── Body ── */}
+      {/* Body */}
       <div className="py-12">
         <Container>
           <div className="max-w-3xl mx-auto">
@@ -94,7 +94,7 @@ export default function BlogDetailPage() {
               })}
             </div>
 
-            {/* ── CTA ── */}
+            {/* CTA */}
             <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 flex flex-col sm:flex-row items-center gap-6 justify-between">
               <div>
                 <p className="text-white font-bold text-lg mb-1">Ready to get connected?</p>
@@ -110,7 +110,7 @@ export default function BlogDetailPage() {
               </div>
             </div>
 
-            {/* ── Back ── */}
+            {/* Back */}
             <div className="mt-8">
               <Link to="/blog" className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 text-sm font-medium transition-colors">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>

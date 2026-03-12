@@ -1,4 +1,4 @@
-// ─── Localization helper ─────────────────────────────────────────────────────
+// Localization helper
 // Usage: L(lang, obj, 'key') → returns obj.key_bn if lang==='bn' and exists, else obj.key
 export function L(lang, obj, key) {
   const bnKey = key + '_bn'
@@ -6,7 +6,7 @@ export function L(lang, obj, key) {
   return obj[key]
 }
 
-// ─── Navigation ─────────────────────────────────────────────────────────────
+// Navigation
 export const navLinks = [
   { label: 'Home', href: '#' },
   {
@@ -28,7 +28,7 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
-// ─── Navbar service dropdown items (router Links) ────────────────────────────
+// Navbar service dropdown items (router Links)
 export const navServiceItems = [
   { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'Link2',     desc: 'Fiber-backed inter-office links' },
   { label: 'IP Telephony',       to: '/ip-telephony',       icon: 'Phone',     desc: 'VoIP & cloud PBX solutions' },
@@ -37,7 +37,7 @@ export const navServiceItems = [
   { label: 'Managed Services',   to: '/managed-services',   icon: 'Shield',    desc: '24/7 IT infrastructure management' },
 ]
 
-// ─── Contact Bar (top dark strip) ────────────────────────────────────────────
+// Contact Bar (top dark strip)
 export const contactBarData = {
   phone: { display: '+880-9640-112233', raw: '+8809640112233' },
   email: 'info@reddata.com.bd',
@@ -65,7 +65,7 @@ export const contactBarData = {
   ],
 }
 
-// ─── Hero ────────────────────────────────────────────────────────────────────
+// Hero
 export const heroData = {
   cta1: { label: 'Explore Plans', href: '#pricing' },
   cta2: { label: 'Get Connected', href: '#contact' },
@@ -76,7 +76,7 @@ export const heroData = {
   ],
 }
 
-// ─── Hero Slides ─────────────────────────────────────────────────────────────
+// Hero Slides
 export const heroSlides = [
   {
     id: 1,
@@ -128,7 +128,7 @@ export const heroSlides = [
   },
 ]
 
-// ─── How It Works ────────────────────────────────────────────────────────────
+// How It Works
 export const howItWorksData = {
   sectionBadge: 'Getting Started',
   heading: 'Connected in',
@@ -178,7 +178,7 @@ export const howItWorksData = {
   ],
 }
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
+// Testimonials
 export const testimonialsData = {
   sectionBadge: 'Customer Reviews',
   heading: 'Trusted by Thousands',
@@ -467,7 +467,7 @@ export const servicesData = {
   ],
 }
 
-// ─── Stats ───────────────────────────────────────────────────────────────────
+// Stats
 export const statsData = [
   { value: '13+', label: 'Years Experience', label_bn: 'যুগুন্ত অভিজ্ঞতা', description: 'Serving homes and businesses since 2012', description_bn: '২০১২ সাল থেকে ঘর ও ব্যবসায় সেবা প্রদান' },
   { value: '99%', label: 'Network Uptime', label_bn: 'নেটওয়ার্ক আপটাইম', description: 'reliable connectivity you can count on', description_bn: 'SLA-সমর্থিত নির্ভরযোগ্যতা' },
@@ -475,7 +475,7 @@ export const statsData = [
   { value: '24 / 7', label: 'Customer Support', label_bn: 'গ্রাহক সহায়তা', description: 'Round-the-clock technical assistance', description_bn: 'সার্বক্ষণিক টেকনিক্যাল সহায়তা' },
 ]
 
-// ─── Why Choose Us ───────────────────────────────────────────────────────────
+// Why Choose Us
 export const whyUsData = {
   sectionBadge: 'Our Advantages',
   heading: 'Why Thousands Choose',
@@ -490,7 +490,7 @@ export const whyUsData = {
   ],
 }
 
-// ─── Pricing ─────────────────────────────────────────────────────────────────
+// Pricing
 export const pricingData = {
   sectionBadge: 'Simple Pricing',
   heading: 'Choose the Plan',
@@ -595,7 +595,7 @@ export const pricingData = {
   ],
 }
 
-// ─── FAQ ─────────────────────────────────────────────────────────────────────
+// FAQ
 export const faqData = {
   sectionBadge: 'FAQ',
   heading: 'Frequently Asked',
@@ -652,7 +652,7 @@ export const faqData = {
   ],
 }
 
-// ─── CTA ─────────────────────────────────────────────────────────────────────
+// CTA
 export const ctaData = {
   heading: 'Ready to Experience',
   heading_bn: 'অভিজ্ঞতা নিতে প্রস্তুত?',
@@ -666,7 +666,7 @@ export const ctaData = {
   cta2: { label: 'Contact Us', label_bn: 'যোগাযোগ করুন', href: '#contact' },
 }
 
-// ─── Footer ──────────────────────────────────────────────────────────────────
+// Footer
 export const footerData = {
   brand: 'Red Data',
   tagline: 'Reliable & High-Speed Internet Under One Roof.',
@@ -724,11 +724,8 @@ export const footerData = {
   copyright: '© 2026 Red Data (Pvt.) Limited. All rights reserved.',
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // PAGE-SPECIFIC DATA
-// ─────────────────────────────────────────────────────────────────────────────
-
-// ─── About Page ──────────────────────────────────────────────────────────────
+// About Page
 export const aboutPageData = {
   stats: [
     { num: '2012',    label: 'Founded' },
@@ -804,7 +801,7 @@ export const aboutPageData = {
   },
 }
 
-// ─── Data Connectivity Page ───────────────────────────────────────────────────
+// Data Connectivity Page
 export const dataConnectivityData = {
   features: [
     { icon: 'Layers', title: 'Dark Fiber for Enterprises', title_bn: 'এন্টারপ্রাইজের জন্য ডার্ক ফাইবার', desc: 'Enterprises increasingly turning to dark fiber as an alternative to lit services. Dark fiber is one of our core services and customers utilize it to create their own networks to support a wide range of applications.', desc_bn: 'এন্টারপ্রাইজগুলো লিট সার্ভিসের বিকল্প হিসেবে ডার্ক ফাইবারের দিকে ঝুঁকছে। ডার্ক ফাইবার আমাদের অন্যতম মূল সেবা এবং গ্রাহকরা এটি ব্যবহার করে নিজস্ব নেটওয়ার্ক তৈরি করে বিভিন্ন ধরনের অ্যাপ্লিকেশন পরিচালনা করেন।' },
@@ -819,7 +816,7 @@ export const dataConnectivityData = {
   ],
 }
 
-// ─── IP Telephony Page ────────────────────────────────────────────────────────
+// IP Telephony Page
 export const ipTelephonyData = {
   features: [
     { icon: 'Building2', title: 'Hosted & On-Premise IPPBX', title_bn: 'হোস্টেড ও অন-প্রেমিস আইপিপিবিএক্স', desc: 'Deploy a full-featured IP PBX either hosted in our cloud or on-premise at your office — your choice of control and scale.', desc_bn: 'আমাদের ক্লাউডে হোস্টেড বা আপনার অফিসে অন-প্রেমিস — সম্পূর্ণ-ফিচার্ড আইপি পিবিএক্স ডিপ্লয় করুন আপনার পছন্দমতো।' },
@@ -843,7 +840,7 @@ export const ipTelephonyData = {
   ],
 }
 
-// ─── SMS Service Page ─────────────────────────────────────────────────────────
+// SMS Service Page
 export const smsServiceData = {
   features: [
     { icon: 'Plug', title: 'Easy API Integration', title_bn: 'সহজ এপিআই ইন্টিগ্রেশন', desc: 'Developer-friendly REST APIs with comprehensive documentation — integrate bulk SMS into any system in minutes.', desc_bn: 'বিস্তারিত ডকুমেন্টেশনসহ ডেভেলপার-বান্ধব রেস্ট এপিআই — যেকোনো সিস্টেমে মিনিটের মধ্যে বাল্ক এসএমএস ইন্টিগ্রেট করুন।' },
@@ -867,7 +864,7 @@ export const smsServiceData = {
   ],
 }
 
-// ─── Domain & Hosting Page ────────────────────────────────────────────────────
+// Domain & Hosting Page
 export const domainHostingData = {
   features: [
     { icon: 'Globe', title: 'Domain Registration', title_bn: 'ডোমেইন রেজিস্ট্রেশন', desc: 'Register .com, .com.bd, .org, .net and all popular TLDs at competitive prices with free DNS management, privacy protection, and auto-renewal.', desc_bn: 'প্রতিযোগিতামূলক মূল্যে .com, .com.bd, .org, .net এবং সকল জনপ্রিয় টিএলডি নিবন্ধন করুন — ফ্রি ডিএনএস ম্যানেজমেন্ট, প্রাইভেসি সুরক্ষা এবং অটো-রিনিউয়াল।' },
@@ -879,10 +876,10 @@ export const domainHostingData = {
     { icon: 'Settings', title: 'Customization Options', title_bn: 'কাস্টমাইজেশন বিকল্প', desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.', desc_bn: 'আপনার প্রয়োজনমতো ওএস, কন্ট্রোল প্যানেল (cPanel / Plesk / DirectAdmin), সফটওয়্যার স্ট্যাক এবং রিসোর্স বরাদ্দ বেছে নিন।' },
     { icon: 'Wrench', title: 'Management Tools', title_bn: 'ম্যানেজমেন্ট টুলস', desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.', desc_bn: 'সম্পূর্ণ মানসিক শান্তির জন্য cPanel / WHM অ্যাক্সেস, ওয়ান-ক্লিক ব্যাকআপ, রিসোর্স মনিটর, ডিএনএস ম্যানেজার এবং ২৪/৭ ম্যানেজড সহায়তা।' },
   ],
-  
+
 }
 
-// ─── Managed Services Page ────────────────────────────────────────────────────
+// Managed Services Page
 export const managedServicesData = {
   services: [
     {
@@ -930,7 +927,7 @@ export const managedServicesData = {
   ],
 }
 
-// ─── Blog Page ────────────────────────────────────────────────────────────────
+// Blog Page
 export const blogPostsData = [
   {
     id: 1,
@@ -1009,7 +1006,7 @@ export const blogPostsData = [
   },
 ]
 
-// ─── Contact Page ─────────────────────────────────────────────────────────────
+// Contact Page
 export const contactPageData = {
   methods: [
     { icon: 'Mail', label: 'Email', value: 'info@reddata.com.bd', href: 'mailto:info@reddata.com.bd', color: 'from-blue-500 to-blue-600', bg: 'bg-blue-50 dark:bg-blue-500/10', border: 'border-blue-200 dark:border-blue-500/30' },
@@ -1021,7 +1018,7 @@ export const contactPageData = {
   ],
 }
 
-// ─── Pay Bill Page ────────────────────────────────────────────────────────────
+// Pay Bill Page
 export const payBillData = {
   paymentMethods: [
     { name: 'bKash', color: 'from-pink-500 to-pink-600', bg: 'bg-pink-50 dark:bg-pink-500/10', border: 'border-pink-200 dark:border-pink-500/30', icon: 'CreditCard', number: '01XXXXXXXXX', steps: ['Open bKash app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'] },
@@ -1039,7 +1036,7 @@ export const payBillData = {
   ],
 }
 
-// ─── Self Corner Page ─────────────────────────────────────────────────────────
+// Self Corner Page
 export const selfCornerData = {
   features: [
     { icon: 'BarChart2', title: 'Account Overview', desc: 'View your current plan, usage data, and subscription details at a glance.' },
@@ -1051,7 +1048,7 @@ export const selfCornerData = {
   ],
 }
 
-// ─── Home Internet Page ─────────────────────────────────────────────────────
+// Home Internet Page
 export const homeInternetPageData = {
   plans: [
     { name: 'Rose',     price: 525,  base: 500,  vat: 25,  speed: 15,  oneTime: 2500, talkTime: 50,  ott: 0, tag: 'Starter',          tagColor: 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300',         popular: false, color: 'from-pink-400 to-rose-500' },
@@ -1073,7 +1070,7 @@ export const homeInternetPageData = {
   ],
 }
 
-// ─── Homepage Contact Section ─────────────────────────────────────────────────
+// Homepage Contact Section
 export const homeContactMethods = [
   { iconKey: 'phone',    label: 'Hotline',   value: '+880-9640-112233',         href: 'tel:+8809640112233',                                          note: '24 / 7 Support' },
   { iconKey: 'headset',  label: 'Help Desk', value: '+880-9640-123123',         href: 'tel:+8809640123123',                                          note: 'Billing & Technical' },
@@ -1083,7 +1080,7 @@ export const homeContactMethods = [
   { iconKey: 'location', label: 'Office',    value: 'Level 19, SimpleTree Attalika', href: 'https://maps.google.com/?q=134+Gulshan+Avenue+Dhaka',   note: '134 Gulshan Ave, Dhaka-1212', external: true },
 ]
 
-// ─── Corporate Internet Page ──────────────────────────────────────────────────
+// Corporate Internet Page
 export const corporateInternetPageData = {
   fiberFeatures: [
     { icon: 'Zap',       title: 'Blazing Fast Speeds',      title_bn: 'অতি দ্রুত গতি',            desc: 'Enjoy download and upload speeds that are unparalleled, providing a smooth and efficient online experience for your entire enterprise.', desc_bn: 'আনপ্যারালেলড ডাউনলোড ও আপলোড স্পিড উপভোগ করুন, যা আপনার পুরো এন্টারপ্রাইজের জন্য মসৃণ অনলাইন অভিজ্ঞতা দেয়।' },
