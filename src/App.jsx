@@ -29,6 +29,7 @@ const SmsServicePage        = lazy(() => import('./pages/SmsServicePage'))
 const DomainHostingPage     = lazy(() => import('./pages/DomainHostingPage'))
 const ManagedServicesPage   = lazy(() => import('./pages/ManagedServicesPage'))
 const BlogPage              = lazy(() => import('./pages/BlogPage'))
+const NotFoundPage          = lazy(() => import('./pages/NotFoundPage'))
 
 function PageLoader() {
   return (
@@ -81,7 +82,7 @@ function AppInner() {
         <Route path="/domain-hosting" element={<DomainHostingPage />} />
         <Route path="/managed-services" element={<ManagedServicesPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="*" element={<HomePage topBarOpen={topBarOpen} />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       </Suspense>
       <Footer />

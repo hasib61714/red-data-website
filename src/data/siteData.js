@@ -982,3 +982,13 @@ export const selfCornerData = {
   ],
 }
 
+// ─── Homepage Contact Section ─────────────────────────────────────────────────
+export const homeContactMethods = [
+  { iconKey: 'phone',    label: 'Hotline',   value: '+880-9640-112233',         href: 'tel:+8809640112233',                                          note: '24 / 7 Support' },
+  { iconKey: 'headset',  label: 'Help Desk', value: '+880-9640-123123',         href: 'tel:+8809640123123',                                          note: 'Billing & Technical' },
+  { iconKey: 'email',    label: 'Email',     value: 'info@reddata.com.bd',      href: 'mailto:info@reddata.com.bd',                                  note: 'Reply within 2 hours' },
+  { iconKey: 'whatsapp', label: 'WhatsApp',  value: '+880 1971-521964',         href: 'https://wa.me/+8801971521964',                                note: 'Quick chat support',    external: true },
+  { iconKey: 'messenger',label: 'Messenger', value: 'Message Red Data',         href: 'https://www.facebook.com/profile.php?id=61556093758540',      note: 'Fast response via FB',  external: true },
+  { iconKey: 'location', label: 'Office',    value: 'Level 19, SimpleTree Attalika', href: 'https://maps.google.com/?q=134+Gulshan+Avenue+Dhaka',   note: '134 Gulshan Ave, Dhaka-1212', external: true },
+]
+
