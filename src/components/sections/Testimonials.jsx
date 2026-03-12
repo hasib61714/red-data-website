@@ -59,8 +59,6 @@ function TestimonialCard({ name, role, avatar, rating, text }) {
 export default function Testimonials() {
   const { lang } = useLanguage()
   const { items } = testimonialsData
-  const trustLabels = getText(lang, 'testimonials.trustLabel')
-  const trustSubs = getText(lang, 'testimonials.trustSub')
 
   return (
     <Section id="testimonials" className="bg-white dark:bg-slate-900 relative overflow-hidden">
@@ -83,15 +81,6 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Trust bar */}
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-8 py-8 border-t border-slate-200 dark:border-white/[0.07]">
-          {trustLabels.map((label, i) => (
-            <div key={label} className="text-center">
-              <p className="text-xl font-black bg-gradient-to-r from-red-400 to-amber-300 bg-clip-text text-transparent">{label}</p>
-              <p className="text-slate-500 text-xs mt-0.5">{trustSubs[i]}</p>
-            </div>
-          ))}
-        </div>
       </Container>
     </Section>
   )
