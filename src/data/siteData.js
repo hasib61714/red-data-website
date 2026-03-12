@@ -772,6 +772,7 @@ export const aboutPageData = {
     { name: 'AyAl Tech',             img: '/images/clients/AyAlTech.png' },
     { name: 'BIIN',                  img: '/images/clients/BIIN.png' },
     { name: 'SMART',                 img: '/images/clients/SMART.png' },
+    { name: 'Foodi',                 img: '/images/clients/foodi logo.png' },
   ],
   story: {
     heading: 'Empowering Bangladesh\'s Digital Future',
