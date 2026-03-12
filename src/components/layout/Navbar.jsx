@@ -25,7 +25,7 @@ function MoonIcon() {
   )
 }
 
-export default function Navbar({ topBarOpen = false, onDismiss }) {
+export default function Navbar() {
   const { dark, toggle: toggleTheme } = useTheme()
   const { lang, toggle: toggleLang } = useLang()
   const T = (path) => getText(lang, path)
@@ -91,8 +91,8 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
         : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07]'
     }`
 
-  // Heights: TopBar h-8 = 32px, dark strip h-9 = 36px
-  const barsHeight = (topBarOpen ? 32 : 0) + 36
+  // Heights: dark strip h-9 = 36px
+  const barsHeight = 36
 
   return (
     <>
@@ -102,30 +102,6 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
           barsHidden ? '-translate-y-full' : 'translate-y-0'
         }`}
       >
-        {/* Announcement TopBar */}
-        {topBarOpen && (
-          <div className="h-8 flex items-center bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white text-[11px] font-medium px-4 relative">
-            <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-              <p className="text-center leading-none">
-                <strong>{lang === 'en' ? 'Special Offer:' : 'বিশেষ অফার:'}</strong> {T('topbar')}{' '}
-                <a href="/#pricing" className="underline underline-offset-2 hover:text-white/80 font-semibold transition-colors">
-                  {T('topbarCta')}
-                </a>
-              </p>
-              <button
-                onClick={onDismiss}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-0.5"
-                aria-label="Dismiss"
-              >
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        )}
-
         {/* ── Dark Contact Strip ──────────────────────────────────────── */}
         <div className="bg-slate-900 dark:bg-black border-b border-white/[0.06]">
           <Container>

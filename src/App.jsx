@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import { LanguageProvider } from './context/LanguageContext'
@@ -64,10 +64,10 @@ function HashScrollHandler() {
   return null
 }
 
-function HomePage({ topBarOpen }) {
+function HomePage() {
   return (
     <main>
-      <Hero topBarVisible={topBarOpen} />
+      <Hero />
       <Pricing />
       <Services />
       <Stats />
@@ -84,15 +84,13 @@ function HomePage({ topBarOpen }) {
 }
 
 function AppInner() {
-  const [topBarOpen, setTopBarOpen] = useState(true)
-
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 overflow-x-hidden">
       <HashScrollHandler />
-      <Navbar topBarOpen={topBarOpen} onDismiss={() => setTopBarOpen(false)} />
+      <Navbar />
       <Suspense fallback={<PageLoader />}>
       <Routes>
-        <Route path="/" element={<HomePage topBarOpen={topBarOpen} />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/home-internet" element={<HomeInternetPage />} />
         <Route path="/corporate-internet" element={<CorporateInternetPage />} />
         <Route path="/about-us" element={<AboutPage />} />

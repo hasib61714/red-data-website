@@ -7,10 +7,10 @@ import { heroData, heroSlides, L } from '../../data/siteData'
 
 const SLIDE_INTERVAL = 5000
 
-export default function Hero({ topBarVisible = false }) {
+export default function Hero() {
   const { cta1, cta2 } = heroData
   const { lang } = useLanguage()
-  const navOffset = topBarVisible ? 124 : 92  // 36px dark strip + 56px main nav (+ optional 32px topbar)
+  const navOffset = 92  // 36px dark strip + 56px main nav
   const [current, setCurrent] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [paused, setPaused] = useState(false)
