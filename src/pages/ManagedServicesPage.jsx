@@ -41,8 +41,10 @@ export default function ManagedServicesPage() {
               </span>
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Comprehensive management of your IT systems — network monitoring, security, data backup, disaster recovery,
-              and custom software development, all under one trusted partner.
+              Focus on your core business activities while we handle your IT infrastructure with Red Data's Managed
+              Service. Our team of experts provides comprehensive management of your IT systems, including network
+              monitoring, security, data backup, and disaster recovery. We offer proactive support and maintenance,
+              ensuring optimal performance and minimizing downtime.
             </p>
           </div>
         </Container>

@@ -44,8 +44,9 @@ export default function IpTelephonyPage() {
               </span>
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Superior voice quality, seamless integration with your business tools, and cost-effective calling plans —
-              including voicemail, call forwarding, conferencing and a full call center stack.
+              Elevate your business communications with Red Data's IP Telephony Service. Enjoy superior voice quality,
+              seamless integration, cost-effective calling plans, and a wide range of advanced features such as
+              voicemail, call forwarding, and conferencing.
             </p>
           </div>
         </Container>
