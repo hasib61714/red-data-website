@@ -30,11 +30,11 @@ export const navLinks = [
 
 // Navbar service dropdown items (router Links)
 export const navServiceItems = [
-  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'Link2',     desc: 'Fiber-backed inter-office links' },
-  { label: 'IP Telephony',       to: '/ip-telephony',       icon: 'Phone',     desc: 'VoIP & cloud PBX solutions' },
-  { label: 'SMS Service',        to: '/sms-service',        icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
-  { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: 'Globe',     desc: 'Domains, NVMe hosting & SSL' },
-  { label: 'Managed Services',   to: '/managed-services',   icon: 'Shield',    desc: '24/7 IT infrastructure management' },
+  { label: 'Data Connectivity',  label_bn: 'ডেটা কানেক্টিভিটি',  to: '/data-connectivity',  icon: 'Link2',         desc: 'Fiber-backed inter-office links',       desc_bn: 'ফাইবার-সমর্থিত অফিস লিংক' },
+  { label: 'IP Telephony',       label_bn: 'আইপি টেলিফোনি',       to: '/ip-telephony',       icon: 'Phone',         desc: 'VoIP & cloud PBX solutions',           desc_bn: 'ভয়েসওভার আইপি ও ক্লাউড পিবিএক্স' },
+  { label: 'SMS Service',        label_bn: 'এসএমএস সেবা',          to: '/sms-service',        icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway',         desc_bn: 'বাল্ক মেসেজিং ও ওটিপি গেটওয়ে' },
+  { label: 'Domain & Hosting',   label_bn: 'ডোমেইন ও হোস্টিং',    to: '/domain-hosting',     icon: 'Globe',         desc: 'Domains, NVMe hosting & SSL',          desc_bn: 'ডোমেইন, হোস্টিং ও এসএসএল' },
+  { label: 'Managed Services',   label_bn: 'ম্যানেজড সেবা',         to: '/managed-services',   icon: 'Shield',        desc: '24/7 IT infrastructure management',    desc_bn: '২৪/৭ আইটি অবকাঠামো ব্যবস্থাপনা' },
 ]
 
 // Contact Bar (top dark strip)

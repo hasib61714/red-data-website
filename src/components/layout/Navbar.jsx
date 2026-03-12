@@ -4,7 +4,7 @@ import Container from '../ui/Container'
 import { useTheme } from '../../context/ThemeContext'
 import { useLang } from '../../context/LanguageContext'
 import { getText } from '../../data/translations'
-import { navServiceItems, contactBarData } from '../../data/siteData'
+import { navServiceItems, contactBarData, L } from '../../data/siteData'
 import IconMapper from '../ui/IconMapper'
 
 // Service dropdown items
@@ -232,8 +232,8 @@ export default function Navbar() {
                               pathname === item.to
                                 ? 'text-red-600 dark:text-red-400'
                                 : 'text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white'
-                            }`}>{item.label}</p>
-                            <p className="text-[10px] text-slate-400 dark:text-slate-500 leading-snug mt-0.5">{item.desc}</p>
+                            }`}>{L(lang, item, 'label')}</p>
+                            <p className="text-[10px] text-slate-400 dark:text-slate-500 leading-snug mt-0.5">{L(lang, item, 'desc')}</p>
                           </div>
                         </Link>
                       ))}
@@ -386,8 +386,8 @@ export default function Navbar() {
                         <IconMapper name={item.icon} className="w-4 h-4" />
                       </span>
                       <div>
-                        <p className="font-semibold text-xs leading-snug">{item.label}</p>
-                        <p className="text-[10px] text-slate-400 leading-snug">{item.desc}</p>
+                        <p className="font-semibold text-xs leading-snug">{L(lang, item, 'label')}</p>
+                        <p className="text-[10px] text-slate-400 leading-snug">{L(lang, item, 'desc')}</p>
                       </div>
                     </Link>
                   ))}
