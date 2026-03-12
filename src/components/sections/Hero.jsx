@@ -72,9 +72,9 @@ export default function Hero({ topBarVisible = false }) {
       <div className="absolute inset-0 bg-grid opacity-20 z-20 pointer-events-none" />
 
       {/* ─── Slide Content ─── */}
-      <div className="absolute inset-0 z-30 flex items-center">
+      <div className="absolute inset-0 z-30 flex ">
       <Container className="w-full">
-        <div className="max-w-3xl py-20">
+        <div className="max-w-[850px] py-10">
 
           {/* Badge */}
           <div

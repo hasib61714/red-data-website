@@ -65,10 +65,6 @@ export default function Pricing() {
           </Link>
         </div>
 
-        <p className="text-center text-slate-500 dark:text-slate-500 text-sm mt-6">
-          {getText(lang, 'pricing.vatNote')}{' '}
-          <span className="text-red-600 dark:text-red-400">{getText(lang, 'pricing.viewTariff')}</span>
-        </p>
       </Container>
     </Section>
   )

@@ -566,7 +566,7 @@ export const pricingData = {
     },
     {
       name: 'Scarlet',
-      tag: '',
+      tag: 'Family Plan',
       price: '৳1,050',
       vatBreakdown: '৳1,000 + ৳50 (5% VAT)',
       vatBreakdown_bn: '৳১,০০০ + ৳৫০ (৫% ভ্যাট)',
