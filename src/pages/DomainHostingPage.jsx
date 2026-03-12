@@ -7,7 +7,7 @@ import { domainHostingData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import { useLanguage } from '../context/LanguageContext'
 
-const { features, plans } = domainHostingData
+const { features } = domainHostingData
 
 export default function DomainHostingPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
@@ -44,8 +44,11 @@ export default function DomainHostingPage() {
               </span>
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Complete domain registration and reliable hosting solutions with robust security features, high uptime
-              guarantees, and expert management tools — everything to keep your web presence running 24/7.
+              Establish your online presence with Red Data's Domain &amp; Hosting Service. We offer a range of domain
+              registration options and reliable hosting solutions tailored to your needs. Our hosting packages include
+              robust security features, high uptime guarantees, and excellent customer support, ensuring your website
+              runs smoothly and securely. Whether you're a small business or a large enterprise, our services provide
+              the foundation for a successful online presence.
             </p>
           </div>
         </Container>
@@ -72,44 +75,23 @@ export default function DomainHostingPage() {
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center text-xl shadow mb-3 group-hover:scale-110 transition-transform">
                   <IconMapper name={f.icon} className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{L(lang, f, 'title')}</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{L(lang, f, 'desc')}</p>
+                <h3 className="font-bold text-slate-900 dark:text-white text-sm">{L(lang, f, 'title')}</h3>
               </div>
             ))}
           </div>
         </Container>
       </div>
 
-      {/* ── Hosting Plans ── */}
+      {/* ── Get Started CTA ── */}
       <div className="py-14 bg-white dark:bg-slate-800/40">
         <Container>
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              Hosting <span className="bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">Plans</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {plans.map((p) => (
-              <div key={p.name} className={`rounded-2xl p-6 flex flex-col border transition-all hover:shadow-lg ${p.highlight ? 'bg-gradient-to-b from-red-600 to-red-700 border-red-500 text-white' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-                {p.highlight && <div className="text-xs font-bold bg-white/20 text-white px-3 py-1 rounded-full self-start mb-3">Most Popular</div>}
-                <h3 className={`text-lg font-bold mb-1 ${p.highlight ? 'text-white' : 'text-slate-900 dark:text-white'}`}>{p.name}</h3>
-                <div className="flex items-end gap-1 mb-4">
-                  <span className={`text-2xl font-extrabold ${p.highlight ? 'text-white' : 'text-slate-900 dark:text-white'}`}>{p.price}</span>
-                  <span className={`text-sm mb-1 ${p.highlight ? 'text-red-200' : 'text-slate-400'}`}>{p.period}</span>
-                </div>
-                <ul className="space-y-2 mb-6 flex-1">
-                  {p.features.map((feat) => (
-                    <li key={feat} className={`flex items-center gap-2 text-sm ${p.highlight ? 'text-red-100' : 'text-slate-500 dark:text-slate-400'}`}>
-                      <svg className={`w-4 h-4 shrink-0 ${p.highlight ? 'text-red-200' : 'text-red-500'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact" className={`text-center py-2.5 rounded-xl font-bold text-sm transition-all ${p.highlight ? 'bg-white text-red-700 hover:bg-red-50' : 'bg-red-600 hover:bg-red-500 text-white'}`}>
-                  Get Started
-                </Link>
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/30 hover:shadow-red-500/40 hover:scale-105 transition-all duration-300"
+            >
+              Get Started
+            </Link>
           </div>
         </Container>
       </div>
