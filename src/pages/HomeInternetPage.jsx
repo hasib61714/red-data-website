@@ -48,7 +48,7 @@ export default function HomeInternetPage() {
                   Plans & Pricing
                 </span>
               </h1>
-              <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+              <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed" wrapperClassName="mb-8">
                 Red Data Home Internet delivers ultra-fast fiber broadband engineered for modern households. From buffer-free 4K streaming and lag-free gaming to seamless video calls — all on one blisteringly fast connection with no hidden charges.
               </ExpandableText>
               <div className="flex flex-wrap gap-3">

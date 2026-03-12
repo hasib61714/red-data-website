@@ -49,7 +49,7 @@ export default function CorporateInternetPage() {
                   Connectivity
                 </span>
               </h1>
-              <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+              <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed" wrapperClassName="mb-8">
                 At Red Data, we understand that a reliable and high-speed internet connection is critical for the success of your business. Our Corporate Internet Connectivity service offers robust, secure, and scalable internet solutions tailored to meet the unique demands of your enterprise. With dedicated bandwidth, 24/7 customer support, and guaranteed uptime, we ensure your business operations run smoothly and efficiently. Partner with us to experience seamless connectivity and drive your business forward.
               </ExpandableText>
               <div className="flex flex-wrap gap-3">

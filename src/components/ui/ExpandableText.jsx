@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function ExpandableText({ children, className = '', lines = 3 }) {
+export default function ExpandableText({ children, className = '', wrapperClassName = '', lines = 3 }) {
   const [expanded, setExpanded] = useState(false)
 
   const clampClass = {
@@ -10,7 +10,7 @@ export default function ExpandableText({ children, className = '', lines = 3 }) 
   }[lines] ?? 'line-clamp-3'
 
   return (
-    <div>
+    <div className={wrapperClassName}>
       <p className={`${className} ${expanded ? '' : clampClass}`}>
         {children}
       </p>
