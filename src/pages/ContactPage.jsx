@@ -161,9 +161,6 @@ export default function ContactPage() {
             {/* ── Contact Methods + Address ── */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6">
-                  Contact Information
-                </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {contactMethods.map((m) => (
                     <a key={m.label} href={m.href} target={m.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
