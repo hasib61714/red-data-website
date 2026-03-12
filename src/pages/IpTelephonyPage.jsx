@@ -6,8 +6,9 @@ import PageMeta from '../components/ui/PageMeta'
 import { ipTelephonyData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import { useLanguage } from '../context/LanguageContext'
+import ExpandableText from '../components/ui/ExpandableText'
 
-const { features, stats } = ipTelephonyData
+const { features } = ipTelephonyData
 
 export default function IpTelephonyPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
@@ -39,11 +40,11 @@ export default function IpTelephonyPage() {
                 Telephony
               </span>
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
               Elevate your business communications with Red Data's IP Telephony Service. Enjoy superior voice quality,
               seamless integration, cost-effective calling plans, and a wide range of advanced features such as
               voicemail, call forwarding, and conferencing.
-            </p>
+            </ExpandableText>
           </div>
         </Container>
       </div>

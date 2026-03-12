@@ -6,6 +6,7 @@ import PageMeta from '../components/ui/PageMeta'
 import { smsServiceData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import { useLanguage } from '../context/LanguageContext'
+import ExpandableText from '../components/ui/ExpandableText'
 
 const { features } = smsServiceData
 
@@ -39,10 +40,10 @@ export default function SmsServicePage() {
                 Service
               </span>
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
               Smart & affordable bulk SMS marketing — send messages, alerts, and notifications at scale with
               high delivery rates, easy API integration, and comprehensive real-time reporting.
-            </p>
+            </ExpandableText>
           </div>
         </Container>
       </div>

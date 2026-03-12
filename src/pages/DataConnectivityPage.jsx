@@ -6,6 +6,7 @@ import PageMeta from '../components/ui/PageMeta'
 import { dataConnectivityData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import { useLanguage } from '../context/LanguageContext'
+import ExpandableText from '../components/ui/ExpandableText'
 
 const { features, stats } = dataConnectivityData
 
@@ -39,13 +40,13 @@ export default function DataConnectivityPage() {
                 Connectivity
               </span>
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
               Red Data offers comprehensive Data Connectivity solutions that ensure seamless data transfer and
               communication within your organization. Our services include point-to-point and multipoint data links,
               VPN services, and dedicated leased lines, all designed to provide high-speed, secure, and reliable
               connections. All of our data services are delivered via Layer2/Layer3 and resilient national MPLS next
               generation network, monitored and maintained 24/7 by our NOC.
-            </p>
+            </ExpandableText>
           </div>
         </Container>
       </div>

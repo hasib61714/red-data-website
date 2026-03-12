@@ -6,6 +6,7 @@ import PageMeta from '../components/ui/PageMeta'
 import { domainHostingData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import { useLanguage } from '../context/LanguageContext'
+import ExpandableText from '../components/ui/ExpandableText'
 
 const { features } = domainHostingData
 
@@ -39,13 +40,13 @@ export default function DomainHostingPage() {
                 Hosting
               </span>
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
               Establish your online presence with Red Data's Domain &amp; Hosting Service. We offer a range of domain
               registration options and reliable hosting solutions tailored to your needs. Our hosting packages include
               robust security features, high uptime guarantees, and excellent customer support, ensuring your website
               runs smoothly and securely. Whether you're a small business or a large enterprise, our services provide
               the foundation for a successful online presence.
-            </p>
+            </ExpandableText>
           </div>
         </Container>
       </div>

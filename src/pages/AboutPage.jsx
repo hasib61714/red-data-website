@@ -4,6 +4,7 @@ import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { aboutPageData, footerData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
+import ExpandableText from '../components/ui/ExpandableText'
 
 const { clients, services, stats, story, companyCards, cta: aboutCta } = aboutPageData
 const { contact } = footerData
@@ -36,9 +37,9 @@ export default function AboutPage() {
                   (Pvt.) Limited
                 </span>
               </h1>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed">
                 Beginning our journey in the year 2012, Red Data (Pvt.) Limited is a leading IT solution provider which specializes in providing Internet and Data Connectivity, IP Telephony Service, SMS Service, Cloud and Email Service Solution, Website and Software Development, Network Hardware and Managed Services.
-              </p>
+              </ExpandableText>
             </div>
             {/* Right: stats */}
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">

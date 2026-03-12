@@ -6,6 +6,7 @@ import PageMeta from '../components/ui/PageMeta'
 import { managedServicesData, L } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import { useLanguage } from '../context/LanguageContext'
+import ExpandableText from '../components/ui/ExpandableText'
 
 const { services } = managedServicesData
 
@@ -39,12 +40,12 @@ export default function ManagedServicesPage() {
                 IT Services
               </span>
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
               Focus on your core business activities while we handle your IT infrastructure with Red Data's Managed
               Service. Our team of experts provides comprehensive management of your IT systems, including network
               monitoring, security, data backup, and disaster recovery. We offer proactive support and maintenance,
               ensuring optimal performance and minimizing downtime.
-            </p>
+            </ExpandableText>
           </div>
         </Container>
       </div>
