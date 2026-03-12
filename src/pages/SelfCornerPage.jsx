@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
@@ -55,7 +56,7 @@ const TEXTS = {
 const { features } = selfCornerData
 
 export default function SelfCornerPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const [tab, setTab] = useState('login')
   const [form, setForm] = useState({ userId: '', password: '', name: '', phone: '', email: '' })
   const { lang } = useLanguage()

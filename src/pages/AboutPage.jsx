@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
@@ -39,7 +40,7 @@ const { clients, services, stats, story, companyCards, cta: aboutCta } = aboutPa
 const { contact } = footerData
 
 export default function AboutPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const { lang } = useLanguage()
   const t = TEXTS[lang]
 

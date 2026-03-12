@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import Container from '../components/ui/Container'
@@ -6,7 +7,7 @@ import { blogPostsData } from '../data/siteData'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function BlogDetailPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const { lang } = useLanguage()
   const { id } = useParams()
   const post = blogPostsData.find((p) => String(p.id) === id)

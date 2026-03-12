@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
@@ -34,7 +35,7 @@ const TEXTS = {
 const posts = blogPostsData
 
 export default function BlogPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const { lang } = useLanguage()
   const t = TEXTS[lang]
 

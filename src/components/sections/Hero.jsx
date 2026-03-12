@@ -4,13 +4,11 @@ import { useState, useEffect, useCallback } from 'react'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
 import { heroData, heroSlides, L } from '../../data/siteData'
-
-const SLIDE_INTERVAL = 5000
+import { NAVBAR_HEIGHT_PX, HERO_SLIDE_INTERVAL_MS, HERO_SLIDE_TRANSITION_MS } from '../../constants'
 
 export default function Hero() {
   const { cta1, cta2 } = heroData
   const { lang } = useLanguage()
-  const navOffset = 92  // 36px dark strip + 56px main nav
   const [current, setCurrent] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [paused, setPaused] = useState(false)
@@ -20,7 +18,7 @@ export default function Hero() {
       if (animating || index === current) return
       setAnimating(true)
       setCurrent(index)
-      setTimeout(() => setAnimating(false), 800)
+      setTimeout(() => setAnimating(false), HERO_SLIDE_TRANSITION_MS)
     },
     [animating, current]
   )
@@ -35,7 +33,7 @@ export default function Hero() {
 
   useEffect(() => {
     if (paused) return
-    const timer = setInterval(next, SLIDE_INTERVAL)
+    const timer = setInterval(next, HERO_SLIDE_INTERVAL_MS)
     return () => clearInterval(timer)
   }, [next, paused])
 
@@ -44,7 +42,7 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden bg-slate-950"
-      style={{ marginTop: navOffset, height: `calc(100dvh - ${navOffset}px)` }}
+      style={{ marginTop: NAVBAR_HEIGHT_PX, height: `calc(100dvh - ${NAVBAR_HEIGHT_PX}px)` }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

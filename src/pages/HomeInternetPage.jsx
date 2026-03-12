@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
@@ -57,7 +58,7 @@ const TEXTS = {
 const { plans, benefits } = homeInternetPageData
 
 export default function HomeInternetPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const { lang } = useLanguage()
   const t = TEXTS[lang]
 

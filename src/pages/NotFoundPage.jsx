@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import PageMeta from '../components/ui/PageMeta'
 
 export default function NotFoundPage() {
+  useScrollToTop()
   const { lang } = useLanguage()
 
   return (

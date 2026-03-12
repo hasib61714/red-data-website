@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect, useState } from 'react'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
@@ -55,7 +56,7 @@ const TEXTS = {
 const contactMethods = contactPageData.methods
 
 export default function ContactPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const { lang } = useLanguage()
   const t = TEXTS[lang]
 

@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import IconMapper from '../components/ui/IconMapper'
@@ -54,7 +55,7 @@ const clients = aboutPageData.clients
 export default function CorporateInternetPage() {
   const { lang } = useLanguage()
   const t = TEXTS[lang]
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">

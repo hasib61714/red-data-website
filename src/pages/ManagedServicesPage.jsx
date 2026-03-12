@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect } from 'react'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
@@ -37,7 +38,7 @@ const TEXTS = {
 const { services } = managedServicesData
 
 export default function ManagedServicesPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const { lang } = useLanguage()
   const t = TEXTS[lang]
 

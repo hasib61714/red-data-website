@@ -1,3 +1,4 @@
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
@@ -35,7 +36,7 @@ const TEXTS = {
 const { paymentMethods, faqs } = payBillData
 
 export default function PayBillPage() {
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  useScrollToTop()
   const [openFaq, setOpenFaq] = useState(null)
   const { lang } = useLanguage()
   const t = TEXTS[lang]
