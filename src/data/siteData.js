@@ -13,13 +13,13 @@ export const navLinks = [
     label: 'Services',
     href: '#services',
     dropdown: [
-      { label: 'Corporate Internet', href: 'https://reddata.com.bd/corporate-internet', icon: '🏢', desc: 'Dedicated enterprise bandwidth' },
-      { label: 'Home Internet', href: 'https://reddata.com.bd/home-internet', icon: '🏠', desc: 'High-speed residential plans' },
-      { label: 'Data Connectivity', href: 'https://reddata.com.bd/data-connectivity', icon: '🔗', desc: 'Fiber-backed inter-office links' },
-      { label: 'IP Telephony', href: 'https://reddata.com.bd/ip-telephony', icon: '📞', desc: 'VoIP & cloud PBX solutions' },
-      { label: 'SMS Service', href: 'https://reddata.com.bd/sms-service', icon: '💬', desc: 'Bulk messaging & OTP gateway' },
-      { label: 'Domain & Hosting', href: 'https://reddata.com.bd/domain-hosting', icon: '🌐', desc: 'Domains, NVMe hosting & SSL' },
-      { label: 'Managed Services', href: 'https://reddata.com.bd/managed-service', icon: '🛡️', desc: '24/7 IT infrastructure management' },
+      { label: 'Corporate Internet', href: 'https://reddata.com.bd/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
+      { label: 'Home Internet', href: 'https://reddata.com.bd/home-internet', icon: 'Home', desc: 'High-speed residential plans' },
+      { label: 'Data Connectivity', href: 'https://reddata.com.bd/data-connectivity', icon: 'Link2', desc: 'Fiber-backed inter-office links' },
+      { label: 'IP Telephony', href: 'https://reddata.com.bd/ip-telephony', icon: 'Phone', desc: 'VoIP & cloud PBX solutions' },
+      { label: 'SMS Service', href: 'https://reddata.com.bd/sms-service', icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
+      { label: 'Domain & Hosting', href: 'https://reddata.com.bd/domain-hosting', icon: 'Globe', desc: 'Domains, NVMe hosting & SSL' },
+      { label: 'Managed Services', href: 'https://reddata.com.bd/managed-service', icon: 'Shield', desc: '24/7 IT infrastructure management' },
     ],
   },
   { label: 'Why Us', href: '#why-us' },
@@ -32,13 +32,13 @@ export const navLinks = [
 
 // ─── Navbar service dropdown items (router Links) ────────────────────────────
 export const navServiceItems = [
-  { label: 'Corporate Internet', to: '/corporate-internet', icon: '🏢', desc: 'Dedicated enterprise bandwidth' },
-  { label: 'Home Internet',      to: '/home-internet',      icon: '🏠', desc: 'High-speed residential plans' },
-  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: '🔗', desc: 'Fiber-backed inter-office links' },
-  { label: 'IP Telephony',       to: '/ip-telephony',       icon: '📞', desc: 'VoIP & cloud PBX solutions' },
-  { label: 'SMS Service',        to: '/sms-service',        icon: '💬', desc: 'Bulk messaging & OTP gateway' },
-  { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: '🌐', desc: 'Domains, NVMe hosting & SSL' },
-  { label: 'Managed Services',   to: '/managed-services',   icon: '🛡️', desc: '24/7 IT infrastructure management' },
+  { label: 'Corporate Internet', to: '/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
+  { label: 'Home Internet',      to: '/home-internet',      icon: 'Home',      desc: 'High-speed residential plans' },
+  { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'Link2',     desc: 'Fiber-backed inter-office links' },
+  { label: 'IP Telephony',       to: '/ip-telephony',       icon: 'Phone',     desc: 'VoIP & cloud PBX solutions' },
+  { label: 'SMS Service',        to: '/sms-service',        icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
+  { label: 'Domain & Hosting',   to: '/domain-hosting',     icon: 'Globe',     desc: 'Domains, NVMe hosting & SSL' },
+  { label: 'Managed Services',   to: '/managed-services',   icon: 'Shield',    desc: '24/7 IT infrastructure management' },
 ]
 
 // ─── Contact Bar (top dark strip) ────────────────────────────────────────────
@@ -141,7 +141,7 @@ export const howItWorksData = {
   steps: [
     {
       number: '01',
-      icon: '📋',
+      icon: 'ClipboardList',
       title: 'Choose Your Plan',
       title_bn: 'প্ল্যান বেছে নিন',
       description:
@@ -151,7 +151,7 @@ export const howItWorksData = {
     },
     {
       number: '02',
-      icon: '📞',
+      icon: 'Phone',
       title: 'Contact & Confirm',
       title_bn: 'যোগাযোগ করুন ও নিশ্চিত করুন',
       description:
@@ -161,7 +161,7 @@ export const howItWorksData = {
     },
     {
       number: '03',
-      icon: '🔧',
+      icon: 'Wrench',
       title: 'Free Installation',
       title_bn: 'বিনামূল্যে ইনস্টলেশন',
       description:
@@ -171,7 +171,7 @@ export const howItWorksData = {
     },
     {
       number: '04',
-      icon: '🚀',
+      icon: 'Rocket',
       title: 'Go Live & Enjoy',
       title_bn: 'লাইভ হন ও উপভোগ করুন',
       description:
@@ -240,7 +240,8 @@ export const servicesData = {
     'From enterprise-grade connectivity to smart home internet — Red Data delivers every solution your business and life demands.',
   items: [
     {
-      icon: '🏢',
+      icon: 'Building2',
+      to: '/corporate-internet',
       title: 'Corporate Internet',
       title_bn: 'কর্পোরেট ইন্টারনেট',
       description:
@@ -271,7 +272,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🏠',
+      icon: 'Home',
+      to: '/home-internet',
       title: 'Home Internet',
       title_bn: 'হোম ইন্টারনেট',
       description:
@@ -310,7 +312,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🔗',
+      icon: 'Link2',
+      to: '/data-connectivity',
       title: 'Data Connectivity',
       title_bn: 'ডেটা কানেক্টিভিটি',
       description:
@@ -340,7 +343,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '📞',
+      icon: 'Phone',
+      to: '/ip-telephony',
       title: 'IP Telephony',
       title_bn: 'আইপি টেলিফোনি',
       description:
@@ -372,7 +376,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '💬',
+      icon: 'MessageSquare',
+      to: '/sms-service',
       title: 'SMS Service',
       title_bn: 'SMS সার্ভিস',
       description:
@@ -402,7 +407,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🌐',
+      icon: 'Globe',
+      to: '/domain-hosting',
       title: 'Domain & Hosting',
       title_bn: 'ডোমেইন ও হোস্টিং',
       description:
@@ -434,7 +440,8 @@ export const servicesData = {
       ],
     },
     {
-      icon: '🛡️',
+      icon: 'Shield',
+      to: '/managed-services',
       title: 'Managed Services',
       title_bn: 'ম্যানেজড সার্ভিস',
       description:
@@ -480,12 +487,12 @@ export const whyUsData = {
   heading: 'Why Thousands Choose',
   headingAccent: 'Red Data',
   items: [
-    { icon: '⚡', title: 'Free Integration', title_bn: 'বিনামূল্যে ইন্টিগ্রেশন', description: 'We set up everything from scratch — no hidden charges, no hassle.', description_bn: 'আমরা শুরু থেকে সবকিছু সেটআপ করি — কোনো লুকানো চার্জ নেই, কোনো ঝামেলা নেই।' },
-    { icon: '🚀', title: 'Fast Installation', title_bn: 'দ্রুত ইনস্টলেশন', description: 'Get connected within 24 hours of sign-up with our rapid deployment team.', description_bn: 'সাইন আপের ২৪ ঘণ্টার মধ্যে আমাদের দ্রুত ডিপ্লয়মেন্ট দল সংযুক্ত করবে।' },
-    { icon: '🔒', title: 'Blazing-Fast & Secure', title_bn: 'দ্রুততম ও নিরাপদ', description: 'Fiber-grade speeds with enterprise-class network security at every level.', description_bn: 'ফাইবার-গ্রেড গতি এবং সব স্তরে এন্টারপ্রাইজ-ক্লাস নেটওয়ার্ক সিকিউরিটি।' },
-    { icon: '💰', title: 'Competitive Pricing', title_bn: 'প্রতিযোগিতামূলক মূল্য', description: 'Premium performance without premium price tags. BTRC approved tariff.', description_bn: 'প্রিমিয়াম পারফর্মান্স, প্রিমিয়াম মূল্য ছাড়াই। BTRC অনুমোদিত ট্যারিফ।' },
-    { icon: '📈', title: 'Continuous Improvement', title_bn: 'নিরন্তর উন্নতি', description: 'We invest constantly in network upgrades to keep you ahead of demand.', description_bn: 'আমরা নিরন্তর নেটওয়ার্ক আপগ্রেডে বিনিয়োগ করি।' },
-    { icon: '🎧', title: '24×7 Proactive Support', title_bn: '২৪×৭ প্রোঅ্যাক্টিভ সহায়তা', description: 'Our NOC team monitors your connection around the clock so issues are resolved before you notice them.', description_bn: 'আমাদের NOC দল সার্বক্ষণিক আপনার সংযোগ মনিটর করে, যেন সমস্যা বোঝার আগেই সমাধান হয়।' },
+    { icon: 'Zap',         title: 'Free Integration', title_bn: 'বিনামূল্যে ইন্টিগ্রেশন', description: 'We set up everything from scratch — no hidden charges, no hassle.', description_bn: 'আমরা শুরু থেকে সবকিছু সেটআপ করি — কোনো লুকানো চার্জ নেই, কোনো ঝামেলা নেই।' },
+    { icon: 'Rocket',      title: 'Fast Installation', title_bn: 'দ্রুত ইনস্টলেশন', description: 'Get connected within 24 hours of sign-up with our rapid deployment team.', description_bn: 'সাইন আপের ২৪ ঘণ্টার মধ্যে আমাদের দ্রুত ডিপ্লয়মেন্ট দল সংযুক্ত করবে।' },
+    { icon: 'Lock',        title: 'Blazing-Fast & Secure', title_bn: 'দ্রুততম ও নিরাপদ', description: 'Fiber-grade speeds with enterprise-class network security at every level.', description_bn: 'ফাইবার-গ্রেড গতি এবং সব স্তরে এন্টারপ্রাইজ-ক্লাস নেটওয়ার্ক সিকিউরিটি।' },
+    { icon: 'DollarSign',  title: 'Competitive Pricing', title_bn: 'প্রতিযোগিতামূলক মূল্য', description: 'Premium performance without premium price tags. BTRC approved tariff.', description_bn: 'প্রিমিয়াম পারফর্মান্স, প্রিমিয়াম মূল্য ছাড়াই। BTRC অনুমোদিত ট্যারিফ।' },
+    { icon: 'TrendingUp',  title: 'Continuous Improvement', title_bn: 'নিরন্তর উন্নতি', description: 'We invest constantly in network upgrades to keep you ahead of demand.', description_bn: 'আমরা নিরন্তর নেটওয়ার্ক আপগ্রেডে বিনিয়োগ করি।' },
+    { icon: 'Headphones',  title: '24×7 Proactive Support', title_bn: '২৪×৭ প্রোঅ্যাক্টিভ সহায়তা', description: 'Our NOC team monitors your connection around the clock so issues are resolved before you notice them.', description_bn: 'আমাদের NOC দল সার্বক্ষণিক আপনার সংযোগ মনিটর করে, যেন সমস্যা বোঝার আগেই সমাধান হয়।' },
   ],
 }
 
@@ -508,7 +515,7 @@ export const pricingData = {
       oneTime: '৳2,000 one-time setup',
       oneTime_bn: '৳২,০০০ এককালীন সেটআপ',
       bandwidth: '30 Mbps',
-      popular: true,
+      popular: false,
       features: [
         '30 Mbps Bandwidth',
         'Buffer-less social media & YouTube',
@@ -530,8 +537,8 @@ export const pricingData = {
     },
     {
       name: 'Maroon',
-      tag: 'Family Plan',
-      tag_bn: 'ফ্যামিলি প্ল্যান',
+      tag: 'Best Value',
+      tag_bn: 'সেরা মানের',
       price: '৳840',
       vatBreakdown: '৳800 + ৳40 (5% VAT)',
       vatBreakdown_bn: '৳৮০০ + ৳৪০ (৫% ভ্যাট)',
@@ -540,7 +547,7 @@ export const pricingData = {
       oneTime: '৳1,500 one-time setup',
       oneTime_bn: '৳১,৫০০ এককালীন সেটআপ',
       bandwidth: '40 Mbps',
-      popular: false,
+      popular: true,
       features: [
         '40 Mbps Bandwidth',
         'Buffer-less social media & YouTube',
@@ -736,13 +743,13 @@ export const aboutPageData = {
     { num: '99.9%',   label: 'Uptime SLA' },
   ],
   services: [
-    { icon: '🌐', label: 'Internet & Data Connectivity' },
-    { icon: '📞', label: 'IP Telephony Service' },
-    { icon: '💬', label: 'SMS Service' },
-    { icon: '☁️', label: 'Cloud & Email Solution' },
-    { icon: '💻', label: 'Website & Software Development' },
-    { icon: '🔧', label: 'Network Hardware' },
-    { icon: '🛡️', label: 'Managed Services' },
+    { icon: 'Globe',          label: 'Internet & Data Connectivity' },
+    { icon: 'Phone',          label: 'IP Telephony Service' },
+    { icon: 'MessageSquare',  label: 'SMS Service' },
+    { icon: 'Cloud',          label: 'Cloud & Email Solution' },
+    { icon: 'Monitor',        label: 'Website & Software Development' },
+    { icon: 'Wrench',         label: 'Network Hardware' },
+    { icon: 'Shield',         label: 'Managed Services' },
   ],
   clients: [
     { name: 'UCB',                   img: 'https://reddata.com.bd/images/clients/1UCB.png' },
@@ -783,12 +790,12 @@ export const aboutPageData = {
   },
   companyCards: [
     {
-      icon: '📍',
+      icon: 'MapPin',
       title: 'Head Office',
       lines: ['Level 19, SimpleTree Attalika,', '134 Gulshan Avenue,', 'Dhaka-1212, Bangladesh'],
     },
     {
-      icon: '🏢',
+      icon: 'Building2',
       title: 'Registered Address',
       lines: ['House 5/A, Road 2, Lane 3,', 'Block G, Halishahar,', 'Chittagong, Bangladesh'],
     },

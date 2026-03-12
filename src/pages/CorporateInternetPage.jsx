@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import IconMapper from '../components/ui/IconMapper'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
@@ -53,12 +54,12 @@ const fiberFeatures = [
 ]
 
 const whyUs = [
-  { icon: '🔗', title: 'Free Integration', desc: 'Seamless integration with your existing network infrastructure at no extra cost.' },
-  { icon: '⚡', title: 'Fast Installation', desc: 'Professional setup and activation within 2–3 business days.' },
-  { icon: '📡', title: 'Reliable & Blazing-Fast Speeds', desc: 'Dedicated bandwidth ensuring consistent performance for your business.' },
-  { icon: '💰', title: 'Competitive Pricing', desc: 'BTRC approved transparent tariffs with no hidden charges or lock-in contracts.' },
-  { icon: '📈', title: 'Commitment to Improvement', desc: 'We continuously invest in network upgrades to deliver the best service.' },
-  { icon: '🎧', title: '24x7 Proactive Support', desc: 'Round-the-clock dedicated support team ready to resolve any issue fast.' },
+  { icon: 'Link2',       title: 'Free Integration', desc: 'Seamless integration with your existing network infrastructure at no extra cost.' },
+  { icon: 'Zap',         title: 'Fast Installation', desc: 'Professional setup and activation within 2–3 business days.' },
+  { icon: 'Network',     title: 'Reliable & Blazing-Fast Speeds', desc: 'Dedicated bandwidth ensuring consistent performance for your business.' },
+  { icon: 'DollarSign',  title: 'Competitive Pricing', desc: 'BTRC approved transparent tariffs with no hidden charges or lock-in contracts.' },
+  { icon: 'TrendingUp',  title: 'Commitment to Improvement', desc: 'We continuously invest in network upgrades to deliver the best service.' },
+  { icon: 'Headphones',  title: '24x7 Proactive Support', desc: 'Round-the-clock dedicated support team ready to resolve any issue fast.' },
 ]
 
 const clients = [
@@ -157,17 +158,17 @@ export default function CorporateInternetPage() {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-600/20 to-slate-800/60 backdrop-blur-sm border border-white/10" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="grid grid-cols-3 gap-6 p-8">
-                    {['🏦','🏥','🏭','🏢','📡','🖥️','🔗','⚙️','🌐'].map((icon, i) => (
-                      <div key={i} className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-2xl backdrop-blur-sm border border-white/10">
-                        {icon}
+                    {['Building2','Shield','Network','Globe','Phone','Monitor','Link2','Wrench','Zap'].map((icon, i) => (
+                      <div key={i} className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white/70 backdrop-blur-sm border border-white/10">
+                        <IconMapper name={icon} className="w-5 h-5" />
                       </div>
                     ))}
                   </div>
                 </div>
-                {/* Speed badge */}
+                {/* SLA badge */}
                 <div className="absolute -bottom-4 -right-4 bg-red-600 text-white rounded-2xl px-4 py-3 shadow-xl">
-                  <div className="text-2xl font-black">10 Gbps</div>
-                  <div className="text-xs text-red-200">Max Speed</div>
+                  <div className="text-2xl font-black">SLA</div>
+                  <div className="text-xs text-red-200">Guaranteed</div>
                 </div>
                 {/* Uptime badge */}
                 <div className="absolute -top-4 -left-4 bg-emerald-600 text-white rounded-2xl px-4 py-3 shadow-xl">
@@ -251,8 +252,8 @@ export default function CorporateInternetPage() {
             <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {whyUs.map((item) => (
                 <div key={item.title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
-                    {item.icon}
+                  <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 shrink-0 group-hover:scale-110 transition-transform">
+                    <IconMapper name={item.icon} className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{item.title}</h4>
@@ -317,7 +318,7 @@ export default function CorporateInternetPage() {
               { num: '10,000+', label: 'Enterprise Clients' },
               { num: '99.9%',   label: 'Uptime SLA' },
               { num: '24/7',    label: 'Dedicated Support' },
-              { num: '10 Gbps', label: 'Max Bandwidth' },
+              { num: '64',      label: 'Districts Covered' },
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-3xl sm:text-4xl font-black mb-1">{s.num}</div>

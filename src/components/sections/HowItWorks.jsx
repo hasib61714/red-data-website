@@ -5,6 +5,7 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 import { howItWorksData, L } from '../../data/siteData'
+import IconMapper from '../ui/IconMapper'
 
 export default function HowItWorks() {
   const { lang } = useLanguage()
@@ -35,7 +36,7 @@ export default function HowItWorks() {
             >
               {/* Number circle */}
               <div className="relative z-10 w-20 h-20 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-center mb-6 group-hover:border-red-500/40 group-hover:bg-slate-50 dark:group-hover:bg-slate-700/80 transition-all duration-300 shadow-md dark:shadow-xl">
-                <span className="text-3xl">{step.icon}</span>
+                <IconMapper name={step.icon} className="w-8 h-8 text-red-500" />
                 {/* Step number badge */}
                 <span className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-amber-400 text-white text-[10px] font-black flex items-center justify-center shadow-lg shadow-orange-500/30">
                   {i + 1}

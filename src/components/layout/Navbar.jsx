@@ -5,6 +5,7 @@ import { useTheme } from '../../context/ThemeContext'
 import { useLang } from '../../context/LanguageContext'
 import { getText } from '../../data/translations'
 import { navServiceItems, contactBarData } from '../../data/siteData'
+import IconMapper from '../ui/IconMapper'
 
 // ─── Service dropdown items ───────────────────────────────────────────────────
 const serviceItems = navServiceItems
@@ -106,7 +107,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
             <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
               <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               <p className="text-center leading-none">
-                🎉 <strong>{lang === 'en' ? 'Special Offer:' : 'বিশেষ অফার:'}</strong> {T('topbar')}{' '}
+                <strong>{lang === 'en' ? 'Special Offer:' : 'বিশেষ অফার:'}</strong> {T('topbar')}{' '}
                 <a href="/#pricing" className="underline underline-offset-2 hover:text-white/80 font-semibold transition-colors">
                   {T('topbarCta')}
                 </a>
@@ -203,10 +204,7 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
           <nav className="hidden xl:flex items-center gap-0.5 flex-1 justify-center">
 
             {/* Home */}
-            <Link to="/" className={`${linkCls(pathname === '/')} flex items-center gap-1`}>
-              <svg className="w-3 h-3 opacity-60" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h3a1 1 0 001-1v-3h2v3a1 1 0 001 1h3a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-              </svg>
+            <Link to="/" className={linkCls(pathname === '/')}>
               {T('nav.home')}
             </Link>
 
@@ -249,8 +247,8 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
                               : 'hover:bg-slate-50 dark:hover:bg-white/[0.05]'
                           }`}
                         >
-                          <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/[0.07] flex items-center justify-center text-sm group-hover:bg-red-50 dark:group-hover:bg-red-500/15 group-hover:border-red-200 dark:group-hover:border-red-500/20 transition-all duration-150">
-                            {item.icon}
+                          <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/[0.07] flex items-center justify-center text-red-500 group-hover:bg-red-50 dark:group-hover:bg-red-500/15 group-hover:border-red-200 dark:group-hover:border-red-500/20 transition-all duration-150">
+                            <IconMapper name={item.icon} className="w-4 h-4" />
                           </span>
                           <div className="min-w-0">
                             <p className={`text-xs font-semibold leading-snug ${
@@ -277,20 +275,6 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               )}
             </div>
 
-            {/* Pay Bill — emerald accent when active, neutral otherwise */}
-            <Link
-              to="/pay-bill"
-              className={pathname === '/pay-bill'
-                ? 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/25 transition-all duration-200'
-                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
-              }
-            >
-              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
-              </svg>
-              {T('nav.payBill')}
-            </Link>
-
             {/* About Us */}
             <Link to="/about-us" className={linkCls(pathname === '/about-us')}>
               {T('nav.aboutUs')}
@@ -301,19 +285,6 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               {T('nav.contactUs')}
             </Link>
 
-            {/* Self Corner — red accent when active, neutral otherwise */}
-            <Link
-              to="/self-corner"
-              className={pathname === '/self-corner'
-                ? 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/25 transition-all duration-200'
-                : 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-white/[0.07] transition-all duration-200'
-              }
-            >
-              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
-              {T('nav.selfCorner')}
-            </Link>
           </nav>
 
           {/* ── Desktop Right Controls ───────────────────────────────────── */}
@@ -394,13 +365,17 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
 
             <Link to="/corporate-internet" onClick={() => setMenuOpen(false)}
               className={mobileLinkCls(pathname === '/corporate-internet')}>
-              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-base flex-shrink-0">🏢</span>
+              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-red-500 flex-shrink-0">
+                <IconMapper name="Building2" className="w-4 h-4" />
+              </span>
               {T('nav.corporateInternet')}
             </Link>
 
             <Link to="/home-internet" onClick={() => setMenuOpen(false)}
               className={mobileLinkCls(pathname === '/home-internet')}>
-              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-base flex-shrink-0">🏠</span>
+              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-red-500 flex-shrink-0">
+                <IconMapper name="Home" className="w-4 h-4" />
+              </span>
               {T('nav.homeInternet')}
             </Link>
 
@@ -413,7 +388,9 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
                     : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.07]'
                 }`}>
                 <span className="flex items-center gap-2.5">
-                  <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-base flex-shrink-0">⚡</span>
+                  <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-red-500 flex-shrink-0">
+                    <IconMapper name="Zap" className="w-4 h-4" />
+                  </span>
                   {T('nav.services')}
                 </span>
                 <svg className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
@@ -428,7 +405,9 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
                           ? 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06]'
                       }`}>
-                      <span className="text-base flex-shrink-0">{item.icon}</span>
+                      <span className="flex-shrink-0 text-red-500">
+                        <IconMapper name={item.icon} className="w-4 h-4" />
+                      </span>
                       <div>
                         <p className="font-semibold text-xs leading-snug">{item.label}</p>
                         <p className="text-[10px] text-slate-400 leading-snug">{item.desc}</p>
@@ -439,38 +418,20 @@ export default function Navbar({ topBarOpen = false, onDismiss }) {
               </div>
             </div>
 
-            <Link to="/pay-bill" onClick={() => setMenuOpen(false)}
-              className={pathname === '/pay-bill'
-                ? 'flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 transition-colors'
-                : mobileLinkCls(false)
-              }>
-              <span className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
-              </span>
-              {T('nav.payBill')}
-            </Link>
-
             <Link to="/about-us" onClick={() => setMenuOpen(false)}
               className={mobileLinkCls(pathname === '/about-us')}>
-              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-base flex-shrink-0">ℹ️</span>
+              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-red-500 flex-shrink-0">
+                <IconMapper name="Info" className="w-4 h-4" />
+              </span>
               {T('nav.aboutUs')}
             </Link>
 
             <Link to="/contact" onClick={() => setMenuOpen(false)}
               className={mobileLinkCls(pathname === '/contact')}>
-              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-base flex-shrink-0">📩</span>
-              {T('nav.contactUs')}
-            </Link>
-
-            <Link to="/self-corner" onClick={() => setMenuOpen(false)}
-              className={pathname === '/self-corner'
-                ? 'flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-semibold text-red-700 dark:text-red-400 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 transition-colors'
-                : mobileLinkCls(false)
-              }>
-              <span className="w-8 h-8 rounded-lg bg-red-100 dark:bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+              <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-red-500 flex-shrink-0">
+                <IconMapper name="Mail" className="w-4 h-4" />
               </span>
-              {T('nav.selfCorner')}
+              {T('nav.contactUs')}
             </Link>
           </nav>
 

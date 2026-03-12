@@ -2,8 +2,15 @@ import { createContext, useContext, useState } from 'react'
 
 const LanguageContext = createContext(null)
 
+function detectLang() {
+  const stored = localStorage.getItem('rdLang')
+  if (stored) return stored
+  const browser = (navigator.language || navigator.userLanguage || 'en').toLowerCase()
+  return browser.startsWith('bn') ? 'bn' : 'en'
+}
+
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(() => localStorage.getItem('rdLang') || 'en')
+  const [lang, setLang] = useState(detectLang)
 
   const toggle = () => {
     const next = lang === 'en' ? 'bn' : 'en'

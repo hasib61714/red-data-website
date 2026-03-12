@@ -5,12 +5,13 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 import { whyUsData, L } from '../../data/siteData'
+import IconMapper from '../ui/IconMapper'
 
 function FeatureItem({ icon, title, description }) {
   return (
     <div className="group flex gap-5 p-6 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-100 dark:border-white/[0.06] hover:border-red-500/20 dark:hover:bg-slate-800/60 hover:-translate-y-0.5 transition-all duration-300">
-      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-700/60 flex items-center justify-center text-xl group-hover:bg-red-500/15 group-hover:scale-105 transition-all duration-300">
-        {icon}
+      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-700/60 flex items-center justify-center text-red-500 group-hover:bg-red-500/15 group-hover:scale-105 transition-all duration-300">
+        <IconMapper name={icon} className="w-5 h-5" />
       </div>
       <div>
         <h3 className="text-slate-900 dark:text-white font-semibold text-sm mb-1.5 group-hover:text-red-400 transition-colors duration-200">
