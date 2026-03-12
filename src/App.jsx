@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { NAVBAR_HEIGHT_PX } from './constants'
 import { ThemeProvider } from './context/ThemeContext'
 import { LanguageProvider } from './context/LanguageContext'
 import Navbar from './components/layout/Navbar'
@@ -55,8 +56,7 @@ function HashScrollHandler() {
     const id = setTimeout(() => {
       const el = document.querySelector(hash)
       if (el) {
-        const offset = 80 // navbar height
-        const top = el.getBoundingClientRect().top + window.scrollY - offset
+        const top = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
         window.scrollTo({ top, behavior: 'smooth' })
       }
     }, 100)

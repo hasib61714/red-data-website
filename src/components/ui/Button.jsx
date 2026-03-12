@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const variants = {
   primary:
     'bg-gradient-to-r from-red-600 via-red-500 to-orange-500 text-white hover:from-red-500 hover:via-red-400 hover:to-orange-400 shadow-lg hover:shadow-orange-500/25',
@@ -32,8 +34,17 @@ export default function Button({
   const classes = `${base} ${variants[variant]} ${sizes[size]} ${mobileClass} ${className}`
 
   if (href) {
+    // Internal routes use React Router Link for client-side navigation
+    if (href.startsWith('/') || href.startsWith('#')) {
+      return (
+        <Link to={href} className={classes} {...props}>
+          {children}
+        </Link>
+      )
+    }
+    // External links open in new tab with security attributes
     return (
-      <a href={href} className={classes} {...props}>
+      <a href={href} className={classes} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
       </a>
     )

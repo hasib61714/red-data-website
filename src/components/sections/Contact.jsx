@@ -3,7 +3,7 @@ import { getText } from '../../data/translations'
 import Section from '../ui/Section'
 import Container from '../ui/Container'
 import Reveal from '../ui/Reveal'
-import { footerData, homeContactMethods } from '../../data/siteData'
+import { homeContactMethods } from '../../data/siteData'
 import { useState } from 'react'
 
 const ICON_PATHS = {

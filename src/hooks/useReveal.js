@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
+import { REVEAL_THRESHOLD } from '../constants'
 
 /**
  * useReveal — returns a ref and `visible` boolean.
  * The element fades in when it enters the viewport.
  */
-export function useReveal(threshold = 0.15) {
+export function useReveal(threshold = REVEAL_THRESHOLD) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
 
