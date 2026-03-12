@@ -59,6 +59,8 @@ export default function BlogPage() {
                     src={featured.image}
                     alt={featured.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                     onError={e => { e.target.style.display = 'none'; e.target.parentNode.classList.add('bg-gradient-to-br', 'from-red-600', 'to-rose-700') }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -110,6 +112,8 @@ export default function BlogPage() {
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                     onError={e => { e.target.style.display = 'none'; e.target.parentNode.classList.add('bg-gradient-to-br', 'from-slate-600', 'to-slate-700') }}
                   />
                   <div className="absolute top-3 left-3">

@@ -153,6 +153,8 @@ export default function ServiceModal({ service, onClose }) {
               src={service.image}
               alt={service.title}
               className="max-h-36 sm:max-h-48 w-auto object-contain opacity-90"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         )}

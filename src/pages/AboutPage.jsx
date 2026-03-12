@@ -63,6 +63,8 @@ export default function AboutPage() {
                   src="https://reddata.com.bd/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout.4a9b9721.jpeg&w=3840&q=75"
                   alt="Red Data office"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     e.target.parentElement.className = 'relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 h-80 lg:h-96 flex items-center justify-center'
                     e.target.style.display = 'none'
@@ -202,6 +204,8 @@ export default function AboutPage() {
                   src={c.img}
                   alt={c.name}
                   className="h-9 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     e.target.style.display = 'none'
                     e.target.parentElement.innerHTML = `<span class="text-xs text-slate-400 font-medium text-center leading-tight">${c.name}</span>`
