@@ -11,11 +11,49 @@ import PageHero from '../components/ui/PageHero'
 import Breadcrumb from '../components/ui/Breadcrumb'
 import SectionHeader from '../components/ui/SectionHeader'
 
+const TEXTS = {
+  en: {
+    bc: 'Corporate Internet',
+    heroBadge: 'Enterprise Solutions',
+    h1: 'Corporate Internet', h1a: 'Connectivity',
+    sub: 'At Red Data, we understand that a reliable and high-speed internet connection is critical for the success of your business. Our Corporate Internet Connectivity service offers robust, secure, and scalable internet solutions tailored to meet the unique demands of your enterprise. With dedicated bandwidth, 24/7 customer support, and guaranteed uptime, we ensure your business operations run smoothly and efficiently. Partner with us to experience seamless connectivity and drive your business forward.',
+    heroBtn: 'Get Started',
+    fiberBadge: 'Fiber Optic Advantage', fiberH: 'Why Choose Red Data', fiberA: 'Fiber Optic Connectivity?',
+    whyBadge: 'Why Choose Us', whyH: 'We provide top-tier services with', whyA: 'benefits you can rely on',
+    whyP: 'Thousands of enterprises across Bangladesh trust Red Data for their mission-critical internet needs.',
+    whyBtn: 'Contact Sales',
+    clientsBadge: 'Our Clients', clientsH: 'Some of Our', clientsA: 'Valuable Clients',
+    clientsSub: 'Trusted by leading banks, fintech companies, and enterprises across Bangladesh.',
+    clientsMore: '+ many more enterprises across Bangladesh',
+    ctaH: 'Ready to power your', ctaAccent: 'enterprise?',
+    ctaP: 'Contact our sales team today and get a custom quote tailored to your business needs.',
+    ctaBtn: 'Get a Custom Quote', ctaBack: '← Back Home',
+  },
+  bn: {
+    bc: 'কর্পোরেট ইন্টারনেট',
+    heroBadge: 'এন্টারপ্রাইজ সমাধান',
+    h1: 'কর্পোরেট ইন্টারনেট', h1a: 'কানেক্টিভিটি',
+    sub: 'রেড ডাটায় আমরা বুঝি যে নির্ভরযোগ্য ও উচ্চ-গতির ইন্টারনেট সংযোগ আপনার ব্যবসার সাফল্যের জন্য অপরিহার্য। আমাদের কর্পোরেট ইন্টারনেট কানেক্টিভিটি সেবা আপনার এন্টারপ্রাইজের অনন্য চাহিদা পূরণে শক্তিশালী, নিরাপদ ও স্কেলযোগ্য ইন্টারনেট সমাধান প্রদান করে। ডেডিকেটেড ব্যান্ডউইথ, ২৪/৭ গ্রাহক সহায়তা এবং নিশ্চিত আপটাইমসহ আমরা আপনার ব্যবসা পরিচালনা মসৃণ ও দক্ষ রাখি।',
+    heroBtn: 'শুরু করুন',
+    fiberBadge: 'ফাইবার অপটিক সুবিধা', fiberH: 'কেন রেড ডাটা বেছে নেবেন', fiberA: 'ফাইবার অপটিক কানেক্টিভিটি?',
+    whyBadge: 'কেন আমাদের বেছে নেবেন', whyH: 'আমরা প্রদান করি সর্বোচ্চ মানের সেবা', whyA: 'যার উপর আপনি নির্ভর করতে পারেন',
+    whyP: 'বাংলাদেশ জুড়ে হাজার হাজার এন্টারপ্রাইজ তাদের মিশন-ক্রিটিক্যাল ইন্টারনেট চাহিদার জন্য রেড ডাটাকে বিশ্বাস করে।',
+    whyBtn: 'বিক্রয় দলে যোগাযোগ করুন',
+    clientsBadge: 'আমাদের ক্লায়েন্ট', clientsH: 'আমাদের কিছু', clientsA: 'মূল্যবান ক্লায়েন্ট',
+    clientsSub: 'বাংলাদেশের শীর্ষস্থানীয় ব্যাংক, ফিনটেক কোম্পানি ও প্রতিষ্ঠানগুলোর আস্থার অংশীদার।',
+    clientsMore: '+ বাংলাদেশ জুড়ে আরও অনেক প্রতিষ্ঠান',
+    ctaH: 'আপনার এন্টারপ্রাইজকে শক্তিশালী করতে', ctaAccent: 'প্রস্তুত?',
+    ctaP: 'আজই আমাদের বিক্রয় দলের সাথে যোগাযোগ করুন এবং আপনার ব্যবসার চাহিদা অনুযায়ী কাস্টম কোটেশন পান।',
+    ctaBtn: 'কাস্টম কোটেশন পান', ctaBack: '← হোমে ফিরুন',
+  },
+}
+
 const { fiberFeatures, whyUs, stats: corpStats } = corporateInternetPageData
 const clients = aboutPageData.clients
 
 export default function CorporateInternetPage() {
   const { lang } = useLanguage()
+  const t = TEXTS[lang]
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
 
   return (
@@ -24,29 +62,28 @@ export default function CorporateInternetPage() {
 
       {/* Page Hero */}
       <PageHero>
-          <Breadcrumb items={[{ label: 'Corporate Internet' }]} />
+          <Breadcrumb items={[{ label: t.bc }]} />
           <div className="flex flex-col lg:flex-row items-center gap-10">
-            {/* Left: text */}
             <div className="lg:w-1/2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-                Enterprise Solutions
+                {t.heroBadge}
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
-                Corporate Internet<br />
+                {t.h1}<br />
                 <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  Connectivity
+                  {t.h1a}
                 </span>
               </h1>
               <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed" wrapperClassName="mb-8">
-                At Red Data, we understand that a reliable and high-speed internet connection is critical for the success of your business. Our Corporate Internet Connectivity service offers robust, secure, and scalable internet solutions tailored to meet the unique demands of your enterprise. With dedicated bandwidth, 24/7 customer support, and guaranteed uptime, we ensure your business operations run smoothly and efficiently. Partner with us to experience seamless connectivity and drive your business forward.
+                {t.sub}
               </ExpandableText>
               <div className="flex flex-wrap gap-3">
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-600/40 transition-all hover:scale-105"
                 >
-                  Get Started
+                  {t.heroBtn}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -62,10 +99,8 @@ export default function CorporateInternetPage() {
                 </a>
               </div>
             </div>
-            {/* Right: visual card */}
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative w-72 h-64 lg:w-96 lg:h-80">
-                {/* Animated network nodes */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-600/20 to-slate-800/60 backdrop-blur-sm border border-white/10" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="grid grid-cols-3 gap-6 p-8">
@@ -76,12 +111,10 @@ export default function CorporateInternetPage() {
                     ))}
                   </div>
                 </div>
-                {/* Uptime badge */}
                 <div className="absolute -top-4 -left-4 bg-emerald-600 text-white rounded-2xl px-4 py-3 shadow-xl">
                   <div className="text-2xl font-black">99%</div>
                   <div className="text-xs text-emerald-200">Uptime</div>
                 </div>
-                {/* Bandwidth badge */}
                 <div className="absolute -bottom-4 -right-4 bg-red-600 text-white rounded-2xl px-4 py-3 shadow-xl">
                   <div className="text-2xl font-black">10G</div>
                   <div className="text-xs text-red-200">Gbps Fiber</div>
@@ -94,14 +127,13 @@ export default function CorporateInternetPage() {
       {/* Fiber Optic Features */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <SectionHeader badge="Fiber Optic Advantage" heading="Why Choose Red Data" headingAccent="Fiber Optic Connectivity?" />
+          <SectionHeader badge={t.fiberBadge} heading={t.fiberH} headingAccent={t.fiberA} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {fiberFeatures.map((f, i) => (
               <div
                 key={f.title}
                 className="group relative p-7 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/60 shadow-sm hover:shadow-xl hover:border-red-200 dark:hover:border-red-500/40 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
-                {/* Number watermark */}
                 <span className="absolute top-4 right-5 text-7xl font-black text-slate-100 dark:text-slate-700/60 leading-none select-none group-hover:text-red-100 dark:group-hover:text-red-900/40 transition-colors">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -122,32 +154,28 @@ export default function CorporateInternetPage() {
       <div className="py-20 bg-white dark:bg-slate-800/40">
         <Container>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
-            {/* Left sticky label */}
             <div className="lg:w-1/3 lg:sticky lg:top-32">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                Why Choose Us
+                {t.whyBadge}
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                We provide top-tier services with{' '}
+                {t.whyH}{' '}
                 <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  benefits you can rely on
+                  {t.whyA}
                 </span>
               </h2>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                Thousands of enterprises across Bangladesh trust Red Data for their mission-critical internet needs.
-              </p>
+              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{t.whyP}</p>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105"
               >
-                Contact Sales
+                {t.whyBtn}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
             </div>
-            {/* Right: grid */}
             <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {whyUs.map((item) => (
                 <div key={item.title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 transition-colors group">
@@ -168,7 +196,7 @@ export default function CorporateInternetPage() {
       {/* Clients */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <SectionHeader badge="Our Clients" heading="Some of Our" headingAccent="Valuable Clients" subheading="Trusted by leading banks, fintech companies, and enterprises across Bangladesh." />
+          <SectionHeader badge={t.clientsBadge} heading={t.clientsH} headingAccent={t.clientsA} subheading={t.clientsSub} />
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             {clients.map((c) => (
               <div
@@ -189,9 +217,7 @@ export default function CorporateInternetPage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-slate-400 dark:text-slate-500 text-sm mt-8">
-            + many more enterprises across Bangladesh
-          </p>
+          <p className="text-center text-slate-400 dark:text-slate-500 text-sm mt-8">{t.clientsMore}</p>
         </Container>
       </div>
 
@@ -216,18 +242,16 @@ export default function CorporateInternetPage() {
             <div className="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
             <div className="relative z-10">
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">
-                Ready to power your{' '}
-                <span className="text-red-400">enterprise?</span>
+                {t.ctaH}{' '}
+                <span className="text-red-400">{t.ctaAccent}</span>
               </h3>
-              <p className="text-slate-300 text-base max-w-xl mx-auto mb-8">
-                Contact our sales team today and get a custom quote tailored to your business needs.
-              </p>
+              <p className="text-slate-300 text-base max-w-xl mx-auto mb-8">{t.ctaP}</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   to="/contact"
                   className="px-8 py-3.5 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-600/40 transition-all hover:scale-105"
                 >
-                  Get a Custom Quote
+                  {t.ctaBtn}
                 </Link>
                 <a
                   href="tel:+8809640112233"
@@ -236,7 +260,7 @@ export default function CorporateInternetPage() {
                   09640-112233
                 </a>
                 <Link to="/" className="px-8 py-3.5 rounded-full border border-white/20 text-slate-300 font-semibold text-sm hover:bg-white/5 transition-all">
-                  ← Back Home
+                  {t.ctaBack}
                 </Link>
               </div>
             </div>

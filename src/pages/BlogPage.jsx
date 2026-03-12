@@ -6,11 +6,37 @@ import PageMeta from '../components/ui/PageMeta'
 import { blogPostsData } from '../data/siteData'
 import PageHero from '../components/ui/PageHero'
 import Breadcrumb from '../components/ui/Breadcrumb'
+import { useLanguage } from '../context/LanguageContext'
+
+const TEXTS = {
+  en: {
+    bc: 'Blog', heroBadge: 'News & Insights',
+    h1: 'Red Data', h1a: 'Blog',
+    sub: 'Company news, technology insights, and helpful guides from the Red Data team.',
+    featuredLabel: 'Featured Post', readMore: 'Read more →',
+    moreArticles: 'More Articles', read: 'Read →',
+    newsletterH: 'Stay Updated',
+    newsletterS: 'Get the latest news and articles from Red Data directly in your inbox.',
+    subscribeBtn: '✉️ Subscribe via Email',
+  },
+  bn: {
+    bc: 'ব্লগ', heroBadge: 'সংবাদ ও অন্তর্দৃষ্টি',
+    h1: 'রেড ডাটা', h1a: 'ব্লগ',
+    sub: 'রেড ডাটা দলের কোম্পানি সংবাদ, প্রযুক্তি অন্তর্দৃষ্টি এবং সহায়ক গাইড।',
+    featuredLabel: 'বৈশিষ্ট্য পোস্ট', readMore: 'আরও পড়ুন →',
+    moreArticles: 'আরও নিবন্ধ', read: 'পড়ুন →',
+    newsletterH: 'আপডেট থাকুন',
+    newsletterS: 'রেড ডাটার সর্বশেষ সংবাদ ও নিবন্ধ সরাসরি আপনার ইনবক্সে পান।',
+    subscribeBtn: '✉️ ইমেইলে সাবস্ক্রাইব করুন',
+  },
+}
 
 const posts = blogPostsData
 
 export default function BlogPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const { lang } = useLanguage()
+  const t = TEXTS[lang]
 
   const [featured, ...rest] = posts
 
@@ -20,21 +46,19 @@ export default function BlogPage() {
 
       {/* Hero */}
       <PageHero>
-          <Breadcrumb items={[{ label: 'Blog' }]} />
+          <Breadcrumb items={[{ label: t.bc }]} />
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-              News & Insights
+              {t.heroBadge}
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
-              Red Data{' '}
+              {t.h1}{' '}
               <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Blog
+                {t.h1a}
               </span>
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Company news, technology insights, and helpful guides from the Red Data team.
-            </p>
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">{t.sub}</p>
           </div>
       </PageHero>
 
@@ -42,7 +66,7 @@ export default function BlogPage() {
       <div className="py-14 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400">Featured Post</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400">{t.featuredLabel}</span>
           </div>
           <Link to={`/blog/${featured.id}`} className="group block">
             <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700/50 overflow-hidden shadow-sm hover:shadow-xl transition-all">
@@ -82,7 +106,7 @@ export default function BlogPage() {
                       <p className="text-xs text-slate-400">{featured.category}</p>
                     </div>
                     <span className="ml-auto text-red-600 dark:text-red-400 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Read more →
+                      {t.readMore}
                     </span>
                   </div>
                 </div>
@@ -96,7 +120,7 @@ export default function BlogPage() {
       <div className="py-8 pb-16 bg-white dark:bg-slate-900">
         <Container>
           <div className="mb-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-slate-400">More Articles</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-slate-400">{t.moreArticles}</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {rest.map((post) => (
@@ -133,7 +157,7 @@ export default function BlogPage() {
                       </div>
                       <span className="text-xs text-slate-500 dark:text-slate-400">{post.author}</span>
                     </div>
-                    <span className="text-red-600 dark:text-red-400 text-xs font-semibold">Read →</span>
+                    <span className="text-red-600 dark:text-red-400 text-xs font-semibold">{t.read}</span>
                   </div>
                 </div>
               </Link>
@@ -147,10 +171,10 @@ export default function BlogPage() {
       <div className="py-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
         <Container>
           <div className="max-w-xl mx-auto text-center">
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Stay Updated</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">Get the latest news and articles from Red Data directly in your inbox.</p>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{t.newsletterH}</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">{t.newsletterS}</p>
             <a href="mailto:info@reddata.com.bd?subject=Newsletter Subscription" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-sm shadow-lg transition-all hover:scale-105">
-              ✉️ Subscribe via Email
+              {t.subscribeBtn}
             </a>
           </div>
         </Container>

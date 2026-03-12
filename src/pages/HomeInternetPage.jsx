@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
+import { homeInternetPageData, L } from '../data/siteData'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
-import { homeInternetPageData } from '../data/siteData'
 import IconMapper from '../components/ui/IconMapper'
 import PricingCard from '../components/shared/PricingCard'
 import Reveal from '../components/ui/Reveal'
@@ -12,10 +13,63 @@ import PageHero from '../components/ui/PageHero'
 import Breadcrumb from '../components/ui/Breadcrumb'
 import SectionHeader from '../components/ui/SectionHeader'
 
+const TEXTS = {
+  en: {
+    bc: 'Home Internet',
+    heroBadge: 'Residential Plans',
+    h1: 'Home Internet', h1a: 'Plans & Pricing',
+    sub: 'Red Data Home Internet delivers ultra-fast fiber broadband engineered for modern households. From buffer-free 4K streaming and lag-free gaming to seamless video calls — all on one blisteringly fast connection with no hidden charges.',
+    heroBtn: 'Get Connected',
+    vatNote: 'All prices include 5% VAT.',
+    feat1: 'Mbps Bandwidth', feat2: 'Buffer-less social media & YouTube', feat3: 'Unlimited Device Support',
+    feat4: 'Min TalkTime', feat5: 'OTT Subscription',
+    feat6: '24/7 Customer Care', freeSetup: 'Free Installation', paidSetup: 'one-time setup',
+    period: '/month', freeInst: 'Free installation',
+    planCta: 'Get Started',
+    whyBadge: 'Why Choose Us', whyH: 'We provide top-tier services with', whyA: 'benefits you can rely on',
+    covBadge: 'Coverage', covH: 'Area', covA: 'Coverage',
+    covP: 'Red Data provides high-speed fiber optic internet services across Bangladesh. From major cities to suburban areas, our growing network ensures you stay connected.',
+    covBtn: 'Check Coverage',
+    ctaH: 'Ready to get connected?', ctaS: 'Subscribe to any plan and get free installation today.',
+    ctaBtn: 'Get Started', ctaBack: '← Back Home',
+  },
+  bn: {
+    bc: 'হোম ইন্টারনেট',
+    heroBadge: 'আবাসিক পরিকল্পনা',
+    h1: 'হোম ইন্টারনেট', h1a: 'প্ল্যান ও মূল্য',
+    sub: 'রেড ডাটা হোম ইন্টারনেট আধুনিক পরিবারের জন্য আল্ট্রা-ফাস্ট ফাইবার ব্রডব্যান্ড সরবরাহ করে। বাফার-মুক্ত ৪কে স্ট্রিমিং, লেটেন্সি-মুক্ত গেমিং থেকে নিরবচ্ছিন্ন ভিডিও কল — সব কিছু এক দ্রুতগতির সংযোগে, কোনো লুকানো চার্জ ছাড়াই।',
+    heroBtn: 'সংযোগ নিন',
+    vatNote: 'সকল মূল্যে ৫% ভ্যাট অন্তর্ভুক্ত।',
+    feat1: 'এমবিপিএস ব্যান্ডউইথ', feat2: 'বাফার-মুক্ত সোশ্যাল মিডিয়া ও ইউটিউব', feat3: 'সীমাহীন ডিভাইস সংযোগ',
+    feat4: 'মিনিট টকটাইম', feat5: 'ওটিটি সাবস্ক্রিপশন',
+    feat6: '২৪/৭ গ্রাহক সেবা', freeSetup: 'বিনামূল্যে ইনস্টলেশন', paidSetup: 'একবার সেটআপ',
+    period: '/মাস', freeInst: 'বিনামূল্যে ইনস্টলেশন',
+    planCta: 'শুরু করুন',
+    whyBadge: 'কেন আমাদের বেছে নেবেন', whyH: 'আমরা প্রদান করি সর্বোচ্চ মানের সেবা', whyA: 'যার উপর আপনি নির্ভর করতে পারেন',
+    covBadge: 'কভারেজ', covH: 'এলাকা', covA: 'কভারেজ',
+    covP: 'রেড ডাটা সারা বাংলাদেশে হাই-স্পিড ফাইবার অপটিক ইন্টারনেট সেবা প্রদান করে। বড় শহর থেকে শহরতলী পর্যন্ত, আমাদের ক্রমবর্ধমান নেটওয়ার্ক আপনাকে সংযুক্ত রাখে।',
+    covBtn: 'কভারেজ দেখুন',
+    ctaH: 'সংযুক্ত হতে প্রস্তুত?', ctaS: 'যেকোনো প্ল্যানে সাবস্ক্রাইব করুন এবং আজই বিনামূল্যে ইনস্টলেশন পান।',
+    ctaBtn: 'শুরু করুন', ctaBack: '← হোমে ফিরুন',
+  },
+}
+
 const { plans, benefits } = homeInternetPageData
 
 export default function HomeInternetPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const { lang } = useLanguage()
+  const t = TEXTS[lang]
+
+  const planFeatures = (plan) => [
+    `${plan.speed} ${t.feat1}`,
+    t.feat2,
+    t.feat3,
+    `${plan.talkTime} ${t.feat4}`,
+    ...(plan.ott > 0 ? [`${plan.ott} ${t.feat5}`] : []),
+    t.feat6,
+    plan.oneTime === 0 ? t.freeSetup : `৳${plan.oneTime.toLocaleString()} ${t.paidSetup}`,
+  ]
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -23,29 +77,28 @@ export default function HomeInternetPage() {
 
       {/* Page Hero */}
       <PageHero>
-          <Breadcrumb items={[{ label: 'Home Internet' }]} />
+          <Breadcrumb items={[{ label: t.bc }]} />
           <div className="flex flex-col lg:flex-row items-center gap-10">
-            {/* Left: text */}
             <div className="lg:w-1/2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-                Residential Plans
+                {t.heroBadge}
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
-                Home Internet<br />
+                {t.h1}<br />
                 <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  Plans & Pricing
+                  {t.h1a}
                 </span>
               </h1>
               <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed" wrapperClassName="mb-8">
-                Red Data Home Internet delivers ultra-fast fiber broadband engineered for modern households. From buffer-free 4K streaming and lag-free gaming to seamless video calls — all on one blisteringly fast connection with no hidden charges.
+                {t.sub}
               </ExpandableText>
               <div className="flex flex-wrap gap-3">
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-600/40 transition-all hover:scale-105"
                 >
-                  Get Connected
+                  {t.heroBtn}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -61,7 +114,6 @@ export default function HomeInternetPage() {
                 </a>
               </div>
             </div>
-            {/* Right: visual card */}
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative w-72 h-64 lg:w-96 lg:h-80">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-600/20 to-slate-800/60 backdrop-blur-sm border border-white/10" />
@@ -74,12 +126,10 @@ export default function HomeInternetPage() {
                     ))}
                   </div>
                 </div>
-                {/* Speed badge */}
                 <div className="absolute -bottom-4 -right-4 bg-red-600 text-white rounded-2xl px-4 py-3 shadow-xl">
                   <div className="text-2xl font-black">100</div>
                   <div className="text-xs text-red-200">Mbps Max</div>
                 </div>
-                {/* Uptime badge */}
                 <div className="absolute -top-4 -left-4 bg-emerald-600 text-white rounded-2xl px-4 py-3 shadow-xl">
                   <div className="text-2xl font-black">99%</div>
                   <div className="text-xs text-emerald-200">Uptime</div>
@@ -100,25 +150,17 @@ export default function HomeInternetPage() {
                   tag={plan.tag}
                   price={`৳${plan.price.toLocaleString()}`}
                   vatBreakdown={`৳${plan.base} + ৳${plan.vat} (5% VAT)`}
-                  period="/month"
-                  oneTime={plan.oneTime === 0 ? 'Free installation' : `৳${plan.oneTime.toLocaleString()} one-time setup`}
+                  period={t.period}
+                  oneTime={plan.oneTime === 0 ? t.freeInst : `৳${plan.oneTime.toLocaleString()} ${t.paidSetup}`}
                   bandwidth={`${plan.speed} Mbps`}
-                  features={[
-                    `${plan.speed} Mbps Bandwidth`,
-                    'Buffer-less social media & YouTube',
-                    'Unlimited Device Support',
-                    `${plan.talkTime} Min TalkTime`,
-                    ...(plan.ott > 0 ? [`${plan.ott} OTT Subscription${plan.ott > 1 ? 's' : ''}`] : []),
-                    '24/7 Customer Care',
-                    plan.oneTime === 0 ? 'Free Installation' : `৳${plan.oneTime.toLocaleString()} one-time setup`,
-                  ]}
-                  cta="Get Started"
+                  features={planFeatures(plan)}
+                  cta={t.planCta}
                 />
               </Reveal>
             ))}
           </div>
           <p className="text-center text-slate-500 dark:text-slate-500 text-sm mt-10">
-            All prices include 5% VAT.
+            {t.vatNote}
           </p>
         </Container>
       </div>
@@ -126,7 +168,7 @@ export default function HomeInternetPage() {
       {/* Why Choose Us */}
       <div className="py-16 bg-white dark:bg-slate-800/40">
         <Container>
-          <SectionHeader badge="Why Choose Us" heading="We provide top-tier services with" headingAccent="benefits you can rely on" className="mb-10" />
+          <SectionHeader badge={t.whyBadge} heading={t.whyH} headingAccent={t.whyA} className="mb-10" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((b) => (
               <div key={b.title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 transition-colors">
@@ -134,8 +176,8 @@ export default function HomeInternetPage() {
                   <IconMapper name={b.icon} className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{b.title}</h4>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{b.desc}</p>
+                  <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{L(lang, b, 'title')}</h4>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{L(lang, b, 'desc')}</p>
                 </div>
               </div>
             ))}
@@ -151,14 +193,12 @@ export default function HomeInternetPage() {
             <div className="lg:w-1/2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-                Coverage
+                {t.covBadge}
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-                Area <span className="text-red-400">Coverage</span>
+                {t.covH} <span className="text-red-400">{t.covA}</span>
               </h2>
-              <p className="text-slate-300 text-base leading-relaxed mb-6">
-                Red Data provides high-speed fiber optic internet services across Bangladesh. From major cities to suburban areas, our growing network ensures you stay connected.
-              </p>
+              <p className="text-slate-300 text-base leading-relaxed mb-6">{t.covP}</p>
               <Link
                 to="/#coverage"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105"
@@ -166,7 +206,7 @@ export default function HomeInternetPage() {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6-3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
-                Check Coverage
+                {t.covBtn}
               </Link>
             </div>
             <div className="lg:w-1/2 flex justify-center">
@@ -186,18 +226,18 @@ export default function HomeInternetPage() {
         <Container>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">Ready to get connected?</h3>
-              <p className="text-red-100 text-sm mt-1">Subscribe to any plan and get free installation today.</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">{t.ctaH}</h3>
+              <p className="text-red-100 text-sm mt-1">{t.ctaS}</p>
             </div>
             <div className="flex gap-3">
               <Link
                 to="/contact"
                 className="px-6 py-3 rounded-full bg-white text-red-600 font-bold text-sm hover:bg-red-50 transition-all shadow"
               >
-                Get Started
+                {t.ctaBtn}
               </Link>
               <Link to="/" className="px-6 py-3 rounded-full border border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition-all">
-                ← Back Home
+                {t.ctaBack}
               </Link>
             </div>
           </div>

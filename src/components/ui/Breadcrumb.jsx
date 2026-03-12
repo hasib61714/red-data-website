@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
+import { useLang } from '../../context/LanguageContext'
 
-// items: [{ label: 'Services' }, { label: 'Data Connectivity', current: true }]
+// items: [{ label: 'Services' }, { label: 'Data Connectivity' }]
 // 'Home' is always prepended automatically
 export default function Breadcrumb({ items }) {
+  const { lang } = useLang()
   return (
     <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-      <Link to="/" className="hover:text-white transition-colors">Home</Link>
+      <Link to="/" className="hover:text-white transition-colors">{lang === 'bn' ? 'হোম' : 'Home'}</Link>
       {items.map((item, i) => (
         <span key={i} className="flex items-center gap-2">
           <span>/</span>

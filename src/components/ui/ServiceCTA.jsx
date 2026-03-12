@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Container from './Container'
 
-export default function ServiceCTA({ heading, subtext, primaryLabel = 'Get Started', primaryTo = '/contact', badge, badgeLabel }) {
+export default function ServiceCTA({ heading, subtext, primaryLabel = 'Get Started', primaryTo = '/contact', badge, badgeLabel, callSalesLabel = 'Call Sales' }) {
   return (
     <div className="py-12 bg-white dark:bg-slate-800/40">
       <Container>
@@ -23,7 +23,7 @@ export default function ServiceCTA({ heading, subtext, primaryLabel = 'Get Start
                 {primaryLabel}
               </Link>
               <a href="tel:+8809640112233" className="px-6 py-3 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all">
-                Call Sales
+                {callSalesLabel}
               </a>
             </div>
           </div>

@@ -8,12 +8,40 @@ import ExpandableText from '../components/ui/ExpandableText'
 import PageHero from '../components/ui/PageHero'
 import Breadcrumb from '../components/ui/Breadcrumb'
 import SectionHeader from '../components/ui/SectionHeader'
+import { useLanguage } from '../context/LanguageContext'
+
+const TEXTS = {
+  en: {
+    bc: 'About Us',
+    h1: 'Red Data', h1a: '(Pvt.) Limited',
+    sub: 'Beginning our journey in the year 2012, Red Data (Pvt.) Limited is a leading IT solution provider which specializes in providing Internet and Data Connectivity, IP Telephony Service, SMS Service, Cloud and Email Service Solution, Website and Software Development, Network Hardware and Managed Services.',
+    expBadge: '13+ Year Experience',
+    storyBadge: 'Our Story', storyH: "Empowering Bangladesh's", storyA: 'Digital Future',
+    servBtn: 'Our Services', contactBtn: 'Contact Us',
+    servBadge: 'What We Offer', servH: 'Our', servA: 'Services',
+    contactTitle: 'Contact',
+    clientsBadge: 'Our Clients', clientsH: 'Some of Our', clientsA: 'Valuable Clients',
+  },
+  bn: {
+    bc: 'আমাদের সম্পর্কে',
+    h1: 'রেড ডাটা', h1a: '(প্রা.) লিমিটেড',
+    sub: '২০১২ সালে যাত্রা শুরু করে, রেড ডাটা (প্রা.) লিমিটেড একটি শীর্ষস্থানীয় আইটি সমাধান প্রদানকারী প্রতিষ্ঠান যা ইন্টারনেট ও ডেটা কানেক্টিভিটি, আইপি টেলিফোনি সেবা, এসএমএস সেবা, ক্লাউড ও ইমেইল সমাধান, ওয়েবসাইট ও সফটওয়্যার ডেভেলপমেন্ট, নেটওয়ার্ক হার্ডওয়্যার এবং ম্যানেজড সার্ভিস প্রদানে বিশেষজ্ঞ।',
+    expBadge: '১৩+ বছরের অভিজ্ঞতা',
+    storyBadge: 'আমাদের গল্প', storyH: 'বাংলাদেশের', storyA: 'ডিজিটাল ভবিষ্যৎ গড়ে তোলা',
+    servBtn: 'আমাদের সেবা', contactBtn: 'যোগাযোগ করুন',
+    servBadge: 'আমাদের সেবাসমূহ', servH: 'আমাদের', servA: 'সেবাসমূহ',
+    contactTitle: 'যোগাযোগ',
+    clientsBadge: 'আমাদের ক্লায়েন্ট', clientsH: 'আমাদের কিছু', clientsA: 'মূল্যবান ক্লায়েন্ট',
+  },
+}
 
 const { clients, services, stats, story, companyCards, cta: aboutCta } = aboutPageData
 const { contact } = footerData
 
 export default function AboutPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
+  const { lang } = useLanguage()
+  const t = TEXTS[lang]
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -21,17 +49,17 @@ export default function AboutPage() {
 
       {/* Hero */}
       <PageHero>
-          <Breadcrumb items={[{ label: 'About Us' }]} />
+          <Breadcrumb items={[{ label: t.bc }]} />
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="lg:w-1/2">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
-                Red Data{' '}
+                {t.h1}{' '}
                 <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  (Pvt.) Limited
+                  {t.h1a}
                 </span>
               </h1>
               <ExpandableText className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                Beginning our journey in the year 2012, Red Data (Pvt.) Limited is a leading IT solution provider which specializes in providing Internet and Data Connectivity, IP Telephony Service, SMS Service, Cloud and Email Service Solution, Website and Software Development, Network Hardware and Managed Services.
+                {t.sub}
               </ExpandableText>
             </div>
             {/* Right: stats */}
@@ -67,7 +95,7 @@ export default function AboutPage() {
                 />
                 {/* Badge */}
                 <div className="absolute bottom-4 left-4 bg-red-600 text-white rounded-xl px-4 py-2 shadow-xl text-sm font-bold">
-                  13+ Year Experience
+                  {t.expBadge}
                 </div>
               </div>
             </div>
@@ -75,12 +103,12 @@ export default function AboutPage() {
             <div className="lg:w-1/2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                Our Story
+                {t.storyBadge}
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-5">
-                Empowering Bangladesh's{' '}
+                {t.storyH}{' '}
                 <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  Digital Future
+                  {t.storyA}
                 </span>
               </h2>
               <div className="space-y-4 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
@@ -90,10 +118,10 @@ export default function AboutPage() {
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/corporate-internet" className="px-5 py-2.5 rounded-full bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/30 transition-all hover:scale-105">
-                  Our Services
+                  {t.servBtn}
                 </Link>
                 <a href="/#contact" className="px-5 py-2.5 rounded-full border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:border-red-300 dark:hover:border-red-500/50 transition-all">
-                  Contact Us
+                  {t.contactBtn}
                 </a>
               </div>
             </div>
@@ -104,7 +132,7 @@ export default function AboutPage() {
       {/* Services */}
       <div className="py-16 bg-slate-50 dark:bg-slate-800/40">
         <Container>
-          <SectionHeader badge="What We Offer" heading="Our" headingAccent="Services" className="mb-10" />
+          <SectionHeader badge={t.servBadge} heading={t.servH} headingAccent={t.servA} className="mb-10" />
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {services.map((s) => (
               <div key={s.label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 text-center hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">
@@ -136,7 +164,7 @@ export default function AboutPage() {
             {/* Contact */}
             <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50">
               <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl mb-4">📞</div>
-              <h4 className="font-bold text-slate-900 dark:text-white mb-2">Contact</h4>
+              <h4 className="font-bold text-slate-900 dark:text-white mb-2">{t.contactTitle}</h4>
               <div className="space-y-1.5 text-sm">
                 <a href={`tel:${contact.phone.replace(/-/g, '')}`} className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
                   📞 {contact.phone}
@@ -153,7 +181,7 @@ export default function AboutPage() {
       {/* Clients */}
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <SectionHeader badge="Our Clients" heading="Some of Our" headingAccent="Valuable Clients" className="mb-10" />
+          <SectionHeader badge={t.clientsBadge} heading={t.clientsH} headingAccent={t.clientsA} className="mb-10" />
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             {clients.map((c) => (
               <div key={c.name} className="flex items-center justify-center p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">
