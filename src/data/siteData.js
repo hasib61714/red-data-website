@@ -14,7 +14,6 @@ export const navLinks = [
     href: '#services',
     dropdown: [
       { label: 'Corporate Internet', href: '/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
-      { label: 'Home Internet', href: '/home-internet', icon: 'Home', desc: 'High-speed residential plans' },
       { label: 'Data Connectivity', href: '/data-connectivity', icon: 'Link2', desc: 'Fiber-backed inter-office links' },
       { label: 'IP Telephony', href: '/ip-telephony', icon: 'Phone', desc: 'VoIP & cloud PBX solutions' },
       { label: 'SMS Service', href: '/sms-service', icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },
