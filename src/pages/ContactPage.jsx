@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { contactPageData } from '../data/siteData'
+import IconMapper from '../components/ui/IconMapper'
 
 const contactMethods = contactPageData.methods
 
@@ -168,8 +169,8 @@ export default function ContactPage() {
                     <a key={m.label} href={m.href} target={m.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
                       className={`flex items-center gap-3 p-4 rounded-2xl border ${m.border} ${m.bg} hover:shadow-md transition-all group`}
                     >
-                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${m.color} text-white flex items-center justify-center text-lg shadow group-hover:scale-110 transition-transform`}>
-                        {m.icon}
+                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${m.color} text-white flex items-center justify-center shadow group-hover:scale-110 transition-transform`}>
+                        <IconMapper name={m.icon} className="w-5 h-5" />
                       </div>
                       <div className="min-w-0">
                         <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">{m.label}</p>

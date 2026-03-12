@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { payBillData } from '../data/siteData'
+import IconMapper from '../components/ui/IconMapper'
 
 const { paymentMethods, faqs } = payBillData
 
@@ -77,8 +78,8 @@ export default function PayBillPage() {
               <div key={m.name} className={`rounded-2xl border ${m.border} ${m.bg} p-6 hover:shadow-lg transition-all group`}>
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-5">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${m.color} text-white flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform`}>
-                    {m.icon}
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${m.color} text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                    <IconMapper name={m.icon} className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white">{m.name}</h3>

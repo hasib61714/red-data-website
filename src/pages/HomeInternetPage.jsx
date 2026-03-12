@@ -4,6 +4,7 @@ import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
 import { homeInternetPageData } from '../data/siteData'
+import IconMapper from '../components/ui/IconMapper'
 
 const { plans, benefits } = homeInternetPageData
 
@@ -166,8 +167,8 @@ export default function HomeInternetPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((b) => (
               <div key={b.title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-2xl shrink-0">
-                  {b.icon}
+                <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 shrink-0">
+                  <IconMapper name={b.icon} className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{b.title}</h4>

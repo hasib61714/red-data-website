@@ -811,12 +811,12 @@ export const aboutPageData = {
 // ─── Data Connectivity Page ───────────────────────────────────────────────────
 export const dataConnectivityData = {
   features: [
-    { icon: '🔗', title: 'Point-to-Point & Multipoint Links', desc: 'Highly reliable dedicated data links connecting your branches and campuses with guaranteed bandwidth and zero congestion.' },
-    { icon: '🔒', title: 'VPN Services', desc: 'Secure encrypted Virtual Private Networks over our high-speed fiber backbone for safe inter-office and remote access.' },
-    { icon: '🌐', title: 'MPLS Network', desc: 'Layer 2 / Layer 3 resilient national MPLS next-generation network ensuring intelligent traffic routing and Quality of Service.' },
-    { icon: '🌑', title: 'Dark Fiber for Enterprises', desc: 'Lease unlit fiber strands and run your own networking equipment at full capacity — complete control over your last-mile infrastructure.' },
-    { icon: '📡', title: 'CP Network', desc: 'Carrier partner network spanning Grameenphone, Banglalink, Airtel, Robi, and Teletalk for maximum national reachability.' },
-    { icon: '🏗️', title: 'Backhaul Service', desc: 'Robust high-capacity backhaul links for ISPs, tower operators, and enterprise aggregation points across Bangladesh.' },
+    { icon: 'Link2', title: 'Point-to-Point & Multipoint Links', desc: 'Highly reliable dedicated data links connecting your branches and campuses with guaranteed bandwidth and zero congestion.' },
+    { icon: 'Lock', title: 'VPN Services', desc: 'Secure encrypted Virtual Private Networks over our high-speed fiber backbone for safe inter-office and remote access.' },
+    { icon: 'Globe', title: 'MPLS Network', desc: 'Layer 2 / Layer 3 resilient national MPLS next-generation network ensuring intelligent traffic routing and Quality of Service.' },
+    { icon: 'Layers', title: 'Dark Fiber for Enterprises', desc: 'Lease unlit fiber strands and run your own networking equipment at full capacity — complete control over your last-mile infrastructure.' },
+    { icon: 'Radio', title: 'CP Network', desc: 'Carrier partner network spanning Grameenphone, Banglalink, Airtel, Robi, and Teletalk for maximum national reachability.' },
+    { icon: 'Network', title: 'Backhaul Service', desc: 'Robust high-capacity backhaul links for ISPs, tower operators, and enterprise aggregation points across Bangladesh.' },
   ],
   stats: [
     { value: '99.9%', label: 'Network Uptime SLA' },
@@ -829,18 +829,18 @@ export const dataConnectivityData = {
 // ─── IP Telephony Page ────────────────────────────────────────────────────────
 export const ipTelephonyData = {
   features: [
-    { icon: '🏢', title: 'Hosted & On-Premise IPPBX', desc: 'Deploy a full-featured IP PBX either hosted in our cloud or on-premise at your office — your choice of control and scale.' },
-    { icon: '☁️', title: 'Cloud PBX Service', desc: 'Fully managed cloud-based PBX eliminating hardware costs while delivering enterprise-grade telephony features.' },
-    { icon: '📞', title: 'Call Center Solution', desc: 'Complete inbound/outbound call center platform with agent management, queue analytics, and supervisor dashboards.' },
-    { icon: '🤖', title: 'Dynamic IVR', desc: 'Multi-level Interactive Voice Response with real-time routing logic, language support, and seamless CRM hooks.' },
-    { icon: '🔢', title: 'Short Code Parking', desc: 'Dedicated short codes for marketing campaigns, hotlines, and internal extensions that are easy to remember.' },
-    { icon: '📟', title: 'Analog PBX Integration', desc: 'Bridge your legacy analog PBX infrastructure into the VoIP world with zero downtime migration paths.' },
-    { icon: '🆓', title: 'Toll Free Service', desc: 'Provision toll-free numbers so customers can call your business at no charge — ideal for support and sales.' },
-    { icon: '🔗', title: 'CRM Integration', desc: 'Native connectors for popular CRMs (Salesforce, Zoho, HubSpot) enabling click-to-dial and call logging.' },
-    { icon: '🌐', title: 'SIP Trunk', desc: 'Replace costly PSTN lines with scalable SIP trunks over our high-quality IP network with competitive per-minute rates.' },
-    { icon: '🃏', title: 'Hunting Group', desc: 'Distribute incoming calls intelligently across agent groups using round-robin, simultaneous, or priority rules.' },
-    { icon: '📲', title: 'Automated Dialing & Call Distribution', desc: 'Predictive, progressive, and preview auto-dialers with automatic call distribution for maximum agent productivity.' },
-    { icon: '↪️', title: 'Call Forwarding', desc: 'Unconditional, busy, and no-answer forwarding rules configurable per extension — stay reachable everywhere.' },
+    { icon: 'Building2', title: 'Hosted & On-Premise IPPBX', desc: 'Deploy a full-featured IP PBX either hosted in our cloud or on-premise at your office — your choice of control and scale.' },
+    { icon: 'Cloud', title: 'Cloud PBX Service', desc: 'Fully managed cloud-based PBX eliminating hardware costs while delivering enterprise-grade telephony features.' },
+    { icon: 'Phone', title: 'Call Center Solution', desc: 'Complete inbound/outbound call center platform with agent management, queue analytics, and supervisor dashboards.' },
+    { icon: 'Bot', title: 'Dynamic IVR', desc: 'Multi-level Interactive Voice Response with real-time routing logic, language support, and seamless CRM hooks.' },
+    { icon: 'Hash', title: 'Short Code Parking', desc: 'Dedicated short codes for marketing campaigns, hotlines, and internal extensions that are easy to remember.' },
+    { icon: 'Monitor', title: 'Analog PBX Integration', desc: 'Bridge your legacy analog PBX infrastructure into the VoIP world with zero downtime migration paths.' },
+    { icon: 'Gift', title: 'Toll Free Service', desc: 'Provision toll-free numbers so customers can call your business at no charge — ideal for support and sales.' },
+    { icon: 'Link2', title: 'CRM Integration', desc: 'Native connectors for popular CRMs (Salesforce, Zoho, HubSpot) enabling click-to-dial and call logging.' },
+    { icon: 'Globe', title: 'SIP Trunk', desc: 'Replace costly PSTN lines with scalable SIP trunks over our high-quality IP network with competitive per-minute rates.' },
+    { icon: 'GitBranch', title: 'Hunting Group', desc: 'Distribute incoming calls intelligently across agent groups using round-robin, simultaneous, or priority rules.' },
+    { icon: 'Smartphone', title: 'Automated Dialing & Call Distribution', desc: 'Predictive, progressive, and preview auto-dialers with automatic call distribution for maximum agent productivity.' },
+    { icon: 'CornerDownRight', title: 'Call Forwarding', desc: 'Unconditional, busy, and no-answer forwarding rules configurable per extension — stay reachable everywhere.' },
   ],
   stats: [
     { value: '12+', label: 'Features' },
@@ -853,38 +853,38 @@ export const ipTelephonyData = {
 // ─── SMS Service Page ─────────────────────────────────────────────────────────
 export const smsServiceData = {
   features: [
-    { icon: '🔌', title: 'Easy API Integration', desc: 'Developer-friendly REST APIs with comprehensive documentation — integrate bulk SMS into any system in minutes.' },
-    { icon: '🖥️', title: 'User Friendly Customer Panel', desc: 'Intuitive web dashboard for non-technical users to send campaigns, view reports, and manage contacts without any coding.' },
-    { icon: '📋', title: 'Campaign & Template Management', desc: 'Create, schedule, and reuse SMS templates for recurring campaigns — segmentation and bulk import included.' },
-    { icon: '🗄️', title: 'Aggregator Plane', desc: 'Connected to all major operators through our aggregator layer ensuring maximum route coverage and reliability across Bangladesh.' },
-    { icon: '📍', title: 'Location Based SMS', desc: 'Target subscribers by geographic zone for hyper-local marketing campaigns and location-triggered notifications.' },
-    { icon: '📈', title: 'Highest Submit Rate', desc: 'Our direct operator connections deliver among the highest submit and delivery rates in the country with real-time status.' },
-    { icon: '💸', title: 'No Hidden Cost', desc: 'Transparent per-SMS pricing — no setup fees, no monthly minimums, no surprise charges. Pay only for what you send.' },
-    { icon: '🔑', title: 'Customer Driven API Key', desc: 'Each customer gets a dedicated API key with role-based access control and usage analytics in the dashboard.' },
-    { icon: '👨‍💻', title: 'Developer Friendly', desc: 'SDKs for PHP, Python, Node.js and Java alongside thorough Postman collections and sandbox environments.' },
-    { icon: '💼', title: 'Transactional SMS', desc: 'Mission-critical OTPs, alerts, and notifications delivered through a dedicated high-priority route with millisecond latency.' },
+    { icon: 'Plug', title: 'Easy API Integration', desc: 'Developer-friendly REST APIs with comprehensive documentation — integrate bulk SMS into any system in minutes.' },
+    { icon: 'Monitor', title: 'User Friendly Customer Panel', desc: 'Intuitive web dashboard for non-technical users to send campaigns, view reports, and manage contacts without any coding.' },
+    { icon: 'ClipboardList', title: 'Campaign & Template Management', desc: 'Create, schedule, and reuse SMS templates for recurring campaigns — segmentation and bulk import included.' },
+    { icon: 'Database', title: 'Aggregator Plane', desc: 'Connected to all major operators through our aggregator layer ensuring maximum route coverage and reliability across Bangladesh.' },
+    { icon: 'MapPin', title: 'Location Based SMS', desc: 'Target subscribers by geographic zone for hyper-local marketing campaigns and location-triggered notifications.' },
+    { icon: 'TrendingUp', title: 'Highest Submit Rate', desc: 'Our direct operator connections deliver among the highest submit and delivery rates in the country with real-time status.' },
+    { icon: 'DollarSign', title: 'No Hidden Cost', desc: 'Transparent per-SMS pricing — no setup fees, no monthly minimums, no surprise charges. Pay only for what you send.' },
+    { icon: 'Key', title: 'Customer Driven API Key', desc: 'Each customer gets a dedicated API key with role-based access control and usage analytics in the dashboard.' },
+    { icon: 'Code2', title: 'Developer Friendly', desc: 'SDKs for PHP, Python, Node.js and Java alongside thorough Postman collections and sandbox environments.' },
+    { icon: 'Briefcase', title: 'Transactional SMS', desc: 'Mission-critical OTPs, alerts, and notifications delivered through a dedicated high-priority route with millisecond latency.' },
   ],
   useCases: [
-    { icon: '🏦', label: 'Banking & Finance' },
-    { icon: '🛒', label: 'E-Commerce' },
-    { icon: '🏥', label: 'Healthcare' },
-    { icon: '📦', label: 'Logistics' },
-    { icon: '🎓', label: 'Education' },
-    { icon: '🏢', label: 'Enterprises' },
+    { icon: 'Landmark', label: 'Banking & Finance' },
+    { icon: 'ShoppingCart', label: 'E-Commerce' },
+    { icon: 'HeartPulse', label: 'Healthcare' },
+    { icon: 'Package', label: 'Logistics' },
+    { icon: 'GraduationCap', label: 'Education' },
+    { icon: 'Building2', label: 'Enterprises' },
   ],
 }
 
 // ─── Domain & Hosting Page ────────────────────────────────────────────────────
 export const domainHostingData = {
   features: [
-    { icon: '🌐', title: 'Domain Registration', desc: 'Register .com, .com.bd, .org, .net and all popular TLDs at competitive prices with free DNS management, privacy protection, and auto-renewal.' },
-    { icon: '☁️', title: 'Cloud Hosting', desc: 'Scalable cloud hosting with SSD storage, auto-scaling resources, free SSL, and one-click app installs — perfect for web & ecommerce.' },
-    { icon: '💾', title: 'Storage Solutions', desc: 'Flexible object and block storage options with redundant backups, geo-replication, and high-throughput access for business data.' },
-    { icon: '🖥️', title: 'Dedicated Servers', desc: 'Bare-metal dedicated servers with full root access, custom hardware configurations, and direct network hand-off in our Dhaka data center.' },
-    { icon: '🏗️', title: 'Network Infrastructure', desc: 'Enterprise-grade connectivity for your hosted services with redundant upstream links, BGP routing, and low-latency peering.' },
-    { icon: '🛡️', title: 'Security Measures', desc: 'DDoS mitigation, WAF, automated malware scanning, SSL certificates, and proactive vulnerability patching included on all plans.' },
-    { icon: '⚙️', title: 'Customization Options', desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.' },
-    { icon: '🔧', title: 'Management Tools', desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.' },
+    { icon: 'Globe', title: 'Domain Registration', desc: 'Register .com, .com.bd, .org, .net and all popular TLDs at competitive prices with free DNS management, privacy protection, and auto-renewal.' },
+    { icon: 'Cloud', title: 'Cloud Hosting', desc: 'Scalable cloud hosting with SSD storage, auto-scaling resources, free SSL, and one-click app installs — perfect for web & ecommerce.' },
+    { icon: 'HardDrive', title: 'Storage Solutions', desc: 'Flexible object and block storage options with redundant backups, geo-replication, and high-throughput access for business data.' },
+    { icon: 'Monitor', title: 'Dedicated Servers', desc: 'Bare-metal dedicated servers with full root access, custom hardware configurations, and direct network hand-off in our Dhaka data center.' },
+    { icon: 'Network', title: 'Network Infrastructure', desc: 'Enterprise-grade connectivity for your hosted services with redundant upstream links, BGP routing, and low-latency peering.' },
+    { icon: 'Shield', title: 'Security Measures', desc: 'DDoS mitigation, WAF, automated malware scanning, SSL certificates, and proactive vulnerability patching included on all plans.' },
+    { icon: 'Settings', title: 'Customization Options', desc: 'Choose your OS, control panel (cPanel / Plesk / DirectAdmin), software stack, and resource allocation exactly how you need.' },
+    { icon: 'Wrench', title: 'Management Tools', desc: 'cPanel / WHM access, one-click backups, resource monitors, DNS manager, and 24/7 managed support for full peace of mind.' },
   ],
   plans: [
     { name: 'Starter',    price: 'BDT 500',   period: '/month', features: ['1 Domain', '10 GB SSD Storage', '10 Email Accounts', 'Free SSL', '99.9% Uptime'] },
@@ -897,7 +897,7 @@ export const domainHostingData = {
 export const managedServicesData = {
   services: [
     {
-      icon: '🌐',
+      icon: 'Globe',
       title: 'Custom Network Management Service',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50 dark:bg-blue-500/10',
@@ -906,7 +906,7 @@ export const managedServicesData = {
       features: ['Proactive fault detection & resolution', '24/7 NOC monitoring', 'Network performance optimisation', 'Regular firmware & patch management', 'Detailed SLA reports & dashboards', 'Incident management & escalation'],
     },
     {
-      icon: '🛡️',
+      icon: 'Shield',
       title: 'Managed Network Security Service',
       color: 'from-red-500 to-rose-600',
       bgColor: 'bg-red-50 dark:bg-red-500/10',
@@ -915,7 +915,7 @@ export const managedServicesData = {
       features: ['Firewall management & tuning', 'IDS / IPS monitoring', 'Security incident response', 'Vulnerability scanning & remediation', 'Compliance reporting (ISO 27001, BDRC)', 'DDoS protection & traffic scrubbing'],
     },
     {
-      icon: '💻',
+      icon: 'Monitor',
       title: 'Managed Software & Embedded System Development',
       color: 'from-emerald-500 to-emerald-600',
       bgColor: 'bg-emerald-50 dark:bg-emerald-500/10',
@@ -978,24 +978,24 @@ export const blogPostsData = [
 // ─── Contact Page ─────────────────────────────────────────────────────────────
 export const contactPageData = {
   methods: [
-    { icon: '✉️', label: 'Email', value: 'info@reddata.com.bd', href: 'mailto:info@reddata.com.bd', color: 'from-blue-500 to-blue-600', bg: 'bg-blue-50 dark:bg-blue-500/10', border: 'border-blue-200 dark:border-blue-500/30' },
-    { icon: '💬', label: 'WhatsApp', value: '+880 1971-521964', href: 'https://wa.me/+8801971521964', color: 'from-green-500 to-emerald-600', bg: 'bg-green-50 dark:bg-green-500/10', border: 'border-green-200 dark:border-green-500/30' },
-    { icon: '📞', label: 'Phone', value: '+880 9640-112233', href: 'tel:+8809640112233', color: 'from-red-500 to-rose-600', bg: 'bg-red-50 dark:bg-red-500/10', border: 'border-red-200 dark:border-red-500/30' },
-    { icon: '🎧', label: 'HelpDesk', value: '+880 9640-123123', href: 'tel:+8809640123123', color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-500/10', border: 'border-purple-200 dark:border-purple-500/30' },
-    { icon: '📘', label: 'Facebook', value: 'Red Data Limited', href: 'https://www.facebook.com/profile.php?id=61556093758540', color: 'from-[#1877F2] to-blue-600', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-700/40' },
-    { icon: '👥', label: 'Facebook Group', value: 'Red Data Community', href: 'https://www.facebook.com/groups/reddatalimited/', color: 'from-sky-500 to-blue-600', bg: 'bg-sky-50 dark:bg-sky-900/20', border: 'border-sky-200 dark:border-sky-700/40' },
+    { icon: 'Mail', label: 'Email', value: 'info@reddata.com.bd', href: 'mailto:info@reddata.com.bd', color: 'from-blue-500 to-blue-600', bg: 'bg-blue-50 dark:bg-blue-500/10', border: 'border-blue-200 dark:border-blue-500/30' },
+    { icon: 'MessageSquare', label: 'WhatsApp', value: '+880 1971-521964', href: 'https://wa.me/+8801971521964', color: 'from-green-500 to-emerald-600', bg: 'bg-green-50 dark:bg-green-500/10', border: 'border-green-200 dark:border-green-500/30' },
+    { icon: 'Phone', label: 'Phone', value: '+880 9640-112233', href: 'tel:+8809640112233', color: 'from-red-500 to-rose-600', bg: 'bg-red-50 dark:bg-red-500/10', border: 'border-red-200 dark:border-red-500/30' },
+    { icon: 'Headphones', label: 'HelpDesk', value: '+880 9640-123123', href: 'tel:+8809640123123', color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-500/10', border: 'border-purple-200 dark:border-purple-500/30' },
+    { icon: 'ExternalLink', label: 'Facebook', value: 'Red Data Limited', href: 'https://www.facebook.com/profile.php?id=61556093758540', color: 'from-[#1877F2] to-blue-600', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-700/40' },
+    { icon: 'Users', label: 'Facebook Group', value: 'Red Data Community', href: 'https://www.facebook.com/groups/reddatalimited/', color: 'from-sky-500 to-blue-600', bg: 'bg-sky-50 dark:bg-sky-900/20', border: 'border-sky-200 dark:border-sky-700/40' },
   ],
 }
 
 // ─── Pay Bill Page ────────────────────────────────────────────────────────────
 export const payBillData = {
   paymentMethods: [
-    { name: 'bKash', color: 'from-pink-500 to-pink-600', bg: 'bg-pink-50 dark:bg-pink-500/10', border: 'border-pink-200 dark:border-pink-500/30', icon: '💳', number: '01XXXXXXXXX', steps: ['Open bKash app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'] },
-    { name: 'Nagad', color: 'from-orange-500 to-orange-600', bg: 'bg-orange-50 dark:bg-orange-500/10', border: 'border-orange-200 dark:border-orange-500/30', icon: '📱', number: '01XXXXXXXXX', steps: ['Open Nagad app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'] },
-    { name: 'Rocket (DBBL)', color: 'from-purple-500 to-purple-600', bg: 'bg-purple-50 dark:bg-purple-500/10', border: 'border-purple-200 dark:border-purple-500/30', icon: '🚀', number: '01XXXXXXXXX', steps: ['Dial *322#', 'Select "Send Money"', 'Enter merchant number', 'Enter amount & PIN'] },
-    { name: 'Internet Banking', color: 'from-blue-500 to-blue-600', bg: 'bg-blue-50 dark:bg-blue-500/10', border: 'border-blue-200 dark:border-blue-500/30', icon: '🏦', number: 'A/C: 12345678901', steps: ['Log in to your bank', 'Go to Fund Transfer', 'Add Red Data as payee', 'Transfer & note your User ID'] },
-    { name: 'Card Payment', color: 'from-emerald-500 to-emerald-600', bg: 'bg-emerald-50 dark:bg-emerald-500/10', border: 'border-emerald-200 dark:border-emerald-500/30', icon: '💳', number: 'VISA / Mastercard', steps: ['Go to Self Corner portal', 'Select "Pay Bill"', 'Choose Card option', 'Enter card details & pay'] },
-    { name: 'Cash / Walk-in', color: 'from-slate-500 to-slate-600', bg: 'bg-slate-50 dark:bg-slate-700/30', border: 'border-slate-200 dark:border-slate-600/50', icon: '🏢', number: 'Office Visit', steps: ['Visit our Gulshan office', 'Bring your User ID', 'Pay at the front desk', 'Collect your receipt'] },
+    { name: 'bKash', color: 'from-pink-500 to-pink-600', bg: 'bg-pink-50 dark:bg-pink-500/10', border: 'border-pink-200 dark:border-pink-500/30', icon: 'CreditCard', number: '01XXXXXXXXX', steps: ['Open bKash app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'] },
+    { name: 'Nagad', color: 'from-orange-500 to-orange-600', bg: 'bg-orange-50 dark:bg-orange-500/10', border: 'border-orange-200 dark:border-orange-500/30', icon: 'Smartphone', number: '01XXXXXXXXX', steps: ['Open Nagad app', 'Tap "Send Money"', 'Enter merchant number', 'Enter amount & confirm'] },
+    { name: 'Rocket (DBBL)', color: 'from-purple-500 to-purple-600', bg: 'bg-purple-50 dark:bg-purple-500/10', border: 'border-purple-200 dark:border-purple-500/30', icon: 'Rocket', number: '01XXXXXXXXX', steps: ['Dial *322#', 'Select "Send Money"', 'Enter merchant number', 'Enter amount & PIN'] },
+    { name: 'Internet Banking', color: 'from-blue-500 to-blue-600', bg: 'bg-blue-50 dark:bg-blue-500/10', border: 'border-blue-200 dark:border-blue-500/30', icon: 'Landmark', number: 'A/C: 12345678901', steps: ['Log in to your bank', 'Go to Fund Transfer', 'Add Red Data as payee', 'Transfer & note your User ID'] },
+    { name: 'Card Payment', color: 'from-emerald-500 to-emerald-600', bg: 'bg-emerald-50 dark:bg-emerald-500/10', border: 'border-emerald-200 dark:border-emerald-500/30', icon: 'CreditCard', number: 'VISA / Mastercard', steps: ['Go to Self Corner portal', 'Select "Pay Bill"', 'Choose Card option', 'Enter card details & pay'] },
+    { name: 'Cash / Walk-in', color: 'from-slate-500 to-slate-600', bg: 'bg-slate-50 dark:bg-slate-700/30', border: 'border-slate-200 dark:border-slate-600/50', icon: 'Building2', number: 'Office Visit', steps: ['Visit our Gulshan office', 'Bring your User ID', 'Pay at the front desk', 'Collect your receipt'] },
   ],
   faqs: [
     { q: 'When will my connection be restored after payment?', a: 'Your connection is typically restored within 5–15 minutes of payment confirmation. For bKash/Nagad payments, it may take up to 1 hour during off-hours.' },
@@ -1008,12 +1008,12 @@ export const payBillData = {
 // ─── Self Corner Page ─────────────────────────────────────────────────────────
 export const selfCornerData = {
   features: [
-    { icon: '📊', title: 'Account Overview', desc: 'View your current plan, usage data, and subscription details at a glance.' },
-    { icon: '💳', title: 'Online Bill Payment', desc: 'Pay your monthly bills quickly and securely using bKash, Nagad, card, or bank transfer.' },
-    { icon: '📜', title: 'Payment History', desc: 'Access your complete payment records and download invoices anytime.' },
-    { icon: '🔄', title: 'Plan Upgrade / Change', desc: 'Easily upgrade or switch your internet plan based on your current needs.' },
-    { icon: '🎫', title: 'Support Tickets', desc: 'Raise and track support requests directly from your portal without calling.' },
-    { icon: '📡', title: 'Connection Status', desc: 'Monitor your connection health and get real-time network status updates.' },
+    { icon: 'BarChart2', title: 'Account Overview', desc: 'View your current plan, usage data, and subscription details at a glance.' },
+    { icon: 'CreditCard', title: 'Online Bill Payment', desc: 'Pay your monthly bills quickly and securely using bKash, Nagad, card, or bank transfer.' },
+    { icon: 'FileText', title: 'Payment History', desc: 'Access your complete payment records and download invoices anytime.' },
+    { icon: 'RefreshCw', title: 'Plan Upgrade / Change', desc: 'Easily upgrade or switch your internet plan based on your current needs.' },
+    { icon: 'Ticket', title: 'Support Tickets', desc: 'Raise and track support requests directly from your portal without calling.' },
+    { icon: 'Radio', title: 'Connection Status', desc: 'Monitor your connection health and get real-time network status updates.' },
   ],
 }
 
@@ -1030,12 +1030,12 @@ export const homeInternetPageData = {
     { name: 'Carmine',  price: 2520, base: 2400, vat: 120, speed: 100, oneTime: 0,    talkTime: 450, ott: 2, tag: 'Best Value',        tagColor: 'bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-300',     popular: false, color: 'from-red-700 to-rose-900' },
   ],
   benefits: [
-    { icon: '⚡', title: 'Blazing Fast Speeds',  desc: 'Unmatched download & upload speeds for a smooth online experience.' },
-    { icon: '🛡️', title: 'Guaranteed Uptime',    desc: '99.9% uptime SLA with proactive monitoring round the clock.' },
-    { icon: '♾️', title: 'Unlimited Data',        desc: 'No data cap, no throttling — stream, game, and browse freely.' },
-    { icon: '📞', title: '24/7 Support',          desc: 'Dedicated support team available any hour of the day.' },
-    { icon: '💰', title: 'Free Installation',     desc: 'No hidden charges — professional install at zero cost.' },
-    { icon: '📡', title: 'Fiber Optic Network',   desc: 'Built on future-proof fiber infrastructure.' },
+    { icon: 'Zap', title: 'Blazing Fast Speeds',  desc: 'Unmatched download & upload speeds for a smooth online experience.' },
+    { icon: 'Shield', title: 'Guaranteed Uptime',    desc: '99.9% uptime SLA with proactive monitoring round the clock.' },
+    { icon: 'Infinity', title: 'Unlimited Data',        desc: 'No data cap, no throttling — stream, game, and browse freely.' },
+    { icon: 'Phone', title: '24/7 Support',          desc: 'Dedicated support team available any hour of the day.' },
+    { icon: 'DollarSign', title: 'Free Installation',     desc: 'No hidden charges — professional install at zero cost.' },
+    { icon: 'Radio', title: 'Fiber Optic Network',   desc: 'Built on future-proof fiber infrastructure.' },
   ],
 }
 
@@ -1048,4 +1048,29 @@ export const homeContactMethods = [
   { iconKey: 'messenger',label: 'Messenger', value: 'Message Red Data',         href: 'https://www.facebook.com/profile.php?id=61556093758540',      note: 'Fast response via FB',  external: true },
   { iconKey: 'location', label: 'Office',    value: 'Level 19, SimpleTree Attalika', href: 'https://maps.google.com/?q=134+Gulshan+Avenue+Dhaka',   note: '134 Gulshan Ave, Dhaka-1212', external: true },
 ]
+
+// ─── Corporate Internet Page ──────────────────────────────────────────────────
+export const corporateInternetPageData = {
+  fiberFeatures: [
+    { icon: 'Zap',       title: 'Blazing Fast Speeds',      desc: 'Enjoy download and upload speeds that are unparalleled, providing a smooth and efficient online experience for your entire enterprise.' },
+    { icon: 'Shield',    title: 'Reliability',               desc: 'Our fiber optic network is built to withstand various environmental factors, offering consistent performance and minimal downtime.' },
+    { icon: 'Infinity',  title: 'Unlimited Bandwidth',       desc: 'With virtually unlimited bandwidth, our fiber optic service supports multiple devices and high-demand applications without any lag.' },
+    { icon: 'Lightbulb', title: 'Future-Proof Technology',   desc: 'As the most advanced internet technology available, fiber optics is designed to handle future technological advancements and increasing data demands.' },
+    { icon: 'Sparkles',  title: 'Superior Quality',          desc: 'Experience high-definition streaming, crystal-clear video calls, and lightning-fast downloads with our top-notch enterprise service.' },
+  ],
+  whyUs: [
+    { icon: 'Link2',      title: 'Free Integration',                   desc: 'Seamless integration with your existing network infrastructure at no extra cost.' },
+    { icon: 'Zap',        title: 'Fast Installation',                   desc: 'Professional setup and activation within 2–3 business days.' },
+    { icon: 'Network',    title: 'Reliable & Blazing-Fast Speeds',      desc: 'Dedicated bandwidth ensuring consistent performance for your business.' },
+    { icon: 'DollarSign', title: 'Competitive Pricing',                 desc: 'BTRC approved transparent tariffs with no hidden charges or lock-in contracts.' },
+    { icon: 'TrendingUp', title: 'Commitment to Improvement',           desc: 'We continuously invest in network upgrades to deliver the best service.' },
+    { icon: 'Headphones', title: '24x7 Proactive Support',              desc: 'Round-the-clock dedicated support team ready to resolve any issue fast.' },
+  ],
+  stats: [
+    { num: '10,000+', label: 'Enterprise Clients' },
+    { num: '99.9%',   label: 'Uptime SLA' },
+    { num: '24/7',    label: 'Dedicated Support' },
+    { num: '64',      label: 'Districts Covered' },
+  ],
+}
 

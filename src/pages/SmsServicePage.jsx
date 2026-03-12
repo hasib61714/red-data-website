@@ -4,6 +4,7 @@ import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
 import { smsServiceData } from '../data/siteData'
+import IconMapper from '../components/ui/IconMapper'
 
 const { features, useCases } = smsServiceData
 
@@ -51,7 +52,7 @@ export default function SmsServicePage() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             {useCases.map((u) => (
               <span key={u.label} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 text-white text-sm font-medium">
-                {u.icon} {u.label}
+                <IconMapper name={u.icon} className="w-5 h-5" /> {u.label}
               </span>
             ))}
           </div>
@@ -77,7 +78,7 @@ export default function SmsServicePage() {
             {features.map((f) => (
               <div key={f.title} className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 p-5 hover:shadow-lg hover:-translate-y-1 transition-all group">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 text-white flex items-center justify-center text-xl shadow mb-3 group-hover:scale-110 transition-transform">
-                  {f.icon}
+                  <IconMapper name={f.icon} className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{f.title}</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{f.desc}</p>
@@ -102,7 +103,7 @@ export default function SmsServicePage() {
                   Get Started
                 </Link>
                 <a href="tel:+8809640112233" className="px-6 py-3 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all">
-                  📞 Call Sales
+                  Call Sales
                 </a>
               </div>
             </div>

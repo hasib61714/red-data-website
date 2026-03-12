@@ -4,6 +4,7 @@ import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
 import { managedServicesData } from '../data/siteData'
+import IconMapper from '../components/ui/IconMapper'
 
 const { services, stats } = managedServicesData
 
@@ -81,7 +82,7 @@ export default function ManagedServicesPage() {
                 <div className="flex flex-col lg:flex-row gap-6">
                   <div className="flex items-start gap-4 flex-1">
                     <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${s.color} text-white flex items-center justify-center text-2xl shadow-lg shrink-0`}>
-                      {s.icon}
+                      <IconMapper name={s.icon} className="w-6 h-6" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2 mb-2">
@@ -125,7 +126,7 @@ export default function ManagedServicesPage() {
                   Book Consultation
                 </Link>
                 <a href="tel:+8809640112233" className="px-6 py-3 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all">
-                  📞 Call Sales
+                  Call Sales
                 </a>
               </div>
             </div>

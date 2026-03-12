@@ -4,6 +4,7 @@ import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
 import { domainHostingData } from '../data/siteData'
+import IconMapper from '../components/ui/IconMapper'
 
 const { features, plans } = domainHostingData
 
@@ -64,7 +65,7 @@ export default function DomainHostingPage() {
             {features.map((f) => (
               <div key={f.title} className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 p-5 hover:shadow-lg hover:-translate-y-1 transition-all group">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 text-white flex items-center justify-center text-xl shadow mb-3 group-hover:scale-110 transition-transform">
-                  {f.icon}
+                  <IconMapper name={f.icon} className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{f.title}</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">{f.desc}</p>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { selfCornerData } from '../data/siteData'
+import IconMapper from '../components/ui/IconMapper'
 
 const { features } = selfCornerData
 
@@ -178,8 +179,8 @@ export default function SelfCornerPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {features.map((f) => (
                   <div key={f.title} className="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 hover:border-red-200 dark:hover:border-red-500/30 hover:shadow-md transition-all group">
-                    <div className="w-11 h-11 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
-                      {f.icon}
+                    <div className="w-11 h-11 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 shrink-0 group-hover:scale-110 transition-transform">
+                      <IconMapper name={f.icon} className="w-6 h-6" />
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{f.title}</h4>

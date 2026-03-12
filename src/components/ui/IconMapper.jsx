@@ -4,6 +4,11 @@ import {
   ClipboardList, Wrench, Info, Mail, MapPin, Monitor,
   Play, Smartphone, Tv, Cloud, BarChart2, Users, Star,
   Clock, Cpu, Sparkles, Network, Infinity,
+  Layers, Radio, Bot, Hash, Gift, GitBranch, CornerDownRight,
+  Plug, Database, Key, Code2, Briefcase,
+  Landmark, ShoppingCart, HeartPulse, Package, GraduationCap,
+  HardDrive, Settings, FileText, RefreshCw, Ticket,
+  CreditCard, Lightbulb, ExternalLink,
 } from 'lucide-react'
 
 const ICON_MAP = {
@@ -12,6 +17,11 @@ const ICON_MAP = {
   ClipboardList, Wrench, Info, Mail, MapPin, Monitor,
   Play, Smartphone, Tv, Cloud, BarChart2, Users, Star,
   Clock, Cpu, Sparkles, Network, Infinity,
+  Layers, Radio, Bot, Hash, Gift, GitBranch, CornerDownRight,
+  Plug, Database, Key, Code2, Briefcase,
+  Landmark, ShoppingCart, HeartPulse, Package, GraduationCap,
+  HardDrive, Settings, FileText, RefreshCw, Ticket,
+  CreditCard, Lightbulb, ExternalLink,
 }
 
 export default function IconMapper({ name, className = 'w-5 h-5' }) {

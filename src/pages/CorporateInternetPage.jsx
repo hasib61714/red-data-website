@@ -4,91 +4,10 @@ import IconMapper from '../components/ui/IconMapper'
 import Container from '../components/ui/Container'
 import ExploreServices from '../components/ui/ExploreServices'
 import PageMeta from '../components/ui/PageMeta'
+import { corporateInternetPageData, aboutPageData } from '../data/siteData'
 
-const fiberFeatures = [
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: 'Blazing Fast Speeds',
-    desc: 'Enjoy download and upload speeds that are unparalleled, providing a smooth and efficient online experience for your entire enterprise.',
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: 'Reliability',
-    desc: 'Our fiber optic network is built to withstand various environmental factors, offering consistent performance and minimal downtime.',
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: 'Unlimited Bandwidth',
-    desc: 'With virtually unlimited bandwidth, our fiber optic service supports multiple devices and high-demand applications without any lag.',
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    ),
-    title: 'Future-Proof Technology',
-    desc: 'As the most advanced internet technology available, fiber optics is designed to handle future technological advancements and increasing data demands.',
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
-    title: 'Superior Quality',
-    desc: 'Experience high-definition streaming, crystal-clear video calls, and lightning-fast downloads with our top-notch enterprise service.',
-  },
-]
-
-const whyUs = [
-  { icon: 'Link2',       title: 'Free Integration', desc: 'Seamless integration with your existing network infrastructure at no extra cost.' },
-  { icon: 'Zap',         title: 'Fast Installation', desc: 'Professional setup and activation within 2–3 business days.' },
-  { icon: 'Network',     title: 'Reliable & Blazing-Fast Speeds', desc: 'Dedicated bandwidth ensuring consistent performance for your business.' },
-  { icon: 'DollarSign',  title: 'Competitive Pricing', desc: 'BTRC approved transparent tariffs with no hidden charges or lock-in contracts.' },
-  { icon: 'TrendingUp',  title: 'Commitment to Improvement', desc: 'We continuously invest in network upgrades to deliver the best service.' },
-  { icon: 'Headphones',  title: '24x7 Proactive Support', desc: 'Round-the-clock dedicated support team ready to resolve any issue fast.' },
-]
-
-const clients = [
-  { name: 'UCB',                    img: 'https://reddata.com.bd/images/clients/1UCB.png' },
-  { name: 'City Bank',              img: 'https://reddata.com.bd/images/clients/2CityBank.png' },
-  { name: 'Prime Bank',             img: 'https://reddata.com.bd/images/clients/3PrimeBank.png' },
-  { name: 'DBBL',                   img: 'https://reddata.com.bd/images/clients/4DBBL.png' },
-  { name: 'Mercantile Bank',        img: 'https://reddata.com.bd/images/clients/5Mercantilebank.png' },
-  { name: 'Shahjalal Islami Bank',  img: 'https://reddata.com.bd/images/clients/6ShahjalalIslamiBank.png' },
-  { name: 'Shimanto Bank',          img: 'https://reddata.com.bd/images/clients/7ShimantoBank.png' },
-  { name: 'Citizens Bank',          img: 'https://reddata.com.bd/images/clients/8CitizensBank.png' },
-  { name: 'Upay',                   img: 'https://reddata.com.bd/images/clients/9Upay.png' },
-  { name: 'Genex',                  img: 'https://reddata.com.bd/images/clients/10Genex.png' },
-  { name: 'Digicon',                img: 'https://reddata.com.bd/images/clients/11Digicon.png' },
-  { name: 'Urmi',                   img: 'https://reddata.com.bd/images/clients/urmi.png' },
-  { name: 'Bitopi Group',           img: 'https://reddata.com.bd/images/clients/13BitopiGroup.png' },
-  { name: 'SSD Tech',               img: 'https://reddata.com.bd/images/clients/14SSDTech.png' },
-  { name: 'Nextnet',                img: 'https://reddata.com.bd/images/clients/15Nextnet.png' },
-  { name: 'CloudWell',              img: 'https://reddata.com.bd/images/clients/16CloudWell.png' },
-  { name: 'EB Solution',            img: 'https://reddata.com.bd/images/clients/17EBSolution.png' },
-  { name: 'SARBS Communication',    img: 'https://reddata.com.bd/images/clients/18SARBSCommunication.png' },
-  { name: 'NRDS',                   img: 'https://reddata.com.bd/images/clients/19NRDS.png' },
-  { name: 'Wintel Limited',         img: 'https://reddata.com.bd/images/clients/20WintelLimited.png' },
-  { name: 'Bangladesh Apparel',     img: 'https://reddata.com.bd/images/clients/21BangladeshApparel.png' },
-  { name: 'AyAl',                   img: 'https://reddata.com.bd/images/clients/AyAl.png' },
-  { name: 'AyAl Tech',              img: 'https://reddata.com.bd/images/clients/AyAlTech.png' },
-  { name: 'BIIN',                   img: 'https://reddata.com.bd/images/clients/BIIN.png' },
-  { name: 'SMART',                  img: 'https://reddata.com.bd/images/clients/SMART.png' },
-]
+const { fiberFeatures, whyUs, stats: corpStats } = corporateInternetPageData
+const clients = aboutPageData.clients
 
 export default function CorporateInternetPage() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [])
@@ -208,7 +127,7 @@ export default function CorporateInternetPage() {
                 </span>
                 <div className="relative z-10">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 text-white flex items-center justify-center mb-5 shadow-lg shadow-red-500/30 group-hover:scale-110 transition-transform">
-                    {f.icon}
+                    <IconMapper name={f.icon} className="w-7 h-7" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{f.title}</h3>
                   <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{f.desc}</p>
@@ -293,7 +212,7 @@ export default function CorporateInternetPage() {
                 <img
                   src={c.img}
                   alt={c.name}
-                  className="h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                  className="h-10 w-auto object-contain group-hover:scale-105 group-hover:brightness-110 opacity-80 group-hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => {
@@ -314,12 +233,7 @@ export default function CorporateInternetPage() {
       <div className="bg-gradient-to-r from-red-600 to-rose-700 py-12">
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center text-white">
-            {[
-              { num: '10,000+', label: 'Enterprise Clients' },
-              { num: '99.9%',   label: 'Uptime SLA' },
-              { num: '24/7',    label: 'Dedicated Support' },
-              { num: '64',      label: 'Districts Covered' },
-            ].map((s) => (
+            {corpStats.map((s) => (
               <div key={s.label}>
                 <div className="text-3xl sm:text-4xl font-black mb-1">{s.num}</div>
                 <div className="text-red-100 text-sm font-medium">{s.label}</div>
@@ -353,7 +267,7 @@ export default function CorporateInternetPage() {
                   href="tel:+8809640112233"
                   className="px-8 py-3.5 rounded-full border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-all"
                 >
-                  📞 09640-112233
+                  09640-112233
                 </a>
                 <Link to="/" className="px-8 py-3.5 rounded-full border border-white/20 text-slate-300 font-semibold text-sm hover:bg-white/5 transition-all">
                   ← Back Home
