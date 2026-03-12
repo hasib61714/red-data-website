@@ -18,9 +18,12 @@ export default function DataConnectivityPage() {
       <PageMeta title="Data Connectivity" description="Fiber-backed inter-office links, VPN, MPLS, and backhaul services from Red Data — Bangladesh's leading ISP." />
 
       {/* ── Hero ── */}
-      <div className="bg-gradient-to-br from-sky-950 via-slate-900 to-slate-900 pt-36 pb-14 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-sky-600/20 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-600/10 blur-3xl pointer-events-none" />
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-14 relative overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px)" }}
+        />
         <Container>
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
@@ -30,13 +33,13 @@ export default function DataConnectivityPage() {
             <span className="text-white font-medium">Data Connectivity</span>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-sky-500/20 text-sky-300 border border-sky-500/30 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
               Enterprise Service
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               Data{' '}
-              <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
                 Connectivity
               </span>
             </h1>
@@ -49,13 +52,13 @@ export default function DataConnectivityPage() {
       </div>
 
       {/* ── Stats ── */}
-      <div className="bg-sky-600 py-6">
+      <div className="bg-red-600 py-6">
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-center">
             {stats.map((s) => (
               <div key={s.label}>
                 <div className="text-2xl sm:text-3xl font-extrabold text-white">{s.value}</div>
-                <div className="text-sky-100 text-xs sm:text-sm font-medium">{s.label}</div>
+                <div className="text-red-100 text-xs sm:text-sm font-medium">{s.label}</div>
               </div>
             ))}
           </div>
@@ -66,13 +69,13 @@ export default function DataConnectivityPage() {
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-200 dark:border-sky-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
               What We Offer
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
               Connectivity{' '}
-              <span className="bg-gradient-to-r from-sky-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h2>
@@ -80,7 +83,7 @@ export default function DataConnectivityPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f) => (
               <div key={f.title} className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 p-6 hover:shadow-lg hover:-translate-y-1 transition-all group">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 text-white flex items-center justify-center text-xl shadow mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center text-xl shadow mb-4 group-hover:scale-110 transition-transform">
                   <IconMapper name={f.icon} className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-base mb-2">{L(lang, f, 'title')}</h3>
@@ -95,7 +98,7 @@ export default function DataConnectivityPage() {
       <div className="py-12 bg-white dark:bg-slate-800/40">
         <Container>
           <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-            <div className="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-sky-600/10 blur-3xl pointer-events-none" />
+            <div className="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-red-600/10 blur-3xl pointer-events-none" />
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-3">
@@ -108,7 +111,7 @@ export default function DataConnectivityPage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-                <Link to="/contact" className="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-lg transition-all hover:scale-105">
+                <Link to="/contact" className="px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg transition-all hover:scale-105">
                   Get a Quote
                 </Link>
                 <a href="tel:+8809640112233" className="px-6 py-3 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all">
@@ -126,7 +129,7 @@ export default function DataConnectivityPage() {
       <div className="py-8 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
         <Container>
           <div className="flex justify-center">
-            <Link to="/" className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 text-sm font-medium transition-colors">
+            <Link to="/" className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 text-sm font-medium transition-colors">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
               Back to Home
             </Link>

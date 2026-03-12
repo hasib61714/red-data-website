@@ -18,9 +18,12 @@ export default function DomainHostingPage() {
       <PageMeta title="Domain & Hosting" description="Domain registration, NVMe web hosting, and SSL certificates — reliable web solutions from Red Data Bangladesh." />
 
       {/* ── Hero ── */}
-      <div className="bg-gradient-to-br from-teal-950 via-slate-900 to-slate-900 pt-36 pb-14 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-teal-600/20 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-cyan-600/10 blur-3xl pointer-events-none" />
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pt-36 pb-14 relative overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-red-600/20 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-700/10 blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(255,255,255,1) 49px,rgba(255,255,255,1) 50px)" }}
+        />
         <Container>
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
@@ -30,13 +33,13 @@ export default function DomainHostingPage() {
             <span className="text-white font-medium">Domain & Hosting</span>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-teal-500/20 text-teal-300 border border-teal-500/30 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-500/20 text-red-300 border border-red-500/30 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
               Web Services
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               Domain &{' '}
-              <span className="bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
                 Hosting
               </span>
             </h1>
@@ -52,13 +55,13 @@ export default function DomainHostingPage() {
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-200 dark:border-teal-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-500" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
               What's Included
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
               Full-stack{' '}
-              <span className="bg-gradient-to-r from-teal-500 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
                 Web Solutions
               </span>
             </h2>
@@ -66,7 +69,7 @@ export default function DomainHostingPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {features.map((f) => (
               <div key={f.title} className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 p-5 hover:shadow-lg hover:-translate-y-1 transition-all group">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 text-white flex items-center justify-center text-xl shadow mb-3 group-hover:scale-110 transition-transform">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center text-xl shadow mb-3 group-hover:scale-110 transition-transform">
                   <IconMapper name={f.icon} className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5">{L(lang, f, 'title')}</h3>
@@ -82,27 +85,27 @@ export default function DomainHostingPage() {
         <Container>
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              Hosting <span className="bg-gradient-to-r from-teal-500 to-cyan-400 bg-clip-text text-transparent">Plans</span>
+              Hosting <span className="bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">Plans</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {plans.map((p) => (
-              <div key={p.name} className={`rounded-2xl p-6 flex flex-col border transition-all hover:shadow-lg ${p.highlight ? 'bg-gradient-to-b from-teal-600 to-teal-700 border-teal-500 text-white' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
+              <div key={p.name} className={`rounded-2xl p-6 flex flex-col border transition-all hover:shadow-lg ${p.highlight ? 'bg-gradient-to-b from-red-600 to-red-700 border-red-500 text-white' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
                 {p.highlight && <div className="text-xs font-bold bg-white/20 text-white px-3 py-1 rounded-full self-start mb-3">Most Popular</div>}
                 <h3 className={`text-lg font-bold mb-1 ${p.highlight ? 'text-white' : 'text-slate-900 dark:text-white'}`}>{p.name}</h3>
                 <div className="flex items-end gap-1 mb-4">
                   <span className={`text-2xl font-extrabold ${p.highlight ? 'text-white' : 'text-slate-900 dark:text-white'}`}>{p.price}</span>
-                  <span className={`text-sm mb-1 ${p.highlight ? 'text-teal-200' : 'text-slate-400'}`}>{p.period}</span>
+                  <span className={`text-sm mb-1 ${p.highlight ? 'text-red-200' : 'text-slate-400'}`}>{p.period}</span>
                 </div>
                 <ul className="space-y-2 mb-6 flex-1">
                   {p.features.map((feat) => (
-                    <li key={feat} className={`flex items-center gap-2 text-sm ${p.highlight ? 'text-teal-100' : 'text-slate-500 dark:text-slate-400'}`}>
-                      <svg className={`w-4 h-4 shrink-0 ${p.highlight ? 'text-teal-200' : 'text-teal-500'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    <li key={feat} className={`flex items-center gap-2 text-sm ${p.highlight ? 'text-red-100' : 'text-slate-500 dark:text-slate-400'}`}>
+                      <svg className={`w-4 h-4 shrink-0 ${p.highlight ? 'text-red-200' : 'text-red-500'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                       {feat}
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className={`text-center py-2.5 rounded-xl font-bold text-sm transition-all ${p.highlight ? 'bg-white text-teal-700 hover:bg-teal-50' : 'bg-teal-600 hover:bg-teal-500 text-white'}`}>
+                <Link to="/contact" className={`text-center py-2.5 rounded-xl font-bold text-sm transition-all ${p.highlight ? 'bg-white text-red-700 hover:bg-red-50' : 'bg-red-600 hover:bg-red-500 text-white'}`}>
                   Get Started
                 </Link>
               </div>
@@ -117,7 +120,7 @@ export default function DomainHostingPage() {
       <div className="py-8 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
         <Container>
           <div className="flex justify-center">
-            <Link to="/" className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 text-sm font-medium transition-colors">
+            <Link to="/" className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 text-sm font-medium transition-colors">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
               Back to Home
             </Link>
