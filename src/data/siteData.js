@@ -33,7 +33,6 @@ export const navLinks = [
 // ─── Navbar service dropdown items (router Links) ────────────────────────────
 export const navServiceItems = [
   { label: 'Corporate Internet', to: '/corporate-internet', icon: 'Building2', desc: 'Dedicated enterprise bandwidth' },
-  { label: 'Home Internet',      to: '/home-internet',      icon: 'Home',      desc: 'High-speed residential plans' },
   { label: 'Data Connectivity',  to: '/data-connectivity',  icon: 'Link2',     desc: 'Fiber-backed inter-office links' },
   { label: 'IP Telephony',       to: '/ip-telephony',       icon: 'Phone',     desc: 'VoIP & cloud PBX solutions' },
   { label: 'SMS Service',        to: '/sms-service',        icon: 'MessageSquare', desc: 'Bulk messaging & OTP gateway' },

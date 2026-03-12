@@ -68,12 +68,12 @@ function HomePage({ topBarOpen }) {
   return (
     <main>
       <Hero topBarVisible={topBarOpen} />
+      <Pricing />
       <Services />
       <Stats />
       <WhyChooseUs />
       <Coverage />
       <HowItWorks />
-      <Pricing />
       <Testimonials />
       <Blog />
       <FAQ />
