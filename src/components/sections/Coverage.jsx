@@ -73,7 +73,7 @@ export default function Coverage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left — Bangladesh Map Image + Dot Overlay */}
           <Reveal direction="left">
-            <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-900 shadow-2xl shadow-black/20 dark:shadow-black/40 flex items-center justify-center mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none">
+            <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-800 shadow-2xl shadow-black/20 dark:shadow-black/40 flex items-center justify-center mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none">
               {/* Map Image — natural 2:3 aspect (408×612) */}
               <img
                 src="/bd map.png"
