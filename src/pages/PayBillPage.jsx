@@ -47,13 +47,13 @@ export default function PayBillPage() {
       </div>
 
       {/* ── Quick Pay Banner ── */}
-      <div className="bg-emerald-600 py-4">
+      <div className="bg-red-600 py-4">
         <Container>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-white font-semibold text-sm">
               💡 Fastest way to pay — use the Self Corner portal with card or mobile banking.
             </p>
-            <Link to="/self-corner" className="shrink-0 px-5 py-2 rounded-full bg-white text-emerald-700 font-bold text-sm hover:bg-emerald-50 transition-all shadow">
+            <Link to="/self-corner" className="shrink-0 px-5 py-2 rounded-full bg-white text-red-700 font-bold text-sm hover:bg-red-50 transition-all shadow">
               Go to Self Corner →
             </Link>
           </div>
@@ -64,13 +64,13 @@ export default function PayBillPage() {
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-500/20 mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
               Payment Options
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">
               Choose Your{' '}
-              <span className="bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
                 Payment Method
               </span>
             </h2>
@@ -110,16 +110,16 @@ export default function PayBillPage() {
       <div className="py-14 bg-white dark:bg-slate-800/40">
         <Container>
           <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-            <div className="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-emerald-600/10 blur-3xl pointer-events-none" />
+            <div className="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-red-600/10 blur-3xl pointer-events-none" />
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 justify-between">
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Payment not reflecting?</h3>
                 <p className="text-slate-300 text-sm">Contact our billing team 24/7 for payment confirmation issues.</p>
               </div>
               <div className="flex flex-wrap gap-3 justify-center">
-                <a href="tel:+8809640123123" className="flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-lg transition-all hover:scale-105">
+                <a href="tel:+8809640123123" className="flex items-center gap-2 px-5 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg transition-all hover:scale-105">
                   📞 09640-123123
-                  <span className="text-emerald-200 text-xs">Billing Help</span>
+                  <span className="text-red-200 text-xs">Billing Help</span>
                 </a>
                 <a href="https://wa.me/+8801971521964" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20b558] text-white font-semibold text-sm shadow-lg transition-all hover:scale-105">
                   WhatsApp
@@ -139,7 +139,7 @@ export default function PayBillPage() {
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                Payment <span className="bg-gradient-to-r from-emerald-500 to-teal-400 bg-clip-text text-transparent">FAQs</span>
+                Payment <span className="bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">FAQs</span>
               </h2>
             </div>
             <div className="space-y-3">
