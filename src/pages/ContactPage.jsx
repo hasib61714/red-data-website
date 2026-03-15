@@ -214,23 +214,10 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Support Hours */}
-              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6">
-                <h3 className="font-bold text-white mb-4 flex items-center gap-2">
-                  <span>🕐</span> {t.hoursTitle}
-                </h3>
-                <div className="space-y-2">
-                  {t.hours.map((row) => (
-                    <div key={row.day} className="flex items-center justify-between py-2 border-b border-white/10 last:border-0">
-                      <span className="text-slate-300 text-sm">{row.day}</span>
-                      <span className={`text-sm font-semibold ${row.highlight ? 'text-emerald-400' : 'text-slate-200'}`}>{row.time}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
-            {/* RIGHT: Full-height Map */}
+            {/* RIGHT: Map + Support Hours */}
+            <div className="flex flex-col gap-6">
             <div className="rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-700/50 shadow-sm flex flex-col min-h-[500px] lg:min-h-0">
               <iframe
                 title="Red Data Office Location"
@@ -264,6 +251,23 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
+
+            {/* Support Hours */}
+            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6">
+              <h3 className="font-bold text-white mb-4 flex items-center gap-2">
+                <span>🕐</span> {t.hoursTitle}
+              </h3>
+              <div className="space-y-2">
+                {t.hours.map((row) => (
+                  <div key={row.day} className="flex items-center justify-between py-2 border-b border-white/10 last:border-0">
+                    <span className="text-slate-300 text-sm">{row.day}</span>
+                    <span className={`text-sm font-semibold ${row.highlight ? 'text-emerald-400' : 'text-slate-200'}`}>{row.time}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            </div>{/* end right column */}
 
           </div>
         </Container>
