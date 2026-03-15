@@ -128,8 +128,8 @@ export default function HomeInternetPage() {
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-red-600 text-white rounded-2xl px-4 py-3 shadow-xl">
-                  <div className="text-2xl font-black">100</div>
-                  <div className="text-xs text-red-200">Mbps Max</div>
+                  <div className="text-2xl font-black">24/7</div>
+                  <div className="text-xs text-red-200">Support</div>
                 </div>
                 <div className="absolute -top-4 -left-4 bg-emerald-600 text-white rounded-2xl px-4 py-3 shadow-xl">
                   <div className="text-2xl font-black">99%</div>
