@@ -108,8 +108,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — Contact Form */}
-          <div className="lg:col-span-3">
+          {/* Right — Contact Form + Map */}
+          <div className="lg:col-span-3 flex flex-col gap-6">
             <div className="rounded-3xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-white/[0.08] p-8">
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -201,6 +201,20 @@ export default function Contact() {
                   <p className="text-slate-600 text-xs text-center">{lang === 'bn' ? 'আমরা আপনার তথ্য শেয়ার করি না। জমা দিয়ে আপনি আমাদের গোপনীয়তা নীতিতে সম্মত হচ্ছেন।' : 'We never share your details. By submitting you agree to our Privacy Policy.'}</p>
                 </form>
               )}
+            </div>
+
+            {/* Map */}
+            <div className="rounded-3xl overflow-hidden border border-slate-200 dark:border-white/[0.08] shadow-sm flex-1 min-h-[280px]">
+              <iframe
+                title="Red Data Office Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.7!2d90.4130632!3d23.7925679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7004c26acc1%3A0xfcf2d4ccdd97965!2sRed%20Data%20(Pvt.)%20Limited!5e0!3m2!1sen!2sbd!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block', minHeight: '280px' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
