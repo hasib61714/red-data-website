@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import { getText } from '../../data/translations'
 import Section from '../ui/Section'
@@ -5,6 +6,8 @@ import Container from '../ui/Container'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 import { testimonialsData } from '../../data/siteData'
+
+const INITIAL_SHOW = 6
 
 function StarRating({ rating }) {
   return (
@@ -78,6 +81,10 @@ function TestimonialCard({ name, role, avatar, rating, text }) {
 export default function Testimonials() {
   const { lang } = useLanguage()
   const { items } = testimonialsData
+  const [showAll, setShowAll] = useState(false)
+
+  const visible = showAll ? items : items.slice(0, INITIAL_SHOW)
+  const remaining = items.length - INITIAL_SHOW
 
   return (
     <Section id="testimonials" className="bg-white dark:bg-slate-900 relative overflow-hidden">
@@ -93,11 +100,50 @@ export default function Testimonials() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {items.map((t, i) => (
-            <Reveal key={t.name} delay={i * 80}>
+          {visible.map((t, i) => (
+            <Reveal key={t.name + i} delay={(i % INITIAL_SHOW) * 80}>
               <TestimonialCard {...t} />
             </Reveal>
           ))}
+        </div>
+
+        {/* See More / See Less */}
+        {items.length > INITIAL_SHOW && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll(prev => !prev)}
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-sm hover:border-red-500/40 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              {showAll ? (
+                <>
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                  </svg>
+                  {lang === 'bn' ? 'কম দেখুন' : 'See Less'}
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                  {lang === 'bn' ? `আরও ${remaining}টি রিভিউ দেখুন` : `See ${remaining} More Reviews`}
+                </>
+              )}
+            </button>
+          </div>
+        )}
+
+        {/* Google Reviews link */}
+        <div className="flex justify-center mt-4">
+          <a
+            href="https://www.google.com/maps/place/Red+Data+(Pvt.)+Limited/@23.7925679,90.4130632,17z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+          >
+            <GoogleIcon />
+            {lang === 'bn' ? 'Google Maps এ সব রিভিউ দেখুন' : 'View all reviews on Google Maps'}
+          </a>
         </div>
 
       </Container>
