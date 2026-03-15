@@ -17,7 +17,7 @@ const TEXTS = {
     bc1: 'Services', bc2: 'Domain & Hosting',
     h1: 'Domain &', h1a: 'Hosting',
     sub: "Establish your online presence with Red Data's Domain & Hosting Service. We offer a range of domain registration options and reliable hosting solutions tailored to your needs. Our hosting packages include robust security features, high uptime guarantees, and excellent customer support, ensuring your website runs smoothly and securely. Whether you're a small business or a large enterprise, our services provide the foundation for a successful online presence.",
-    sectionBadge: "What's Included", sectionH: 'Full-stack', sectionA: 'Web Solutions',
+    sectionBadge: "What's Included", sectionH: 'Complete Web', sectionA: 'Infrastructure',
     ctaBtn: 'Get Started',
   },
   bn: {

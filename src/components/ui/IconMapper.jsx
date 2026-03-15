@@ -9,6 +9,7 @@ import {
   Landmark, ShoppingCart, HeartPulse, Package, GraduationCap,
   HardDrive, Settings, FileText, RefreshCw, Ticket,
   CreditCard, Lightbulb, ExternalLink, Wifi, Server, Activity,
+  ShieldCheck, Sliders,
 } from 'lucide-react'
 
 const ICON_MAP = {
@@ -22,6 +23,7 @@ const ICON_MAP = {
   Landmark, ShoppingCart, HeartPulse, Package, GraduationCap,
   HardDrive, Settings, FileText, RefreshCw, Ticket,
   CreditCard, Lightbulb, ExternalLink, Wifi, Server, Activity,
+  ShieldCheck, Sliders,
 }
 
 export default function IconMapper({ name, className = 'w-5 h-5' }) {
