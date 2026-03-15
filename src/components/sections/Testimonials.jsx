@@ -50,14 +50,8 @@ function TestimonialCard({ name, role, avatar, rating, text }) {
         "
       </div>
 
-      {/* Stars + Google badge */}
-      <div className="flex items-center justify-between">
-        <StarRating rating={rating} />
-        <div className="flex items-center gap-1 text-xs text-slate-400 dark:text-slate-500">
-          <GoogleIcon />
-          <span>Google</span>
-        </div>
-      </div>
+      {/* Stars */}
+      <StarRating rating={rating} />
 
       {/* Review text */}
       <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mt-4 mb-6 flex-1">
@@ -133,18 +127,6 @@ export default function Testimonials() {
           </div>
         )}
 
-        {/* Google Reviews link */}
-        <div className="flex justify-center mt-4">
-          <a
-            href="https://www.google.com/maps/place/Red+Data+(Pvt.)+Limited/@23.7925679,90.4130632,17z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
-          >
-            <GoogleIcon />
-            {lang === 'bn' ? 'Google Maps এ সব রিভিউ দেখুন' : 'View all reviews on Google Maps'}
-          </a>
-        </div>
 
       </Container>
     </Section>
