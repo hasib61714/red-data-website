@@ -1,5 +1,5 @@
 import { useScrollToTop } from '../hooks/useScrollToTop'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Container from '../components/ui/Container'
 import PageMeta from '../components/ui/PageMeta'
 import { contactPageData } from '../data/siteData'
@@ -103,153 +103,118 @@ export default function ContactPage() {
 
       {/* Hero */}
       <PageHero>
-          <Breadcrumb items={[{ label: t.bc }]} />
-          <div className="max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
-              {t.h1}{' '}
-              <span className="bg-gradient-to-r from-red-400 via-rose-400 to-orange-300 bg-clip-text text-transparent">
-                {t.h1a}
-              </span>
-            </h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">{t.sub}</p>
-          </div>
+        <Breadcrumb items={[{ label: t.bc }]} />
+        <div className="max-w-2xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            {t.h1}{' '}
+            <span className="bg-gradient-to-r from-red-400 via-rose-400 to-orange-300 bg-clip-text text-transparent">
+              {t.h1a}
+            </span>
+          </h1>
+          <p className="text-slate-300 text-base sm:text-lg leading-relaxed">{t.sub}</p>
+        </div>
       </PageHero>
 
       {/* Main */}
       <div className="py-16 bg-slate-50 dark:bg-slate-900">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
-            {/* Contact Form */}
-            <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700/50 p-8 lg:p-10">
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6">
-                {t.formTitle}
-              </h2>
+            {/* LEFT: Form + Contact Cards + Hours */}
+            <div className="flex flex-col gap-6">
 
-              {submitted ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-500/20 flex items-center justify-center text-3xl mx-auto mb-4">✅</div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{t.successTitle}</h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">{t.successMsg}</p>
-                  <button onClick={() => setSubmitted(false)} className="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-sm transition-all">
-                    {t.sendAnother}
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Contact Form */}
+              <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700/50 p-8 lg:p-10">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                  {t.formTitle}
+                </h2>
+
+                {submitted ? (
+                  <div className="text-center py-12">
+                    <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-500/20 flex items-center justify-center text-3xl mx-auto mb-4">✅</div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{t.successTitle}</h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">{t.successMsg}</p>
+                    <button onClick={() => setSubmitted(false)} className="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-sm transition-all">
+                      {t.sendAnother}
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelName} <span className="text-red-500">*</span></label>
+                        <input
+                          type="text" required
+                          value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
+                          placeholder={t.placeholderName}
+                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelPhone} <span className="text-red-500">*</span></label>
+                        <input
+                          type="tel" required
+                          value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
+                          placeholder={t.placeholderPhone}
+                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all"
+                        />
+                      </div>
+                    </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelName} <span className="text-red-500">*</span></label>
+                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelEmail} <span className="text-red-500">*</span></label>
+                      <input
+                        type="email" required
+                        value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
+                        placeholder={t.placeholderEmail}
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelSubject} <span className="text-red-500">*</span></label>
                       <input
                         type="text" required
-                        value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-                        placeholder={t.placeholderName}
+                        value={form.subject} onChange={e => setForm({ ...form, subject: e.target.value })}
+                        placeholder={t.placeholderSubject}
                         className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelPhone} <span className="text-red-500">*</span></label>
-                      <input
-                        type="tel" required
-                        value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
-                        placeholder={t.placeholderPhone}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all"
+                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelMsg} <span className="text-red-500">*</span></label>
+                      <textarea
+                        required rows={5}
+                        value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
+                        placeholder={t.placeholderMsg}
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all resize-none"
                       />
                     </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelEmail} <span className="text-red-500">*</span></label>
-                    <input
-                      type="email" required
-                      value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-                      placeholder={t.placeholderEmail}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelSubject} <span className="text-red-500">*</span></label>
-                    <input
-                      type="text" required
-                      value={form.subject} onChange={e => setForm({ ...form, subject: e.target.value })}
-                      placeholder={t.placeholderSubject}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">{t.labelMsg} <span className="text-red-500">*</span></label>
-                    <textarea
-                      required rows={5}
-                      value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
-                      placeholder={t.placeholderMsg}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-all resize-none"
-                    />
-                  </div>
-                  <button type="submit" disabled={sending} className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold shadow-lg hover:shadow-red-500/25 transition-all transform hover:scale-[1.01] disabled:scale-100 text-sm flex items-center justify-center gap-2">
-                    {sending ? (
-                      <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg> {t.sending}</>
-                    ) : t.sendBtn}
-                  </button>
-                  {error && <p className="text-red-500 text-sm text-center mt-2">{error}</p>}
-                </form>
-              )}
-            </div>
-
-            {/* Contact Methods + Address */}
-            <div className="space-y-6">
-              <div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {contactMethods.map((m) => (
-                    <a key={m.label} href={m.href} target={m.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
-                      className={`flex items-center gap-3 p-4 rounded-2xl border ${m.border} ${m.bg} hover:shadow-md transition-all group`}
-                    >
-                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${m.color} text-white flex items-center justify-center shadow group-hover:scale-110 transition-transform`}>
-                        <IconMapper name={m.icon} className="w-5 h-5" />
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">{m.label}</p>
-                        <p className="font-semibold text-slate-900 dark:text-white text-sm truncate">{m.value}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+                    <button type="submit" disabled={sending} className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold shadow-lg hover:shadow-red-500/25 transition-all transform hover:scale-[1.01] disabled:scale-100 text-sm flex items-center justify-center gap-2">
+                      {sending ? (
+                        <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg> {t.sending}</>
+                      ) : t.sendBtn}
+                    </button>
+                    {error && <p className="text-red-500 text-sm text-center mt-2">{error}</p>}
+                  </form>
+                )}
               </div>
 
-              {/* Office Map */}
-              <div className="rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-700/50 shadow-sm">
-                <iframe
-                  title="Red Data Office Location"
-                  src="https://maps.google.com/maps?width=600&height=260&hl=en&q=SimpleTree+Attalika+134+Gulshan+Avenue+Dhaka+1212&ie=UTF8&t=&z=16&iwloc=B&output=embed"
-                  width="100%"
-                  height="260"
-                  style={{ border: 0, display: 'block' }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-                <div className="bg-white dark:bg-slate-800 px-5 py-4 flex items-center justify-between gap-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-red-600 to-rose-600 text-white flex items-center justify-center shrink-0 mt-0.5">
-                      <IconMapper name="MapPin" className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-slate-900 dark:text-white text-sm">{t.officeTitle}</p>
-                      <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mt-0.5">
-                        Level 19, SimpleTree Attalika, 134 Gulshan Avenue, Dhaka 1212
-                      </p>
-                    </div>
-                  </div>
-                  <a
-                    href="https://maps.google.com/?q=SimpleTree+Attalika+134+Gulshan+Avenue+Dhaka+1212+Bangladesh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-semibold transition-colors"
+              {/* Contact Method Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {contactMethods.map((m) => (
+                  <a key={m.label} href={m.href} target={m.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
+                    className={`flex items-center gap-3 p-4 rounded-2xl border ${m.border} ${m.bg} hover:shadow-md transition-all group`}
                   >
-                    {t.directionsBtn}
+                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${m.color} text-white flex items-center justify-center shadow group-hover:scale-110 transition-transform`}>
+                      <IconMapper name={m.icon} className="w-5 h-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">{m.label}</p>
+                      <p className="font-semibold text-slate-900 dark:text-white text-sm truncate">{m.value}</p>
+                    </div>
                   </a>
-                </div>
+                ))}
               </div>
 
-              {/* Hours */}
+              {/* Support Hours */}
               <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6">
                 <h3 className="font-bold text-white mb-4 flex items-center gap-2">
                   <span>🕐</span> {t.hoursTitle}
@@ -264,11 +229,45 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+
+            {/* RIGHT: Full-height Map */}
+            <div className="rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-700/50 shadow-sm flex flex-col min-h-[500px] lg:min-h-0">
+              <iframe
+                title="Red Data Office Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.7!2d90.4130632!3d23.7925679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7004c26acc1%3A0xfcf2d4ccdd97965!2sRed%20Data%20(Pvt.)%20Limited!5e0!3m2!1sen!2sbd!4v1"
+                width="100%"
+                style={{ border: 0, display: 'block', flex: 1 }}
+                className="flex-1 w-full h-full"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="bg-white dark:bg-slate-800 px-5 py-4 flex items-center justify-between gap-4 shrink-0">
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-red-600 to-rose-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <IconMapper name="MapPin" className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-slate-900 dark:text-white text-sm">{t.officeTitle}</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mt-0.5">
+                      Level 19, SimpleTree Attalika, 134 Gulshan Avenue, Dhaka 1212
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="https://www.google.com/maps/place/Red+Data+(Pvt.)+Limited/@23.7925679,90.4130632,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-semibold transition-colors"
+                >
+                  {t.directionsBtn}
+                </a>
+              </div>
+            </div>
+
           </div>
         </Container>
       </div>
-
-      {/* Back */}
     </div>
   )
 }
