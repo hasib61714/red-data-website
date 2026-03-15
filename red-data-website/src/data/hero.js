@@ -37,7 +37,7 @@ export const heroSlides = [
   },
   {
     id: 3,
-    image: '/images/hero/hero3-home.jpg',
+    image: '/images/hero/hero3-home.png',
     badge: 'Home Internet Plans',
     badge_bn: 'হোম ইন্টারনেট প্ল্যান',
     headline: 'Home Internet',
@@ -49,7 +49,7 @@ export const heroSlides = [
   },
   {
     id: 4,
-    image: '/images/hero/hero4-city.jpg',
+    image: '/images/hero/hero4-city.png',
     badge: 'Nationwide Coverage',
     badge_bn: 'সারাদেশে কভারেজ',
     headline: 'Serving Across',
