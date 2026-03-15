@@ -101,13 +101,13 @@ export default function Coverage() {
                         <animate attributeName="opacity" values="0.6;0;0.6" dur={dur} repeatCount="indefinite" />
                       </circle>
                       {/* Dot */}
-                      <circle cx={x} cy={y} r={r / 2} fill="#ef4444" opacity="0.95" />
+                      <circle cx={x} cy={y} r={r / 1.2} fill="#ef4444" opacity="0.95" />
                       {/* Label for divisional HQs */}
                       {size !== 'sm' && (
                         <text
                           x={x + r + 3} y={y + 4}
                           fill="rgba(255,255,255,0.9)"
-                          fontSize={size === 'lg' ? 13 : 10}
+                          fontSize={size === 'lg' ? 16 : 16}
                           fontWeight="700"
                           fontFamily="sans-serif"
                           style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}
