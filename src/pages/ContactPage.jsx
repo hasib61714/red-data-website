@@ -218,7 +218,7 @@ export default function ContactPage() {
 
             {/* RIGHT: Map + Support Hours */}
             <div className="flex flex-col gap-6">
-            <div className="rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-700/50 shadow-sm flex flex-col min-h-[500px] lg:min-h-0">
+            <div className="flex-1 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-700/50 shadow-sm flex flex-col min-h-[400px]">
               <iframe
                 title="Red Data Office Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.7!2d90.4130632!3d23.7925679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7004c26acc1%3A0xfcf2d4ccdd97965!2sRed%20Data%20(Pvt.)%20Limited!5e0!3m2!1sen!2sbd!4v1"
@@ -253,7 +253,7 @@ export default function ContactPage() {
             </div>
 
             {/* Support Hours */}
-            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6">
+            <div className="shrink-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6">
               <h3 className="font-bold text-white mb-4 flex items-center gap-2">
                 <span>🕐</span> {t.hoursTitle}
               </h3>
